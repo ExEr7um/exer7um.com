@@ -1,6 +1,12 @@
 <template>
   <header class="container flex items-center justify-between h-24">
-    <Navigation />
+    <Navigation
+      :items="[
+        { title: 'Главная', href: '/' },
+        { title: 'Проекты', href: '/projects' },
+        { title: 'Обо мне', href: '/about' },
+      ]"
+    />
     <Button text="Написать мне!" />
   </header>
 </template>

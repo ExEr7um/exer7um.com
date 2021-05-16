@@ -1,8 +1,8 @@
 <template>
   <component
     :is="type"
-    :to="to"
-    class="items-center justify-center border rounded-md py-2 px-4"
+    :to="href"
+    class="items-center justify-center border rounded-md py-2 px-4 transition"
     :class="buttonClass"
     @click="onClick"
     >{{ text }}</component
@@ -20,7 +20,7 @@ export default {
       type: String,
       default: null,
     },
-    to: {
+    href: {
       type: String,
       default: null,
     },
@@ -31,8 +31,8 @@ export default {
   },
   computed: {
     type() {
-      if (this.to) {
-        return 'Nuxt-Link'
+      if (this.href) {
+        return 'nuxt-link'
       } else {
         return 'button'
       }

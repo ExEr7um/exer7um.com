@@ -40,6 +40,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -47,6 +48,12 @@ export default {
 
   optimizedImages: {
     optimizeImages: true,
+  },
+
+  webfontloader: {
+    google: {
+      families: ['Inter:400,700'],
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

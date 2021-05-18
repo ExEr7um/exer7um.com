@@ -41,6 +41,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-webfontloader',
+    'nuxt-i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -54,6 +55,30 @@ export default {
     google: {
       families: ['Inter:400,700'],
     },
+  },
+
+  i18n: {
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: false,
+      fallbackLocale: 'ru',
+    },
+    locales: [
+      {
+        name: 'Русский',
+        code: 'ru',
+        file: 'ru.js',
+      },
+      {
+        name: 'English',
+        code: 'en',
+        file: 'en.js',
+      },
+    ],
+    lazy: true,
+    langDir: 'assets/lang/',
+    defaultLocale: 'ru',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

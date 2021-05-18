@@ -2,7 +2,7 @@
   <component
     :is="type"
     :to="href"
-    class="items-center justify-center border rounded-md py-2 px-4 transition"
+    class="items-center justify-center border rounded-md py-2 px-4"
     :class="buttonClass"
     @click="onClick"
     >{{ text }}</component

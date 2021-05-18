@@ -2,12 +2,15 @@
   <header class="container flex items-center justify-between h-24">
     <Navigation
       :items="[
-        { title: 'Главная', href: '/' },
-        { title: 'Проекты', href: '/projects' },
-        { title: 'Обо мне', href: '/about' },
+        { title: $t('pages.home'), href: '/' },
+        { title: $t('pages.projects'), href: '/projects' },
+        { title: $t('pages.about'), href: '/about' },
       ]"
     />
-    <Button text="Написать мне!" />
+    <div class="flex items-center">
+      <LocaleSelect :locales="['ru', 'en']" />
+      <Button :text="$t('buttons.contactMe')" />
+    </div>
   </header>
 </template>
 

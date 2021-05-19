@@ -34,6 +34,9 @@
           },
         ]"
       />
+      <a href="https://nuxtjs.org/" target="_blank">
+        <img src="@/assets/social/nuxt.svg" alt="Built with Nuxt" class="h-5" />
+      </a>
     </div>
   </footer>
 </template>

@@ -5,7 +5,17 @@
       :key="icon.title"
       target="_blank"
       :href="icon.href"
-      class="bg-indigo-500 p-3 rounded-md flex items-center justify-center"
+      class="
+        bg-indigo-500
+        p-3
+        rounded-md
+        flex
+        items-center
+        justify-center
+        hover:bg-indigo-400
+        dark:bg-gray-600
+        dark:hover:bg-gray-500
+      "
     >
       <img :src="icon.icon" :alt="icon.title" class="h-full filter invert" />
     </a>

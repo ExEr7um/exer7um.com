@@ -37,6 +37,20 @@
       <a href="https://nuxtjs.org/" target="_blank">
         <img src="@/assets/social/nuxt.svg" alt="Built with Nuxt" class="h-5" />
       </a>
+      <div class="flex items-center space-x-8">
+        <span class="text-indigo-300 dark:text-gray-400 text-sm"
+          >© 2021 exer7um.github.io</span
+        >
+        <span class="text-indigo-300 dark:text-gray-400 text-sm">
+          Made by
+          <a
+            href="https://exer7um.github.io"
+            class="text-white hover:text-gray-300"
+            target="_blank"
+            >exer7um</a
+          >
+        </span>
+      </div>
     </div>
   </footer>
 </template>

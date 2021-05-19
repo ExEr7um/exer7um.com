@@ -7,3 +7,13 @@
 <script>
 export default {}
 </script>
+
+<style lang="css">
+body {
+  @apply dark:bg-gray-800;
+}
+
+h2 {
+  @apply text-xl font-medium dark:text-white;
+}
+</style>

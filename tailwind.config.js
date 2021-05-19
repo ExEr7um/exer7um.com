@@ -12,9 +12,14 @@ module.exports = {
       center: true,
       padding: '2rem',
     },
+    fontFamily: {
+      sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      invert: ['dark'],
+    },
   },
   plugins: [],
 }

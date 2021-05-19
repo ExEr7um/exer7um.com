@@ -3,6 +3,7 @@ export default {
     home: 'Home',
     projects: 'Projects',
     about: 'About',
+    controlPanel: 'Control panel',
   },
   buttons: {
     contactMe: 'Contact me 👋🏻',

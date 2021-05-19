@@ -9,12 +9,12 @@
     <nuxt-link
       v-for="item in items"
       :key="item.title"
-      class="
-        text-gray-500
-        hover:text-gray-900
-        dark:text-gray-400
-        dark:hover:text-gray-100
-      "
+      :class="{
+        'text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-gray-100':
+          isWhite,
+        'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100':
+          !isWhite,
+      }"
       :to="localePath(item.href)"
     >
       {{ item.title }}
@@ -30,6 +30,10 @@ export default {
       default: null,
     },
     isVertical: {
+      type: Boolean,
+      default: false,
+    },
+    isWhite: {
       type: Boolean,
       default: false,
     },

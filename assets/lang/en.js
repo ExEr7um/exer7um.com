@@ -6,5 +6,10 @@ export default {
   },
   buttons: {
     contactMe: 'Contact me 👋🏻',
+    menu: 'Menu',
+  },
+  mobileMenu: {
+    navigation: 'Navigation',
+    changeLanguage: 'Change language',
   },
 }

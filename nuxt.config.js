@@ -53,7 +53,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Inter:400,700'],
+      families: ['Inter:400,500,700'],
     },
   },
 

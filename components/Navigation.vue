@@ -1,5 +1,11 @@
 <template>
-  <nav class="flex space-x-8">
+  <nav
+    class="flex"
+    :class="{
+      'flex-col space-x-0 space-y-4': isVertical,
+      'space-x-8': !isVertical,
+    }"
+  >
     <nuxt-link
       v-for="item in items"
       :key="item.title"
@@ -22,6 +28,10 @@ export default {
     items: {
       type: Array,
       default: null,
+    },
+    isVertical: {
+      type: Boolean,
+      default: false,
     },
   },
 }

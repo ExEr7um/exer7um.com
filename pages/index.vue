@@ -12,4 +12,8 @@ export default {}
 body {
   @apply dark:bg-gray-800;
 }
+
+h2 {
+  @apply text-xl font-medium dark:text-white;
+}
 </style>

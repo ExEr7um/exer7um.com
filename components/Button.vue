@@ -2,11 +2,17 @@
   <component
     :is="type"
     :to="href"
-    class="items-center justify-center border rounded-md py-2 px-4"
+    class="flex items-center justify-center border rounded-md py-2 px-4"
     :class="buttonClass"
     @click="onClick"
-    >{{ text }}</component
   >
+    <img
+      v-if="icon"
+      :src="icon"
+      class="mr-3 filter dark:invert max-w-4 max-h-4 w-full h-full"
+    />
+    {{ text }}
+  </component>
 </template>
 
 <script>
@@ -21,6 +27,10 @@ export default {
       default: null,
     },
     href: {
+      type: String,
+      default: null,
+    },
+    icon: {
       type: String,
       default: null,
     },
@@ -41,7 +51,7 @@ export default {
       return {
         'border-transparent text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600':
           this.buttonType === 'primary',
-        'border-gray-300 text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700':
+        'border-gray-400 text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700':
           this.buttonType === 'secondary',
         'text-white bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600':
           this.buttonType === 'destructive',

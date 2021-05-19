@@ -6,5 +6,10 @@ export default {
   },
   buttons: {
     contactMe: 'Написать мне 👋🏻',
+    menu: 'Меню',
+  },
+  mobileMenu: {
+    navigation: 'Навигация',
+    changeLanguage: 'Сменить язык',
   },
 }

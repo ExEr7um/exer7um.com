@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-indigo-600 dark:bg-gray-700">
+  <footer class="bg-indigo-600 dark:bg-gray-700 mt-16">
     <div class="container py-10 flex flex-col items-center space-y-8">
       <Navigation
         :items="[

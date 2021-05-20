@@ -3,12 +3,13 @@
     class="flex"
     :class="{
       'flex-col space-x-0 space-y-4': isVertical,
-      'space-x-8': !isVertical,
+      'md:space-x-8': !isVertical,
     }"
   >
     <nuxt-link
       v-for="item in items"
       :key="item.title"
+      class="px-4 py-1 md:p-0"
       :class="{
         'text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-gray-100':
           isWhite,

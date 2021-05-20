@@ -9,6 +9,7 @@
           { title: $t('pages.controlPanel'), href: '/admin' },
         ]"
         :is-white="true"
+        class="flex-wrap justify-around"
       />
       <SocialIcons
         :icons="[
@@ -37,7 +38,17 @@
       <a href="https://nuxtjs.org/" target="_blank">
         <img src="@/assets/social/nuxt.svg" alt="Built with Nuxt" class="h-5" />
       </a>
-      <div class="flex items-center space-x-8">
+      <div
+        class="
+          flex
+          items-center
+          space-y-4
+          flex-col
+          md:space-y-0
+          md:flex-row
+          md:space-x-8
+        "
+      >
         <span class="text-indigo-300 dark:text-gray-400 text-sm"
           >© 2021 exer7um.github.io</span
         >

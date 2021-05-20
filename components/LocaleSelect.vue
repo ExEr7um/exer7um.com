@@ -8,7 +8,6 @@
         cursor-pointer
         hover:text-gray-900
         dark:hover:text-gray-100
-        flex-grow
         px-2
       "
       :to="switchLocalePath(locale)"

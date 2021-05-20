@@ -9,7 +9,7 @@
     <img
       v-if="icon"
       :src="icon"
-      class="mr-3 filter dark:invert max-w-4 max-h-4 w-full h-full"
+      class="mr-3 filter dark:invert max-h-4 w-full h-full"
     />
     {{ text }}
   </component>

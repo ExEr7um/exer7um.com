@@ -21,7 +21,7 @@
       class="hidden lg:block"
     />
     <div class="flex items-center">
-      <LocaleSelect :locales="['ru', 'en']" class="hidden md:block" />
+      <LocaleSelect :locales="['ru', 'en']" class="hidden md:flex" />
       <Button :text="$t('buttons.contactMe')" />
     </div>
   </header>

@@ -5,21 +5,24 @@
       items-start
       absolute
       top-full
-      bg-white
-      border-b
+      bg-white bg-gradient-to-b
+      from-white
+      to-gray-50
+      dark:from-gray-800
+      dark:to-gray-700
       w-full
       left-0
       container
       pt-2
       pb-8
       z-20
-      rounded-md
+      rounded-xl
       lg:hidden
       dark:bg-gray-800
       dark:border-gray-600
     "
   >
-    <h2 class="mb-6">{{ $t('mobileMenu.navigation') }}</h2>
+    <h3 class="mb-6">{{ $t('mobileMenu.navigation') }}</h3>
     <Navigation
       :items="[
         { title: $t('pages.home'), href: '/' },
@@ -29,7 +32,7 @@
       :is-vertical="true"
     />
     <div class="md:hidden">
-      <h2 class="mt-8">{{ $t('mobileMenu.changeLanguage') }}</h2>
+      <h3 class="mt-8">{{ $t('mobileMenu.changeLanguage') }}</h3>
       <LocaleSelect :locales="['ru', 'en']" class="mt-4 -ml-2" />
     </div>
   </div>

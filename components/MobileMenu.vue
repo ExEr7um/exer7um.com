@@ -12,6 +12,8 @@
       container
       pt-2
       pb-8
+      z-20
+      rounded-md
       lg:hidden
       dark:bg-gray-800
       dark:border-gray-600

@@ -5,11 +5,7 @@
       items-start
       absolute
       top-full
-      bg-white bg-gradient-to-b
-      from-white
-      to-gray-50
-      dark:from-gray-800
-      dark:to-gray-700
+      bg-white
       w-full
       left-0
       container

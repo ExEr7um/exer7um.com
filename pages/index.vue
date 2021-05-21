@@ -8,6 +8,7 @@
       <Button :text="$t('buttons.contactMe')" />
     </div>
     <RecentProjects :projects="projects.slice(-4)" />
+    <AboutMe class="mt-8" />
   </div>
 </template>
 
@@ -93,6 +94,6 @@ h4 {
 }
 
 p {
-  @apply text-gray-500 leading-8 dark:text-gray-400;
+  @apply text-gray-500 leading-loose dark:text-gray-400;
 }
 </style>

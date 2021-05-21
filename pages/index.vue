@@ -7,7 +7,14 @@
       </p>
       <Button :text="$t('buttons.contactMe')" />
     </div>
-    <RecentProjects :projects="projects.slice(-4)" />
+    <ProjectsList :projects="projects.slice(-4)" />
+    <div class="flex justify-center mt-8">
+      <Button
+        :text="$t('buttons.showAll')"
+        button-type="secondary"
+        href="/projects"
+      />
+    </div>
     <AboutMe class="mt-8" />
   </div>
 </template>
@@ -66,7 +73,7 @@ export default {
   },
   head() {
     return {
-      title: 'Главная | exer7um.github.io',
+      title: `${this.$t('pages.home')} | exer7um.github.io`,
     }
   },
 }

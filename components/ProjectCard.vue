@@ -2,10 +2,8 @@
   <div
     class="flex flex-col border rounded-md dark:border-gray-600 overflow-hidden"
   >
-    <div
-      :class="`flex items-center justify-center h-40 bg-${project.color}-200`"
-    >
-      1
+    <div class="flex items-center justify-center h-40" :class="project.color">
+      <img :src="project.logo" :alt="project[`${$i18n.locale}_title`]" />
     </div>
     <div class="p-5">
       <h4>{{ project[`${$i18n.locale}_title`] }}</h4>
@@ -13,7 +11,8 @@
       <div class="flex mt-6 items-center justify-between">
         <span class="text-gray-400">{{ project.year }}</span>
         <a
-          href="#"
+          :href="project.link"
+          target="_blank"
           class="
             text-indigo-600
             dark:text-indigo-400

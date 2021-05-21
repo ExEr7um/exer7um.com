@@ -8,7 +8,7 @@
 export default {
   head() {
     return {
-      title: 'Обо мне | exer7um.github.io',
+      title: `${this.$t('pages.about')} | exer7um.github.io`,
     }
   },
 }

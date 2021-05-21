@@ -8,13 +8,6 @@
         :project="project"
       />
     </div>
-    <div class="flex justify-center mt-8">
-      <Button
-        :text="$t('buttons.showAll')"
-        button-type="secondary"
-        href="/projects"
-      />
-    </div>
   </div>
 </template>
 

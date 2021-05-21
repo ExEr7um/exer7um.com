@@ -6,6 +6,7 @@ updates:
   schedule:
     interval: daily
     time: '00:00'
+  target-branch: "dev"
   open-pull-requests-limit: 10
   reviewers:
     - vasily kuzin
@@ -21,6 +22,7 @@ updates:
   schedule:
     interval: daily
     time: '00:00'
+  target-branch: "dev"
   open-pull-requests-limit: 10
   reviewers:
     - vasily kuzin

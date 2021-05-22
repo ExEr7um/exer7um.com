@@ -1,7 +1,7 @@
 <template>
   <div>
     <AdminSidebar />
-    <main class="ml-64">
+    <main class="pl-64 py-4">
       <Nuxt />
     </main>
   </div>

@@ -11,7 +11,7 @@
 <script>
 export default {
   created() {
-    this.$store.dispatch('projects/getProjects')
+    this.$store.dispatch('projects/load')
   },
 }
 </script>

@@ -3,7 +3,7 @@ export const state = () => ({
 })
 
 export const actions = {
-  async getProjects({ commit }) {
+  async load({ commit }) {
     const projects = await this.$axios.$get(
       `${this.$axios.defaults.baseURL}/projects`
     )

@@ -29,5 +29,10 @@ export default {
       selectedStatus: this.status,
     }
   },
+  watch: {
+    selectedStatus(newStatus) {
+      this.$emit('change-status', newStatus)
+    },
+  },
 }
 </script>

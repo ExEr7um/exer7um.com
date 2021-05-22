@@ -4,6 +4,11 @@ export default {
     projects: 'Projects',
     about: 'About',
     controlPanel: 'Control panel',
+    admin: {
+      dashboard: 'Dashboard',
+      projects: 'Project',
+      messages: 'Messages',
+    },
   },
   buttons: {
     contactMe: 'Contact me 👋🏻',

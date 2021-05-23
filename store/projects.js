@@ -9,6 +9,14 @@ export const actions = {
     )
     commit('SET_PROJECTS', projects)
   },
+  async deleteProject({ dispatch }, payload) {
+    const res = await this.$axios.$delete(
+      `${this.$axios.defaults.baseURL}/projects/${payload}`
+    )
+    if (res !== null) {
+      dispatch('load')
+    }
+  },
 }
 
 export const mutations = {

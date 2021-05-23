@@ -64,7 +64,7 @@ export default {
           this.buttonType === 'primary',
         'text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700':
           this.buttonType === 'secondary',
-        'border-transparent text-white bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600':
+        'text-red-700 hover:bg-gray-50 dark:text-red-300 dark:border-gray-600 dark:hover:bg-gray-700':
           this.buttonType === 'destructive',
       }
     },

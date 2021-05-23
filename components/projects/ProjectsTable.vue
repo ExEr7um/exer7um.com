@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col w-full">
     <div class="space-y-4">
-      <MessageCell
-        v-for="message in messages"
-        :key="message._id"
-        :message="message"
+      <ProjectCell
+        v-for="project in projects"
+        :key="project._id"
+        :project="project"
         :actions="true"
       />
     </div>
@@ -14,7 +14,7 @@
 <script>
 export default {
   props: {
-    messages: {
+    projects: {
       type: Array,
       default: null,
     },

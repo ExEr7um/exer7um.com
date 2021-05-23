@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-9 border rounded-md dark:border-gray-600"
+    class="grid border rounded-md dark:border-gray-600"
     :class="actions ? 'grid-cols-9' : 'grid-cols-8'"
   >
     <div class="flex flex-col col-span-2 p-4">
@@ -11,18 +11,13 @@
         {{ message.email }}
       </div>
     </div>
-    <div
-      class="col-span-3 p-4 flex items-center text-gray-900 dark:text-gray-100"
-    >
-      {{ message.message }}
+    <div class="col-span-3 p-4 flex items-center">
+      <p class="text-gray-900 dark:text-gray-100">{{ message.message }}</p>
     </div>
     <div class="col-span-2 p-4 flex items-center">
       <MessageStatus :status="message.status" @change-status="updateMessage" />
     </div>
-    <div
-      class="p-4 flex items-center text-gray-900 dark:text-gray-100"
-      :class="{ 'col-span-2': !actions }"
-    >
+    <div class="p-4 flex items-center text-gray-900 dark:text-gray-100">
       {{ new Date(message.createdAt).toLocaleDateString() }}
     </div>
     <div v-if="actions" class="p-4 flex items-center justify-end">

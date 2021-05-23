@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2>Краткая сводка</h2>
-    <div class="border p-6 space-y-4 rounded-xl mt-8 dark:border-gray-600">
+    <div class="border p-6 space-y-4 rounded-xl mt-4 dark:border-gray-600">
       <div class="flex justify-between items-center">
         <h3>Последние сообщения</h3>
         <nuxt-link
@@ -15,7 +15,7 @@
           >{{ $t('buttons.showAll') }} →</nuxt-link
         >
       </div>
-      <MessageCard
+      <MessageCell
         v-for="message in $store.state.messages.messages"
         :key="message._id"
         :message="message"

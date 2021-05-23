@@ -19,7 +19,8 @@
     <img
       v-if="icon"
       :src="icon"
-      class="filter dark:invert max-h-4 w-full h-full"
+      class="max-h-4 w-full h-full"
+      :class="{ 'filter dark:invert': buttonType === 'secondary' }"
     />
     <span v-if="text">{{ text }}</span>
   </component>

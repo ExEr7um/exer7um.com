@@ -2,16 +2,26 @@
   <component
     :is="type"
     :to="href"
-    class="flex items-center justify-center border rounded-md py-2 px-4 w-max"
+    class="
+      flex
+      items-center
+      justify-center
+      border
+      rounded-md
+      py-2
+      px-4
+      w-max
+      space-x-2
+    "
     :class="buttonClass"
     @click="onClick"
   >
     <img
       v-if="icon"
       :src="icon"
-      class="mr-3 filter dark:invert max-h-4 w-full h-full"
+      class="filter dark:invert max-h-4 w-full h-full"
     />
-    {{ text }}
+    <span v-if="text">{{ text }}</span>
   </component>
 </template>
 

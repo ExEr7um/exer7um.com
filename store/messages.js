@@ -18,6 +18,14 @@ export const actions = {
       dispatch('load')
     }
   },
+  async deleteMessage({ dispatch }, payload) {
+    const res = await this.$axios.$delete(
+      `${this.$axios.defaults.baseURL}/messages/${payload}`
+    )
+    if (res !== null) {
+      dispatch('load')
+    }
+  },
 }
 
 export const mutations = {

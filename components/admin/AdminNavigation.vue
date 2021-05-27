@@ -12,7 +12,9 @@
         px-4
         w-max
         rounded-md
+        hover:text-gray-700
         dark:text-white
+        dark:hover:text-gray-300
       "
       >{{ item.title }}</nuxt-link
     >
@@ -32,6 +34,6 @@ export default {
 
 <style scoped>
 .nuxt-link-exact-active {
-  @apply bg-gray-100 font-medium dark:bg-gray-700;
+  @apply bg-gray-100 font-medium cursor-default hover:text-black dark:bg-gray-700 dark:hover:text-gray-300;
 }
 </style>

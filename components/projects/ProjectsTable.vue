@@ -6,6 +6,7 @@
         :key="project._id"
         :project="project"
         :actions="true"
+        @open-popup="$emit('open-popup', $event)"
       />
     </div>
   </div>

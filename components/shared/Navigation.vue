@@ -6,6 +6,7 @@
     <nuxt-link
       v-for="item in items"
       :key="item.title"
+      class=""
       :class="[
         isWhite
           ? 'text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-gray-100'

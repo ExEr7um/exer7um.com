@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style lang="css">
+* {
+  @apply transition;
+}
+
 body {
   @apply dark:bg-gray-800;
 }

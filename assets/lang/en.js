@@ -6,7 +6,7 @@ export default {
     controlPanel: 'Control panel',
     admin: {
       dashboard: 'Dashboard',
-      projects: 'Project',
+      projects: 'Projects',
       messages: 'Messages',
     },
   },

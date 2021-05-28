@@ -1,5 +1,5 @@
 export const state = () => ({
-  messages: null,
+  messages: [],
 })
 
 export const actions = {

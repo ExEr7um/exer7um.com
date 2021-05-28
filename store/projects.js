@@ -1,5 +1,5 @@
 export const state = () => ({
-  projects: null,
+  projects: [],
 })
 
 export const actions = {

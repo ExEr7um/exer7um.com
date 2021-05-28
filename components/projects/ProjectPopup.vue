@@ -26,8 +26,9 @@
       <form id="popup" @submit.prevent="save">
         <div class="grid grid-cols-2 gap-6">
           <div>
-            <h4 class="mb-1">Название RU</h4>
+            <label for="ru_title"><h4 class="mb-1">Название RU</h4></label>
             <input
+              id="ru_title"
               v-model="popupData.ru_title"
               type="text"
               placeholder="Русское название"
@@ -48,8 +49,9 @@
             />
           </div>
           <div>
-            <h4 class="mb-1">Название EN</h4>
+            <label for="en_title"><h4 class="mb-1">Название EN</h4></label>
             <input
+              id="en_title"
               v-model="popupData.en_title"
               type="text"
               placeholder="Английское название"
@@ -70,8 +72,11 @@
             />
           </div>
           <div>
-            <h4 class="mb-1">Описание RU</h4>
+            <label for="ru_description"
+              ><h4 class="mb-1">Описание RU</h4></label
+            >
             <textarea
+              id="ru_description"
               v-model="popupData.ru_description"
               rows="3"
               placeholder="Русское описание"
@@ -93,8 +98,11 @@
             />
           </div>
           <div>
-            <h4 class="mb-1">Описание EN</h4>
+            <label for="en_description"
+              ><h4 class="mb-1">Описание EN</h4></label
+            >
             <textarea
+              id="en_description"
               v-model="popupData.en_description"
               rows="3"
               placeholder="Английское описание"
@@ -116,8 +124,9 @@
             />
           </div>
           <div>
-            <h4 class="mb-1">Ссылка</h4>
+            <label for="link"><h4 class="mb-1">Ссылка</h4></label>
             <input
+              id="link"
               v-model="popupData.link"
               type="text"
               placeholder="Ссылка на сайт"
@@ -138,9 +147,10 @@
             />
           </div>
           <div>
-            <h4 class="mb-1">Цвет</h4>
+            <label for="color"><h4 class="mb-1">Цвет</h4></label>
             <div class="flex space-x-4">
               <input
+                id="color"
                 v-model="popupData.color"
                 type="text"
                 placeholder="Класс Tailwind"
@@ -163,8 +173,9 @@
             </div>
           </div>
           <div>
-            <h4 class="mb-1">Логотип</h4>
+            <label for="logo"><h4 class="mb-1">Логотип</h4></label>
             <input
+              id="logo"
               v-model="popupData.logo"
               type="text"
               placeholder="Ссылка на логотип"
@@ -185,8 +196,9 @@
             />
           </div>
           <div>
-            <h4 class="mb-1">Год</h4>
+            <label for="year"><h4 class="mb-1">Год</h4></label>
             <input
+              id="year"
               v-model="popupData.year"
               type="text"
               placeholder="Год"

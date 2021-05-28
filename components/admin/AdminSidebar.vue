@@ -33,10 +33,25 @@
       />
       <h3 class="mt-8">{{ $t('mobileMenu.changeLanguage') }}</h3>
       <LocaleSelect :locales="['ru', 'en']" class="mt-4 -ml-2" />
+      <Button
+        button-type="secondary"
+        :text="$t('buttons.logout')"
+        class="mt-8"
+        :on-click="logout"
+      />
     </div>
   </header>
 </template>
 
 <script>
-export default {}
+import nuxtStorage from 'nuxt-storage'
+
+export default {
+  methods: {
+    logout() {
+      nuxtStorage.localStorage.setData('user', null)
+      this.$router.push(this.localePath('/admin/login'))
+    },
+  },
+}
 </script>

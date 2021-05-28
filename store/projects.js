@@ -1,18 +1,21 @@
+import nuxtStorage from 'nuxt-storage'
+
 export const state = () => ({
   projects: [],
 })
 
 export const actions = {
   async load({ commit }) {
-    const projects = await this.$axios.$get(
+    const res = await this.$axios.$get(
       `${this.$axios.defaults.baseURL}/projects`
     )
-    commit('SET_PROJECTS', projects)
+    commit('SET_PROJECTS', res)
   },
   async createProject({ dispatch }, payload) {
     const res = await this.$axios.$post(
       `${this.$axios.defaults.baseURL}/projects`,
-      payload.body
+      payload.body,
+      { headers: { 'auth-token': nuxtStorage.localStorage.getData('user') } }
     )
     if (res) {
       dispatch('load')
@@ -21,7 +24,8 @@ export const actions = {
   async updateProject({ commit, dispatch }, payload) {
     const res = await this.$axios.$patch(
       `${this.$axios.defaults.baseURL}/projects/${payload.id}`,
-      payload.body
+      payload.body,
+      { headers: { 'auth-token': nuxtStorage.localStorage.getData('user') } }
     )
     if (res) {
       dispatch('load')
@@ -29,7 +33,8 @@ export const actions = {
   },
   async deleteProject({ dispatch }, payload) {
     const res = await this.$axios.$delete(
-      `${this.$axios.defaults.baseURL}/projects/${payload}`
+      `${this.$axios.defaults.baseURL}/projects/${payload}`,
+      { headers: { 'auth-token': nuxtStorage.localStorage.getData('user') } }
     )
     if (res !== null) {
       dispatch('load')

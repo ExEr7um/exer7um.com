@@ -27,6 +27,7 @@
     "core-js": "^3.13.0",
     "nuxt": "^2.2.0",
     "nuxt-i18n": "^6.27.0",
+    "nuxt-storage": "^1.2.2",
     "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {

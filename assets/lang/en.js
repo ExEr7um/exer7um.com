@@ -4,6 +4,7 @@ export default {
     projects: 'Projects',
     about: 'About',
     controlPanel: 'Control panel',
+    auth: 'Authorization',
     admin: {
       dashboard: 'Dashboard',
       projects: 'Projects',
@@ -14,6 +15,8 @@ export default {
     contactMe: 'Contact me 👋🏻',
     menu: 'Menu',
     showAll: 'Show all',
+    login: 'Login',
+    logout: 'Logout',
   },
   mobileMenu: {
     navigation: 'Navigation',
@@ -43,5 +46,11 @@ export default {
       'Also I have great knowledge of pure CSS, and I can work with preprocessors too. In addition, I have basic knowledge of',
     paragraph_3:
       'That website can be an example of how I write code, so I made a public repository on GitHub for it.',
+  },
+  auth: {
+    title: 'Authorization',
+    email: 'Email',
+    password: 'Password',
+    passwordPlaceholder: 'At least 6 symbols',
   },
 }

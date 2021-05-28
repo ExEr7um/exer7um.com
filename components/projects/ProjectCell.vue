@@ -4,7 +4,15 @@
     :class="actions ? 'grid-cols-6' : 'grid-cols-5'"
   >
     <div
-      class="p-4 flex items-center justify-center h-24"
+      class="
+        p-4
+        flex
+        items-center
+        justify-center
+        h-24
+        border-r
+        dark:border-gray-600
+      "
       :class="project.color"
     >
       <img

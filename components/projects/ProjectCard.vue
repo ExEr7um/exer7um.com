@@ -8,8 +8,7 @@
         items-center
         justify-center
         h-40
-        px-8
-        py-4
+        p-8
         border-b
         dark:border-gray-600
       "

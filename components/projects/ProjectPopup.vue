@@ -257,6 +257,7 @@ export default {
         id: this.popupData._id,
         body: this.popupData,
       })
+      this.closePopup()
     },
   },
 }

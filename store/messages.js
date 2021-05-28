@@ -1,29 +1,21 @@
 import nuxtStorage from 'nuxt-storage'
 
 export const state = () => ({
-  projects: [],
+  messages: [],
 })
 
 export const actions = {
   async load({ commit }) {
     const res = await this.$axios.$get(
-      `${this.$axios.defaults.baseURL}/projects`
-    )
-    commit('SET_PROJECTS', res)
-  },
-  async createProject({ dispatch }, payload) {
-    const res = await this.$axios.$post(
-      `${this.$axios.defaults.baseURL}/projects`,
-      payload.body,
+      `${this.$axios.defaults.baseURL}/messages`,
       { headers: { 'auth-token': nuxtStorage.localStorage.getData('user') } }
     )
-    if (res) {
-      dispatch('load')
-    }
+
+    commit('SET_MESSAGES', res)
   },
-  async updateProject({ commit, dispatch }, payload) {
+  async updateMessage({ commit, dispatch }, payload) {
     const res = await this.$axios.$patch(
-      `${this.$axios.defaults.baseURL}/projects/${payload.id}`,
+      `${this.$axios.defaults.baseURL}/messages/${payload.id}`,
       payload.body,
       { headers: { 'auth-token': nuxtStorage.localStorage.getData('user') } }
     )
@@ -31,9 +23,9 @@ export const actions = {
       dispatch('load')
     }
   },
-  async deleteProject({ dispatch }, payload) {
+  async deleteMessage({ dispatch }, payload) {
     const res = await this.$axios.$delete(
-      `${this.$axios.defaults.baseURL}/projects/${payload}`,
+      `${this.$axios.defaults.baseURL}/messages/${payload}`,
       { headers: { 'auth-token': nuxtStorage.localStorage.getData('user') } }
     )
     if (res !== null) {
@@ -43,7 +35,7 @@ export const actions = {
 }
 
 export const mutations = {
-  SET_PROJECTS(state, projects) {
-    state.projects = projects
+  SET_MESSAGES(state, messages) {
+    state.messages = messages
   },
 }

@@ -21,5 +21,5 @@ module.exports = {
       invert: ['dark'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }

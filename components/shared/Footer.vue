@@ -53,7 +53,7 @@
           >© 2021 exer7um.github.io</span
         >
         <span class="text-indigo-300 dark:text-gray-400 text-sm">
-          Made by
+          Made with ❤️ by
           <a
             href="https://exer7um.github.io"
             class="text-white hover:text-gray-300"

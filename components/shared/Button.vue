@@ -2,16 +2,27 @@
   <component
     :is="type"
     :to="href"
-    class="flex items-center justify-center border rounded-md py-2 px-4 w-max"
+    class="
+      flex
+      items-center
+      justify-center
+      border
+      rounded-md
+      py-2
+      px-4
+      w-max
+      space-x-2
+    "
     :class="buttonClass"
     @click="onClick"
   >
     <img
       v-if="icon"
       :src="icon"
-      class="mr-3 filter dark:invert max-h-4 w-full h-full"
+      class="max-h-4 w-full h-full"
+      :class="{ 'filter dark:invert': buttonType === 'secondary' }"
     />
-    {{ text }}
+    <span v-if="text">{{ text }}</span>
   </component>
 </template>
 
@@ -53,7 +64,7 @@ export default {
           this.buttonType === 'primary',
         'text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700':
           this.buttonType === 'secondary',
-        'text-white bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600':
+        'text-red-700 hover:bg-gray-50 dark:text-red-300 dark:border-gray-600 dark:hover:bg-gray-700':
           this.buttonType === 'destructive',
       }
     },

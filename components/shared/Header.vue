@@ -22,7 +22,7 @@
     />
     <div class="flex items-center">
       <LocaleSelect :locales="['ru', 'en']" class="hidden md:flex" />
-      <Button :text="$t('buttons.contactMe')" />
+      <Button :text="$t('buttons.contactMe')" href="/message" />
     </div>
   </header>
 </template>

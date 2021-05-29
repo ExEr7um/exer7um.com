@@ -3,6 +3,7 @@ export default {
     home: 'Home',
     projects: 'Projects',
     about: 'About',
+    message: 'Contact me',
     controlPanel: 'Control panel',
     auth: 'Authorization',
     admin: {

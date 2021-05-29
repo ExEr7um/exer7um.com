@@ -5,7 +5,7 @@
       <p class="mb-8 max-w-sm text-center">
         {{ $t('home.description') }}
       </p>
-      <Button :text="$t('buttons.contactMe')" />
+      <Button :text="$t('buttons.contactMe')" href="/message" />
     </div>
     <ProjectsList :projects="$store.state.projects.projects.slice(0, 4)" />
     <div class="flex justify-center mt-8">

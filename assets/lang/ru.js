@@ -3,6 +3,7 @@ export default {
     home: 'Главная',
     projects: 'Проекты',
     about: 'Обо мне',
+    message: 'Написать мне',
     controlPanel: 'Панель управления',
     auth: 'Авторизация',
     admin: {

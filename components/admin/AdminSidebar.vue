@@ -1,5 +1,5 @@
 <template>
-  <header
+  <aside
     class="
       fixed
       w-64
@@ -40,7 +40,7 @@
         :on-click="logout"
       />
     </div>
-  </header>
+  </aside>
 </template>
 
 <script>

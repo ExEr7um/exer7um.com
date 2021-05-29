@@ -54,4 +54,11 @@ export default {
     password: 'Password',
     passwordPlaceholder: 'At least 6 symbols',
   },
+  message: {
+    name: 'Your name',
+    email: 'Email',
+    message: 'Message',
+    messagePlaceholder: 'Enter your message',
+    send: 'Send',
+  },
 }

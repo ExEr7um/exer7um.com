@@ -54,4 +54,11 @@ export default {
     password: 'Пароль',
     passwordPlaceholder: 'Минимум 6 символов',
   },
+  message: {
+    name: 'Ваше имя',
+    email: 'Электронная почта',
+    message: 'Сообщение',
+    messagePlaceholder: 'Введите ваше сообщение',
+    send: 'Отправить',
+  },
 }

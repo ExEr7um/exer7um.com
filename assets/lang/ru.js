@@ -3,6 +3,7 @@ export default {
     home: 'Главная',
     projects: 'Проекты',
     about: 'Обо мне',
+    message: 'Написать мне',
     controlPanel: 'Панель управления',
     auth: 'Авторизация',
     admin: {
@@ -17,6 +18,7 @@ export default {
     showAll: 'Посмотреть все',
     login: 'Войти',
     logout: 'Выйти',
+    return: 'Вернуться на главную',
   },
   mobileMenu: {
     navigation: 'Навигация',
@@ -52,5 +54,17 @@ export default {
     email: 'Электронная почта',
     password: 'Пароль',
     passwordPlaceholder: 'Минимум 6 символов',
+  },
+  message: {
+    name: 'Ваше имя',
+    email: 'Электронная почта',
+    message: 'Сообщение',
+    messagePlaceholder: 'Введите ваше сообщение',
+    send: 'Отправить',
+    popup: {
+      title: 'Сообщение отправлено',
+      message:
+        'Ваше сообщение было отправлено. Я постараюсь ответить на него в ближайшее время.',
+    },
   },
 }

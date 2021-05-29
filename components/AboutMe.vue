@@ -50,7 +50,7 @@
         />
         GitHub
       </a>
-      <Button :text="$t('buttons.contactMe')" />
+      <Button :text="$t('buttons.contactMe')" href="/message" />
     </div>
   </div>
 </template>

@@ -3,6 +3,7 @@ export default {
     home: 'Home',
     projects: 'Projects',
     about: 'About',
+    message: 'Contact me',
     controlPanel: 'Control panel',
     auth: 'Authorization',
     admin: {
@@ -17,6 +18,7 @@ export default {
     showAll: 'Show all',
     login: 'Login',
     logout: 'Logout',
+    return: 'Return to home',
   },
   mobileMenu: {
     navigation: 'Navigation',
@@ -52,5 +54,17 @@ export default {
     email: 'Email',
     password: 'Password',
     passwordPlaceholder: 'At least 6 symbols',
+  },
+  message: {
+    name: 'Your name',
+    email: 'Email',
+    message: 'Message',
+    messagePlaceholder: 'Enter your message',
+    send: 'Send',
+    popup: {
+      title: 'Message sent',
+      message:
+        'Your message has been sent. I will answer you as soon as possible.',
+    },
   },
 }

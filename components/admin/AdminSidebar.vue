@@ -49,7 +49,7 @@ import nuxtStorage from 'nuxt-storage'
 export default {
   methods: {
     logout() {
-      nuxtStorage.localStorage.setData('user', null)
+      nuxtStorage.localStorage.clear()
       this.$router.push(this.localePath('/admin/login'))
     },
   },

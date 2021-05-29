@@ -18,6 +18,7 @@ export default {
     showAll: 'Show all',
     login: 'Login',
     logout: 'Logout',
+    return: 'Return to home',
   },
   mobileMenu: {
     navigation: 'Navigation',
@@ -60,5 +61,10 @@ export default {
     message: 'Message',
     messagePlaceholder: 'Enter your message',
     send: 'Send',
+    popup: {
+      title: 'Message sent',
+      message:
+        'Your message has been sent. I will answer you as soon as possible.',
+    },
   },
 }

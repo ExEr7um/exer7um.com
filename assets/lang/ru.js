@@ -18,6 +18,7 @@ export default {
     showAll: 'Посмотреть все',
     login: 'Войти',
     logout: 'Выйти',
+    return: 'Вернуться на главную',
   },
   mobileMenu: {
     navigation: 'Навигация',
@@ -60,5 +61,10 @@ export default {
     message: 'Сообщение',
     messagePlaceholder: 'Введите ваше сообщение',
     send: 'Отправить',
+    popup: {
+      title: 'Сообщение отправлено',
+      message:
+        'Ваше сообщение было отправлено. Я постараюсь ответить на него в ближайшее время.',
+    },
   },
 }

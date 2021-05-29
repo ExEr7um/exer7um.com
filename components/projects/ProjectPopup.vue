@@ -4,7 +4,8 @@
       fixed
       w-full
       h-full
-      bg-opacity-30 bg-gray-900
+      bg-opacity-30 bg-gray-500
+      dark:bg-gray-900
       z-10
       flex
       items-center

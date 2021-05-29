@@ -1,7 +1,7 @@
 <template>
   <component
     :is="type"
-    :to="href"
+    :to="localePath(href)"
     class="
       flex
       items-center

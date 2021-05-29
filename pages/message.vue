@@ -2,7 +2,11 @@
   <div class="container flex items-center flex-col">
     <div>
       <h2>{{ $t('buttons.contactMe') }}</h2>
-      <form id="message" class="grid grid-cols-2 gap-4 mt-8">
+      <form
+        id="message"
+        class="grid grid-cols-2 gap-4 mt-8"
+        @submit.prevent="send"
+      >
         <div>
           <label for="name">
             <h4 class="mb-1">{{ $t('message.name') }}</h4>
@@ -35,7 +39,7 @@
             id="email"
             v-model="message.email"
             type="email"
-            placeholder="exer7um@gmail.com"
+            placeholder="you@example.com"
             class="
               bg-gray-100
               border-transparent
@@ -102,6 +106,14 @@
         </button>
       </form>
     </div>
+    <Popup
+      v-if="isPopupOpened"
+      :popup="{
+        title: $t('message.popup.title'),
+        message: $t('message.popup.message'),
+        button: $t('buttons.return'),
+      }"
+    />
   </div>
 </template>
 
@@ -114,12 +126,24 @@ export default {
         email: '',
         message: '',
       },
+      isPopupOpened: false,
     }
   },
   head() {
     return {
       title: `${this.$t('pages.message')} | exer7um.github.io`,
     }
+  },
+  methods: {
+    async send() {
+      const res = await this.$axios.$post(
+        `${this.$axios.defaults.baseURL}/messages`,
+        this.message
+      )
+      if (res) {
+        this.isPopupOpened = true
+      }
+    },
   },
 }
 </script>

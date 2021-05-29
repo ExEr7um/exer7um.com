@@ -7,9 +7,21 @@
       <div class="flex items-center text-gray-900 dark:text-gray-100">
         {{ message.name }}
       </div>
-      <div class="flex items-center text-gray-500 dark:text-gray-400">
+      <a
+        class="
+          flex
+          items-center
+          text-gray-500
+          hover:text-indigo-600
+          dark:text-gray-400
+          dark:hover:text-indigo-400
+        "
+        :href="`mailto:${message.email}?subject=${new Date(
+          message.createdAt
+        ).toLocaleDateString()}`"
+      >
         {{ message.email }}
-      </div>
+      </a>
     </div>
     <div class="col-span-3 p-4 flex items-center">
       <p class="text-gray-900 dark:text-gray-100">{{ message.message }}</p>

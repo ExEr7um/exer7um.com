@@ -10,7 +10,8 @@
       {{ $t('about.paragraph_1_1') }}
       <span class="text-green-500 font-medium dark:text-green-400">Nuxt</span>
       {{ $t('about.and') }}
-      <span class="text-blue-500 font-medium dark:text-blue-400">Tailwind</span>
+      <span class="text-blue-500 font-medium dark:text-blue-400">Tailwind</span
+      >.
       {{ $t('about.paragraph_1_2') }}
       <span class="text-yellow-500 font-medium dark:text-yellow-400"
         >Sketch</span

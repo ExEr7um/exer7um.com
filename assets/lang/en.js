@@ -41,7 +41,7 @@ export default {
     and: 'and',
     paragraph_1_1:
       'years old, live in Moscow. I have worked with a lot of different frameworks and technologies. Now I use',
-    paragraph_1_2: '. I create designs in',
+    paragraph_1_2: 'I create designs in',
     paragraph_2:
       'Also I have great knowledge of pure CSS, and I can work with preprocessors too. In addition, I have basic knowledge of',
     paragraph_3:

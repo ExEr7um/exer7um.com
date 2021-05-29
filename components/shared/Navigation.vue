@@ -14,6 +14,7 @@
         { 'px-4 py-1 md:p-0': !isVertical },
       ]"
       :to="localePath(item.href)"
+      @click.native="$emit('close-menu')"
     >
       {{ item.title }}
     </nuxt-link>

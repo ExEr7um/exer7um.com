@@ -11,7 +11,7 @@
       class="lg:hidden"
       :on-click="toggleMenu"
     />
-    <MobileMenu v-if="isMenuOpened" />
+    <MobileMenu v-if="isMenuOpened" @close-menu="isMenuOpened = false" />
     <Navigation
       :items="[
         { title: $t('pages.home'), href: '/' },

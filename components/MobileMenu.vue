@@ -26,6 +26,7 @@
         { title: $t('pages.about'), href: '/about' },
       ]"
       :is-vertical="true"
+      @close-menu="$emit('close-menu')"
     />
     <div class="md:hidden">
       <h3 class="mt-8">{{ $t('mobileMenu.changeLanguage') }}</h3>

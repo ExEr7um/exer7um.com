@@ -1,10 +1,10 @@
 <template>
   <div class="container flex items-center flex-col">
-    <div>
+    <div class="w-full md:w-max">
       <h2>{{ $t('buttons.contactMe') }}</h2>
       <form
         id="message"
-        class="grid grid-cols-2 gap-4 mt-8"
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 w-full"
         @submit.prevent="send"
       >
         <div>
@@ -17,6 +17,7 @@
             type="text"
             :placeholder="$t('message.name')"
             class="
+              w-full
               bg-gray-100
               border-transparent
               rounded-md
@@ -41,6 +42,7 @@
             type="email"
             placeholder="you@example.com"
             class="
+              w-full
               bg-gray-100
               border-transparent
               rounded-md
@@ -55,7 +57,7 @@
             required
           />
         </div>
-        <div class="col-span-2">
+        <div class="col-span-1 md:col-span-2">
           <label for="message">
             <h4 class="mb-1">{{ $t('message.message') }}</h4>
           </label>

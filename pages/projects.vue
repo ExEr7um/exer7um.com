@@ -5,5 +5,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: `${this.$t('pages.projects')} | exer7um.github.io`,
+    }
+  },
+}
 </script>

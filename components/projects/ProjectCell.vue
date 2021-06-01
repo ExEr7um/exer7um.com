@@ -9,7 +9,7 @@
         flex
         items-center
         justify-center
-        h-24
+        h-full
         border-r
         dark:border-gray-600
       "
@@ -18,7 +18,7 @@
       <img
         :src="project.logo"
         :alt="project[`${$i18n.locale}_title`]"
-        class="max-h-full max-w-full"
+        class="max-h-20 max-w-full"
       />
     </div>
     <div class="p-4 flex items-center text-gray-900 dark:text-gray-100">

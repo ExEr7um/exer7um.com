@@ -4,15 +4,7 @@
     :class="actions ? 'grid-cols-6' : 'grid-cols-5'"
   >
     <div
-      class="
-        p-4
-        flex
-        items-center
-        justify-center
-        h-full
-        border-r
-        dark:border-gray-600
-      "
+      class="p-4 flex items-center justify-center h-full border-r dark:border-gray-600"
       :class="project.color"
     >
       <img
@@ -34,12 +26,12 @@
     </div>
     <div v-if="actions" class="p-4 flex items-center justify-end space-x-2">
       <Button
-        :icon="require('@/assets/icons/pencil.svg')"
+        :icon="require('@/assets/icons/pencil.svg?include')"
         button-type="secondary"
         :on-click="openPopup"
       />
       <Button
-        :icon="require('@/assets/icons/trash.svg')"
+        :icon="require('@/assets/icons/trash.svg?include')"
         button-type="destructive"
         :on-click="deleteProject"
       />

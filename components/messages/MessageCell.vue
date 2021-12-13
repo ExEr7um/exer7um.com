@@ -8,14 +8,7 @@
         {{ message.name }}
       </div>
       <a
-        class="
-          flex
-          items-center
-          text-gray-500
-          hover:text-indigo-600
-          dark:text-gray-400
-          dark:hover:text-indigo-400
-        "
+        class="flex items-center text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400"
         :href="`mailto:${message.email}?subject=${new Date(
           message.createdAt
         ).toLocaleDateString()}`"
@@ -34,7 +27,7 @@
     </div>
     <div v-if="actions" class="p-4 flex items-center justify-end">
       <Button
-        :icon="require('@/assets/icons/trash.svg')"
+        :icon="require('@/assets/icons/trash.svg?include')"
         button-type="destructive"
         :on-click="deleteMessage"
       />

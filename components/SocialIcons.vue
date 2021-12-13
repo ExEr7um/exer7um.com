@@ -10,7 +10,7 @@
       <img
         :src="icon.icon"
         :alt="icon.title"
-        class="w-full h-full filter invert flex"
+        class="w-full h-full filter invert"
       />
     </a>
   </div>

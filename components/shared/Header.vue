@@ -4,8 +4,8 @@
       button-type="secondary"
       :icon="
         isMenuOpened
-          ? require('@/assets/icons/xmark.svg')
-          : require('@/assets/icons/menu.svg')
+          ? require('@/assets/icons/xmark.svg?include')
+          : require('@/assets/icons/menu.svg?include')
       "
       :text="$t('buttons.menu')"
       class="lg:hidden"

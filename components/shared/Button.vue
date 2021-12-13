@@ -2,26 +2,20 @@
   <component
     :is="type"
     :to="localePath(href)"
-    class="
-      flex
-      items-center
-      justify-center
-      border
-      rounded-md
-      py-2
-      px-4
-      w-max
-      space-x-2
-    "
+    class="flex items-center justify-center border rounded-md py-2 px-4 w-max space-x-2"
     :class="buttonClass"
     @click="onClick"
   >
-    <img
+    <div
       v-if="icon"
-      :src="icon"
-      class="max-h-4 w-full h-full"
-      :class="{ 'filter dark:invert': buttonType === 'secondary' }"
-    />
+      class="max-h-4 w-full h-full fill-current flex items-center justify-center"
+      :class="{
+        'text-white': buttonType === 'primary',
+        'text-black dark:text-white': buttonType === 'secondary',
+        'text-red-500 dark:text-red-400': buttonType === 'destructive',
+      }"
+      v-html="icon"
+    ></div>
     <span v-if="text">{{ text }}</span>
   </component>
 </template>

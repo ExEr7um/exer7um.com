@@ -3,22 +3,14 @@
     class="flex flex-col border rounded-md dark:border-gray-600 overflow-hidden"
   >
     <div
-      class="
-        flex
-        items-center
-        justify-center
-        h-40
-        p-8
-        border-b
-        dark:border-gray-600
-      "
+      class="flex items-center justify-center h-40 p-8 border-b dark:border-gray-600"
       style="min-height: 10rem"
       :class="project.color"
     >
       <img
         :src="project.logo"
         :alt="project[`${$i18n.locale}_title`]"
-        class="max-h-full max-w-full"
+        class="max-h-full max-w-full select-none"
       />
     </div>
     <div class="p-5 flex flex-col justify-between h-full">
@@ -31,12 +23,7 @@
         <a
           :href="project.link"
           target="_blank"
-          class="
-            text-indigo-600
-            dark:text-indigo-400
-            hover:text-indigo-800
-            dark:hover:text-indigo-300
-          "
+          class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300"
           >{{ $t('projects.card.view') }} →</a
         >
       </div>

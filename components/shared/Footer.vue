@@ -16,22 +16,22 @@
           {
             title: 'Telegram',
             href: 'https://t.me/exer7um',
-            icon: `${require('@/assets/social/telegram.svg')}`,
+            icon: `${require('@/assets/social/telegram.svg?include')}`,
           },
           {
             title: 'Twitter',
             href: 'https://twitter.com/exer7um',
-            icon: `${require('@/assets/social/twitter.svg')}`,
+            icon: `${require('@/assets/social/twitter.svg?include')}`,
           },
           {
             title: 'GitHub',
             href: 'https://github.com/exer7um',
-            icon: `${require('@/assets/social/github.svg')}`,
+            icon: `${require('@/assets/social/github.svg?include')}`,
           },
           {
             title: 'VK',
             href: 'https://vk.com/exer7um',
-            icon: `${require('@/assets/social/vk.svg')}`,
+            icon: `${require('@/assets/social/vk.svg?include')}`,
           },
         ]"
       />
@@ -39,15 +39,7 @@
         <img src="@/assets/social/nuxt.svg" alt="Built with Nuxt" class="h-5" />
       </a>
       <div
-        class="
-          flex
-          items-center
-          space-y-4
-          flex-col
-          md:space-y-0
-          md:flex-row
-          md:space-x-8
-        "
+        class="flex items-center space-y-4 flex-col md:space-y-0 md:flex-row md:space-x-8"
       >
         <span class="text-indigo-300 dark:text-gray-400 text-sm"
           >© 2021 exer7um.github.io</span

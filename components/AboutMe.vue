@@ -28,26 +28,12 @@
       <a
         href="https://github.com/ExEr7um/exer7um.github.io"
         target="_blank"
-        class="
-          flex
-          items-center
-          justify-center
-          border
-          rounded-md
-          py-2
-          px-4
-          text-gray-700
-          hover:bg-gray-50
-          dark:text-gray-300
-          dark:border-gray-600
-          dark:hover:bg-gray-700
-        "
+        class="flex items-center justify-center border rounded-md py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700"
       >
-        <img
-          src="@/assets/social/github.svg"
-          alt=""
-          class="mr-3 filter dark:invert"
-        />
+        <div
+          class="mr-3 fill-current text-black dark:text-white"
+          v-html="require('~/assets/social/github.svg?include')"
+        ></div>
         GitHub
       </a>
       <Button :text="$t('buttons.contactMe')" href="/message" />

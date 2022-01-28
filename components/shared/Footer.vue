@@ -42,7 +42,10 @@
         class="flex items-center space-y-4 flex-col md:space-y-0 md:flex-row md:space-x-8"
       >
         <span class="text-indigo-300 dark:text-gray-400 text-sm"
-          >© 2021 exer7um.github.io</span
+          >© 2021-{{
+            new Date(Date.now()).getUTCFullYear()
+          }}
+          exer7um.github.io</span
         >
         <span class="text-indigo-300 dark:text-gray-400 text-sm">
           Made with ❤️ by

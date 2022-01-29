@@ -1,19 +1,11 @@
 <template>
   <div
-    class="grid border rounded-md dark:border-gray-600 overflow-hidden"
+    class="grid overflow-hidden rounded-md border dark:border-gray-600"
     :class="actions ? 'grid-cols-6' : 'grid-cols-5'"
   >
     <div
-      class="
-        p-4
-        flex
-        items-center
-        justify-center
-        h-full
-        border-r
-        dark:border-gray-600
-      "
-      :class="project.color"
+      class="flex h-full items-center justify-center border-r p-4 dark:border-gray-600"
+      :style="`background-color: ${project.color};`"
     >
       <img
         :src="project.logo"
@@ -21,25 +13,25 @@
         class="max-h-20 max-w-full"
       />
     </div>
-    <div class="p-4 flex items-center text-gray-900 dark:text-gray-100">
+    <div class="flex items-center p-4 text-gray-900 dark:text-gray-100">
       {{ project[`${$i18n.locale}_title`] }}
     </div>
-    <div class="col-span-2 p-4 flex items-center">
+    <div class="col-span-2 flex items-center p-4">
       <p class="text-gray-900 dark:text-gray-100">
         {{ project[`${$i18n.locale}_description`] }}
       </p>
     </div>
-    <div class="p-4 flex items-center text-gray-900 dark:text-gray-100">
+    <div class="flex items-center p-4 text-gray-900 dark:text-gray-100">
       {{ project.year }}
     </div>
-    <div v-if="actions" class="p-4 flex items-center justify-end space-x-2">
+    <div v-if="actions" class="flex items-center justify-end space-x-2 p-4">
       <Button
-        :icon="require('@/assets/icons/pencil.svg')"
+        :icon="require('@/assets/icons/pencil.svg?include')"
         button-type="secondary"
         :on-click="openPopup"
       />
       <Button
-        :icon="require('@/assets/icons/trash.svg')"
+        :icon="require('@/assets/icons/trash.svg?include')"
         button-type="destructive"
         :on-click="deleteProject"
       />

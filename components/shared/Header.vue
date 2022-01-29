@@ -1,11 +1,11 @@
 <template>
-  <header class="container flex items-center justify-between h-24 relative">
+  <header class="container relative flex h-24 items-center justify-between">
     <Button
       button-type="secondary"
       :icon="
         isMenuOpened
-          ? require('@/assets/icons/xmark.svg')
-          : require('@/assets/icons/menu.svg')
+          ? require('@/assets/icons/xmark.svg?include')
+          : require('@/assets/icons/menu.svg?include')
       "
       :text="$t('buttons.menu')"
       class="lg:hidden"
@@ -22,7 +22,9 @@
     />
     <div class="flex items-center">
       <LocaleSelect :locales="['ru', 'en']" class="hidden md:flex" />
-      <Button :text="$t('buttons.contactMe')" href="/message" />
+      <div @click="toggleMenu">
+        <Button :text="$t('buttons.contactMe')" href="/message" />
+      </div>
     </div>
   </header>
 </template>

@@ -8,7 +8,7 @@
       <Button :text="$t('buttons.contactMe')" href="/message" />
     </div>
     <ProjectsList :projects="$store.state.projects.projects.slice(0, 4)" />
-    <div class="flex justify-center mt-8">
+    <div class="mt-8 flex justify-center">
       <Button
         :text="$t('buttons.showAll')"
         button-type="secondary"

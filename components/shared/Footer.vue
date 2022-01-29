@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-indigo-600 dark:bg-gray-700 mt-16">
-    <div class="container py-10 flex flex-col items-center space-y-8">
+  <footer class="mt-16 bg-indigo-600 dark:bg-gray-700">
+    <div class="container flex flex-col items-center space-y-8 py-10">
       <Navigation
         :items="[
           { title: $t('pages.home'), href: '/' },
@@ -16,22 +16,22 @@
           {
             title: 'Telegram',
             href: 'https://t.me/exer7um',
-            icon: `${require('@/assets/social/telegram.svg')}`,
+            icon: `${require('@/assets/social/telegram.svg?include')}`,
           },
           {
             title: 'Twitter',
             href: 'https://twitter.com/exer7um',
-            icon: `${require('@/assets/social/twitter.svg')}`,
+            icon: `${require('@/assets/social/twitter.svg?include')}`,
           },
           {
             title: 'GitHub',
             href: 'https://github.com/exer7um',
-            icon: `${require('@/assets/social/github.svg')}`,
+            icon: `${require('@/assets/social/github.svg?include')}`,
           },
           {
             title: 'VK',
             href: 'https://vk.com/exer7um',
-            icon: `${require('@/assets/social/vk.svg')}`,
+            icon: `${require('@/assets/social/vk.svg?include')}`,
           },
         ]"
       />
@@ -39,20 +39,15 @@
         <img src="@/assets/social/nuxt.svg" alt="Built with Nuxt" class="h-5" />
       </a>
       <div
-        class="
-          flex
-          items-center
-          space-y-4
-          flex-col
-          md:space-y-0
-          md:flex-row
-          md:space-x-8
-        "
+        class="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-8"
       >
-        <span class="text-indigo-300 dark:text-gray-400 text-sm"
-          >© 2021 exer7um.github.io</span
+        <span class="text-sm text-indigo-300 dark:text-gray-400"
+          >© 2021-{{
+            new Date(Date.now()).getUTCFullYear()
+          }}
+          exer7um.github.io</span
         >
-        <span class="text-indigo-300 dark:text-gray-400 text-sm">
+        <span class="text-sm text-indigo-300 dark:text-gray-400">
           Made with ❤️ by
           <a
             href="https://exer7um.github.io"

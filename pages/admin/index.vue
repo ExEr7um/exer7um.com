@@ -1,17 +1,12 @@
 <template>
   <div class="container">
     <h2>Краткая сводка</h2>
-    <div class="border p-6 space-y-4 rounded-xl mt-4 dark:border-gray-600">
-      <div class="flex justify-between items-center">
+    <div class="mt-4 space-y-4 rounded-xl border p-6 dark:border-gray-600">
+      <div class="flex items-center justify-between">
         <h3>Последние сообщения</h3>
         <nuxt-link
           :to="localePath('/admin/messages')"
-          class="
-            text-indigo-600
-            dark:text-indigo-400
-            hover:text-indigo-800
-            dark:hover:text-indigo-300
-          "
+          class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
           >{{ $t('buttons.showAll') }} →</nuxt-link
         >
       </div>
@@ -21,17 +16,12 @@
         :message="message"
       />
     </div>
-    <div class="border p-6 space-y-4 rounded-xl mt-8 dark:border-gray-600">
-      <div class="flex justify-between items-center">
+    <div class="mt-8 space-y-4 rounded-xl border p-6 dark:border-gray-600">
+      <div class="flex items-center justify-between">
         <h3>Последние проекты</h3>
         <nuxt-link
           :to="localePath('/admin/projects')"
-          class="
-            text-indigo-600
-            dark:text-indigo-400
-            hover:text-indigo-800
-            dark:hover:text-indigo-300
-          "
+          class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
           >{{ $t('buttons.showAll') }} →</nuxt-link
         >
       </div>

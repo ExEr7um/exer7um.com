@@ -7,14 +7,13 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'exer7um.github.io',
-    htmlAttrs: {
-      lang: 'en',
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        name: 'google-site-verification',
+        content: 'YXzxEGAF3ahAAqmvvXPdeFxApY0wrxeFvTq2JXASDyE',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -53,6 +52,7 @@ export default {
     '@nuxtjs/axios',
     'nuxt-webfontloader',
     '@nuxtjs/i18n',
+    '@nuxtjs/robots',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -82,17 +82,25 @@ export default {
       {
         name: 'Русский',
         code: 'ru',
+        iso: 'ru-RU',
         file: 'ru.js',
       },
       {
         name: 'English',
         code: 'en',
+        iso: 'en-US',
         file: 'en.js',
       },
     ],
+    baseUrl: 'https://exer7um.github.io',
     lazy: true,
     langDir: 'assets/lang/',
     defaultLocale: 'ru',
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/admin',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

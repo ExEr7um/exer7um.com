@@ -1,10 +1,10 @@
 <template>
-  <div class="container flex items-center flex-col">
+  <div class="container flex flex-col items-center">
     <div class="w-full md:w-max">
       <h2>{{ $t('buttons.contactMe') }}</h2>
       <form
         id="message"
-        class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 w-full"
+        class="mt-8 grid w-full grid-cols-1 gap-4 md:grid-cols-2"
         @submit.prevent="send"
       >
         <div>
@@ -16,19 +16,7 @@
             v-model="message.name"
             type="text"
             :placeholder="$t('message.name')"
-            class="
-              w-full
-              bg-gray-100
-              border-transparent
-              rounded-md
-              focus:ring-indigo-600
-              focus:border-indigo-600
-              dark:bg-gray-700
-              dark:placeholder-gray-400
-              dark:focus:ring-indigo-500
-              dark:focus:border-indigo-500
-              dark:text-white
-            "
+            class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
@@ -41,19 +29,7 @@
             v-model="message.email"
             type="email"
             placeholder="you@example.com"
-            class="
-              w-full
-              bg-gray-100
-              border-transparent
-              rounded-md
-              focus:ring-indigo-600
-              focus:border-indigo-600
-              dark:bg-gray-700
-              dark:placeholder-gray-400
-              dark:focus:ring-indigo-500
-              dark:focus:border-indigo-500
-              dark:text-white
-            "
+            class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
@@ -66,43 +42,14 @@
             v-model="message.message"
             rows="5"
             :placeholder="$t('message.messagePlaceholder')"
-            class="
-              w-full
-              bg-gray-100
-              border-transparent
-              rounded-md
-              resize-none
-              focus:ring-indigo-600
-              focus:border-indigo-600
-              dark:bg-gray-700
-              dark:placeholder-gray-400
-              dark:focus:ring-indigo-500
-              dark:focus:border-indigo-500
-              dark:text-white
-            "
+            class="w-full resize-none rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
         <button
           type="submit"
           form="message"
-          class="
-            mt-4
-            flex
-            items-center
-            justify-center
-            border
-            rounded-md
-            py-2
-            px-4
-            w-max
-            border-transparent
-            text-white
-            bg-indigo-600
-            hover:bg-indigo-700
-            dark:bg-indigo-700
-            dark:hover:bg-indigo-600
-          "
+          class="mt-4 flex w-max items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-white hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600"
         >
           {{ $t('message.send') }}
         </button>

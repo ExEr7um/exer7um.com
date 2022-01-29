@@ -42,6 +42,6 @@ h4 {
 }
 
 p {
-  @apply text-gray-500 leading-loose dark:text-gray-400;
+  @apply leading-loose text-gray-500 dark:text-gray-400;
 }
 </style>

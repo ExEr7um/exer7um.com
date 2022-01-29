@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full">
+  <div class="flex w-full flex-col">
     <div class="space-y-4">
       <ProjectCell
         v-for="project in projects"

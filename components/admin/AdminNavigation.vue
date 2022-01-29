@@ -1,21 +1,10 @@
 <template>
-  <div class="flex flex-col space-y-3 mt-12">
+  <div class="mt-12 flex flex-col space-y-3">
     <nuxt-link
       v-for="item in items"
       :key="item.title"
       :to="localePath(item.href)"
-      class="
-        flex
-        items-center
-        justify-center
-        py-2
-        px-4
-        w-max
-        rounded-md
-        hover:text-gray-700
-        dark:text-white
-        dark:hover:text-gray-300
-      "
+      class="flex w-max items-center justify-center rounded-md py-2 px-4 hover:text-gray-700 dark:text-white dark:hover:text-gray-300"
       >{{ item.title }}</nuxt-link
     >
   </div>
@@ -34,6 +23,6 @@ export default {
 
 <style scoped>
 .nuxt-link-exact-active {
-  @apply bg-gray-100 font-medium cursor-default hover:text-black dark:bg-gray-700 dark:hover:text-gray-300;
+  @apply cursor-default bg-gray-100 font-medium hover:text-black dark:bg-gray-700 dark:hover:text-gray-300;
 }
 </style>

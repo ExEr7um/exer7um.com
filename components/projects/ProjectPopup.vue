@@ -79,11 +79,14 @@
                 id="color"
                 v-model="popupData.color"
                 type="text"
-                placeholder="Класс Tailwind"
+                placeholder="#HEX"
                 class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
                 required
               />
-              <div :class="popupData.color" class="w-16 rounded-md"></div>
+              <div
+                :style="`background-color: ${popupData.color};`"
+                class="w-16 rounded-md"
+              ></div>
             </div>
           </div>
           <div>

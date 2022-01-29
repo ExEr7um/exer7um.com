@@ -3,9 +3,8 @@
     class="flex flex-col overflow-hidden rounded-md border dark:border-gray-600"
   >
     <div
-      class="flex h-40 items-center justify-center border-b p-8 dark:border-gray-600"
-      style="min-height: 10rem"
-      :class="project.color"
+      class="flex h-40 min-h-[10rem] items-center justify-center border-b p-8 dark:border-gray-600"
+      :style="`background-color: ${project.color};`"
     >
       <img
         :src="project.logo"

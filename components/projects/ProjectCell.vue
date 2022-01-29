@@ -5,7 +5,7 @@
   >
     <div
       class="flex h-full items-center justify-center border-r p-4 dark:border-gray-600"
-      :class="project.color"
+      :style="`background-color: ${project.color};`"
     >
       <img
         :src="project.logo"

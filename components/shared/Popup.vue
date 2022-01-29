@@ -1,45 +1,12 @@
 <template>
   <div
-    class="
-      fixed
-      w-full
-      h-full
-      bg-opacity-30 bg-gray-500
-      dark:bg-gray-900
-      z-10
-      flex
-      items-center
-      justify-center
-      top-0
-      left-0
-      backdrop-filter backdrop-blur
-    "
+    class="fixed top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-gray-500 bg-opacity-30 backdrop-blur dark:bg-gray-900"
   >
     <div
-      class="
-        bg-white
-        p-6
-        rounded-xl
-        dark:bg-gray-700
-        flex
-        items-center
-        space-y-4
-        flex-col
-      "
+      class="flex flex-col items-center space-y-4 rounded-xl bg-white p-6 dark:bg-gray-700"
     >
       <div
-        class="
-          flex
-          items-center
-          justify-center
-          bg-green-100
-          w-12
-          h-12
-          rounded-full
-          text-green-700 text-xl
-          dark:bg-green-800
-          dark:text-green-200
-        "
+        class="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-xl text-green-700 dark:bg-green-800 dark:text-green-200"
       >
         ✓
       </div>

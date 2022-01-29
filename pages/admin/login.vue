@@ -2,7 +2,7 @@
   <div class="container">
     <form
       id="login"
-      class="flex items-center flex-col mt-16"
+      class="mt-16 flex flex-col items-center"
       @submit.prevent="login"
     >
       <h2 class="mb-8">{{ $t('auth.title') }}</h2>
@@ -16,18 +16,7 @@
             v-model="user.email"
             type="email"
             placeholder="exer7um@gmail.com"
-            class="
-              bg-gray-100
-              border-transparent
-              rounded-md
-              focus:ring-indigo-600
-              focus:border-indigo-600
-              dark:bg-gray-700
-              dark:placeholder-gray-400
-              dark:focus:ring-indigo-500
-              dark:focus:border-indigo-500
-              dark:text-white
-            "
+            class="rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
@@ -40,18 +29,7 @@
             v-model="user.password"
             type="password"
             :placeholder="$t('auth.passwordPlaceholder')"
-            class="
-              bg-gray-100
-              border-transparent
-              rounded-md
-              focus:ring-indigo-600
-              focus:border-indigo-600
-              dark:bg-gray-700
-              dark:placeholder-gray-400
-              dark:focus:ring-indigo-500
-              dark:focus:border-indigo-500
-              dark:text-white
-            "
+            class="rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
@@ -59,23 +37,7 @@
       <button
         type="submit"
         form="login"
-        class="
-          mt-8
-          flex
-          items-center
-          justify-center
-          border
-          rounded-md
-          py-2
-          px-4
-          w-max
-          border-transparent
-          text-white
-          bg-indigo-600
-          hover:bg-indigo-700
-          dark:bg-indigo-700
-          dark:hover:bg-indigo-600
-        "
+        class="mt-8 flex w-max items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-white hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600"
       >
         {{ $t('buttons.login') }}
       </button>

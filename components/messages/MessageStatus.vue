@@ -1,7 +1,7 @@
 <template>
   <select
     v-model="selectedStatus"
-    class="rounded-md py-1 px-2 border-none"
+    class="rounded-md border-none py-1 px-2"
     :class="{
       'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-400':
         selectedStatus === 'Не просмотрено',

@@ -1,5 +1,5 @@
 <template>
-  <header class="container flex items-center justify-between h-24 relative">
+  <header class="container relative flex h-24 items-center justify-between">
     <Button
       button-type="secondary"
       :icon="

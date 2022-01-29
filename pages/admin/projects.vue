@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="flex justify-between items-end">
+    <div class="flex items-end justify-between">
       <h2>Проекты</h2>
       <Button
         text="Новый"

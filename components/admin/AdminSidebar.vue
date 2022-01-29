@@ -1,15 +1,6 @@
 <template>
   <aside
-    class="
-      fixed
-      w-64
-      border-r
-      h-full
-      p-4
-      flex flex-col
-      justify-between
-      dark:border-gray-600
-    "
+    class="fixed flex h-full w-64 flex-col justify-between border-r p-4 dark:border-gray-600"
   >
     <div class="flex flex-col">
       <h2>Панель управления</h2>

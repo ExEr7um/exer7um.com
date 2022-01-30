@@ -1,4 +1,9 @@
 export default {
+  // Для тестирования в локальной сети
+  // server: {
+  //   port: 3000,
+  //   host: '0.0.0.0',
+  // },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -7,12 +12,19 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    title: 'exer7um.github.io',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'google-site-verification',
         content: 'YXzxEGAF3ahAAqmvvXPdeFxApY0wrxeFvTq2JXASDyE',
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Я фронтенд-разработчик из Москвы, пишу сайты на Nuxt, делаю дизайн в Sketch.',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

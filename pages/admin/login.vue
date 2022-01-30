@@ -37,7 +37,7 @@
       <button
         type="submit"
         form="login"
-        class="mt-8 flex w-max items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-white hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600"
+        class="mt-8 flex w-max items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 font-normal text-white hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600"
       >
         {{ $t('buttons.login') }}
       </button>

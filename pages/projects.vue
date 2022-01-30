@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ProjectsList :projects="$store.state.projects.projects" />
+    <ProjectsList :projects="$store.state.projects.projects" class="mt-4" />
   </div>
 </template>
 

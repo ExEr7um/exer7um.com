@@ -49,14 +49,21 @@
         <button
           type="submit"
           form="message"
-          class="mt-4 flex w-max items-center justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 font-normal text-white hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600"
+          class="mt-4 flex w-max items-center justify-center gap-x-2 rounded-md border border-transparent bg-indigo-600 py-2 px-4 font-normal text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50 disabled:grayscale dark:bg-indigo-700 dark:hover:bg-indigo-600"
         >
-          {{ $t('message.send') }}
+          <div
+            v-if="messageSendingStage === 'Sending'"
+            class="fill-current"
+            v-html="require('@/assets/icons/loading.svg?include')"
+          ></div>
+          <span v-if="messageSendingStage === 'Not sent'">{{
+            $t('message.send')
+          }}</span>
         </button>
       </form>
     </div>
     <Popup
-      v-if="isPopupOpened"
+      v-if="messageSendingStage === 'Sent'"
       :popup="{
         title: $t('message.popup.title'),
         message: $t('message.popup.message'),
@@ -75,7 +82,7 @@ export default {
         email: '',
         message: '',
       },
-      isPopupOpened: false,
+      messageSendingStage: 'Not sent',
     }
   },
   head() {
@@ -85,12 +92,13 @@ export default {
   },
   methods: {
     async send() {
+      this.messageSendingStage = 'Sending'
       const res = await this.$axios.$post(
         `${this.$axios.defaults.baseURL}/messages`,
         this.message
       )
       if (res) {
-        this.isPopupOpened = true
+        this.messageSendingStage = 'Sent'
       }
     },
   },

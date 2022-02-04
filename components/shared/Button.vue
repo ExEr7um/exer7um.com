@@ -2,13 +2,13 @@
   <component
     :is="type"
     :to="localePath(href)"
-    class="flex w-max items-center justify-center space-x-2 rounded-md border py-2 px-4"
-    :class="buttonClass"
+    class="flex w-max items-center justify-center gap-x-2 rounded-md border py-2 px-4"
+    :class="[buttonClass, { 'aspect-square px-3': !text }]"
     @click="onClick"
   >
     <div
       v-if="icon"
-      class="flex h-full max-h-4 w-full items-center justify-center fill-current"
+      class="flex items-center justify-center fill-current"
       :class="{
         'text-white': buttonType === 'primary',
         'text-black dark:text-white': buttonType === 'secondary',

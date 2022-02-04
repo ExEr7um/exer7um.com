@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-gray-500 bg-opacity-30 backdrop-blur dark:bg-gray-900"
+    class="fixed top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-gray-500/30 backdrop-blur dark:bg-gray-900/30"
   >
     <div class="rounded-xl bg-white p-12 dark:bg-gray-700">
       <div class="mb-5 flex items-center justify-between">

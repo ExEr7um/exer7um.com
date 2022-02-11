@@ -9,9 +9,9 @@ updates:
   target-branch: "dev"
   open-pull-requests-limit: 10
   reviewers:
-    - vasily kuzin
+    - ExEr7um
   assignees:
-    - vasily kuzin
+    - ExEr7um
   commit-message:
     prefix: fix
     prefix-development: chore
@@ -25,9 +25,9 @@ updates:
   target-branch: "dev"
   open-pull-requests-limit: 10
   reviewers:
-    - vasily kuzin
+    - ExEr7um
   assignees:
-    - vasily kuzin
+    - ExEr7um
   commit-message:
     prefix: fix
     prefix-development: chore

@@ -22,9 +22,13 @@
         <a
           :href="project.link"
           target="_blank"
-          class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
-          >{{ $t('projects.card.view') }} →</a
-        >
+          class="group inline-flex items-center text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
+          >{{ $t('projects.card.view') }}
+          <div
+            class="ml-1 fill-current text-indigo-600 group-hover:text-indigo-800 dark:text-indigo-400 dark:group-hover:text-indigo-300"
+            v-html="require('~/assets/icons/arrow-right.svg?include')"
+          ></div>
+        </a>
       </div>
     </div>
   </div>

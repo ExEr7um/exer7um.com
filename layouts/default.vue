@@ -39,7 +39,7 @@ export default {
 }
 
 body {
-  @apply dark:bg-gray-800;
+  @apply dark:bg-zinc-900;
 }
 
 h1 {
@@ -59,6 +59,6 @@ h4 {
 }
 
 p {
-  @apply leading-loose text-gray-500 dark:text-gray-400;
+  @apply leading-loose text-zinc-500 dark:text-zinc-400;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div
-    class="grid overflow-hidden rounded-md border dark:border-gray-600"
+    class="grid overflow-hidden rounded-md border dark:border-zinc-600"
     :class="actions ? 'grid-cols-6' : 'grid-cols-5'"
   >
     <div
-      class="flex h-full items-center justify-center border-r p-4 dark:border-gray-600"
+      class="flex h-full items-center justify-center border-r p-4 dark:border-zinc-600"
       :style="`background-color: ${project.color};`"
     >
       <img
@@ -13,15 +13,15 @@
         class="max-h-20 max-w-full"
       />
     </div>
-    <div class="flex items-center p-4 text-gray-900 dark:text-gray-100">
+    <div class="flex items-center p-4 text-zinc-900 dark:text-zinc-100">
       {{ project[`${$i18n.locale}_title`] }}
     </div>
     <div class="col-span-2 flex items-center p-4">
-      <p class="text-gray-900 dark:text-gray-100">
+      <p class="text-zinc-900 dark:text-zinc-100">
         {{ project[`${$i18n.locale}_description`] }}
       </p>
     </div>
-    <div class="flex items-center p-4 text-gray-900 dark:text-gray-100">
+    <div class="flex items-center p-4 text-zinc-900 dark:text-zinc-100">
       {{ project.year }}
     </div>
     <div v-if="actions" class="flex items-center justify-end space-x-2 p-4">

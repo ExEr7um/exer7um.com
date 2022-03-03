@@ -28,7 +28,7 @@
       <a
         href="https://github.com/ExEr7um/exer7um.github.io"
         target="_blank"
-        class="flex items-center justify-center rounded-md border py-2 px-4 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+        class="flex items-center justify-center rounded-md border py-2 px-4 text-zinc-700 hover:bg-zinc-50 dark:border-transparent dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
       >
         <div
           class="mr-3 fill-current text-black dark:text-white"

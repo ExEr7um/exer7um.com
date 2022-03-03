@@ -5,7 +5,7 @@
       :key="icon.title"
       target="_blank"
       :href="icon.href"
-      class="flex items-center justify-center rounded-md bg-indigo-500 p-3 hover:bg-indigo-400 dark:bg-gray-600 dark:hover:bg-gray-500"
+      class="flex items-center justify-center rounded-md bg-indigo-500 p-3 hover:bg-indigo-400 dark:bg-zinc-700 dark:hover:bg-zinc-600"
     >
       <div
         :alt="icon.title"

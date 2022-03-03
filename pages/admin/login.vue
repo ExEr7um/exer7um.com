@@ -16,7 +16,7 @@
             v-model="user.email"
             type="email"
             placeholder="exer7um@gmail.com"
-            class="rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+            class="rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-800 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
@@ -29,7 +29,7 @@
             v-model="user.password"
             type="password"
             :placeholder="$t('auth.passwordPlaceholder')"
-            class="rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+            class="rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-800 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>

@@ -25,6 +25,6 @@ export default {
 
 <style lang="css">
 body {
-  @apply dark:bg-gray-800;
+  @apply dark:bg-zinc-900;
 }
 </style>

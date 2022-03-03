@@ -3,7 +3,7 @@
     v-model="selectedStatus"
     class="rounded-md border-none py-1 px-2"
     :class="{
-      'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-400':
+      'bg-zinc-100 text-zinc-700 dark:bg-zinc-700 dark:text-zinc-400':
         selectedStatus === 'Не просмотрено',
       'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-400':
         selectedStatus === 'Просмотрено',

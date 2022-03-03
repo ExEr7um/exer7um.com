@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container absolute top-full left-0 z-20 flex w-full flex-col items-start rounded-xl bg-white pt-2 pb-8 dark:border-gray-600 dark:bg-gray-800 lg:hidden"
+    class="container absolute top-full left-0 z-20 flex w-full flex-col items-start rounded-xl bg-white pt-2 pb-8 dark:border-zinc-600 dark:bg-zinc-800 lg:hidden"
   >
     <h3 class="mb-6">{{ $t('mobileMenu.navigation') }}</h3>
     <Navigation

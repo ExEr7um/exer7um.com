@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-16 bg-indigo-600 dark:bg-gray-700">
+  <footer class="mt-16 bg-indigo-600 dark:bg-zinc-800">
     <div class="container flex flex-col items-center space-y-8 py-10">
       <Navigation
         :items="[
@@ -41,17 +41,17 @@
       <div
         class="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-8"
       >
-        <span class="text-sm text-indigo-300 dark:text-gray-400"
+        <span class="text-sm text-indigo-300 dark:text-zinc-400"
           >© 2021-{{
             new Date(Date.now()).getUTCFullYear()
           }}
           exer7um.github.io</span
         >
-        <span class="text-sm text-indigo-300 dark:text-gray-400">
+        <span class="text-sm text-indigo-300 dark:text-zinc-400">
           Made with ❤️ by
           <a
             href="https://exer7um.github.io"
-            class="text-white hover:text-gray-300"
+            class="text-white hover:text-zinc-300"
             target="_blank"
             >exer7um</a
           >

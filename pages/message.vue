@@ -16,7 +16,7 @@
             v-model="message.name"
             type="text"
             :placeholder="$t('message.name')"
-            class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+            class="w-full rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-800 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
@@ -29,7 +29,7 @@
             v-model="message.email"
             type="email"
             placeholder="you@example.com"
-            class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+            class="w-full rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-800 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
@@ -42,14 +42,14 @@
             v-model="message.message"
             rows="5"
             :placeholder="$t('message.messagePlaceholder')"
-            class="w-full resize-none rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+            class="w-full resize-none rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-800 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
             required
           />
         </div>
         <button
           type="submit"
           form="message"
-          class="mt-4 flex w-max items-center justify-center gap-x-2 rounded-md border border-transparent bg-indigo-600 py-2 px-4 font-normal text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50 disabled:grayscale dark:bg-indigo-700 dark:hover:bg-indigo-600"
+          class="disabled:zincscale mt-4 flex w-max items-center justify-center gap-x-2 rounded-md border border-transparent bg-indigo-600 py-2 px-4 font-normal text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-indigo-700 dark:hover:bg-indigo-600"
         >
           <div
             v-if="messageSendingStage === 'Sending'"

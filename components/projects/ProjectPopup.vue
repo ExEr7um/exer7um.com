@@ -1,8 +1,8 @@
 <template>
   <div
-    class="fixed top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-gray-500/30 backdrop-blur dark:bg-gray-900/30"
+    class="fixed top-0 left-0 z-10 flex h-full w-full items-center justify-center bg-zinc-500/30 backdrop-blur dark:bg-zinc-900/30"
   >
-    <div class="rounded-xl bg-white p-12 dark:bg-gray-700">
+    <div class="rounded-xl bg-white p-12 dark:bg-zinc-700">
       <div class="mb-5 flex items-center justify-between">
         <h2>{{ popup.title }}</h2>
         <Button
@@ -20,7 +20,7 @@
               v-model="popupData.ru_title"
               type="text"
               placeholder="Русское название"
-              class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+              class="w-full rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
               required
             />
           </div>
@@ -31,7 +31,7 @@
               v-model="popupData.en_title"
               type="text"
               placeholder="Английское название"
-              class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+              class="w-full rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
               required
             />
           </div>
@@ -44,7 +44,7 @@
               v-model="popupData.ru_description"
               rows="3"
               placeholder="Русское описание"
-              class="w-full resize-none rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+              class="w-full resize-none rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
               required
             />
           </div>
@@ -57,7 +57,7 @@
               v-model="popupData.en_description"
               rows="3"
               placeholder="Английское описание"
-              class="w-full resize-none rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+              class="w-full resize-none rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
               required
             />
           </div>
@@ -68,7 +68,7 @@
               v-model="popupData.link"
               type="text"
               placeholder="Ссылка на сайт"
-              class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+              class="w-full rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
               required
             />
           </div>
@@ -80,7 +80,7 @@
                 v-model="popupData.color"
                 type="text"
                 placeholder="#HEX"
-                class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+                class="w-full rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
                 required
               />
               <div
@@ -96,7 +96,7 @@
               v-model="popupData.logo"
               type="text"
               placeholder="Ссылка на логотип"
-              class="w-full rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+              class="w-full rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
               required
             />
           </div>
@@ -107,7 +107,7 @@
               v-model="popupData.year"
               type="text"
               placeholder="Год"
-              class="w-16 rounded-md border-transparent bg-gray-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
+              class="w-16 rounded-md border-transparent bg-zinc-100 focus:border-indigo-600 focus:ring-indigo-600 dark:bg-zinc-600 dark:text-white dark:placeholder-zinc-400 dark:focus:border-indigo-500 dark:focus:ring-indigo-500"
               required
             />
           </div>

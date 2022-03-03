@@ -22,9 +22,3 @@ export default {
   },
 }
 </script>
-
-<style lang="css">
-body {
-  @apply dark:bg-gray-800;
-}
-</style>

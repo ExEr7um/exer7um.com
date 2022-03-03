@@ -1,14 +1,14 @@
 <template>
   <div
-    class="grid rounded-md border dark:border-gray-600"
+    class="grid rounded-md border dark:border-zinc-600"
     :class="actions ? 'grid-cols-9' : 'grid-cols-8'"
   >
     <div class="col-span-2 flex flex-col p-4">
-      <div class="flex items-center text-gray-900 dark:text-gray-100">
+      <div class="flex items-center text-zinc-900 dark:text-zinc-100">
         {{ message.name }}
       </div>
       <a
-        class="flex items-center text-gray-500 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400"
+        class="flex items-center text-zinc-500 hover:text-indigo-600 dark:text-zinc-400 dark:hover:text-indigo-400"
         :href="`mailto:${message.email}?subject=${new Date(
           message.createdAt
         ).toLocaleDateString()}`"
@@ -17,12 +17,12 @@
       </a>
     </div>
     <div class="col-span-3 flex items-center p-4">
-      <p class="text-gray-900 dark:text-gray-100">{{ message.message }}</p>
+      <p class="text-zinc-900 dark:text-zinc-100">{{ message.message }}</p>
     </div>
     <div class="col-span-2 flex items-center p-4">
       <MessageStatus :status="message.status" @change-status="updateMessage" />
     </div>
-    <div class="flex items-center p-4 text-gray-900 dark:text-gray-100">
+    <div class="flex items-center p-4 text-zinc-900 dark:text-zinc-100">
       {{ new Date(message.createdAt).toLocaleDateString() }}
     </div>
     <div v-if="actions" class="flex items-center justify-end p-4">

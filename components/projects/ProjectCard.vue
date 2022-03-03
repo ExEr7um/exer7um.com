@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex flex-col overflow-hidden rounded-md border dark:border-gray-600"
+    class="flex flex-col overflow-hidden rounded-md border dark:border-0 dark:bg-zinc-800"
   >
     <div
-      class="flex h-40 min-h-[10rem] items-center justify-center border-b p-8 dark:border-gray-600"
+      class="flex h-40 min-h-[10rem] items-center justify-center border-b p-8 dark:border-0"
       :style="`background-color: ${project.color};`"
     >
       <img
@@ -18,7 +18,7 @@
         <p class="mt-3">{{ project[`${$i18n.locale}_description`] }}</p>
       </div>
       <div class="mt-6 flex items-center justify-between">
-        <span class="text-gray-400">{{ project.year }}</span>
+        <span class="text-zinc-400">{{ project.year }}</span>
         <a
           :href="project.link"
           target="_blank"

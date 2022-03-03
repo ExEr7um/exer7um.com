@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2>Краткая сводка</h2>
-    <div class="mt-4 space-y-4 rounded-xl border p-6 dark:border-gray-600">
+    <div class="mt-4 space-y-4 rounded-xl border p-6 dark:border-zinc-600">
       <div class="flex items-center justify-between">
         <h3>Последние сообщения</h3>
         <nuxt-link
@@ -16,7 +16,7 @@
         :message="message"
       />
     </div>
-    <div class="mt-8 space-y-4 rounded-xl border p-6 dark:border-gray-600">
+    <div class="mt-8 space-y-4 rounded-xl border p-6 dark:border-zinc-600">
       <div class="flex items-center justify-between">
         <h3>Последние проекты</h3>
         <nuxt-link

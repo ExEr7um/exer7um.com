@@ -56,9 +56,9 @@ export default {
       return {
         'border-transparent text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600':
           this.buttonType === 'primary',
-        'text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700':
+        'text-zinc-700 hover:bg-zinc-50 dark:text-zinc-300 dark:bg-zinc-800 dark:border-transparent dark:hover:bg-zinc-700':
           this.buttonType === 'secondary',
-        'text-red-700 hover:bg-gray-50 dark:text-red-300 dark:border-gray-600 dark:hover:bg-gray-700':
+        'text-red-700 hover:bg-zinc-50 dark:text-red-300 dark:border-zinc-600 dark:hover:bg-zinc-700':
           this.buttonType === 'destructive',
       }
     },

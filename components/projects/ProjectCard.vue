@@ -7,15 +7,17 @@
       :style="`background-color: ${project.color};`"
     >
       <img
-        :src="project.logo"
-        :alt="project[`${$i18n.locale}_title`]"
+        :src="`${$strapi.options.url.slice(0, -4)}${
+          project.logo.data.attributes.url
+        }`"
+        :alt="project.title"
         class="max-h-full max-w-full select-none"
       />
     </div>
     <div class="flex h-full flex-col justify-between p-5">
       <div>
-        <h4>{{ project[`${$i18n.locale}_title`] }}</h4>
-        <p class="mt-3">{{ project[`${$i18n.locale}_description`] }}</p>
+        <h4>{{ project.title }}</h4>
+        <p class="mt-3">{{ project.description }}</p>
       </div>
       <div class="mt-6 flex items-center justify-between">
         <span class="text-zinc-400">{{ project.year }}</span>

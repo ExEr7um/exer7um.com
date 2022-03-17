@@ -10,8 +10,8 @@
     <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
       <ProjectCard
         v-for="project in projects"
-        :key="project._id"
-        :project="project"
+        :key="project.id"
+        :project="project.attributes"
       />
     </div>
   </div>

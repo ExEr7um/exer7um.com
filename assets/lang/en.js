@@ -63,6 +63,7 @@ export default {
     send: 'Send',
     popup: {
       title: 'Message sent',
+      titleError: 'Error',
       message:
         'Your message has been sent. I will answer you as soon as possible.',
     },

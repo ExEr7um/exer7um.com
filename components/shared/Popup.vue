@@ -6,9 +6,15 @@
       class="flex flex-col items-center gap-y-6 rounded-xl bg-white px-6 py-12 dark:bg-zinc-700"
     >
       <div
-        class="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-xl text-green-700 dark:bg-green-800 dark:text-green-200"
+        class="flex h-12 w-12 cursor-default select-none items-center justify-center rounded-full text-xl"
+        :class="
+          popup.error
+            ? 'bg-red-100 text-red-700 dark:bg-red-800 dark:text-red-200'
+            : 'bg-green-100 text-green-700 dark:bg-green-800 dark:text-green-200'
+        "
       >
-        ✓
+        <span v-if="popup.error">✗</span>
+        <span v-else>✓</span>
       </div>
       <h3>{{ popup.title }}</h3>
       <p class="max-w-xs text-center">{{ popup.message }}</p>

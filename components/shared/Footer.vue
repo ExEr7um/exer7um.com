@@ -6,7 +6,6 @@
           { title: $t('pages.home'), href: '/' },
           { title: $t('pages.projects'), href: '/projects' },
           { title: $t('pages.about'), href: '/about' },
-          { title: $t('pages.controlPanel'), href: '/admin' },
         ]"
         :is-white="true"
         class="flex-wrap justify-around"

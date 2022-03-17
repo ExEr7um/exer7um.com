@@ -36,17 +36,11 @@ export default {
   css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/i18n.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: [
-      '~/components',
-      '~/components/shared',
-      '~/components/admin',
-      '~/components/projects',
-      '~/components/messages',
-    ],
+    dirs: ['~/components', '~/components/shared', '~/components/projects'],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -63,6 +57,7 @@ export default {
     'nuxt-webfontloader',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
+    '@nuxtjs/strapi',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -111,6 +106,10 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: '/admin',
+  },
+
+  strapi: {
+    url: 'http://localhost:1337/api',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

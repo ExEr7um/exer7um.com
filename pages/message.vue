@@ -65,9 +65,12 @@
     <Popup
       v-if="messageSendingStage === 'Sent'"
       :popup="{
-        title: $t('message.popup.title'),
-        message: $t('message.popup.message'),
+        title: error
+          ? $t('message.popup.titleError')
+          : $t('message.popup.title'),
+        message: error ? errorText : $t('message.popup.message'),
         button: $t('buttons.return'),
+        error,
       }"
     />
   </div>
@@ -83,6 +86,8 @@ export default {
         message: '',
       },
       messageSendingStage: 'Not sent',
+      error: false,
+      errorText: '',
     }
   },
   head() {
@@ -93,11 +98,16 @@ export default {
   methods: {
     async send() {
       this.messageSendingStage = 'Sending'
-      const res = await this.$axios.$post(
-        `${this.$axios.defaults.baseURL}/messages`,
-        this.message
-      )
-      if (res) {
+      try {
+        const res = await this.$strapi.create('messages', {
+          data: this.message,
+        })
+        if (res) {
+          this.messageSendingStage = 'Sent'
+        }
+      } catch (error) {
+        this.error = true
+        this.errorText = error.response.data.error.message
         this.messageSendingStage = 'Sent'
       }
     },

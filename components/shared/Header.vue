@@ -21,7 +21,7 @@
       class="hidden lg:block"
     />
     <div class="flex items-center">
-      <LocaleSelect :locales="['ru', 'en']" class="hidden md:flex" />
+      <LocaleSelect class="hidden md:flex" />
       <div @click="isMenuOpened = false">
         <Button :text="$t('buttons.contactMe')" href="/message" />
       </div>

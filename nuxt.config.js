@@ -52,20 +52,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     'nuxt-webfontloader',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
     '@nuxtjs/strapi',
     '@nuxtjs/sitemap',
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    baseURL: 'https://exer7um.herokuapp.com',
-    https: true,
-  },
 
   optimizedImages: {
     optimizeImages: true,
@@ -110,7 +102,7 @@ export default {
   },
 
   strapi: {
-    url: 'http://localhost:1337/api',
+    url: 'https://exer7um.herokuapp.com/api',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

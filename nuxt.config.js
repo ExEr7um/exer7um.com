@@ -105,6 +105,10 @@ export default {
     url: 'https://exer7um.herokuapp.com/api',
   },
 
+  sitemap: {
+    hostname: 'https://exer7um.github.io',
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {

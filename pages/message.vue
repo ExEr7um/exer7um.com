@@ -63,7 +63,7 @@
       </form>
     </div>
     <Popup
-      v-if="messageSendingStage === 'Sent'"
+      :is-opened="messageSendingStage === 'Sent'"
       :popup="{
         title: error
           ? $t('message.popup.titleError')

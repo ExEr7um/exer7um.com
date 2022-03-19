@@ -7,9 +7,7 @@
       :style="`background-color: ${project.color};`"
     >
       <img
-        :src="`${$strapi.options.url.slice(0, -4)}${
-          project.logo.data.attributes.url
-        }`"
+        :src="project.logo.data.attributes.url"
         :alt="project.title"
         class="max-h-full max-w-full select-none"
       />

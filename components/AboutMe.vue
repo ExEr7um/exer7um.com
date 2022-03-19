@@ -24,7 +24,7 @@
     <p class="mt-4 max-w-xl">
       {{ $t('about.paragraph_3') }}
     </p>
-    <div class="mt-8 flex space-x-4">
+    <div class="mt-8 flex gap-x-4">
       <a
         href="https://github.com/ExEr7um/exer7um.github.io"
         target="_blank"

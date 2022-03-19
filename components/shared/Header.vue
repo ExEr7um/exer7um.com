@@ -18,10 +18,10 @@
         { title: $t('pages.projects'), href: '/projects' },
         { title: $t('pages.about'), href: '/about' },
       ]"
-      class="hidden lg:block"
+      class="hidden lg:flex"
     />
     <div class="flex items-center">
-      <LocaleSelect :locales="['ru', 'en']" class="hidden md:flex" />
+      <LocaleSelect class="hidden md:flex" />
       <div @click="isMenuOpened = false">
         <Button :text="$t('buttons.contactMe')" href="/message" />
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex space-x-4">
+  <div class="flex gap-x-4">
     <a
       v-for="icon in icons"
       :key="icon.title"

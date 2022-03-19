@@ -36,17 +36,11 @@ export default {
   css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/i18n.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: [
-      '~/components',
-      '~/components/shared',
-      '~/components/admin',
-      '~/components/projects',
-      '~/components/messages',
-    ],
+    dirs: ['~/components', '~/components/shared', '~/components/projects'],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -58,18 +52,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     'nuxt-webfontloader',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
+    '@nuxtjs/strapi',
+    '@nuxtjs/sitemap',
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    baseURL: 'https://exer7um.herokuapp.com',
-    https: true,
-  },
 
   optimizedImages: {
     optimizeImages: true,
@@ -111,6 +99,14 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: '/admin',
+  },
+
+  strapi: {
+    url: 'https://exer7um.herokuapp.com/api',
+  },
+
+  sitemap: {
+    hostname: 'https://exer7um.github.io',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

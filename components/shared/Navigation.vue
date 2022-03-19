@@ -1,7 +1,7 @@
 <template>
   <nav
     class="flex"
-    :class="isVertical ? 'flex-col space-x-0 space-y-4' : 'md:space-x-8'"
+    :class="isVertical ? 'flex-col gap-x-0 gap-y-4' : 'md:gap-x-8'"
   >
     <nuxt-link
       v-for="item in items"

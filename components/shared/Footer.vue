@@ -1,6 +1,6 @@
 <template>
   <footer class="mt-16 bg-indigo-600 dark:bg-zinc-800">
-    <div class="container flex flex-col items-center space-y-8 py-10">
+    <div class="container flex flex-col items-center gap-y-8 py-10">
       <Navigation
         :items="[
           { title: $t('pages.home'), href: '/' },
@@ -38,7 +38,7 @@
         <img src="@/assets/social/nuxt.svg" alt="Built with Nuxt" class="h-5" />
       </a>
       <div
-        class="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-8"
+        class="flex flex-col items-center gap-y-4 md:flex-row md:gap-x-8 md:gap-y-0"
       >
         <span class="text-sm text-indigo-300 dark:text-zinc-400"
           >© 2021-{{

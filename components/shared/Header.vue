@@ -18,7 +18,7 @@
         { title: $t('pages.projects'), href: '/projects' },
         { title: $t('pages.about'), href: '/about' },
       ]"
-      class="hidden lg:block"
+      class="hidden lg:flex"
     />
     <div class="flex items-center">
       <LocaleSelect class="hidden md:flex" />

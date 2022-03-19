@@ -74,7 +74,7 @@
           </div>
           <div>
             <label for="color"><h4 class="mb-1">Цвет</h4></label>
-            <div class="flex space-x-4">
+            <div class="flex gap-x-4">
               <input
                 id="color"
                 v-model="popupData.color"

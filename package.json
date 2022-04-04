@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^7.2.0",
+    "@nuxtjs/i18n": "^7.2.1",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/strapi": "^0.3.6",

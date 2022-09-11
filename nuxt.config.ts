@@ -6,5 +6,14 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
   },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Inter: [400, 500, 700],
+    },
+    subsets: "cyrillic",
+  },
+  tailwindcss: {
+    viewer: false,
+  },
 })

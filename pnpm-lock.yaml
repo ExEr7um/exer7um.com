@@ -1,10 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@nuxtjs/google-fonts': 3.0.0-0
   '@nuxtjs/tailwindcss': ^5.3.3
   nuxt: 3.0.0-rc.9
 
 devDependencies:
+  '@nuxtjs/google-fonts': 3.0.0-0_fur7awe7sddig5uusmg32radwu
   '@nuxtjs/tailwindcss': 5.3.3_fur7awe7sddig5uusmg32radwu
   nuxt: 3.0.0-rc.9_fur7awe7sddig5uusmg32radwu
 
@@ -666,6 +668,20 @@ packages:
       - typescript
       - vls
       - vti
+      - webpack
+    dev: true
+
+  /@nuxtjs/google-fonts/3.0.0-0_fur7awe7sddig5uusmg32radwu:
+    resolution: {integrity: sha512-ZVq2Yqgmi/6duUQig1Zme8s/CbTkTT1jA1o4f+Bc9su/8jZMnIBz0VUw5TSHCupZurhOi3aUYNEfYt8VFjljfg==}
+    dependencies:
+      '@nuxt/kit': 3.0.0-rc.9_fur7awe7sddig5uusmg32radwu
+      google-fonts-helper: 3.1.0
+      pathe: 0.3.7
+    transitivePeerDependencies:
+      - esbuild
+      - rollup
+      - supports-color
+      - vite
       - webpack
     dev: true
 
@@ -2890,6 +2906,16 @@ packages:
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 4.0.0
+    dev: true
+
+  /google-fonts-helper/3.1.0:
+    resolution: {integrity: sha512-ePLjDSRnk75R64szIiBUwJuW+emHqyshe8dWZcI7xIVBiy75rNdd9lzh4iskZw6DoMDgZ+jj2R4aTyLOVBim8A==}
+    dependencies:
+      deepmerge: 4.2.2
+      fs-extra: 10.1.0
+      hookable: 5.3.0
+      ohmyfetch: 0.4.18
+      ufo: 0.8.5
     dev: true
 
   /graceful-fs/4.2.10:

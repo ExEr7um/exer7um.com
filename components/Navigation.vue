@@ -60,6 +60,5 @@ function navigateAndEmit(
         {{ t(link.title) }}
       </a>
     </NuxtLink>
-    <LocaleSwitch />
   </nav>
 </template>

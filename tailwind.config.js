@@ -1,3 +1,4 @@
+// eslint-disable-next-line tsdoc/syntax
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -18,5 +19,4 @@ module.exports = {
       sans: ["Inter", "ui-sans-serif", "system-ui"],
     },
   },
-  plugins: [],
 }

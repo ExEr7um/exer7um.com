@@ -3,9 +3,8 @@
   "version": "2.0.0-WIP",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "build": "nuxt build",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

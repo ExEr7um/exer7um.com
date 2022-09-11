@@ -6,12 +6,16 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "preview": "nuxt preview",
+    "prettier": "prettier --write *",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "3.0.0-0",
     "@nuxtjs/tailwindcss": "^5.3.3",
-    "nuxt": "3.0.0-rc.9"
+    "nuxt": "3.0.0-rc.9",
+    "prettier": "^2.7.1",
+    "prettier-plugin-sort-json": "^0.0.3",
+    "prettier-plugin-tailwindcss": "^0.1.13"
   },
   "dependencies": {
     "@nuxtjs/i18n": "8.0.0-alpha.1"

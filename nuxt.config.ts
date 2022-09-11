@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxtjs/i18n"],
   googleFonts: {
     families: {
       Inter: [400, 500, 700],
@@ -15,5 +15,23 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     viewer: false,
+  },
+  i18n: {
+    langDir: "assets/lang/",
+    defaultLocale: "ru",
+    locales: [
+      {
+        name: "Русский",
+        code: "ru",
+        iso: "ru-RU",
+        file: "ru.json",
+      },
+      {
+        name: "English",
+        code: "en",
+        iso: "en-US",
+        file: "en.json",
+      },
+    ],
   },
 })

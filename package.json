@@ -12,5 +12,8 @@
     "@nuxtjs/google-fonts": "3.0.0-0",
     "@nuxtjs/tailwindcss": "^5.3.3",
     "nuxt": "3.0.0-rc.9"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "8.0.0-alpha.1"
   }
 }

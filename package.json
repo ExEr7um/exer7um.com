@@ -1,0 +1,19 @@
+{
+  "name": "exer7um.github.io",
+  "version": "2.0.0-WIP",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "3.0.0-0",
+    "@nuxtjs/tailwindcss": "^5.3.3",
+    "nuxt": "3.0.0-rc.9"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "8.0.0-alpha.1"
+  }
+}

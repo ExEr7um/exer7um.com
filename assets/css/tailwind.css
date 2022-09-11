@@ -4,23 +4,23 @@
 
 @layer base {
   body {
-    @apply dark:bg-zinc-900;
+    @apply dark:bg-zinc-900 dark:text-white;
   }
 
   h1 {
-    @apply text-4xl font-medium dark:text-white;
+    @apply text-4xl font-medium;
   }
 
   h2 {
-    @apply text-2xl font-medium dark:text-white;
+    @apply text-2xl font-medium;
   }
 
   h3 {
-    @apply text-xl font-medium dark:text-white;
+    @apply text-xl font-medium;
   }
 
   h4 {
-    @apply text-lg font-medium dark:text-white;
+    @apply text-lg font-medium;
   }
 
   p {

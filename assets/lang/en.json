@@ -1,4 +1,7 @@
 {
+  "header": {
+    "contactMe": "Contact me 👋🏻"
+  },
   "pages": {
     "home": "Home"
   }

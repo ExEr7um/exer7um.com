@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply dark:bg-zinc-900 dark:text-white;
+    @apply text-neutral-900 dark:bg-neutral-900 dark:text-white;
   }
 
   h1 {
@@ -24,6 +24,6 @@
   }
 
   p {
-    @apply leading-loose text-zinc-500 dark:text-zinc-400;
+    @apply leading-loose text-neutral-500 dark:text-neutral-400;
   }
 }

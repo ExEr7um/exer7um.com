@@ -25,13 +25,15 @@ export default defineNuxtConfig({
         name: "English",
       },
     ],
+    vueI18n: {
+      legacy: false,
+    },
   },
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxtjs/i18n"],
   tailwindcss: {
     viewer: false,
   },
   typescript: {
-    shim: false,
     strict: true,
   },
 })

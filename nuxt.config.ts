@@ -6,4 +6,5 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
   },
+  modules: ["@nuxtjs/tailwindcss"],
 })

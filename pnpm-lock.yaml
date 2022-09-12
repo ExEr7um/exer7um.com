@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/vue': ^2.0.10
   '@nuxtjs/eslint-config-typescript': ^11.0.0
   '@nuxtjs/google-fonts': 3.0.0-0
   '@nuxtjs/i18n': 8.0.0-alpha.1
@@ -26,6 +27,7 @@ dependencies:
   '@nuxtjs/i18n': 8.0.0-alpha.1_hmciedqicqptbymf3r7sxedk6q
 
 devDependencies:
+  '@heroicons/vue': 2.0.10_vue@3.2.39
   '@nuxtjs/eslint-config-typescript': 11.0.0_itqs5654cmlnjraw6gjzqacppi
   '@nuxtjs/google-fonts': 3.0.0-0_fur7awe7sddig5uusmg32radwu
   '@nuxtjs/tailwindcss': 5.3.3_fur7awe7sddig5uusmg32radwu
@@ -380,6 +382,14 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@heroicons/vue/2.0.10_vue@3.2.39:
+    resolution: {integrity: sha512-K32WvSqsuWQrxqAAGCaTELW6VCOgg7OeVP+VBwCMbyeflnguJlCfHNlJ+0z4aPpgJCWB2RESRy3x59t+2byKSg==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.2.39
     dev: true
 
   /@humanwhocodes/config-array/0.10.4:

@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@heroicons/vue": "^2.0.10",
     "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "@nuxtjs/google-fonts": "3.0.0-0",
     "@nuxtjs/tailwindcss": "^5.3.3",

@@ -41,3 +41,23 @@
     @apply text-neutral-700 hover:bg-neutral-50 dark:border-transparent dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700;
   }
 }
+
+.v-enter-active,
+.v-leave-active {
+  @apply transition-opacity;
+}
+
+.v-enter-from,
+.v-leave-to {
+  @apply opacity-0;
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  @apply transition-all;
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  @apply -translate-y-full opacity-0;
+}

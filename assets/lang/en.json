@@ -1,6 +1,11 @@
 {
   "header": {
-    "contactMe": "Contact me 👋🏻"
+    "contactMe": "Contact me 👋🏻",
+    "menu": "Menu",
+    "mobileMenu": {
+      "changeLanguage": "Change language",
+      "navigation": "Navigation"
+    }
   },
   "pages": {
     "home": "Home"

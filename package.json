@@ -1,0 +1,23 @@
+{
+  "name": "exer7um.com",
+  "type": "module",
+  "description": "Мой персональный сайт-портфолио",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "prepare": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "3.10.3",
+    "vue": "3.4.21",
+    "vue-router": "4.3.0"
+  },
+  "contributors": [
+    {
+      "name": "Василий Кузин",
+      "email": "work@exer7um.com",
+      "url": "https://github.com/ExEr7um"
+    }
+  ]
+}

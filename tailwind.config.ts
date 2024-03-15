@@ -12,6 +12,9 @@ export default {
     `app.{js,ts,vue}`,
   ],
   theme: {
+    boxShadow: {
+      DEFAULT: "0 4px 6px 0 #4B556308",
+    },
     container: {
       center: true,
       padding: {

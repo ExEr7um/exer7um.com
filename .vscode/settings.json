@@ -1,3 +1,32 @@
 {
-  "eslint.validate": ["javascript", "json", "vue", "typescript"]
+  "cSpell.language": "en,ru",
+  "cSpell.words": [
+    "composables",
+    "headlessui",
+    "heroicons",
+    "Nuxt",
+    "nuxtjs",
+    "tailwindcss",
+    "typecheck",
+    "unref",
+    "vite",
+    "vueuse"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "eslint.validate": ["javascript", "json", "vue", "typescript"],
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "git.branchProtection": ["main"],
+  "i18n-ally.displayLanguage": "ru",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["assets/lang"],
+  "i18n-ally.sourceLanguage": "ru",
+  "tailwindCSS.emmetCompletions": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

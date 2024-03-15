@@ -1,6 +1,11 @@
 {
   "name": "exer7um.com",
   "description": "Мой персональный сайт-портфолио",
+  "author": {
+    "name": "Василий Кузин",
+    "email": "work@exer7um.com",
+    "url": "https://github.com/ExEr7um"
+  },
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -16,13 +21,6 @@
     "vue": "3.4.21",
     "vue-router": "4.3.0"
   },
-  "contributors": [
-    {
-      "name": "Василий Кузин",
-      "email": "work@exer7um.com",
-      "url": "https://github.com/ExEr7um"
-    }
-  ]
   "devDependencies": {
     "@exer7um/prettier-config": "0.4.1"
   }

@@ -11,6 +11,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.json --ignore-path .gitignore --max-warnings=0",
+    "eslint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.json --ignore-path .gitignore --max-warnings=0 --fix",
     "prepare": "nuxt prepare",
     "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern *",
     "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *",
@@ -23,6 +25,7 @@
     "vue-router": "4.3.0"
   },
   "devDependencies": {
+    "@exer7um/eslint-config": "0.8.1",
     "@exer7um/prettier-config": "0.4.1"
   }
 }

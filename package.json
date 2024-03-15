@@ -29,6 +29,7 @@
   "prettier": "@exer7um/prettier-config",
   "dependencies": {
     "@formkit/auto-animate": "0.8.1",
+    "@nuxt/fonts": "0.3.0",
     "@nuxt/image": "1.4.0",
     "@nuxtjs/i18n": "8.2.0",
     "@nuxtjs/tailwindcss": "6.11.4",

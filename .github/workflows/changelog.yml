@@ -1,0 +1,27 @@
+name: Релиз проекта
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Версия релиза
+        required: true
+        type: string
+
+jobs:
+  changelog:
+    uses: ExEr7um/workflows/.github/workflows/changelog.yml@v0.6.1
+    with:
+      version: ${{ inputs.version }}
+    secrets:
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      PASSPHRASE: ${{ secrets.PASSPHRASE }}
+
+  release:
+    runs-on: ubuntu-latest
+    needs: changelog
+    steps:
+      - name: Запуск деплоя
+        uses: peter-evans/repository-dispatch@v3.0.0
+        with:
+          event-type: deploy

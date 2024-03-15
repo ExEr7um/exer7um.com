@@ -1,0 +1,9 @@
+name: Обновление ветки release
+
+on:
+  repository_dispatch:
+    types: [deploy]
+
+jobs:
+  release:
+    uses: ExEr7um/workflows/.github/workflows/release.yml@v0.6.1

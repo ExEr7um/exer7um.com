@@ -6,9 +6,9 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "prepare": "nuxt prepare",
+    "preview": "nuxt preview",
     "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern *",
-    "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *",
-    "preview": "nuxt preview"
+    "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *"
   },
   "prettier": "@exer7um/prettier-config",
   "dependencies": {

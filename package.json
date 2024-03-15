@@ -1,13 +1,16 @@
 {
   "name": "exer7um.com",
-  "type": "module",
   "description": "Мой персональный сайт-портфолио",
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "prepare": "nuxt prepare",
     "preview": "nuxt preview",
-    "prepare": "nuxt prepare"
+    "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern *",
+    "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *"
   },
+  "prettier": "@exer7um/prettier-config",
   "dependencies": {
     "nuxt": "3.10.3",
     "vue": "3.4.21",
@@ -20,4 +23,7 @@
       "url": "https://github.com/ExEr7um"
     }
   ]
+  "devDependencies": {
+    "@exer7um/prettier-config": "0.4.1"
+  }
 }

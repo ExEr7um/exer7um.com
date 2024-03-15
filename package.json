@@ -1,6 +1,7 @@
 {
   "name": "exer7um.com",
   "description": "Мой персональный сайт-портфолио",
+  "license": "MIT",
   "author": {
     "name": "Василий Кузин",
     "email": "work@exer7um.com",
@@ -11,9 +12,9 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "prepare": "nuxt prepare",
-    "preview": "nuxt preview",
     "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern *",
-    "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *"
+    "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *",
+    "preview": "nuxt preview"
   },
   "prettier": "@exer7um/prettier-config",
   "dependencies": {

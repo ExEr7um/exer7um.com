@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: ExEr7um/workflows/.github/workflows/frontend-build.yml@v0.6.1
+  lint:
+    uses: ExEr7um/workflows/.github/workflows/frontend-lint.yml@v0.6.1
+  test:
+    uses: ExEr7um/workflows/.github/workflows/frontend-test.yml@v0.6.1
+  typecheck:
+    uses: ExEr7um/workflows/.github/workflows/frontend-typecheck.yml@v0.6.1

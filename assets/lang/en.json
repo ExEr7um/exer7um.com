@@ -1,5 +1,8 @@
 {
   "pages": {
-    "home": "home"
+    "about": "About",
+    "experience": "Experience",
+    "index": "Home",
+    "projects": "Projects"
   }
 }

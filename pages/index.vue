@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: t("pages.home"),
+  title: t("pages.index"),
   // TODO: Добавить описание страницы
 })
 </script>

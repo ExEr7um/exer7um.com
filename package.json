@@ -28,7 +28,16 @@
   },
   "prettier": "@exer7um/prettier-config",
   "dependencies": {
+    "@formkit/auto-animate": "0.8.1",
+    "@nuxt/image": "1.4.0",
+    "@nuxtjs/i18n": "8.2.0",
+    "@nuxtjs/tailwindcss": "6.11.4",
+    "@vueuse/core": "10.9.0",
+    "@vueuse/nuxt": "10.9.0",
     "nuxt": "3.10.3",
+    "nuxt-headlessui": "1.1.5",
+    "nuxt-icon": "0.6.9",
+    "postcss-nesting": "12.1.0",
     "vue": "3.4.21",
     "vue-router": "4.3.0"
   },

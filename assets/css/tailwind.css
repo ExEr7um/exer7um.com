@@ -3,4 +3,33 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-neutral-50 text-neutral-500 antialiased lg:text-lg dark:bg-neutral-950 dark:text-neutral-400;
+  }
+}
+
+@layer components {
+  .button {
+    @apply flex h-12 cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-6 leading-none transition-colors;
+
+    &.primary {
+      @apply border-blue-700 bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-800;
+    }
+
+    &.secondary {
+      @apply border-blue-200 bg-blue-50 text-blue-600 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400 dark:hover:bg-blue-900;
+    }
+
+    &.tertiary {
+      @apply border-neutral-200 bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800;
+    }
+
+    &.squared {
+      @apply size-12 !p-0;
+    }
+  }
+
+  .card {
+    @apply rounded-2xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900;
+  }
 }

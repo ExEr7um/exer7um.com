@@ -1,6 +1,7 @@
 bun.lockb
 bunfig.toml
 CHANGELOG.md
+LICENSE
 
 # Перенесено из .gitignore
 .output

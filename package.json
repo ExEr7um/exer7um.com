@@ -13,10 +13,15 @@
     "dev": "nuxt dev",
     "eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.json --ignore-path .gitignore --max-warnings=0",
     "eslint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.json --ignore-path .gitignore --max-warnings=0 --fix",
-    "prepare": "nuxt prepare",
+    "lint-staged": "lint-staged",
+    "prepare": "husky && nuxt prepare",
     "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern *",
     "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *",
     "preview": "nuxt preview"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,cjs,mjs,ts,json}": "eslint --cache --fix",
+    "*": "prettier --write --ignore-unknown"
   },
   "prettier": "@exer7um/prettier-config",
   "dependencies": {
@@ -26,6 +31,8 @@
   },
   "devDependencies": {
     "@exer7um/eslint-config": "0.8.1",
-    "@exer7um/prettier-config": "0.4.1"
+    "@exer7um/prettier-config": "0.4.1",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2"
   }
 }

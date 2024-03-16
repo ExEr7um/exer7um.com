@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     headNext: true,
     typedPages: true,
   },
+  extends: ["@nuxthub/core"],
   fonts: {
     experimental: {
       addPreloadLinks: true,

@@ -31,6 +31,7 @@
     "@formkit/auto-animate": "0.8.1",
     "@nuxt/fonts": "0.3.0",
     "@nuxt/image": "1.4.0",
+    "@nuxthub/core": "0.3.2",
     "@nuxtjs/i18n": "8.2.0",
     "@nuxtjs/tailwindcss": "6.11.4",
     "@vueuse/core": "10.9.0",
@@ -54,6 +55,7 @@
     "msw": "2.2.3",
     "typescript": "5.4.2",
     "vitest": "1.4.0",
-    "vue-tsc": "2.0.6"
+    "vue-tsc": "2.0.6",
+    "wrangler": "3.34.2"
   }
 }

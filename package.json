@@ -47,6 +47,7 @@
     "@exer7um/eslint-config": "0.8.2",
     "@exer7um/prettier-config": "0.4.2",
     "@nuxt/test-utils": "3.11.0",
+    "@types/node": "20.11.28",
     "@vitest/coverage-istanbul": "1.4.0",
     "@vue/test-utils": "2.4.5",
     "happy-dom": "13.8.6",

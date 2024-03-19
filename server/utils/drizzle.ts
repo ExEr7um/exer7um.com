@@ -9,4 +9,5 @@ export function useDrizzle() {
   return drizzle(hubDatabase())
 }
 
+// Экспортируем методы Drizzle для автоимпорта
 export { and, eq, or, sql } from "drizzle-orm"

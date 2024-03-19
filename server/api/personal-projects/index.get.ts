@@ -1,3 +1,5 @@
+import { sql } from "drizzle-orm"
+
 export default defineEventHandler(async (event) => {
   const { limit } = getQuery(event)
 
@@ -12,7 +14,19 @@ export default defineEventHandler(async (event) => {
   /** Список проектов */
   const personalProjects = await useDrizzle().query.personalProjects.findMany({
     columns: {
-      createdAt: false, // Скрываем поле createdAt
+      github: true,
+      icon: true,
+      id: true,
+    },
+    extras: {
+      description:
+        sql`${tables.personalProjects[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
+          "description"
+        ),
+      title:
+        sql`${tables.personalProjects[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
+          "title"
+        ),
     },
     limit: limit as number, // Ограничиваем количество результатов
     orderBy: desc(tables.personalProjects.createdAt), // Сортируем по дате создания — сначала новые

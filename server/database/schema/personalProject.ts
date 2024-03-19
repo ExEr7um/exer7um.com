@@ -7,11 +7,13 @@ export const personalProjects = sqliteTable("personal_projects", {
   createdAt: integer("created_at", { mode: "timestamp" })
     .notNull()
     .default(sql`(unixepoch())`),
-  description: text("description").notNull(),
+  descriptionEN: text("description_en").notNull(),
+  descriptionRU: text("description_ru").notNull(),
   github: text("github"),
   icon: text("icon", { length: 1 }).notNull(),
   id: integer("id").primaryKey({ autoIncrement: true }),
-  title: text("title").notNull(),
+  titleEN: text("title_en").notNull(),
+  titleRU: text("title_ru").notNull(),
 })
 
 export type personalProject = typeof personalProjects.$inferSelect

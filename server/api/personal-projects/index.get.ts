@@ -32,10 +32,7 @@ export default defineEventHandler(async (event) => {
     orderBy: desc(tables.personalProjects.createdAt), // Сортируем по дате создания — сначала новые
     with: {
       tags: {
-        columns: {
-          personalProjectId: false,
-          tagId: false,
-        },
+        columns: {},
         with: {
           tag: true,
         },

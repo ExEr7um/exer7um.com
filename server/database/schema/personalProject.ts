@@ -4,9 +4,9 @@ import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core"
 import { tagsToPersonalProjects } from "./tagsToPersonalProjects"
 
 export const personalProjects = sqliteTable("personal_projects", {
-  createdAt: integer("created_at", { mode: "timestamp" }).default(
-    sql`CURRENT_TIMESTAMP`
-  ),
+  createdAt: integer("created_at", { mode: "timestamp" })
+    .notNull()
+    .default(sql`(unixepoch())`),
   description: text("description").notNull(),
   github: text("github"),
   icon: text("icon", { length: 1 }).notNull(),

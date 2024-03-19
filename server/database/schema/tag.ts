@@ -11,5 +11,5 @@ export const tags = sqliteTable("tags", {
 export type Tag = typeof tags.$inferSelect
 
 export const tagsRelations = relations(tags, ({ many }) => ({
-  tagsToPersonalProjects: many(tagsToPersonalProjects),
+  personalProjects: many(tagsToPersonalProjects),
 }))

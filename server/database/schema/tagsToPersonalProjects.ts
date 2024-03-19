@@ -16,13 +16,13 @@ export const tagsToPersonalProjects = sqliteTable("tags_to_personal_projects", {
 export const tagsToPersonalProjectsRelations = relations(
   tagsToPersonalProjects,
   ({ one }) => ({
+    personalProject: one(personalProjects, {
+      fields: [tagsToPersonalProjects.personalProjectId],
+      references: [personalProjects.id],
+    }),
     tag: one(tags, {
       fields: [tagsToPersonalProjects.tagId],
       references: [tags.id],
-    }),
-    user: one(personalProjects, {
-      fields: [tagsToPersonalProjects.personalProjectId],
-      references: [personalProjects.id],
     }),
   })
 )

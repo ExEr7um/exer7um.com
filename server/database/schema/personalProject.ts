@@ -19,6 +19,6 @@ export type personalProject = typeof personalProjects.$inferSelect
 export const personalProjectsRelations = relations(
   personalProjects,
   ({ many }) => ({
-    tagsToPersonalProjects: many(tagsToPersonalProjects),
+    tags: many(tagsToPersonalProjects),
   })
 )

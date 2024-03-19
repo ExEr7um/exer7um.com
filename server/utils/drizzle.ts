@@ -1,9 +1,13 @@
 import { drizzle } from "drizzle-orm/d1"
 
+import * as personalProjectsSchema from "../database/schema/personalProject"
 import * as tagsSchema from "../database/schema/tag"
+import * as tagsToPersonalProjects from "../database/schema/tagsToPersonalProjects"
 
 export const tables = {
   ...tagsSchema,
+  ...personalProjectsSchema,
+  ...tagsToPersonalProjects,
 }
 
 /**
@@ -18,4 +22,4 @@ export function useDrizzle() {
 }
 
 // Экспортируем методы Drizzle для автоимпорта
-export { and, eq, or, sql } from "drizzle-orm"
+export { and, asc, desc, eq, or } from "drizzle-orm"

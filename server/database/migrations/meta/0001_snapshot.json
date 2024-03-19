@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  },
+  "dialect": "sqlite",
+  "enums": {},
+  "id": "3ead7df7-d23e-4a87-b4cf-8b0f19dd3a21",
+  "prevId": "292399ce-54c1-46fb-a2f8-9b56176f3f6c",
+  "tables": {
+    "personal_projects": {
+      "columns": {
+        "created_at": {
+          "autoincrement": false,
+          "default": "(unixepoch())",
+          "name": "created_at",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "description_en": {
+          "autoincrement": false,
+          "name": "description_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "description_ru": {
+          "autoincrement": false,
+          "name": "description_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "github": {
+          "autoincrement": false,
+          "name": "github",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "icon": {
+          "autoincrement": false,
+          "name": "icon",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text(1)"
+        },
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "integer"
+        },
+        "title_en": {
+          "autoincrement": false,
+          "name": "title_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "title_ru": {
+          "autoincrement": false,
+          "name": "title_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {},
+      "indexes": {},
+      "name": "personal_projects",
+      "uniqueConstraints": {}
+    },
+    "tags": {
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "integer"
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {},
+      "indexes": {},
+      "name": "tags",
+      "uniqueConstraints": {}
+    },
+    "tags_to_personal_projects": {
+      "columns": {
+        "personal_project_id": {
+          "autoincrement": false,
+          "name": "personal_project_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "tag_id": {
+          "autoincrement": false,
+          "name": "tag_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {
+        "tags_to_personal_projects_personal_project_id_personal_projects_id_fk": {
+          "columnsFrom": ["personal_project_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_personal_projects_personal_project_id_personal_projects_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_personal_projects",
+          "tableTo": "personal_projects"
+        },
+        "tags_to_personal_projects_tag_id_tags_id_fk": {
+          "columnsFrom": ["tag_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_personal_projects_tag_id_tags_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_personal_projects",
+          "tableTo": "tags"
+        }
+      },
+      "indexes": {},
+      "name": "tags_to_personal_projects",
+      "uniqueConstraints": {}
+    }
+  },
+  "version": "5"
+}

@@ -20,4 +20,4 @@ export function useDrizzle() {
 }
 
 // Экспортируем методы Drizzle для автоимпорта
-export { and, eq, or, sql } from "drizzle-orm"
+export { and, asc, desc, eq, or } from "drizzle-orm"

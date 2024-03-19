@@ -1,5 +1,4 @@
 import { drizzle } from "drizzle-orm/d1"
-export { and, eq, or, sql } from "drizzle-orm"
 
 /**
  * Функция для обращения к Drizzle ORM.
@@ -9,3 +8,5 @@ export { and, eq, or, sql } from "drizzle-orm"
 export function useDrizzle() {
   return drizzle(hubDatabase())
 }
+
+export { and, eq, or, sql } from "drizzle-orm"

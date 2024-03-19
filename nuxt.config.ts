@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   },
   experimental: {
     componentIslands: {
-      selectiveClient: true,
+      selectiveClient: "deep",
     },
     cookieStore: true,
     headNext: true,

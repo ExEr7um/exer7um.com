@@ -3,13 +3,13 @@ import type { VueWrapper } from "@vue/test-utils"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import ContactMeButton from "~/components/ContactMeButton.vue"
+import UiContactMeButton from "~/components/ui/UiContactMeButton.vue"
 
-describe("Компонент ContactMeButton", () => {
+describe("Компонент UiContactMeButton", () => {
   let wrapper: VueWrapper
 
   beforeEach(async () => {
-    wrapper = await mountSuspended(ContactMeButton)
+    wrapper = await mountSuspended(UiContactMeButton)
   })
 
   afterEach(() => {

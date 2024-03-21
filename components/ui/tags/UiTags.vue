@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-wrap gap-2">
+  <div class="flex h-max flex-wrap gap-2">
     <UiTagsCard v-for="tag in tags" :key="tag.id" :small="small" :tag="tag" />
   </div>
 </template>

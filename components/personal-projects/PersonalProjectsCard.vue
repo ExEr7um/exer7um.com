@@ -19,12 +19,14 @@ defineProps<{
       <!-- Иконка проекта -->
       <div
         class="tag flex size-16 items-center justify-center rounded-lg font-[system-ui] text-[2rem]"
+        data-test-id="icon"
       >
         {{ personalProject.icon }}
       </div>
       <!-- Ссылка на GitHub -->
       <LazyNuxtLink
         v-if="personalProject.github"
+        data-test-id="github-link"
         external
         target="_blank"
         :to="personalProject.github"
@@ -41,6 +43,7 @@ defineProps<{
     <!-- Список тегов -->
     <LazyUiTags
       v-if="personalProject.tags.length"
+      data-test-id="tags"
       small
       :tags="personalProject.tags"
     />

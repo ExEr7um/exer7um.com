@@ -28,9 +28,8 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
         :key="personalProject.id"
         :personal-project="personalProject"
       />
-      <div class="row-span-4 flex items-center justify-center">
+      <div v-if="limit" class="row-span-4 flex items-center justify-center">
         <LazyNuxtLinkLocale
-          v-if="limit"
           class="button secondary"
           to="/projects#personal-projects"
         >

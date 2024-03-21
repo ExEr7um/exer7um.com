@@ -8,5 +8,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div></div>
+  <main>
+    <PersonalProjects :limit="3" />
+  </main>
 </template>

@@ -15,7 +15,7 @@ const navigation = [
     >
       <TheHeaderNavigation class="hidden md:flex" :navigation="navigation" />
       <TheHeaderNavigationMobile class="md:hidden" :navigation="navigation" />
-      <ContactMeButton />
+      <UiContactMeButton />
     </div>
   </header>
 </template>

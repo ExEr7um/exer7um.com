@@ -6,6 +6,25 @@
   body {
     @apply bg-neutral-50 text-neutral-500 antialiased lg:text-lg dark:bg-neutral-950 dark:text-neutral-400;
   }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold text-black dark:text-white;
+  }
+
+  h1 {
+    @apply text-[3.5rem];
+  }
+
+  h2 {
+    @apply text-[2.5rem];
+  }
+
+  h3 {
+    @apply text-[1.75rem];
+  }
 }
 
 @layer components {
@@ -29,7 +48,15 @@
     }
   }
 
+  .default-border {
+    @apply border border-neutral-200 dark:border-neutral-800;
+  }
+
   .card {
-    @apply rounded-2xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900;
+    @apply default-border rounded-2xl bg-white dark:bg-neutral-900;
+  }
+
+  .tag {
+    @apply default-border bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800;
   }
 }

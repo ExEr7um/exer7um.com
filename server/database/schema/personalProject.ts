@@ -16,7 +16,7 @@ export const personalProjects = sqliteTable("personal_projects", {
   titleRU: text("title_ru").notNull(),
 })
 
-export type personalProject = typeof personalProjects.$inferSelect
+export type PersonalProject = typeof personalProjects.$inferSelect
 
 export const personalProjectsRelations = relations(
   personalProjects,

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { t } = useI18n()
-const localeRoute = useLocaleRoute()
-
 const props = defineProps<{
   /** Ссылка навигации */
   routeName: string
 }>()
+
+const { t } = useI18n()
+const localeRoute = useLocaleRoute()
 
 /** Полученный объект `route` для навигации */
 const navigationRoute = localeRoute({

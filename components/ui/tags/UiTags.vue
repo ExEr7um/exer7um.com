@@ -11,6 +11,6 @@ defineProps<{
 
 <template>
   <div class="flex h-max flex-wrap gap-2">
-    <UiTagsCard v-for="tag in tags" :key="tag.id" :small="small" :tag="tag" />
+    <UiTagsCard v-for="tag in tags" :key="tag.id" :small :tag />
   </div>
 </template>

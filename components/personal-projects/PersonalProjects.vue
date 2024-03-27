@@ -26,7 +26,7 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
       <PersonalProjectsCard
         v-for="personalProject in personalProjects"
         :key="personalProject.id"
-        :personal-project="personalProject"
+        :personal-project
       />
       <div v-if="limit" class="row-span-4 flex items-center justify-center">
         <LazyNuxtLinkLocale

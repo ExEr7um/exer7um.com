@@ -1,3 +1,12 @@
+/**
+ * Модули, которые будут использоваться только в `DEV` среде.
+ *
+ * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при билде.
+ */
+const devModules = import.meta.env.PROD
+  ? []
+  : ["@nuxt/eslint", "@nuxt/test-utils/module"]
+
 export default defineNuxtConfig({
   appConfig: {
     nuxtIcon: {
@@ -57,10 +66,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "nuxt-headlessui",
     "nuxt-icon",
-    // Если запускается билд, то @nuxt/test-utils не нужен
-    process.env.NODE_ENV === "production"
-      ? () => undefined
-      : "@nuxt/test-utils/module",
+    // Добавляем модули только для DEV среды
+    ...devModules,
   ],
   postcss: {
     plugins: {

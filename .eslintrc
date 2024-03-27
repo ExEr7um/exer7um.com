@@ -1,6 +1,0 @@
-{
-  "extends": "@exer7um",
-  "rules": {
-    "@intlify/vue-i18n/no-raw-text": "error"
-  }
-}

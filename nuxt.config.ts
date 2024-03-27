@@ -3,9 +3,10 @@
  *
  * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при билде.
  */
-const devModules = import.meta.env.PROD
-  ? []
-  : ["@nuxt/eslint", "@nuxt/test-utils/module"]
+const devModules =
+  import.meta.env.NODE_ENV === "production"
+    ? []
+    : ["@nuxt/eslint", "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
   appConfig: {

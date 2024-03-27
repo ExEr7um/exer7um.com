@@ -23,7 +23,7 @@ const modules = [
 
 export default defineNuxtConfig({
   $production: {
-    modules,
+    modules: modules,
   },
   appConfig: {
     nuxtIcon: {

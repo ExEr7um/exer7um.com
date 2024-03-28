@@ -1,11 +1,4 @@
 /**
- * Модули, которые будут использоваться только в `DEV` среде.
- *
- * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
- */
-const devModules = ["@nuxt/eslint", "@nuxt/test-utils/module"]
-
-/**
  * Общие модули, которые используются в любой среде.
  *
  * Сюда нужно помещать модули, которые находятся в `dependencies`
@@ -21,9 +14,22 @@ const modules = [
   "nuxt-icon",
 ]
 
+/**
+ * Объединенный массив модулей, которые будут использоваться только в `DEV` среде.
+ *
+ * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
+ */
+const devModules = [...modules, "@nuxt/eslint", "@nuxt/test-utils/module"]
+
 export default defineNuxtConfig({
+  $development: {
+    modules: devModules,
+  },
   $production: {
-    modules: modules,
+    modules,
+  },
+  $test: {
+    modules: devModules,
   },
   appConfig: {
     nuxtIcon: {
@@ -74,7 +80,6 @@ export default defineNuxtConfig({
     ],
     trailingSlash: true,
   },
-  modules: [...modules, ...devModules],
   postcss: {
     plugins: {
       "tailwindcss/nesting": "postcss-nesting",

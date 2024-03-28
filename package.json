@@ -14,7 +14,7 @@
     "dev": "nuxt dev",
     "eslint": "eslint . --max-warnings=0",
     "eslint:fix": "eslint . --max-warnings=0 --fix",
-    "postinstall": "husky && nuxt prepare",
+    "postinstall": "husky && NODE_ENV=development nuxt prepare",
     "lint-staged": "lint-staged",
     "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern *",
     "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *",

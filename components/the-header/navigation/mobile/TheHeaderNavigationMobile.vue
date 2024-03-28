@@ -17,7 +17,7 @@ defineProps<{
       <TheHeaderNavigationMobileCard
         v-for="routeName in navigation"
         :key="routeName"
-        :route-name="routeName"
+        :route-name
       />
     </HeadlessMenuItems>
   </HeadlessMenu>

@@ -10,7 +10,7 @@ defineProps<{
     <TheHeaderNavigationCard
       v-for="routeName in navigation"
       :key="routeName"
-      :route-name="routeName"
+      :route-name
     />
   </nav>
 </template>

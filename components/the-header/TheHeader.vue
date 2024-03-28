@@ -13,8 +13,8 @@ const navigation = [
     <div
       class="card flex h-20 items-center justify-between bg-opacity-30 px-4 shadow backdrop-blur-lg md:pl-8"
     >
-      <TheHeaderNavigation class="hidden md:flex" :navigation="navigation" />
-      <TheHeaderNavigationMobile class="md:hidden" :navigation="navigation" />
+      <TheHeaderNavigation class="hidden md:flex" :navigation />
+      <TheHeaderNavigationMobile class="md:hidden" :navigation />
       <UiContactMeButton />
     </div>
   </header>

@@ -1,4 +1,36 @@
+/**
+ * Общие модули, которые используются в любой среде.
+ *
+ * Сюда нужно помещать модули, которые находятся в `dependencies`
+ */
+const modules = [
+  "@formkit/auto-animate/nuxt",
+  "@nuxt/fonts",
+  "@nuxt/image",
+  "@nuxtjs/i18n",
+  "@nuxtjs/tailwindcss",
+  "@vueuse/nuxt",
+  "nuxt-headlessui",
+  "nuxt-icon",
+]
+
+/**
+ * Объединенный массив модулей, которые будут использоваться только в `DEV` среде.
+ *
+ * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
+ */
+const devModules = [...modules, "@nuxt/eslint", "@nuxt/test-utils/module"]
+
 export default defineNuxtConfig({
+  $development: {
+    modules: devModules,
+  },
+  $production: {
+    modules,
+  },
+  $test: {
+    modules: devModules,
+  },
   appConfig: {
     nuxtIcon: {
       size: "24px",
@@ -48,20 +80,6 @@ export default defineNuxtConfig({
     ],
     trailingSlash: true,
   },
-  modules: [
-    "@formkit/auto-animate/nuxt",
-    "@nuxt/fonts",
-    "@nuxt/image",
-    "@nuxtjs/i18n",
-    "@nuxtjs/tailwindcss",
-    "@vueuse/nuxt",
-    "nuxt-headlessui",
-    "nuxt-icon",
-    // Если запускается билд, то @nuxt/test-utils не нужен
-    process.env.NODE_ENV === "production"
-      ? () => undefined
-      : "@nuxt/test-utils/module",
-  ],
   postcss: {
     plugins: {
       "tailwindcss/nesting": "postcss-nesting",

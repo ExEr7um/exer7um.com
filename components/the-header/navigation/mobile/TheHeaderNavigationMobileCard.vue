@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const { t } = useI18n()
-const localeRoute = useLocaleRoute()
-
-const NuxtLink = resolveComponent("NuxtLink")
-
 const props = defineProps<{
   /** Ссылка навигации */
   routeName: string
 }>()
+
+const { t } = useI18n()
+const localeRoute = useLocaleRoute()
+
+const NuxtLink = resolveComponent("NuxtLink")
 
 /** Полученный объект `route` для навигации */
 const navigationRoute = localeRoute({

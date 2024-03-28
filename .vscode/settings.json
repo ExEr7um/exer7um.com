@@ -3,9 +3,11 @@
   "cSpell.words": [
     "composables",
     "consola",
+    "formkit",
     "headlessui",
     "heroicons",
     "Nuxt",
+    "nuxthub",
     "nuxtjs",
     "tailwindcss",
     "typecheck",
@@ -19,6 +21,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
+  "eslint.experimental.useFlatConfig": true,
   "eslint.validate": ["javascript", "json", "vue", "typescript"],
   "files.associations": {
     "*.css": "postcss"

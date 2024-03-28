@@ -6,7 +6,6 @@ export default defineVitestConfig({
       provider: "istanbul",
     },
     environment: "nuxt",
-    globalSetup: ["tests/globalSetup.ts"],
     globals: true,
     sequence: {
       concurrent: true,

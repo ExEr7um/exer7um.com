@@ -12,7 +12,7 @@ defineProps<{
     </HeadlessMenuButton>
     <HeadlessMenuItems
       as="nav"
-      class="absolute left-0 top-full mt-2 flex min-w-40 flex-col divide-y divide-neutral-200 overflow-hidden rounded-lg border border-neutral-200 bg-white shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900"
+      class="absolute left-0 top-full mt-2 flex min-w-40 flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white p-1 shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900"
     >
       <TheHeaderNavigationMobileCard
         v-for="routeName in navigation"

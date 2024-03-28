@@ -18,7 +18,7 @@ const navigationRoute = localeRoute({
 <template>
   <HeadlessMenuItem
     :as="NuxtLink"
-    class="w-full px-3 py-2 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+    class="w-full rounded px-3 py-2 hover:bg-neutral-50 dark:hover:bg-neutral-800"
     exact-active-class="hover:bg-white dark:hover:bg-neutral-900 cursor-default"
     :to="navigationRoute"
   >

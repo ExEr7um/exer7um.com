@@ -23,7 +23,7 @@ const social = [
     <TheFooterSocialCard
       v-for="socialCard in social"
       :key="socialCard.url"
-      :social-card="socialCard"
+      :social-card
     />
   </div>
 </template>

@@ -24,7 +24,7 @@ describe("Компонент TheHeaderNavigationMobile", () => {
   })
 
   const navigationMenu = () => wrapper.findComponent({ name: "MenuItems" })
-  const menuButton = () => wrapper.findComponent({ name: "menuButton" })
+  const menuButton = () => wrapper.findComponent({ name: "MenuButton" })
 
   describe("Открытие мобильного меню", () => {
     test("Мобильное меню по умолчанию закрыто", () => {
@@ -52,6 +52,18 @@ describe("Компонент TheHeaderNavigationMobile", () => {
       const navigationLinksCount = navigationMenu().element.childElementCount
 
       expect(navigationLinksCount).toBe(navigation.length)
+    })
+
+    test("Меню закрывается при нажатии на ссылку", async () => {
+      await menuButton().trigger("click")
+
+      const navigationLinks = navigationMenu().findAllComponents({
+        name: "MenuItem",
+      })
+
+      await navigationLinks[1].trigger("click")
+
+      expect(navigationMenu().isVisible()).toBeFalsy()
     })
   })
 })

@@ -14,6 +14,13 @@
       "tag": "0001_dusty_living_mummy",
       "version": "5",
       "when": 1710875417359
+    },
+    {
+      "breakpoints": true,
+      "idx": 2,
+      "tag": "0002_strange_magik",
+      "version": "5",
+      "when": 1711904363178
     }
   ],
   "version": "5"

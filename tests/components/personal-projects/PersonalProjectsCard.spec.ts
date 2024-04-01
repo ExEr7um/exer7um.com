@@ -15,6 +15,8 @@ describe("Компонент PersonalProjectsCard", () => {
 
   const cardContentAttributes = () =>
     wrapper.findComponent(UiCardContent).attributes()
+  const githubLinkAttributes = () =>
+    wrapper.find("[data-test-id=github-link]").attributes()
 
   beforeEach(async () => {
     wrapper = await mountSuspended(PersonalProjectsCard, {
@@ -46,20 +48,18 @@ describe("Компонент PersonalProjectsCard", () => {
       )
     })
 
-    test("Ссылка на GitHub", () => {
-      expect(wrapper.find("[data-test-id=github-link]").attributes().to).toBe(
-        personalProject.github
-      )
-    })
-
     test("Теги", () => {
       expect(cardContentAttributes().tags).toBe(personalProject.tags.toString())
     })
   })
 
-  test("Ссылка на GitHub открывается в новой вкладке", () => {
-    expect(wrapper.find("[data-test-id=github-link]").attributes().target).toBe(
-      "_blank"
-    )
+  describe("Ссылка на GitHub", () => {
+    test("Выставляется из props", () => {
+      expect(githubLinkAttributes().to).toBe(personalProject.github)
+    })
+
+    test("Открывается в новой вкладке", () => {
+      expect(githubLinkAttributes().target).toBe("_blank")
+    })
   })
 })

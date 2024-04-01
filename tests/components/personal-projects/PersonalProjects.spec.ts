@@ -73,6 +73,14 @@ describe("Компонент PersonalProjects", () => {
 
       expect(viewAllButton().exists()).toBeTruthy()
     })
+
+    test.fails("Переводит на правильную страницу", async () => {
+      await wrapper.setProps({
+        limit: 3,
+      })
+
+      expect(viewAllButton().attributes()).toBe("/projects#personal-projects")
+    })
   })
 
   describe.sequential("Запрос к API", () => {

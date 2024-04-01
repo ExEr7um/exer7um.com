@@ -37,11 +37,11 @@
     "@nuxtjs/tailwindcss": "6.11.4",
     "@vueuse/core": "10.9.0",
     "@vueuse/nuxt": "10.9.0",
-    "drizzle-orm": "0.30.5",
+    "drizzle-orm": "0.30.6",
     "nuxt": "3.11.1",
     "nuxt-headlessui": "1.1.5",
     "nuxt-icon": "0.6.10",
-    "postcss-nesting": "12.1.0",
+    "postcss-nesting": "12.1.1",
     "vue": "3.4.21",
     "vue-router": "4.3.0"
   },
@@ -49,7 +49,7 @@
     "@exer7um/eslint-config": "1.0.0",
     "@exer7um/prettier-config": "0.4.2",
     "@nuxt/test-utils": "3.12.0",
-    "@types/node": "20.11.30",
+    "@types/node": "20.12.2",
     "@vitest/coverage-istanbul": "1.4.0",
     "@vue/test-utils": "2.4.5",
     "drizzle-kit": "0.20.14",
@@ -59,6 +59,6 @@
     "typescript": "5.4.3",
     "vitest": "1.4.0",
     "vue-tsc": "2.0.7",
-    "wrangler": "3.39.0"
+    "wrangler": "3.41.0"
   }
 }

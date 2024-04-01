@@ -24,6 +24,7 @@ const { t } = useI18n({
     <!-- Логотип проекта -->
     <div
       class="flex aspect-video size-full items-center justify-center rounded-2xl border-b px-6 py-8"
+      data-test-id="logo"
       :style="{ backgroundColor: project.backgroundColor }"
     >
       <NuxtImg
@@ -46,6 +47,7 @@ const { t } = useI18n({
         <!-- Ссылка на проект -->
         <NuxtLink
           class="text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+          data-test-id="project-link"
           external
           target="_blank"
           :to="project.url"

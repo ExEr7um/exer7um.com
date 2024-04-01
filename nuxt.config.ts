@@ -80,6 +80,11 @@ export default defineNuxtConfig({
     ],
     trailingSlash: true,
   },
+  image: {
+    cloudinary: {
+      baseURL: "https://res.cloudinary.com/exer7um/image/upload/",
+    },
+  },
   postcss: {
     plugins: {
       "tailwindcss/nesting": "postcss-nesting",

@@ -4,6 +4,7 @@ import { mountSuspended } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import PersonalProjectsCard from "~/components/personal-projects/PersonalProjectsCard.vue"
+import UiCardContent from "~/components/ui/UiCardContent.vue"
 
 import { personalProjects } from "./PersonalProjects.spec"
 
@@ -11,6 +12,9 @@ describe("Компонент PersonalProjectsCard", () => {
   const personalProject = personalProjects[0]
 
   let wrapper: VueWrapper
+
+  const cardContentAttributes = () =>
+    wrapper.findComponent(UiCardContent).attributes()
 
   beforeEach(async () => {
     wrapper = await mountSuspended(PersonalProjectsCard, {
@@ -27,11 +31,13 @@ describe("Компонент PersonalProjectsCard", () => {
 
   describe("Правильная передача полей", () => {
     test("Заголовок", () => {
-      expect(wrapper.find("h4").text()).toBe(personalProject.title)
+      expect(cardContentAttributes().title).toBe(personalProject.title)
     })
 
     test("Описание", () => {
-      expect(wrapper.find("p").text()).toBe(personalProject.description)
+      expect(cardContentAttributes().description).toBe(
+        personalProject.description
+      )
     })
 
     test("Иконка", () => {
@@ -47,20 +53,8 @@ describe("Компонент PersonalProjectsCard", () => {
     })
 
     test("Теги", () => {
-      expect(wrapper.find("[data-test-id=tags]").attributes().tags).toBe(
-        personalProject.tags.toString()
-      )
+      expect(cardContentAttributes().tags).toBe(personalProject.tags.toString())
     })
-  })
-
-  test("Список тегов отсутствует при пустом массиве", async () => {
-    personalProject.tags = []
-
-    await wrapper.setProps({
-      personalProject,
-    })
-
-    expect(wrapper.find("[data-test-id=tags]").exists()).toBeFalsy()
   })
 
   test("Ссылка на GitHub открывается в новой вкладке", () => {

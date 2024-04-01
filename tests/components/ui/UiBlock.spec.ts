@@ -13,9 +13,6 @@ describe("Компонент UiBlock", () => {
 
   beforeEach(async () => {
     wrapper = await mountSuspended(UiBlock, {
-      props: {
-        title,
-      },
       slots: {
         default: () => testBlock,
       },
@@ -26,8 +23,16 @@ describe("Компонент UiBlock", () => {
     wrapper.unmount()
   })
 
-  test("Заголовок блока", () => {
-    expect(wrapper.find("h2").text()).toBe(title)
+  describe("Заголовок блока", () => {
+    test("По умолчанию скрыт", () => {
+      expect(wrapper.find("h2").exists()).toBeFalsy()
+    })
+
+    test("Выставляется из props", async () => {
+      await wrapper.setProps({ title })
+
+      expect(wrapper.find("h2").text()).toBe(title)
+    })
   })
 
   test("Передача контента через slot", () => {

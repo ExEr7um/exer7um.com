@@ -37,15 +37,11 @@ defineProps<{
         />
       </LazyNuxtLink>
     </div>
-    <!-- Заголовок и описание -->
-    <h4>{{ personalProject.title }}</h4>
-    <p>{{ personalProject.description }}</p>
-    <!-- Список тегов -->
-    <LazyUiTags
-      v-if="personalProject.tags.length"
-      data-test-id="tags"
-      small
+    <!-- Контент карточки -->
+    <UiCardContent
+      :description="personalProject.description"
       :tags="personalProject.tags"
+      :title="personalProject.title"
     />
   </div>
 </template>

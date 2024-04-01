@@ -6,44 +6,48 @@ import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
 import { getQuery } from "h3"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import PersonalProjects from "~/components/personal-projects/PersonalProjects.vue"
-import PersonalProjectsCard from "~/components/personal-projects/PersonalProjectsCard.vue"
+import Projects from "~/components/projects/Projects.vue"
+import ProjectsCard from "~/components/projects/ProjectsCard.vue"
 
 import { tags } from "../ui/tags/UiTags.spec"
 
-export const personalProjects = [
+export const projects = [
   {
-    description: "Описание личного проекта",
-    github: "https://exer7um.com/",
-    icon: "🍔",
+    backgroundColor: "#000000",
+    description: "Интернет-магазин брендовой одежды",
     id: 1,
-    tags: tags,
-    title: "Личный проект",
+    logo: "/oonyxx-store.svg",
+    tags,
+    title: "oonyxx.store",
+    url: "https://exer7um.github.io/Oonyxx-Store/",
+    year: 2019,
   },
   {
-    description: "Описание личного проекта",
-    github: "https://exer7um.com/",
-    icon: "🍔",
+    backgroundColor: "#000000",
+    description: "Интернет-магазин брендовой одежды",
     id: 2,
-    tags: tags,
-    title: "Личный проект",
+    logo: "/oonyxx-store.svg",
+    tags,
+    title: "oonyxx.store",
+    url: "https://exer7um.github.io/Oonyxx-Store/",
+    year: 2019,
   },
 ]
 
-describe("Компонент PersonalProjects", () => {
+describe("Компонент Projects", () => {
   let wrapper: VueWrapper
   let userRequest: H3Event | undefined
 
   const viewAllButton = () => wrapper.findComponent({ name: "NuxtLinkLocale" })
 
-  registerEndpoint("/api/personal-projects", (request) => {
+  registerEndpoint("/api/projects", (request) => {
     userRequest = request
 
-    return personalProjects
+    return projects
   })
 
   beforeEach(async () => {
-    wrapper = await mountSuspended(PersonalProjects)
+    wrapper = await mountSuspended(Projects)
   })
 
   afterEach(() => {
@@ -51,14 +55,22 @@ describe("Компонент PersonalProjects", () => {
     wrapper.unmount()
   })
 
-  test("Заголовок блока", () => {
-    expect(wrapper.find("h2").text()).toBe("Личные проекты")
+  describe("Заголовок блока", () => {
+    test("По умолчанию отображается", () => {
+      expect(wrapper.find("h2").text()).toBe("Проекты")
+    })
+
+    test("Скрывается при передаче параметра", async () => {
+      await wrapper.setProps({
+        hideTitle: true,
+      })
+
+      expect(wrapper.find("h2").exists()).toBeFalsy()
+    })
   })
 
   test("Количество проектов", () => {
-    expect(wrapper.findAllComponents(PersonalProjectsCard).length).toBe(
-      personalProjects.length
-    )
+    expect(wrapper.findAllComponents(ProjectsCard).length).toBe(projects.length)
   })
 
   describe("Кнопка «Показать все»", () => {
@@ -79,7 +91,7 @@ describe("Компонент PersonalProjects", () => {
         limit: 3,
       })
 
-      expect(viewAllButton().attributes()).toBe("/projects#personal-projects")
+      expect(viewAllButton().attributes()).toBe("/projects#projects")
     })
   })
 

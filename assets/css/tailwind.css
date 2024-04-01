@@ -27,7 +27,7 @@
   }
 
   small {
-    @apply text-sm text-neutral-400 md:text-lg dark:text-neutral-500;
+    @apply text-sm text-neutral-400 md:text-base dark:text-neutral-500;
   }
 }
 

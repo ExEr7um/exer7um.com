@@ -13,6 +13,7 @@ export default defineEventHandler(async (event) => {
   // Получаем поля из сообщения
   const { email, message, name } = await readBody<Message>(event)
 
+  // Если не передано хотя бы одно из полей
   if (!email || !message || !name)
     // Выводим ошибку
     throw createError({

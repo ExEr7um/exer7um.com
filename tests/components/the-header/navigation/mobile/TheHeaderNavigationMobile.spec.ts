@@ -38,7 +38,7 @@ describe("Компонент TheHeaderNavigationMobile", () => {
     })
   })
 
-  describe.sequential("Открытое меню", async () => {
+  describe("Открытое меню", async () => {
     test("Семантический тег nav", async () => {
       await menuButton().trigger("click")
 

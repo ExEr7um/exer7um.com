@@ -23,12 +23,12 @@ const { t } = useI18n({
   <div class="card row-span-5 grid grid-rows-subgrid gap-y-5 overflow-hidden">
     <!-- Логотип проекта -->
     <div
-      class="flex aspect-video size-full items-center justify-center rounded-2xl border-b px-6 py-8"
+      class="-mr-0.5 flex aspect-video size-full items-center justify-center rounded-2xl px-6 py-8 ring-1 ring-neutral-200 dark:ring-neutral-800"
       data-test-id="logo"
       :style="{ backgroundColor: project.backgroundColor }"
     >
       <NuxtImg
-        class="size-full"
+        class="size-full object-contain"
         format="svg"
         provider="cloudinary"
         :src="project.logo"

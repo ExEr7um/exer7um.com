@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { locale, localeCodes } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
 
 /** Код следующей локализации в списке */
 const nextLocaleCode = computed(() => {
@@ -21,10 +20,10 @@ const nextLocaleCode = computed(() => {
 </script>
 
 <template>
-  <NuxtLink
+  <SwitchLocalePathLink
     class="button tertiary squared uppercase"
-    :to="switchLocalePath(nextLocaleCode)"
+    :locale="nextLocaleCode"
   >
     {{ locale }}
-  </NuxtLink>
+  </SwitchLocalePathLink>
 </template>

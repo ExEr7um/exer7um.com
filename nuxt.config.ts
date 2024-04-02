@@ -96,6 +96,10 @@ export default defineNuxtConfig({
       scrollBehaviorType: "smooth",
     },
   },
+  runtimeConfig: {
+    telegramChatId: "",
+    telegramUrl: "",
+  },
   shiki: {
     bundledLangs: ["vue-html"],
     bundledThemes: ["night-owl"],

@@ -46,13 +46,14 @@ const { t } = useI18n({
         <small>{{ project.year }}</small>
         <!-- Ссылка на проект -->
         <NuxtLink
-          class="text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+          class="flex items-center gap-x-1 text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
           data-test-id="project-link"
           external
           target="_blank"
           :to="project.url"
         >
-          {{ t("view") }}
+          <span>{{ t("view") }}</span>
+          <Icon name="heroicons:arrow-right-16-solid" size="16" />
         </NuxtLink>
       </div>
     </div>

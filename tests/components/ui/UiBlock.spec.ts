@@ -35,6 +35,10 @@ describe("Компонент UiBlock", () => {
     })
   })
 
+  test("Семантический тег section", () => {
+    expect(wrapper.element.tagName).toBe("SECTION")
+  })
+
   test("Передача контента через slot", () => {
     expect(wrapper.html()).toContain(testBlock)
   })

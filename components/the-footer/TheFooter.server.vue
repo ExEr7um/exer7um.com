@@ -7,7 +7,7 @@
       <small data-test-id="copyright">
         © 2021-{{ new Date().getFullYear() }} exer7um.com
       </small>
-      <TheFooterSocial class="order-first w-full md:order-none md:w-auto" />
+      <Social class="order-first w-full md:order-none md:w-auto" />
       <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
       <small>
         Made with ❤️ by

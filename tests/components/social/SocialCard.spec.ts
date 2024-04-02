@@ -3,21 +3,21 @@ import type { VueWrapper } from "@vue/test-utils"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import TheFooterSocialCard, {
-  type SocialCard,
-} from "~/components/the-footer/social/TheFooterSocialCard.server.vue"
+import SocialCard, {
+  type SocialCard as SocialCardType,
+} from "~/components/social/SocialCard.server.vue"
 
-describe("Компонент TheFooterSocialCard", () => {
+describe("Компонент SocialCard", () => {
   let wrapper: VueWrapper
 
   /** Социальная сеть */
   const socialCard = {
     icon: "icon",
     url: "https://test.com/",
-  } as const satisfies SocialCard
+  } as const satisfies SocialCardType
 
   beforeEach(async () => {
-    wrapper = await mountSuspended(TheFooterSocialCard, {
+    wrapper = await mountSuspended(SocialCard, {
       props: {
         socialCard,
       },
@@ -28,19 +28,21 @@ describe("Компонент TheFooterSocialCard", () => {
     wrapper.unmount()
   })
 
+  const cardAttributes = () => wrapper.attributes()
+
   test("Семантический тег a", () => {
     expect(wrapper.element.tagName).toBe("A")
   })
 
   test("Открывается в новой вкладке", () => {
-    expect(wrapper.attributes().target).toBe("_blank")
+    expect(cardAttributes().target).toBe("_blank")
   })
 
   test("Является внешней", () => {
-    expect(wrapper.attributes().rel).toBe("noopener noreferrer")
+    expect(cardAttributes().rel).toBe("noopener noreferrer")
   })
 
   test("Ссылка из props", () => {
-    expect(wrapper.attributes().href).toBe(socialCard.url)
+    expect(cardAttributes().href).toBe(socialCard.url)
   })
 })

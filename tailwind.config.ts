@@ -14,6 +14,7 @@ export default {
   theme: {
     boxShadow: {
       DEFAULT: "0 4px 6px 0 #4B556308",
+      lg: "0 10px 20px 0 #01162720",
     },
     container: {
       center: true,

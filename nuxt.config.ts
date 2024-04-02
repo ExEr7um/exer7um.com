@@ -12,6 +12,7 @@ const modules = [
   "@vueuse/nuxt",
   "nuxt-headlessui",
   "nuxt-icon",
+  "nuxt-shiki",
 ]
 
 /**
@@ -94,6 +95,12 @@ export default defineNuxtConfig({
     options: {
       scrollBehaviorType: "smooth",
     },
+  },
+  shiki: {
+    bundledLangs: ["vue-html"],
+    bundledThemes: ["night-owl"],
+    defaultLang: "vue-html",
+    defaultTheme: "night-owl",
   },
   tailwindcss: {
     viewer: false,

@@ -39,7 +39,7 @@
     "@vueuse/nuxt": "10.9.0",
     "drizzle-orm": "0.30.6",
     "nuxt": "3.11.1",
-    "nuxt-headlessui": "1.1.5",
+    "nuxt-headlessui": "1.2.0",
     "nuxt-icon": "0.6.10",
     "nuxt-shiki": "0.3.0",
     "postcss-nesting": "12.1.1",

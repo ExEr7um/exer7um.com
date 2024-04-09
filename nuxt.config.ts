@@ -114,9 +114,4 @@ export default defineNuxtConfig({
   tailwindcss: {
     viewer: false,
   },
-  vite: {
-    optimizeDeps: {
-      exclude: ["@headlessui/vue"],
-    },
-  },
 })

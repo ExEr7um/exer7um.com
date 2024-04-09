@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { provideUseId } from "@headlessui/vue"
-
-provideUseId(() => useId())
+provideHeadlessUseId(() => useId())
 
 const i18nHead = useLocaleHead({
   addDirAttribute: true,

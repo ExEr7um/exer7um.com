@@ -7,13 +7,13 @@ const modules = [
   "@formkit/auto-animate/nuxt",
   "@nuxt/fonts",
   "@nuxt/image",
+  "@nuxthub/core",
   "@nuxtjs/i18n",
   "@nuxtjs/tailwindcss",
   "@vueuse/nuxt",
   "nuxt-headlessui",
   "nuxt-icon",
   "nuxt-shiki",
-  "@nuxthub/core",
 ]
 
 /**

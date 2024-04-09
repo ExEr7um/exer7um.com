@@ -3,11 +3,13 @@ import { consola } from "consola"
 export default defineNitroPlugin(async () => {
   if (!import.meta.dev) return
 
+  // @ts-expect-error - при запуске typecheck не определяется тип
   onHubReady(async () => {
     const migrationsStorage = useStorage("root/server/database/migrations")
     let migrationFiles = await migrationsStorage.getKeys()
     migrationFiles = migrationFiles.filter((key) => key.endsWith(".sql"))
 
+    // @ts-expect-error - при запуске typecheck не определяется тип
     const database = hubDatabase()
 
     // Make sure to create the _hub_migrations table if it doesn't exist
@@ -22,6 +24,7 @@ export default defineNitroPlugin(async () => {
       .prepare("SELECT * FROM _hub_migrations")
       .all()
     const appliedMigrations = (hubMigrations.results || []).map(
+      // @ts-expect-error - при запуске typecheck не определяется тип
       (row) => row.name
     )
     const missingMigrations = migrationFiles.filter(

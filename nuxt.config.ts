@@ -7,6 +7,7 @@ const modules = [
   "@formkit/auto-animate/nuxt",
   "@nuxt/fonts",
   "@nuxt/image",
+  "@nuxthub/core",
   "@nuxtjs/i18n",
   "@nuxtjs/tailwindcss",
   "@vueuse/nuxt",
@@ -48,7 +49,6 @@ export default defineNuxtConfig({
     headNext: true,
     typedPages: true,
   },
-  extends: ["@nuxthub/core"],
   fonts: {
     experimental: {
       addPreloadLinks: true,
@@ -60,6 +60,10 @@ export default defineNuxtConfig({
         weights: [400, 700],
       },
     ],
+  },
+  hub: {
+    cache: true,
+    database: true,
   },
   i18n: {
     defaultLocale: "ru",

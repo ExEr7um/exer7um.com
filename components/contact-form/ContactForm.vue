@@ -58,7 +58,6 @@ async function submitForm(event: Event) {
         :placeholder="t('message.placeholder')"
       />
     </div>
-    {{ status }}
     <button class="button primary w-40" type="submit">
       <LazyIcon v-if="status === 'pending'" name="svg-spinners:270-ring" />
       <span v-else>{{ t("send") }}</span>

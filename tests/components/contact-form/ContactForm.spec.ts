@@ -60,6 +60,10 @@ describe("Компонент ContactForm", () => {
     })
   })
 
+  test("Фокусировка на первом инпуте", () => {
+    expect(document.activeElement).toStrictEqual(name().element)
+  })
+
   test("Отправка сообщения к API", async () => {
     await name().setValue(contactData.name)
     await email().setValue(contactData.email)

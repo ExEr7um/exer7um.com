@@ -32,6 +32,15 @@
 }
 
 @layer components {
+  input,
+  textarea {
+    @apply default-border rounded-lg bg-neutral-100 px-3 py-1.5 text-black outline-none transition focus:ring-2 focus:ring-blue-500 dark:bg-neutral-900 dark:text-white dark:focus:ring-blue-600;
+  }
+
+  textarea {
+    @apply resize-none;
+  }
+
   .button {
     @apply flex h-12 cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-6 leading-none transition-colors;
 

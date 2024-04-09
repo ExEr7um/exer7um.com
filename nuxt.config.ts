@@ -91,6 +91,11 @@ export default defineNuxtConfig({
       "tailwindcss/nesting": "postcss-nesting",
     },
   },
+  routeRules: {
+    "/contact-me/": {
+      prerender: true,
+    },
+  },
   router: {
     options: {
       scrollBehaviorType: "smooth",

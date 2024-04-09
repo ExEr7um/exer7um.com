@@ -39,6 +39,9 @@ async function submitForm(event: Event) {
     // Выводим сообщение об ошибке, если она есть
     .catch((error) => alert(error))
 }
+
+// Фокусируемся на первом инпуте
+useFirstInputFocus()
 </script>
 
 <template>

@@ -1,6 +1,7 @@
 {
   "cSpell.language": "en,ru",
   "cSpell.words": [
+    "инпута",
     "composables",
     "consola",
     "formkit",
@@ -35,5 +36,6 @@
   "i18n-ally.localesPaths": ["assets/lang"],
   "i18n-ally.sourceLanguage": "ru",
   "tailwindCSS.emmetCompletions": true,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "vue.server.hybridMode": true
 }

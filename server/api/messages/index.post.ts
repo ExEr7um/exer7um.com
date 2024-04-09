@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
     })
 
   // Отправляем запрос к боту Telegram
-  $fetch("/sendMessage", {
+  await $fetch("/sendMessage", {
     baseURL: runtimeConfig.telegramUrl,
     body: {
       chat_id: runtimeConfig.telegramChatId,
@@ -30,6 +30,12 @@ export default defineEventHandler(async (event) => {
       text: `<b>Имя:</b> ${name}\r\n<b>Почта:</b> ${email}\r\n<b>Сообщение:</b> ${message}`,
     },
     method: "POST",
+  }).catch((error) => {
+    // Выводим ошибку
+    throw createError({
+      message: error,
+      status: 500,
+    })
   })
 
   return "OK"

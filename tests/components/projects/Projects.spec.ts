@@ -1,3 +1,4 @@
+// @vitest-environment nuxt
 import type { VueWrapper } from "@vue/test-utils"
 import type { H3Event } from "h3"
 
@@ -8,31 +9,7 @@ import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import Projects from "~/components/projects/Projects.vue"
 import ProjectsCard from "~/components/projects/ProjectsCard.vue"
-
-import { tags } from "../ui/tags/UiTags.spec"
-
-export const projects = [
-  {
-    backgroundColor: "#000000",
-    description: "Интернет-магазин брендовой одежды",
-    id: 1,
-    logo: "/oonyxx-store.svg",
-    tags,
-    title: "oonyxx.store",
-    url: "https://exer7um.github.io/Oonyxx-Store/",
-    year: 2019,
-  },
-  {
-    backgroundColor: "#000000",
-    description: "Интернет-магазин брендовой одежды",
-    id: 2,
-    logo: "/oonyxx-store.svg",
-    tags,
-    title: "oonyxx.store",
-    url: "https://exer7um.github.io/Oonyxx-Store/",
-    year: 2019,
-  },
-]
+import { projects } from "~/tests/constants/projects"
 
 describe("Компонент Projects", () => {
   let wrapper: VueWrapper

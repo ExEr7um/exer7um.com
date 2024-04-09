@@ -5,8 +5,7 @@ import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import PersonalProjectsCard from "~/components/personal-projects/PersonalProjectsCard.vue"
 import UiCardContent from "~/components/ui/UiCardContent.vue"
-
-import { personalProjects } from "./PersonalProjects.spec"
+import { personalProjects } from "~/tests/constants/personalProjects"
 
 describe("Компонент PersonalProjectsCard", () => {
   const personalProject = personalProjects[0]

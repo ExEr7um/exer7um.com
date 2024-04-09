@@ -3,21 +3,9 @@ import type { VueWrapper } from "@vue/test-utils"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import type { Tag } from "~/server/database/schema/tag"
-
 import UiTags from "~/components/ui/tags/UiTags.vue"
 import UiTagsCard from "~/components/ui/tags/UiTagsCard.vue"
-
-export const tags: Tag[] = [
-  {
-    id: 1,
-    title: "Заголовок тега",
-  },
-  {
-    id: 2,
-    title: "Заголовок тега",
-  },
-]
+import { tags } from "~/tests/constants/tags"
 
 describe("Компонент UiTags", () => {
   let wrapper: VueWrapper

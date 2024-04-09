@@ -4,8 +4,7 @@ import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UiTagsCard from "~/components/ui/tags/UiTagsCard.vue"
-
-import { tags } from "./UiTags.spec"
+import { tags } from "~/tests/constants/tags"
 
 describe("Компонент UiTagsCard", () => {
   const tag = tags[0]

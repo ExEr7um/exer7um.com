@@ -1,3 +1,4 @@
+// @vitest-environment nuxt
 import type { H3Event } from "h3"
 
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"

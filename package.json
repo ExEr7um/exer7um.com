@@ -41,7 +41,7 @@
     "nuxt": "3.11.1",
     "nuxt-headlessui": "1.1.5",
     "nuxt-icon": "0.6.10",
-    "nuxt-shiki": "0.2.1",
+    "nuxt-shiki": "0.3.0",
     "postcss-nesting": "12.1.1",
     "vue": "3.4.21",
     "vue-router": "4.3.0"

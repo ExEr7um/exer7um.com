@@ -22,12 +22,14 @@ const code = `<section class="flex items-center justify-between gap-x-8 py-8">
 </script>
 
 <template>
-  <div class="w-max rounded-2xl bg-[#011627] px-6 pb-6 text-sm shadow-lg">
-    <div class="flex h-12 items-center gap-x-2">
+  <div
+    class="w-full overflow-hidden rounded-2xl bg-[#011627] px-4 pb-4 text-[.625rem] shadow-lg sm:px-6 sm:pb-6 sm:text-xs md:text-sm lg:w-max lg:text-xs xl:text-sm"
+  >
+    <div class="flex h-10 items-center gap-x-2 sm:h-12">
       <div
         v-for="color in buttonColors"
         :key="color"
-        class="size-3 rounded-full"
+        class="size-2.5 rounded-full sm:size-3"
         :class="color"
         data-test-id="windowButton"
       />

@@ -16,7 +16,7 @@ describe("Компонент UiTagsCard", () => {
 
   let wrapper: VueWrapper
 
-  const elementClasses = () => wrapper.attributes().class
+  const elementClasses = () => wrapper.attributes("class")
 
   beforeEach(async () => {
     wrapper = await mountSuspended(UiTagsCard, {

@@ -24,7 +24,7 @@ describe("Компонент UiTags", () => {
 
   const tagsList = () => wrapper.findAllComponents(UiTagsCard)
   const isEveryTagSmall = () =>
-    tagsList().every((tag) => tag.attributes().small === "true")
+    tagsList().every((tag) => tag.attributes("small") === "true")
 
   beforeEach(async () => {
     wrapper = await mountSuspended(UiTags, {

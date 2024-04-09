@@ -26,15 +26,15 @@ describe("Компонент UiInput", () => {
 
   const input = () => wrapper.find("input")
   const label = () => wrapper.find("label")
-  const inputAttribute = (attribute: string) => input().attributes(attribute)
+  const inputAttributes = (attribute: string) => input().attributes(attribute)
 
   const setLabel = async () => await wrapper.setProps({ label: labelText })
 
   test("Выставление атрибутов `id` и `name` на поле ввода", () => {
     // Проверка атрибута `id`
-    expect(inputAttribute("id")).toBe(defaultProps.id)
+    expect(inputAttributes("id")).toBe(defaultProps.id)
     // Проверка атрибута `name`
-    expect(inputAttribute("name")).toBe(defaultProps.id)
+    expect(inputAttributes("name")).toBe(defaultProps.id)
   })
 
   describe("Параметр label", () => {
@@ -63,40 +63,40 @@ describe("Компонент UiInput", () => {
 
   describe("Параметр placeholder", () => {
     test("Отсутствие по умолчанию", () => {
-      expect(inputAttribute("placeholder")).toBeUndefined()
+      expect(inputAttributes("placeholder")).toBeUndefined()
     })
 
     test("Выставление при передаче параметра", async () => {
       const placeholder = "Тестовый placeholder"
       await wrapper.setProps({ placeholder })
 
-      expect(inputAttribute("placeholder")).toBe(placeholder)
+      expect(inputAttributes("placeholder")).toBe(placeholder)
     })
   })
 
   describe("Параметр required", () => {
     test("По умолчанию true", () => {
       // При преобразовании в HTML, true заменяется на пустую строку.
-      expect(inputAttribute("required")).toBe("")
+      expect(inputAttributes("required")).toBe("")
     })
 
     test("Выставление при передаче параметра", async () => {
       await wrapper.setProps({ required: false })
 
-      expect(inputAttribute("required")).toBeUndefined()
+      expect(inputAttributes("required")).toBeUndefined()
     })
   })
 
   describe("Параметр type", () => {
     test("По умолчанию text", () => {
-      expect(inputAttribute("type")).toBe("text")
+      expect(inputAttributes("type")).toBe("text")
     })
 
     test("Выставление при передаче параметра", async () => {
       const type: InputTypeHTMLAttribute = "email"
       await wrapper.setProps({ type })
 
-      expect(inputAttribute("type")).toBe(type)
+      expect(inputAttributes("type")).toBe(type)
     })
   })
 })

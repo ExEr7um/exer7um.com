@@ -25,16 +25,16 @@ describe("Компонент UiTextArea", () => {
 
   const textarea = () => wrapper.find("textarea")
   const label = () => wrapper.find("label")
-  const textareaAttribute = (attribute: string) =>
+  const textareaAttributes = (attribute: string) =>
     textarea().attributes(attribute)
 
   const setLabel = async () => await wrapper.setProps({ label: labelText })
 
   test("Выставление атрибутов `id` и `name` на поле ввода", () => {
     // Проверка атрибута `id`
-    expect(textareaAttribute("id")).toBe(defaultProps.id)
+    expect(textareaAttributes("id")).toBe(defaultProps.id)
     // Проверка атрибута `name`
-    expect(textareaAttribute("name")).toBe(defaultProps.id)
+    expect(textareaAttributes("name")).toBe(defaultProps.id)
   })
 
   describe("Параметр label", () => {
@@ -63,40 +63,40 @@ describe("Компонент UiTextArea", () => {
 
   describe("Параметр placeholder", () => {
     test("Отсутствие по умолчанию", () => {
-      expect(textareaAttribute("placeholder")).toBeUndefined()
+      expect(textareaAttributes("placeholder")).toBeUndefined()
     })
 
     test("Выставление при передаче параметра", async () => {
       const placeholder = "Тестовый placeholder"
       await wrapper.setProps({ placeholder })
 
-      expect(textareaAttribute("placeholder")).toBe(placeholder)
+      expect(textareaAttributes("placeholder")).toBe(placeholder)
     })
   })
 
   describe("Параметр required", () => {
     test("По умолчанию true", () => {
       // При преобразовании в HTML, true заменяется на пустую строку.
-      expect(textareaAttribute("required")).toBe("")
+      expect(textareaAttributes("required")).toBe("")
     })
 
     test("Выставление при передаче параметра", async () => {
       await wrapper.setProps({ required: false })
 
-      expect(textareaAttribute("required")).toBeUndefined()
+      expect(textareaAttributes("required")).toBeUndefined()
     })
   })
 
   describe("Параметр rows", () => {
     test("По умолчанию 4", () => {
-      expect(textareaAttribute("rows")).toBe("4")
+      expect(textareaAttributes("rows")).toBe("4")
     })
 
     test("Выставление при передаче параметра", async () => {
       const rows = 3
       await wrapper.setProps({ rows })
 
-      expect(textareaAttribute("rows")).toBe(rows.toString())
+      expect(textareaAttributes("rows")).toBe(rows.toString())
     })
   })
 })

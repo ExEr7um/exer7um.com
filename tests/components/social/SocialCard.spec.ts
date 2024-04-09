@@ -28,21 +28,21 @@ describe("Компонент SocialCard", () => {
     wrapper.unmount()
   })
 
-  const cardAttributes = () => wrapper.attributes()
+  const cardAttributes = (attribute: string) => wrapper.attributes(attribute)
 
   test("Семантический тег a", () => {
     expect(wrapper.element.tagName).toBe("A")
   })
 
   test("Открывается в новой вкладке", () => {
-    expect(cardAttributes().target).toBe("_blank")
+    expect(cardAttributes("target")).toBe("_blank")
   })
 
   test("Является внешней", () => {
-    expect(cardAttributes().rel).toBe("noopener noreferrer")
+    expect(cardAttributes("rel")).toBe("noopener noreferrer")
   })
 
   test("Ссылка из props", () => {
-    expect(cardAttributes().href).toBe(socialCard.url)
+    expect(cardAttributes("href")).toBe(socialCard.url)
   })
 })

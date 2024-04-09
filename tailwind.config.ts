@@ -29,7 +29,7 @@ export default {
       },
     },
     fontFamily: {
-      sans: ["Gill Sans", "sans-serif"],
+      sans: ["Inter", "sans-serif"],
     },
     fontWeight: {
       bold: "700",

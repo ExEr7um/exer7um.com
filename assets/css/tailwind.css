@@ -26,6 +26,10 @@
     @apply text-xl md:text-[1.75rem];
   }
 
+  p {
+    @apply leading-relaxed;
+  }
+
   small {
     @apply text-sm text-neutral-400 md:text-base dark:text-neutral-500;
   }

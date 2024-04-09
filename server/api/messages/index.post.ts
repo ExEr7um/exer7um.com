@@ -8,7 +8,7 @@ export interface Message {
 }
 
 export default defineEventHandler(async (event) => {
-  const runtimeConfig = useRuntimeConfig()
+  const runtimeConfig = useRuntimeConfig(event)
 
   // Получаем поля из сообщения
   const { email, message, name } = await readBody<Message>(event)

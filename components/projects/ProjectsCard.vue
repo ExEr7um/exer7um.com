@@ -30,6 +30,7 @@ const { t } = useI18n({
       <NuxtImg
         class="size-full object-contain"
         format="svg"
+        loading="lazy"
         provider="cloudinary"
         :src="project.logo"
       />

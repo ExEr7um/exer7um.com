@@ -70,6 +70,10 @@ describe("Компонент ProjectsCard", () => {
     test("Значение из props", () => {
       expect(logoAttributes("src")).toBe(project.logo)
     })
+
+    test("Загрузка lazy", () => {
+      expect(logoAttributes("loading")).toBe("lazy")
+    })
   })
 
   describe("Ссылка на проект", () => {

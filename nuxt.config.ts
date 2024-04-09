@@ -53,13 +53,6 @@ export default defineNuxtConfig({
     experimental: {
       addPreloadLinks: true,
     },
-    families: [
-      {
-        name: "Gill Sans",
-        provider: "local",
-        weights: [400, 700],
-      },
-    ],
   },
   hub: {
     cache: true,

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-50 text-neutral-500 antialiased lg:text-lg dark:bg-neutral-950 dark:text-neutral-400;
+    @apply bg-neutral-50 text-neutral-500 antialiased dark:bg-neutral-950 dark:text-neutral-400;
   }
 
   h1,
@@ -15,15 +15,19 @@
   }
 
   h1 {
-    @apply text-[3.5rem];
+    @apply text-[2.5rem] md:text-[3.5rem];
   }
 
   h2 {
-    @apply text-[2.5rem];
+    @apply text-[1.75rem] md:text-[2.5rem];
   }
 
   h3 {
-    @apply text-[1.75rem];
+    @apply text-xl md:text-[1.75rem];
+  }
+
+  p {
+    @apply leading-relaxed;
   }
 
   small {
@@ -34,15 +38,19 @@
 @layer components {
   input,
   textarea {
-    @apply default-border rounded-lg bg-neutral-100 px-3 py-1.5 text-black outline-none transition focus:ring-2 focus:ring-blue-500 dark:bg-neutral-900 dark:text-white dark:focus:ring-blue-600;
+    @apply default-border rounded-lg bg-neutral-100 px-3 py-2 text-black outline-none transition focus:ring-2 focus:ring-blue-500 dark:bg-neutral-900 dark:text-white dark:focus:ring-blue-600;
   }
 
   textarea {
     @apply resize-none;
   }
 
+  label {
+    @apply text-black lg:text-lg dark:text-white;
+  }
+
   .button {
-    @apply flex h-12 cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-6 leading-none transition-colors;
+    @apply flex h-12 cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-5 leading-none transition-colors sm:px-6;
 
     &.primary {
       @apply border-blue-700 bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-800;

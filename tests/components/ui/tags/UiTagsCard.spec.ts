@@ -11,7 +11,7 @@ describe("Компонент UiTagsCard", () => {
   const tag = tags[0]
   const classes = {
     big: "px-3",
-    small: "px-2 text-sm",
+    small: "px-2 text-xs sm:text-sm",
   }
 
   let wrapper: VueWrapper

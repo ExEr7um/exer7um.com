@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card row-span-4 grid grid-rows-subgrid gap-y-5 p-6">
+  <div class="card row-span-4 grid grid-rows-subgrid gap-y-5 p-5">
     <!-- Шапка карточки -->
     <div class="flex justify-between">
       <!-- Иконка проекта -->

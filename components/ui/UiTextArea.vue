@@ -22,11 +22,7 @@ withDefaults(
 
 <template>
   <div class="flex flex-col gap-y-1">
-    <label
-      v-if="label"
-      class="text-lg text-black lg:text-xl dark:text-white"
-      :for="id"
-    >
+    <label v-if="label" :for="id">
       {{ label }}
     </label>
     <textarea :id :name="id" :placeholder :required :rows type="text" />

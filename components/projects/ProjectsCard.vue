@@ -36,7 +36,7 @@ const { t } = useI18n({
       />
     </div>
     <!-- Контент карточки -->
-    <div class="row-span-4 -mt-5 grid grid-rows-subgrid p-6">
+    <div class="row-span-4 -mt-5 grid grid-rows-subgrid p-5">
       <UiCardContent
         :description="project.description"
         :tags="project.tags"

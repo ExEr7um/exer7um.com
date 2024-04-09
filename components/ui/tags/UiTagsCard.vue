@@ -12,7 +12,7 @@ defineProps<{
 <template>
   <div
     class="tag size-max rounded-md py-2"
-    :class="[small ? 'px-2 text-sm' : 'px-3']"
+    :class="[small ? 'px-2 text-xs sm:text-sm' : 'px-3']"
   >
     {{ tag.title }}
   </div>

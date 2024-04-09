@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import Social from "~/components/social/Social.server.vue"
@@ -8,10 +8,8 @@ import Social from "~/components/social/Social.server.vue"
 describe("Компонент Social", () => {
   let wrapper: VueWrapper
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(Social, {
-      shallow: true,
-    })
+  beforeEach(() => {
+    wrapper = shallowMount(Social)
   })
 
   afterEach(() => {

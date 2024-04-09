@@ -1,3 +1,4 @@
+// @vitest-environment nuxt
 import type { VueWrapper } from "@vue/test-utils"
 
 import { mountSuspended } from "@nuxt/test-utils/runtime"
@@ -38,7 +39,7 @@ describe("Компонент TheHeaderNavigationMobile", () => {
     })
   })
 
-  describe("Открытое меню", async () => {
+  describe("Открытое меню", () => {
     test("Семантический тег nav", async () => {
       await menuButton().trigger("click")
 

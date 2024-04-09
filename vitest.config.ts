@@ -5,7 +5,7 @@ export default defineVitestConfig({
     coverage: {
       provider: "istanbul",
     },
-    environment: "nuxt",
+    environment: "happy-dom",
     globals: true,
     sequence: {
       concurrent: true,

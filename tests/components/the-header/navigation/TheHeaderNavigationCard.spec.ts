@@ -1,3 +1,4 @@
+// @vitest-environment nuxt
 import type { VueWrapper } from "@vue/test-utils"
 
 import { mountSuspended } from "@nuxt/test-utils/runtime"
@@ -24,7 +25,7 @@ describe("Компонент TheHeaderNavigationCard", () => {
     expect(wrapper.element.tagName).toBe("A")
   })
 
-  test("Ссылка на страницу — /", () => {
+  test("Ссылка на страницу `/`", () => {
     expect(wrapper.attributes("href")).toBe("/")
   })
 })

@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import TheHeader from "~/components/the-header/TheHeader.vue"
@@ -8,10 +8,8 @@ import TheHeader from "~/components/the-header/TheHeader.vue"
 describe("Компонент TheHeader", () => {
   let wrapper: VueWrapper
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(TheHeader, {
-      shallow: true,
-    })
+  beforeEach(() => {
+    wrapper = shallowMount(TheHeader)
   })
 
   afterEach(() => {

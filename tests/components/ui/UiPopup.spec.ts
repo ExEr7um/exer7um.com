@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { mount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UiPopup from "~/components/ui/UiPopup.vue"
@@ -12,8 +12,8 @@ describe("Компонент UiPopup", () => {
 
   let wrapper: VueWrapper
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(UiPopup, {
+  beforeEach(() => {
+    wrapper = mount(UiPopup, {
       props: {
         description,
         title,

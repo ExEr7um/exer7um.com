@@ -1,12 +1,11 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import ProjectsCard from "~/components/projects/ProjectsCard.vue"
 import UiCardContent from "~/components/ui/UiCardContent.vue"
-
-import { projects } from "./Projects.spec"
+import { projects } from "~/tests/constants/projects"
 
 describe("Компонент ProjectsCard", () => {
   const project = projects[0]
@@ -20,12 +19,11 @@ describe("Компонент ProjectsCard", () => {
   const projectLinkAttributes = (attribute: string) =>
     wrapper.find("[data-test-id=project-link]").attributes(attribute)
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(ProjectsCard, {
+  beforeEach(() => {
+    wrapper = shallowMount(ProjectsCard, {
       props: {
         project,
       },
-      shallow: true,
     })
   })
 

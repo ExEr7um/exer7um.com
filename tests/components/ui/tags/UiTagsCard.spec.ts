@@ -1,11 +1,10 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UiTagsCard from "~/components/ui/tags/UiTagsCard.vue"
-
-import { tags } from "./UiTags.spec"
+import { tags } from "~/tests/constants/tags"
 
 describe("Компонент UiTagsCard", () => {
   const tag = tags[0]
@@ -18,8 +17,8 @@ describe("Компонент UiTagsCard", () => {
 
   const elementClasses = () => wrapper.attributes("class")
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(UiTagsCard, {
+  beforeEach(() => {
+    wrapper = shallowMount(UiTagsCard, {
       props: {
         tag,
       },

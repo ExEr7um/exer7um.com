@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import TheHeaderNavigation from "~/components/the-header/navigation/TheHeaderNavigation.vue"
@@ -11,12 +11,11 @@ describe("Компонент TheHeaderNavigation", () => {
   /** Список навигации */
   const navigation = ["index", "projects"] as const satisfies string[]
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(TheHeaderNavigation, {
+  beforeEach(() => {
+    wrapper = shallowMount(TheHeaderNavigation, {
       props: {
         navigation,
       },
-      shallow: true,
     })
   })
 

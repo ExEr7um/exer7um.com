@@ -1,3 +1,4 @@
+// @vitest-environment node
 import { describe, expect, test } from "vitest"
 
 describe("Если число 0", () => {

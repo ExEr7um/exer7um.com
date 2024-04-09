@@ -1,7 +1,7 @@
 import type { VueWrapper } from "@vue/test-utils"
 import type { InputTypeHTMLAttribute } from "vue"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UiInput from "~/components/ui/UiInput.vue"
@@ -14,8 +14,8 @@ describe("Компонент UiInput", () => {
 
   let wrapper: VueWrapper
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(UiInput, {
+  beforeEach(() => {
+    wrapper = shallowMount(UiInput, {
       props: defaultProps,
     })
   })

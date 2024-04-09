@@ -24,7 +24,7 @@ describe("Компонент TheHeaderNavigationCard", () => {
     expect(wrapper.element.tagName).toBe("A")
   })
 
-  test("Ссылка на страницу — /", () => {
+  test("Ссылка на страницу `/`", () => {
     expect(wrapper.attributes("href")).toBe("/")
   })
 })

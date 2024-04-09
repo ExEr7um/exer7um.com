@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UiBlock from "~/components/ui/UiBlock.vue"
@@ -11,8 +11,8 @@ describe("Компонент UiBlock", () => {
 
   let wrapper: VueWrapper
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(UiBlock, {
+  beforeEach(() => {
+    wrapper = shallowMount(UiBlock, {
       slots: {
         default: () => testBlock,
       },

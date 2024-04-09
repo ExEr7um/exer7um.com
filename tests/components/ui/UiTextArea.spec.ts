@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UiTextArea from "~/components/ui/UiTextArea.vue"
@@ -13,8 +13,8 @@ describe("Компонент UiTextArea", () => {
 
   let wrapper: VueWrapper
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(UiTextArea, {
+  beforeEach(() => {
+    wrapper = shallowMount(UiTextArea, {
       props: defaultProps,
     })
   })

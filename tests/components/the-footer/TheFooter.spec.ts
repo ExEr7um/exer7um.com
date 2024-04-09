@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import TheFooter from "~/components/the-footer/TheFooter.server.vue"
@@ -8,10 +8,8 @@ import TheFooter from "~/components/the-footer/TheFooter.server.vue"
 describe("Компонент TheFooter", () => {
   let wrapper: VueWrapper
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(TheFooter, {
-      shallow: true,
-    })
+  beforeEach(() => {
+    wrapper = shallowMount(TheFooter)
   })
 
   afterEach(() => {

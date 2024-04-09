@@ -1,6 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { mountSuspended } from "@nuxt/test-utils/runtime"
+import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import type { Tag } from "~/server/database/schema/tag"
@@ -26,12 +26,11 @@ describe("Компонент UiTags", () => {
   const isEveryTagSmall = () =>
     tagsList().every((tag) => tag.attributes("small") === "true")
 
-  beforeEach(async () => {
-    wrapper = await mountSuspended(UiTags, {
+  beforeEach(() => {
+    wrapper = shallowMount(UiTags, {
       props: {
         tags,
       },
-      shallow: true,
     })
   })
 

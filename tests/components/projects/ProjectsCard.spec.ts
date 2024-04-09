@@ -13,12 +13,12 @@ describe("Компонент ProjectsCard", () => {
 
   let wrapper: VueWrapper
 
-  const cardContentAttributes = () =>
-    wrapper.findComponent(UiCardContent).attributes()
-  const logoAttributes = () =>
-    wrapper.findComponent({ name: "NuxtImg" }).attributes()
-  const projectLinkAttributes = () =>
-    wrapper.find("[data-test-id=project-link]").attributes()
+  const cardContentAttributes = (attribute: string) =>
+    wrapper.findComponent(UiCardContent).attributes(attribute)
+  const logoAttributes = (attribute: string) =>
+    wrapper.findComponent({ name: "NuxtImg" }).attributes(attribute)
+  const projectLinkAttributes = (attribute: string) =>
+    wrapper.find("[data-test-id=project-link]").attributes(attribute)
 
   beforeEach(async () => {
     wrapper = await mountSuspended(ProjectsCard, {
@@ -35,15 +35,15 @@ describe("Компонент ProjectsCard", () => {
 
   describe("Правильная передача полей", () => {
     test("Заголовок", () => {
-      expect(cardContentAttributes().title).toBe(project.title)
+      expect(cardContentAttributes("title")).toBe(project.title)
     })
 
     test("Описание", () => {
-      expect(cardContentAttributes().description).toBe(project.description)
+      expect(cardContentAttributes("description")).toBe(project.description)
     })
 
     test("Теги", () => {
-      expect(cardContentAttributes().tags).toBe(project.tags.toString())
+      expect(cardContentAttributes("tags")).toBe(project.tags.toString())
     })
 
     test("Год", () => {
@@ -60,25 +60,25 @@ describe("Компонент ProjectsCard", () => {
     })
 
     test("Формат SVG", () => {
-      expect(logoAttributes().format).toBe("svg")
+      expect(logoAttributes("format")).toBe("svg")
     })
 
     test("Провайдер Cloudinary", () => {
-      expect(logoAttributes().provider).toBe("cloudinary")
+      expect(logoAttributes("provider")).toBe("cloudinary")
     })
 
     test("Значение из props", () => {
-      expect(logoAttributes().src).toBe(project.logo)
+      expect(logoAttributes("src")).toBe(project.logo)
     })
   })
 
   describe("Ссылка на проект", () => {
     test("Правильно передается из props", () => {
-      expect(projectLinkAttributes().to).toBe(project.url)
+      expect(projectLinkAttributes("to")).toBe(project.url)
     })
 
     test("Открывается в новой вкладке", () => {
-      expect(projectLinkAttributes().target).toBe("_blank")
+      expect(projectLinkAttributes("target")).toBe("_blank")
     })
   })
 })

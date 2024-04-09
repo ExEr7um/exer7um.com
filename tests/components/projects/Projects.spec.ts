@@ -91,7 +91,7 @@ describe("Компонент Projects", () => {
         limit: 3,
       })
 
-      expect(viewAllButton().attributes()).toBe("/projects#projects")
+      expect(viewAllButton().attributes("to")).toBe("/projects#projects")
     })
   })
 

@@ -79,7 +79,9 @@ describe("Компонент PersonalProjects", () => {
         limit: 3,
       })
 
-      expect(viewAllButton().attributes()).toBe("/projects#personal-projects")
+      expect(viewAllButton().attributes("to")).toBe(
+        "/projects#personal-projects"
+      )
     })
   })
 

@@ -39,7 +39,7 @@ describe("Компонент UiCardContent", () => {
 
   describe("Список тегов", () => {
     test("Передается из props", () => {
-      expect(wrapper.find("[data-test-id=tags]").attributes().tags).toBe(
+      expect(wrapper.find("[data-test-id=tags]").attributes("tags")).toBe(
         cardContent.tags.toString()
       )
     })

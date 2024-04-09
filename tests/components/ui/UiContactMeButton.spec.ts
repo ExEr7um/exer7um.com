@@ -22,7 +22,7 @@ describe("Компонент UiContactMeButton", () => {
 
   test("Кнопка переводит на страницу «Связаться со мной»", () => {
     /** Атрибут `href` кнопки */
-    const buttonHref = wrapper.attributes().href
+    const buttonHref = wrapper.attributes("href")
 
     expect(buttonHref).toBe("/contact-me/")
   })

@@ -13,10 +13,10 @@ describe("Компонент PersonalProjectsCard", () => {
 
   let wrapper: VueWrapper
 
-  const cardContentAttributes = () =>
-    wrapper.findComponent(UiCardContent).attributes()
-  const githubLinkAttributes = () =>
-    wrapper.find("[data-test-id=github-link]").attributes()
+  const cardContentAttributes = (attribute: string) =>
+    wrapper.findComponent(UiCardContent).attributes(attribute)
+  const githubLinkAttributes = (attribute: string) =>
+    wrapper.find("[data-test-id=github-link]").attributes(attribute)
 
   beforeEach(async () => {
     wrapper = await mountSuspended(PersonalProjectsCard, {
@@ -33,11 +33,11 @@ describe("Компонент PersonalProjectsCard", () => {
 
   describe("Правильная передача полей", () => {
     test("Заголовок", () => {
-      expect(cardContentAttributes().title).toBe(personalProject.title)
+      expect(cardContentAttributes("title")).toBe(personalProject.title)
     })
 
     test("Описание", () => {
-      expect(cardContentAttributes().description).toBe(
+      expect(cardContentAttributes("description")).toBe(
         personalProject.description
       )
     })
@@ -49,17 +49,19 @@ describe("Компонент PersonalProjectsCard", () => {
     })
 
     test("Теги", () => {
-      expect(cardContentAttributes().tags).toBe(personalProject.tags.toString())
+      expect(cardContentAttributes("tags")).toBe(
+        personalProject.tags.toString()
+      )
     })
   })
 
   describe("Ссылка на GitHub", () => {
     test("Выставляется из props", () => {
-      expect(githubLinkAttributes().to).toBe(personalProject.github)
+      expect(githubLinkAttributes("to")).toBe(personalProject.github)
     })
 
     test("Открывается в новой вкладке", () => {
-      expect(githubLinkAttributes().target).toBe("_blank")
+      expect(githubLinkAttributes("target")).toBe("_blank")
     })
   })
 })

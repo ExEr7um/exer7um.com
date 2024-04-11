@@ -42,9 +42,6 @@ export default defineNuxtConfig({
     enabled: true,
   },
   experimental: {
-    componentIslands: {
-      selectiveClient: "deep",
-    },
     cookieStore: true,
     headNext: true,
     typedPages: true,

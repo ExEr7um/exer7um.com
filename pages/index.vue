@@ -12,5 +12,6 @@ useSeoMeta({
     <TheHero />
     <Projects :limit="3" />
     <PersonalProjects :limit="3" />
+    <AboutMe />
   </main>
 </template>

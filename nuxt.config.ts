@@ -42,9 +42,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
   experimental: {
-    componentIslands: {
-      selectiveClient: "deep",
-    },
+    componentIslands: true,
     cookieStore: true,
     headNext: true,
     typedPages: true,
@@ -89,6 +87,9 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
+    "/about/": {
+      prerender: true,
+    },
     "/contact-me/": {
       prerender: true,
     },

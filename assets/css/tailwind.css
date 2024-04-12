@@ -46,7 +46,7 @@
   }
 
   label {
-    @apply text-black lg:text-lg dark:text-white;
+    @apply font-medium text-black lg:text-lg dark:text-white;
   }
 
   .button {

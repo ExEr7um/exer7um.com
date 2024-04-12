@@ -2,16 +2,14 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: t("pages.index"),
+  title: t("pages.about"),
   // TODO: Добавить описание страницы
 })
 </script>
 
 <template>
   <main>
-    <TheHero />
-    <Projects :limit="3" />
-    <PersonalProjects :limit="3" />
-    <AboutMe />
+    <h1>{{ t("pages.about") }}</h1>
+    <AboutMe hide-title />
   </main>
 </template>

@@ -10,10 +10,10 @@ export default defineNitroPlugin(async () => {
       migrationsFolder: "server/database/migrations",
     })
       .then(() => {
-        consola.success("Database migrations done")
+        consola.success("Миграции БД проведены успешно")
       })
       .catch((err) => {
-        consola.error("Database migrations failed", err)
+        consola.error("Ошибка при проведении миграций БД", err)
       })
   })
 })

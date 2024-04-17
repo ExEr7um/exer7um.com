@@ -1,0 +1,382 @@
+{
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  },
+  "dialect": "sqlite",
+  "enums": {},
+  "id": "b3b18a80-678d-4602-b830-2807fce36532",
+  "prevId": "6462ff00-0f93-4c51-906c-ca1ac2d328a1",
+  "tables": {
+    "personal_projects": {
+      "columns": {
+        "created_at": {
+          "autoincrement": false,
+          "default": "(unixepoch())",
+          "name": "created_at",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "description_en": {
+          "autoincrement": false,
+          "name": "description_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "description_ru": {
+          "autoincrement": false,
+          "name": "description_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "github": {
+          "autoincrement": false,
+          "name": "github",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "icon": {
+          "autoincrement": false,
+          "name": "icon",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text(1)"
+        },
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "integer"
+        },
+        "title_en": {
+          "autoincrement": false,
+          "name": "title_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "title_ru": {
+          "autoincrement": false,
+          "name": "title_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {},
+      "indexes": {},
+      "name": "personal_projects",
+      "uniqueConstraints": {}
+    },
+    "projects": {
+      "columns": {
+        "background_color": {
+          "autoincrement": false,
+          "name": "background_color",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "created_at": {
+          "autoincrement": false,
+          "default": "(unixepoch())",
+          "name": "created_at",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "description_en": {
+          "autoincrement": false,
+          "name": "description_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "description_ru": {
+          "autoincrement": false,
+          "name": "description_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "integer"
+        },
+        "logo": {
+          "autoincrement": false,
+          "name": "logo",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "title_en": {
+          "autoincrement": false,
+          "name": "title_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "title_ru": {
+          "autoincrement": false,
+          "name": "title_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "url": {
+          "autoincrement": false,
+          "name": "url",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "year": {
+          "autoincrement": false,
+          "name": "year",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {},
+      "indexes": {},
+      "name": "projects",
+      "uniqueConstraints": {}
+    },
+    "tags": {
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "integer"
+        },
+        "title": {
+          "autoincrement": false,
+          "name": "title",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {},
+      "indexes": {},
+      "name": "tags",
+      "uniqueConstraints": {}
+    },
+    "tags_to_personal_projects": {
+      "columns": {
+        "personal_project_id": {
+          "autoincrement": false,
+          "name": "personal_project_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "tag_id": {
+          "autoincrement": false,
+          "name": "tag_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {
+        "tags_to_personal_projects_personal_project_id_personal_projects_id_fk": {
+          "columnsFrom": ["personal_project_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_personal_projects_personal_project_id_personal_projects_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_personal_projects",
+          "tableTo": "personal_projects"
+        },
+        "tags_to_personal_projects_tag_id_tags_id_fk": {
+          "columnsFrom": ["tag_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_personal_projects_tag_id_tags_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_personal_projects",
+          "tableTo": "tags"
+        }
+      },
+      "indexes": {},
+      "name": "tags_to_personal_projects",
+      "uniqueConstraints": {}
+    },
+    "tags_to_projects": {
+      "columns": {
+        "project_id": {
+          "autoincrement": false,
+          "name": "project_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "tag_id": {
+          "autoincrement": false,
+          "name": "tag_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {
+        "tags_to_projects_project_id_projects_id_fk": {
+          "columnsFrom": ["project_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_projects_project_id_projects_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_projects",
+          "tableTo": "projects"
+        },
+        "tags_to_projects_tag_id_tags_id_fk": {
+          "columnsFrom": ["tag_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_projects_tag_id_tags_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_projects",
+          "tableTo": "tags"
+        }
+      },
+      "indexes": {},
+      "name": "tags_to_projects",
+      "uniqueConstraints": {}
+    },
+    "tags_to_workplaces": {
+      "columns": {
+        "tag_id": {
+          "autoincrement": false,
+          "name": "tag_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "workplace_id": {
+          "autoincrement": false,
+          "name": "workplace_id",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {
+        "tags_to_workplaces_tag_id_tags_id_fk": {
+          "columnsFrom": ["tag_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_workplaces_tag_id_tags_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_workplaces",
+          "tableTo": "tags"
+        },
+        "tags_to_workplaces_workplace_id_workplaces_id_fk": {
+          "columnsFrom": ["workplace_id"],
+          "columnsTo": ["id"],
+          "name": "tags_to_workplaces_workplace_id_workplaces_id_fk",
+          "onDelete": "no action",
+          "onUpdate": "no action",
+          "tableFrom": "tags_to_workplaces",
+          "tableTo": "workplaces"
+        }
+      },
+      "indexes": {},
+      "name": "tags_to_workplaces",
+      "uniqueConstraints": {}
+    },
+    "workplaces": {
+      "columns": {
+        "created_at": {
+          "autoincrement": false,
+          "default": "(unixepoch())",
+          "name": "created_at",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "description_en": {
+          "autoincrement": false,
+          "name": "description_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "description_ru": {
+          "autoincrement": false,
+          "name": "description_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "end_date": {
+          "autoincrement": false,
+          "name": "end_date",
+          "notNull": false,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "notNull": true,
+          "primaryKey": true,
+          "type": "integer"
+        },
+        "logo": {
+          "autoincrement": false,
+          "name": "logo",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "start_date": {
+          "autoincrement": false,
+          "name": "start_date",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "integer"
+        },
+        "title_en": {
+          "autoincrement": false,
+          "name": "title_en",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        },
+        "title_ru": {
+          "autoincrement": false,
+          "name": "title_ru",
+          "notNull": true,
+          "primaryKey": false,
+          "type": "text"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "foreignKeys": {},
+      "indexes": {},
+      "name": "workplaces",
+      "uniqueConstraints": {}
+    }
+  },
+  "version": "5"
+}

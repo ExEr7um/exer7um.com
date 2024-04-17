@@ -31,10 +31,10 @@ export default defineEventHandler(async (event) => {
     },
   })
 
-  return workplaces.map((project) => {
+  return workplaces.map((workplace) => {
     return {
-      ...project,
-      tags: project.tags.map((tag) => tag.tag),
+      ...workplace,
+      tags: workplace.tags.map((tag) => tag.tag),
     }
   })
 })

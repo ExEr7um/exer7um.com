@@ -1,0 +1,40 @@
+import { sql } from "drizzle-orm"
+
+export default defineEventHandler(async (event) => {
+  /** Список мест работы */
+  const workplaces = await useDrizzle().query.workplaces.findMany({
+    columns: {
+      createdAt: false,
+      descriptionEN: false,
+      descriptionRU: false,
+      titleEN: false,
+      titleRU: false,
+    },
+    extras: {
+      description:
+        sql`${tables.workplaces[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
+          "description"
+        ),
+      title:
+        sql`${tables.workplaces[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
+          "title"
+        ),
+    },
+    orderBy: desc(tables.workplaces.createdAt), // Сортируем по дате создания — сначала новые
+    with: {
+      tags: {
+        columns: {},
+        with: {
+          tag: true,
+        },
+      },
+    },
+  })
+
+  return workplaces.map((project) => {
+    return {
+      ...project,
+      tags: project.tags.map((tag) => tag.tag),
+    }
+  })
+})

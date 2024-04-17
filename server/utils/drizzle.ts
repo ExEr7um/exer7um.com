@@ -5,6 +5,8 @@ import * as projectsSchema from "../database/schema/project"
 import * as tagsSchema from "../database/schema/tag"
 import * as tagsToPersonalProjects from "../database/schema/tagsToPersonalProjects"
 import * as tagsToProjects from "../database/schema/tagsToProjects"
+import * as tagsToWorkplaces from "../database/schema/tagsToWorkplaces"
+import * as workplacesSchema from "../database/schema/workplace"
 
 export const tables = {
   ...projectsSchema,
@@ -12,6 +14,8 @@ export const tables = {
   ...tagsSchema,
   ...personalProjectsSchema,
   ...tagsToPersonalProjects,
+  ...tagsToWorkplaces,
+  ...workplacesSchema,
 }
 
 /**

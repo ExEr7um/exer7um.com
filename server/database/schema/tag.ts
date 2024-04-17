@@ -3,7 +3,7 @@ import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core"
 
 import { tagsToPersonalProjects } from "./tagsToPersonalProjects"
 import { tagsToProjects } from "./tagsToProjects"
-import { tagsToWorkplaces } from "./tagsToWorkplace"
+import { tagsToWorkplaces } from "./tagsToWorkplaces"
 
 export const tags = sqliteTable("tags", {
   id: integer("id").primaryKey({ autoIncrement: true }),

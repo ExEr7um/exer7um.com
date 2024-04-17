@@ -21,6 +21,13 @@
       "tag": "0002_strange_magik",
       "version": "5",
       "when": 1711904363178
+    },
+    {
+      "breakpoints": true,
+      "idx": 3,
+      "tag": "0003_numerous_wilson_fisk",
+      "version": "5",
+      "when": 1713367715412
     }
   ],
   "version": "5"

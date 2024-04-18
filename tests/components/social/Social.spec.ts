@@ -17,10 +17,6 @@ describe("Компонент Social", () => {
   })
 
   const socialCards = () => wrapper.findAllComponents({ name: "SocialCard" })
-  const setCompact = async () =>
-    await wrapper.setProps({
-      compact: true,
-    })
 
   describe("Отсутствует compact", () => {
     test("Отображается больше 2 соцсетей", () => {
@@ -33,15 +29,17 @@ describe("Компонент Social", () => {
   })
 
   describe("Присутствует compact", () => {
-    test("Отображаются 2 соцсети", async () => {
-      await setCompact()
+    beforeEach(async () => {
+      await wrapper.setProps({
+        compact: true,
+      })
+    })
 
+    test("Отображаются 2 соцсети", async () => {
       expect(socialCards().length).toBe(2)
     })
 
     test("Увеличенный отступ между кнопками", async () => {
-      await setCompact()
-
       expect(wrapper.classes()).toContain("gap-x-2")
     })
   })

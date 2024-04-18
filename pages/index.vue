@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
-
-useSeoMeta({
-  title: t("pages.index"),
-  // TODO: Добавить описание страницы
-})
+usePageSeo("index")
 </script>
 
 <template>

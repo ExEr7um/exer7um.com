@@ -1,15 +1,10 @@
 <script setup lang="ts">
-const { t } = useI18n()
-
-useSeoMeta({
-  title: t("pages.about"),
-  // TODO: Добавить описание страницы
-})
+usePageSeo("about")
 </script>
 
 <template>
   <main>
-    <h1>{{ t("pages.about") }}</h1>
+    <h1>{{ $t("pages.about") }}</h1>
     <AboutMe hide-title />
   </main>
 </template>

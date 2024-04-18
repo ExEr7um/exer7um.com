@@ -20,11 +20,11 @@ export default defineEventHandler(async (event) => {
     },
     extras: {
       description:
-        sql`${tables.personalProjects[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
+        sql<string>`${tables.personalProjects[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
           "description"
         ),
       title:
-        sql`${tables.personalProjects[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
+        sql<string>`${tables.personalProjects[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
           "title"
         ),
     },

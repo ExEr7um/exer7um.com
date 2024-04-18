@@ -57,6 +57,10 @@ describe("Компонент ProjectsCard", () => {
       ).toBe(project.backgroundColor)
     })
 
+    test.skip("Атрибут alt", () => {
+      expect(logoAttributes("alt")).toBe(project.title)
+    })
+
     test("Формат SVG", () => {
       expect(logoAttributes("format")).toBe("svg")
     })

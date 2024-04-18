@@ -6,8 +6,13 @@
 export default function (pageName: string) {
   const { t } = useI18n()
 
+  const title = t(`pages.${pageName}`)
+  const description = t(`descriptions.${pageName}`)
+
   useSeoMeta({
-    description: t(`descriptions.${pageName}`),
-    title: t(`pages.${pageName}`),
+    description,
+    title,
+    twitterDescription: description,
+    twitterTitle: title,
   })
 }

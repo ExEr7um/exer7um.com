@@ -25,14 +25,28 @@ describe("Компонент UiCardContent", () => {
     wrapper.unmount()
   })
 
-  describe("Правильная передача полей", () => {
-    test("Заголовок", () => {
-      expect(wrapper.find("h4").text()).toBe(cardContent.title)
+  const title = () => wrapper.find("[data-test-id=title]")
+
+  describe("Заголовок", () => {
+    test("По умолчанию h4", () => {
+      expect(title().element.tagName).toBe("H4")
     })
 
-    test("Описание", () => {
-      expect(wrapper.find("p").text()).toBe(cardContent.description)
+    test("При передаче largeTitle становится h3", async () => {
+      await wrapper.setProps({
+        largeTitle: true,
+      })
+
+      expect(title().element.tagName).toBe("H3")
     })
+
+    test("Передача текста", () => {
+      expect(title().text()).toBe(cardContent.title)
+    })
+  })
+
+  test("Правильная передача описания", () => {
+    expect(wrapper.find("p").text()).toBe(cardContent.description)
   })
 
   describe("Список тегов", () => {

@@ -4,6 +4,8 @@ import type { Tag } from "~/server/database/schema/tag"
 defineProps<{
   /** Описание карточки */
   description: string
+  /** Является ли заголовок увеличенным */
+  largeTitle?: boolean
   /** Теги карточки */
   tags: Tag[]
   /** Заголовок карточки */
@@ -13,7 +15,9 @@ defineProps<{
 
 <template>
   <!-- Заголовок и описание -->
-  <h4>{{ title }}</h4>
+  <component :is="largeTitle ? 'h3' : 'h4'" data-test-id="title">
+    {{ title }}
+  </component>
   <p class="-mt-2">{{ description }}</p>
   <!-- Список тегов -->
   <LazyUiTags v-if="tags.length" data-test-id="tags" small :tags />

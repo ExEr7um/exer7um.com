@@ -112,6 +112,7 @@ export default defineNuxtConfig({
   },
   site: {
     name: "ExEr7um",
+    trailingSlash: true,
     url: "https://exer7um.com",
   },
   tailwindcss: {

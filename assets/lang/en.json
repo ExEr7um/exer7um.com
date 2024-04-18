@@ -1,4 +1,11 @@
 {
+  "descriptions": {
+    "about": "I have extensive experience working with various frameworks and technologies in web development. I professionally master Nuxt 3 and Tailwind CSS, and bring my design ideas to life using Sketch.",
+    "contactMe": "On this page you can contact me.",
+    "experience": "On this page you can check out the companies I've worked for.",
+    "index": "I'm a frontend developer from Moscow. I love Vue, clean code, and beautiful design.",
+    "projects": "On this page you will find an overview of my commercial and personal projects."
+  },
   "pages": {
     "about": "About",
     "experience": "Experience",

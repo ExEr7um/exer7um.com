@@ -27,10 +27,6 @@ describe("Компонент WorkplacesCardDate", () => {
   })
 
   const wrapperClasses = () => wrapper.classes()
-  const setDateNull = async () =>
-    await wrapper.setProps({
-      date: null,
-    })
 
   test("Семантический тег time", () => {
     expect(wrapper.element.tagName).toBe("TIME")
@@ -55,21 +51,21 @@ describe("Компонент WorkplacesCardDate", () => {
   })
 
   describe("Отсутствие даты", () => {
-    test("Вывод текста «Настоящее время»", async () => {
-      await setDateNull()
+    beforeEach(async () => {
+      await wrapper.setProps({
+        date: null,
+      })
+    })
 
+    test("Вывод текста «Настоящее время»", async () => {
       expect(wrapper.text()).toBe("Настоящее время")
     })
 
     test("Отсутствует класс по умолчанию", async () => {
-      await setDateNull()
-
       expect(wrapperClasses()).not.toContain(defaultClasses)
     })
 
     test("Присутствуют классы выделения", async () => {
-      await setDateNull()
-
       expect(wrapperClasses().join(" ")).toContain(activeClasses)
     })
   })

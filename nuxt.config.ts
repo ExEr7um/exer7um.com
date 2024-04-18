@@ -9,6 +9,7 @@ const modules = [
   "@nuxt/image",
   "@nuxthub/core",
   "@nuxtjs/i18n",
+  "@nuxtjs/seo",
   "@nuxtjs/tailwindcss",
   "@vueuse/nuxt",
   "nuxt-headlessui",
@@ -108,6 +109,11 @@ export default defineNuxtConfig({
     bundledThemes: ["night-owl"],
     defaultLang: "vue-html",
     defaultTheme: "night-owl",
+  },
+  site: {
+    name: "ExEr7um",
+    trailingSlash: true,
+    url: "https://exer7um.com",
   },
   tailwindcss: {
     viewer: false,

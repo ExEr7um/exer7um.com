@@ -10,6 +10,8 @@ defineProps<{
     title: string
   } & Pick<PersonalProject, "github" | "icon" | "id">
 }>()
+
+const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
@@ -26,6 +28,7 @@ defineProps<{
       <!-- Ссылка на GitHub -->
       <LazyNuxtLink
         v-if="personalProject.github"
+        :aria-label="t('open', { title: personalProject.title })"
         data-test-id="github-link"
         external
         target="_blank"
@@ -45,3 +48,14 @@ defineProps<{
     />
   </div>
 </template>
+
+<i18n lang="json">
+{
+  "ru": {
+    "open": "Открыть проект {title} на GitHub"
+  },
+  "en": {
+    "open": "Open {title} project on GitHub"
+  }
+}
+</i18n>

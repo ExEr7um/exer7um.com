@@ -3,11 +3,16 @@ defineProps<{
   /** Навигация */
   navigation: string[]
 }>()
+
+const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
   <HeadlessMenu v-auto-animate as="div" class="relative *:outline-none">
-    <HeadlessMenuButton class="button tertiary squared">
+    <HeadlessMenuButton
+      :aria-label="t('navigation')"
+      class="button tertiary squared"
+    >
       <Icon name="heroicons:bars-2" />
     </HeadlessMenuButton>
     <HeadlessMenuItems
@@ -22,3 +27,14 @@ defineProps<{
     </HeadlessMenuItems>
   </HeadlessMenu>
 </template>
+
+<i18n lang="json">
+{
+  "ru": {
+    "navigation": "Меню навигации"
+  },
+  "en": {
+    "navigation": "Navigation menu"
+  }
+}
+</i18n>

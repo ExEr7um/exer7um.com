@@ -57,7 +57,7 @@ describe("Компонент ProjectsCard", () => {
       ).toBe(project.backgroundColor)
     })
 
-    test.skip("Атрибут alt", () => {
+    test("Атрибут alt", () => {
       expect(logoAttributes("alt")).toBe(project.title)
     })
 

@@ -3,6 +3,8 @@
 export interface SocialCard {
   /** Иконка социальной сети */
   icon: string
+  /** Заголовок социальной сети */
+  title: string
   /** `URL` социальной сети */
   url: string
 }
@@ -15,6 +17,7 @@ defineProps<{
 
 <template>
   <NuxtLink
+    :aria-label="socialCard.title"
     class="tag flex size-12 items-center justify-center rounded-lg transition-colors hover:bg-white hover:dark:bg-neutral-700"
     external
     target="_blank"

@@ -87,6 +87,9 @@ export default defineNuxtConfig({
       "tailwindcss/nesting": "postcss-nesting",
     },
   },
+  robots: {
+    blockNonSeoBots: true,
+  },
   routeRules: {
     "/about/": {
       prerender: true,

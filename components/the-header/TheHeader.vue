@@ -2,8 +2,8 @@
 /** Список навигации */
 const navigation = [
   "index",
-  "projects",
   "experience",
+  "projects",
   "about",
 ] as const satisfies string[]
 </script>

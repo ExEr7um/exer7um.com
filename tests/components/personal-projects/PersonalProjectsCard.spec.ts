@@ -61,5 +61,11 @@ describe("Компонент PersonalProjectsCard", () => {
     test("Открывается в новой вкладке", () => {
       expect(githubLinkAttributes("target")).toBe("_blank")
     })
+
+    test("Присутствует aria-label", () => {
+      expect(githubLinkAttributes("aria-label")).toBe(
+        `Открыть проект ${personalProject.title} на GitHub`
+      )
+    })
   })
 })

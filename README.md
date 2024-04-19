@@ -1,75 +1,52 @@
-# Nuxt 3 Minimal Starter
+# exer7um.com
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![GitHub Release](https://img.shields.io/github/v/release/ExEr7um/exer7um.com?color=%232563EB)
 
-## Setup
+Я — фронтенд разработчик из Москвы. Люблю Vue, чистый код и красивый дизайн. Этот сайт является моим личным портфолио.
 
-Make sure to install the dependencies:
+## Стек технологий
+
+### Фронтенд
+
+- Nuxt 3
+- Vue 3
+- TypeScript
+- Tailwind CSS
+
+### Бекенд
+
+- Nitro
+- Drizzle ORM
+- Cloudflare D1
+
+### Тестирование
+
+- Vitest
+- Vue Test Utils
+- Nuxt Test Utils
+
+## Настройка проекта
+
+### Установка зависимостей
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Запуск `dev`-сервера
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
 bun run dev
 ```
 
-## Production
-
-Build the application for production:
+### Сборка проекта
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
 bun run build
 ```
 
-Locally preview production build:
+## License
 
-```bash
-# npm
-npm run preview
+Copyright © 2024 Vasily Kuzin.
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This project is [MIT](https://github.com/ExEr7um/exer7um.com/blob/main/LICENSE) licensed.

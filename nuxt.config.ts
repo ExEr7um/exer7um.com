@@ -82,6 +82,12 @@ export default defineNuxtConfig({
       baseURL: "https://res.cloudinary.com/exer7um/image/upload/",
     },
   },
+  nitro: {
+    preset: "cloudflare-pages",
+  },
+  ogImage: {
+    enabled: false,
+  },
   postcss: {
     plugins: {
       "tailwindcss/nesting": "postcss-nesting",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TechnologyIcon } from "./AboutMeIcon.server.vue"
+import type { TechnologyIcon } from "./AboutMeIcon.vue"
 
 defineProps<{
   /** Скрыть ли заголовок блока */
@@ -116,5 +116,3 @@ const icons = [
   }
 }
 </i18n>
-
-<!-- nuxt3 tailwind sketch typescript drizzle -->

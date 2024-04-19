@@ -10,12 +10,9 @@ on:
 
 jobs:
   changelog:
-    uses: ExEr7um/workflows/.github/workflows/changelog.yml@v0.6.1
+    uses: ExEr7um/workflows/.github/workflows/changelog.yml@v0.6.2
     with:
       version: ${{ inputs.version }}
-    secrets:
-      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-      PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
   release:
     runs-on: ubuntu-latest

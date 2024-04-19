@@ -6,4 +6,4 @@ on:
 
 jobs:
   release:
-    uses: ExEr7um/workflows/.github/workflows/release.yml@v0.6.1
+    uses: ExEr7um/workflows/.github/workflows/release.yml@v0.6.2

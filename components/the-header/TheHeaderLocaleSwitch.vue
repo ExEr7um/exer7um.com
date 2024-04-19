@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { locale, localeCodes } = useI18n()
+const { locale, localeCodes, t } = useI18n({ useScope: "local" })
 
 /** Код следующей локализации в списке */
 const nextLocaleCode = computed(() => {
@@ -21,9 +21,21 @@ const nextLocaleCode = computed(() => {
 
 <template>
   <SwitchLocalePathLink
+    :aria-label="t('changeLocale')"
     class="button tertiary squared uppercase"
     :locale="nextLocaleCode"
   >
     {{ locale }}
   </SwitchLocalePathLink>
 </template>
+
+<i18n lang="json">
+{
+  "ru": {
+    "changeLocale": "Изменить выбранную локализацию"
+  },
+  "en": {
+    "changeLocale": "Change selected localization"
+  }
+}
+</i18n>

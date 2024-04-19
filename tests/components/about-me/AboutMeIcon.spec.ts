@@ -3,9 +3,9 @@ import type { VueWrapper } from "@vue/test-utils"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import type { TechnologyIcon } from "~/components/about-me/AboutMeIcon.server.vue"
+import type { TechnologyIcon } from "~/components/about-me/AboutMeIcon.vue"
 
-import AboutMeIcon from "~/components/about-me/AboutMeIcon.server.vue"
+import AboutMeIcon from "~/components/about-me/AboutMeIcon.vue"
 
 describe("Компонент AboutMeIcon", () => {
   const icon = {

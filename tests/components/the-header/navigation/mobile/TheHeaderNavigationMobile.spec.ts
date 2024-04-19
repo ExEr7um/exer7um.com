@@ -28,6 +28,10 @@ describe("Компонент TheHeaderNavigationMobile", () => {
   const menuButton = () => wrapper.findComponent({ name: "MenuButton" })
   const clickMenuButton = async () => await menuButton().trigger("click")
 
+  test("Присутствует aria-label", () => {
+    expect(menuButton().attributes("aria-label")).toBe("Меню навигации")
+  })
+
   describe("Открытие мобильного меню", () => {
     test("Мобильное меню по умолчанию закрыто", () => {
       expect(navigationMenu().isVisible()).toBeFalsy()

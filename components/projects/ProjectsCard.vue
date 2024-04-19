@@ -28,6 +28,7 @@ const { t } = useI18n({
       :style="{ backgroundColor: project.backgroundColor }"
     >
       <NuxtImg
+        :alt="project.title"
         class="size-full object-contain"
         format="svg"
         loading="lazy"

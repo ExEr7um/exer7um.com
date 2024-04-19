@@ -10,10 +10,12 @@ const props = defineProps<{
 const compactSocial = [
   {
     icon: "icon-park:telegram",
+    title: "Telegram",
     url: "https://t.me/exer7um",
   },
   {
     icon: "heroicons:at-symbol",
+    title: "E-Mail",
     url: "mailto:work@exer7um.com",
   },
 ] as const satisfies SocialCard[]
@@ -22,6 +24,7 @@ const compactSocial = [
 const fullSocial = [
   {
     icon: "simple-icons:github",
+    title: "GitHub",
     url: "https://github.com/ExEr7um",
   },
 ] as const satisfies SocialCard[]

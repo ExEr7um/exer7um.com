@@ -14,6 +14,7 @@ describe("Компонент SocialCard", () => {
   /** Социальная сеть */
   const socialCard = {
     icon: "icon",
+    title: "Социальная сеть",
     url: "https://test.com/",
   } as const satisfies SocialCardType
 
@@ -45,5 +46,9 @@ describe("Компонент SocialCard", () => {
 
   test("Ссылка из props", () => {
     expect(cardAttributes("href")).toBe(socialCard.url)
+  })
+
+  test("Присутствует aria-label", () => {
+    expect(cardAttributes("aria-label")).toBe(socialCard.title)
   })
 })

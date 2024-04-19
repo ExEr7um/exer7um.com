@@ -1,0 +1,96 @@
+
+## v2.0.0
+
+
+### 🚀 Улучшения
+
+- Создание проекта ([bb86471](https://github.com/ExEr7um/exer7um.github.io/commit/bb86471))
+- Настройка проекта ([#414](https://github.com/ExEr7um/exer7um.github.io/pull/414))
+- Шапка ([#415](https://github.com/ExEr7um/exer7um.github.io/pull/415))
+- Настройка `NuxtHub` и `Cloudflare` ([2643df6](https://github.com/ExEr7um/exer7um.github.io/commit/2643df6))
+- **API:** Настройка `Drizzle ORM` ([#418](https://github.com/ExEr7um/exer7um.github.io/pull/418))
+- **API:** Сущность «Технология» ([#419](https://github.com/ExEr7um/exer7um.github.io/pull/419))
+- **API:** Сущность «Личный проект» ([#420](https://github.com/ExEr7um/exer7um.github.io/pull/420))
+- Блок «Личные проекты» ([#422](https://github.com/ExEr7um/exer7um.github.io/pull/422))
+- Подвал ([#426](https://github.com/ExEr7um/exer7um.github.io/pull/426))
+- **API:** Сущность «Проекты» ([#428](https://github.com/ExEr7um/exer7um.github.io/pull/428))
+- Блок «Проекты» ([#429](https://github.com/ExEr7um/exer7um.github.io/pull/429))
+- Переключатель локализаций ([#432](https://github.com/ExEr7um/exer7um.github.io/pull/432))
+- Главный блок ([#433](https://github.com/ExEr7um/exer7um.github.io/pull/433))
+- **API:** Эндпоинт отправки сообщений в Telegram ([#436](https://github.com/ExEr7um/exer7um.github.io/pull/436))
+- Форма обратной связи ([#437](https://github.com/ExEr7um/exer7um.github.io/pull/437))
+- Добавление `Favicon` ([#441](https://github.com/ExEr7um/exer7um.github.io/pull/441))
+- Изменение основного шрифта на `Inter` ([#443](https://github.com/ExEr7um/exer7um.github.io/pull/443))
+- Блок «Обо мне» ([#447](https://github.com/ExEr7um/exer7um.github.io/pull/447))
+- **API:** Сущность «Опыт работы» ([#451](https://github.com/ExEr7um/exer7um.github.io/pull/451))
+- Блок «Опыт работы» ([#452](https://github.com/ExEr7um/exer7um.github.io/pull/452))
+- SEO оптимизация страниц ([#454](https://github.com/ExEr7um/exer7um.github.io/pull/454))
+- Настройка `OG Image` ([#455](https://github.com/ExEr7um/exer7um.github.io/pull/455))
+- Настройка Robots и Sitemap ([#456](https://github.com/ExEr7um/exer7um.github.io/pull/456))
+
+### 🐞 Исправления
+
+- Исправление генерируемого `ID` для `Headless UI` ([#417](https://github.com/ExEr7um/exer7um.github.io/pull/417))
+- Исправление положения тегов в `UiTags` ([da287a3](https://github.com/ExEr7um/exer7um.github.io/commit/da287a3))
+- Обновление конфигурации `ESLint` ([#424](https://github.com/ExEr7um/exer7um.github.io/pull/424))
+- Исправление дизайна `TheHeaderNavigationMobile` ([dad4098](https://github.com/ExEr7um/exer7um.github.io/commit/dad4098))
+- Закрытие мобильного меню при навигации ([#427](https://github.com/ExEr7um/exer7um.github.io/pull/427))
+- Добавление стрелки в кнопку «Перейти» ([39baaef](https://github.com/ExEr7um/exer7um.github.io/commit/39baaef))
+- Исправление работы границы в `ProjectsCard` ([#431](https://github.com/ExEr7um/exer7um.github.io/pull/431))
+- Изменение тега `UiBlock` на `<section />` ([#434](https://github.com/ExEr7um/exer7um.github.io/pull/434))
+- Обновление `nuxt-shiki` до `v0.3.0` ([7c1d3d9](https://github.com/ExEr7um/exer7um.github.io/commit/7c1d3d9))
+- Обновление `nuxt-headlessui` до `v1.2.0` ([8849244](https://github.com/ExEr7um/exer7um.github.io/commit/8849244))
+- Адаптив блока `TheHero` ([#439](https://github.com/ExEr7um/exer7um.github.io/pull/439))
+- Исправление ссылок в `TheHeaderNavigation` ([29cfd22](https://github.com/ExEr7um/exer7um.github.io/commit/29cfd22))
+- **API:** Обработка ошибки на эндпоинте `/api/messages/` ([c2f3326](https://github.com/ExEr7um/exer7um.github.io/commit/c2f3326))
+- **API:** Исправление получения `runtimeConfig` в `/api/messages/` ([d341ef5](https://github.com/ExEr7um/exer7um.github.io/commit/d341ef5))
+- Добавление `loading="lazy"` для логотипа проекта ([#442](https://github.com/ExEr7um/exer7um.github.io/pull/442))
+- Автоматическая фокусировка в форме обратной связи ([#444](https://github.com/ExEr7um/exer7um.github.io/pull/444))
+- Отключение `OG Image` ([094dff8](https://github.com/ExEr7um/exer7um.github.io/commit/094dff8))
+- Добавление `disallow` для `/api` ([931681f](https://github.com/ExEr7um/exer7um.github.io/commit/931681f))
+- Оптимизация специальных возможностей ([#457](https://github.com/ExEr7um/exer7um.github.io/pull/457))
+- Перемещение блока «Опыт работы» в начало главной страницы ([#461](https://github.com/ExEr7um/exer7um.github.io/pull/461))
+- Изменение языка в блоке «Обо мне» ([#460](https://github.com/ExEr7um/exer7um.github.io/pull/460))
+
+### 💅 Рефактор кода
+
+- **API:** Сокращение скрытия колонок в `/api/personal-projects/` ([2aa037a](https://github.com/ExEr7um/exer7um.github.io/commit/2aa037a))
+
+### 📖 Документация
+
+- Обновление `README` ([#458](https://github.com/ExEr7um/exer7um.github.io/pull/458))
+
+### 🏡 Другие изменения
+
+- Настройка `Prettier` ([#408](https://github.com/ExEr7um/exer7um.github.io/pull/408))
+- Добавление автора в `package.json` ([07a5a76](https://github.com/ExEr7um/exer7um.github.io/commit/07a5a76))
+- Добавление лицензии ([297d396](https://github.com/ExEr7um/exer7um.github.io/commit/297d396))
+- Настройка `ESLint` ([#409](https://github.com/ExEr7um/exer7um.github.io/pull/409))
+- Настройка хуков ([#410](https://github.com/ExEr7um/exer7um.github.io/pull/410))
+- Настройка CI ([#412](https://github.com/ExEr7um/exer7um.github.io/pull/412))
+- Настройка релизов ([#413](https://github.com/ExEr7um/exer7um.github.io/pull/413))
+- Типизация `.env` ([ab6da2b](https://github.com/ExEr7um/exer7um.github.io/commit/ab6da2b))
+- Обновление зависимостей ([#416](https://github.com/ExEr7um/exer7um.github.io/pull/416))
+- Добавление `scopeMap` в `changelog.config.json` ([7a1b779](https://github.com/ExEr7um/exer7um.github.io/commit/7a1b779))
+- Обновление зависимостей ([#423](https://github.com/ExEr7um/exer7um.github.io/pull/423))
+- Обновление зависимостей ([#425](https://github.com/ExEr7um/exer7um.github.io/pull/425))
+- Обновление зависимостей ([#430](https://github.com/ExEr7um/exer7um.github.io/pull/430))
+- Обновление зависимостей ([#435](https://github.com/ExEr7um/exer7um.github.io/pull/435))
+- Обновление зависимостей ([#438](https://github.com/ExEr7um/exer7um.github.io/pull/438))
+- Обновление зависимостей ([#446](https://github.com/ExEr7um/exer7um.github.io/pull/446))
+- **API:** Обновление скрипта миграций ([#450](https://github.com/ExEr7um/exer7um.github.io/pull/450))
+- Обновление зависимостей ([#459](https://github.com/ExEr7um/exer7um.github.io/pull/459))
+- Обновление скриптов GitHub ([8c8838e](https://github.com/ExEr7um/exer7um.github.io/commit/8c8838e))
+
+### ✅ Тестирование
+
+- Настройка тестов ([#411](https://github.com/ExEr7um/exer7um.github.io/pull/411))
+- **API:** Тесты функции `useLocalizedColumn` ([#421](https://github.com/ExEr7um/exer7um.github.io/pull/421))
+- Переработка использования функции `attributes()` ([#440](https://github.com/ExEr7um/exer7um.github.io/pull/440))
+- Более правильное использование `enviroment` в тестах ([#445](https://github.com/ExEr7um/exer7um.github.io/pull/445))
+- Вынесение повторяющихся действий в `beforeEach` ([#453](https://github.com/ExEr7um/exer7um.github.io/pull/453))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+

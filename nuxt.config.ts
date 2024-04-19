@@ -95,6 +95,7 @@ export default defineNuxtConfig({
   },
   robots: {
     blockNonSeoBots: true,
+    disallow: ["/api"],
   },
   routeRules: {
     "/about/": {

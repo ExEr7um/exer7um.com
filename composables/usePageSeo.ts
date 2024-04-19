@@ -15,4 +15,8 @@ export default function (pageName: string) {
     twitterDescription: description,
     twitterTitle: title,
   })
+
+  defineOgImageComponent("Nuxt", {
+    headline: "ExEr7um",
+  })
 }

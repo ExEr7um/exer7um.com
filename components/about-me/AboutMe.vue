@@ -116,5 +116,3 @@ const icons = [
   }
 }
 </i18n>
-
-<!-- nuxt3 tailwind sketch typescript drizzle -->

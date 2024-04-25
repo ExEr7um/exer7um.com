@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { diffYears } from "@formkit/tempo"
+
 import type { TechnologyIcon } from "./AboutMeIcon.vue"
 
 defineProps<{
@@ -11,9 +13,7 @@ const { t } = useI18n({
 })
 
 /** Текущий возраст */
-const age = computed(() => {
-  return new Date(Date.now() - +new Date("2002-01-15")).getUTCFullYear() - 1970
-})
+const age = diffYears(new Date(), new Date("2002-01-15"))
 
 const icons = [
   [

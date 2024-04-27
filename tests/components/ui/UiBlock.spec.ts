@@ -42,4 +42,8 @@ describe("Компонент UiBlock", () => {
   test("Передача контента через slot", () => {
     expect(wrapper.html()).toContain(testBlock)
   })
+
+  test("Отступ при скролле", () => {
+    expect(wrapper.classes()).toContain("scroll-mt-32")
+  })
 })

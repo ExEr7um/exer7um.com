@@ -20,7 +20,7 @@ const { data: workplaces } = await useFetch("/api/workplaces", {
         <!-- @vue-expect-error - неправильно определяется тип -->
         <WorkplacesCard :workplace />
         <hr
-          class="ml-8 h-8 w-px justify-self-center border-none bg-neutral-200 last:hidden dark:bg-neutral-800"
+          class="ml-5 h-8 w-px justify-self-center border-none bg-neutral-200 last:hidden sm:ml-8 dark:bg-neutral-800"
         />
       </template>
     </div>

@@ -1,4 +1,26 @@
 
+## v2.0.1
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.0...v2.0.1)
+
+### 🐞 Исправления
+
+- Отступ при скролле к блокам ([#463](https://github.com/ExEr7um/exer7um.com/pull/463))
+- Исправление положения линии между `WorkplacesCard` ([#464](https://github.com/ExEr7um/exer7um.com/pull/464))
+
+### 💅 Рефактор кода
+
+- Использование `@formkit/tempo` для вычисления возраста в `AboutMe` ([#462](https://github.com/ExEr7um/exer7um.com/pull/462))
+
+### 🏡 Другие изменения
+
+- Проверка заголовков PR ([#465](https://github.com/ExEr7um/exer7um.com/pull/465))
+- Обновление зависимостей ([#466](https://github.com/ExEr7um/exer7um.com/pull/466))
+
+### ❤️ Contributors
+
+- Vasily Kuzin <exer7um@gmail.com>
+
 ## v2.0.0
 
 

@@ -1,12 +1,13 @@
 import { relations } from "drizzle-orm"
-import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core"
+import { sqliteTable, text } from "drizzle-orm/sqlite-core"
 
+import { id } from "./common"
 import { tagsToPersonalProjects } from "./tagsToPersonalProjects"
 import { tagsToProjects } from "./tagsToProjects"
 import { tagsToWorkplaces } from "./tagsToWorkplaces"
 
 export const tags = sqliteTable("tags", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
+  ...id,
   title: text("title").notNull(),
 })
 

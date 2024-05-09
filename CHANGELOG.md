@@ -1,4 +1,21 @@
 
+## v2.0.2
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.1...v2.0.2)
+
+### 💅 Рефактор кода
+
+- **API:** Вынесение общих полей в отдельные переменные ([#467](https://github.com/ExEr7um/exer7um.com/pull/467))
+
+### 🏡 Другие изменения
+
+- Шаблон для Pull Request ([#468](https://github.com/ExEr7um/exer7um.com/pull/468))
+- Обновление зависимостей ([#469](https://github.com/ExEr7um/exer7um.com/pull/469))
+
+### ❤️ Contributors
+
+- Vasily Kuzin <exer7um@gmail.com>
+
 ## v2.0.1
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.0...v2.0.1)

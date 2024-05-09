@@ -48,11 +48,6 @@ export default defineNuxtConfig({
     headNext: true,
     typedPages: true,
   },
-  fonts: {
-    experimental: {
-      addPreloadLinks: true,
-    },
-  },
   hub: {
     cache: true,
     database: true,

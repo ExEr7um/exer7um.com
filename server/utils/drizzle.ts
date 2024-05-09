@@ -24,7 +24,6 @@ export const tables = {
  * @returns методы для работы с Drizzle ORM.
  */
 export function useDrizzle() {
-  // @ts-expect-error - при запуске typecheck не определяется тип
   return drizzle(hubDatabase(), {
     schema: tables,
   })

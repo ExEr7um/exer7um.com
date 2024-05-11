@@ -28,7 +28,7 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "eslint.experimental.useFlatConfig": true,
-  "eslint.validate": ["javascript", "json", "vue", "typescript"],
+  "eslint.validate": ["javascript", "json", "vue", "typescript", "yaml"],
   "files.associations": {
     "*.css": "postcss"
   },

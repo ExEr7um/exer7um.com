@@ -34,6 +34,7 @@
   },
   "git.branchProtection": ["main"],
   "i18n-ally.displayLanguage": "ru",
+  "i18n-ally.enabledFrameworks": ["vue", "vue-sfc"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": ["assets/lang"],
   "i18n-ally.sourceLanguage": "ru",

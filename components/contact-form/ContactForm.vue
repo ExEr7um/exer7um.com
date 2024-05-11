@@ -69,25 +69,19 @@ useFirstInputFocus()
   </form>
 </template>
 
-<i18n lang="json">
-{
-  "en": {
-    "name": "Your name",
-    "email": "E-Mail",
-    "message": {
-      "label": "Your message",
-      "placeholder": "Enter your message"
-    },
-    "send": "Send"
-  },
-  "ru": {
-    "name": "Ваше имя",
-    "email": "Электронная почта",
-    "message": {
-      "label": "Ваше сообщение",
-      "placeholder": "Введите ваше сообщение"
-    },
-    "send": "Отправить"
-  }
-}
+<i18n lang="yaml">
+en:
+  email: E-Mail
+  message:
+    label: Your message
+    placeholder: Enter your message
+  name: Your name
+  send: Send
+ru:
+  email: Электронная почта
+  message:
+    label: Ваше сообщение
+    placeholder: Введите ваше сообщение
+  name: Ваше имя
+  send: Отправить
 </i18n>

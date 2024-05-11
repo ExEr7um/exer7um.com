@@ -19,17 +19,13 @@ const { t } = useI18n({ useScope: "local" })
   </section>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "title": "👋🏻 Привет!",
-    "description": "Я — фронтенд разработчик из Москвы. Люблю Vue, чистый код и красивый дизайн.",
-    "or": "или"
-  },
-  "en": {
-    "title": "👋🏻 Hello!",
-    "description": "I'm a frontend developer from Moscow. I love Vue, clean code, and beautiful design.",
-    "or": "or"
-  }
-}
+<i18n lang="yaml">
+en:
+  description: I'm a frontend developer from Moscow. I love Vue, clean code, and beautiful design.
+  or: or
+  title: 👋🏻 Hello!
+ru:
+  description: Я — фронтенд разработчик из Москвы. Люблю Vue, чистый код и красивый дизайн.
+  or: или
+  title: 👋🏻 Привет!
 </i18n>

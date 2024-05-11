@@ -49,13 +49,9 @@ const { t } = useI18n({ useScope: "local" })
   </div>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "open": "Открыть проект {title} на GitHub"
-  },
-  "en": {
-    "open": "Open {title} project on GitHub"
-  }
-}
+<i18n lang="yaml">
+en:
+  open: Open {title} project on GitHub
+ru:
+  open: Открыть проект {title} на GitHub
 </i18n>

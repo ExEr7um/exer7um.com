@@ -62,13 +62,9 @@ const { t } = useI18n({
   </div>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "view": "Перейти"
-  },
-  "en": {
-    "view": "View"
-  }
-}
+<i18n lang="yaml">
+en:
+  view: View
+ru:
+  view: Перейти
 </i18n>

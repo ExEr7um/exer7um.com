@@ -92,27 +92,21 @@ const icons = [
   </UiBlock>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "about": [
-      "Мне {age}. Я имею обширный опыт работы с различными фреймворками и технологиями в области веб-разработки. Профессионально владею {nuxt} и {tailwind}, а также воплощаю свои дизайнерские идеи с помощью {sketch}.",
-      "В поисках постоянного совершенствования своих навыков я активно изучаю и внедряю новейшие технологии. {typescript} привлек мое внимание своей способностью улучшить стабильность и читаемость кода, а для удобного взаимодействия с базами данных я стал использовать {drizzle}. Эти инструменты становятся важной частью моего технологического арсенала, вдохновляя меня на создание более эффективных и мощных веб-приложений.",
-      "Я убежден, что построенный мной веб-сайт станет отличным образцом моего подхода к разработке, поэтому я открыл доступ к его исходному коду на платформе GitHub."
-    ],
-    "title": "Обо мне",
-    "age": "0 лет | {n} год | {n} года | {n} лет",
-    "name": "Меня зовут Василий Кузин,"
-  },
-  "en": {
-    "about": [
-      "I'm {age}. I have extensive experience working with various frameworks and technologies in web development. I professionally master {nuxt} and {tailwind}, and bring my design ideas to life using {sketch}.",
-      "In pursuit of continuously improving my skills, I actively explore and implement the latest technologies. {typescript} caught my attention with its ability to enhance code stability and readability, and for convenient database interaction, I have started using {drizzle}. These tools have become an integral part of my technological arsenal, inspiring me to create more efficient and powerful web applications.",
-      "I am convinced that the website I build will serve as an excellent example of my development approach, which is why I have opened access to its source code on the GitHub platform."
-    ],
-    "title": "About Me",
-    "age": "{n} years old",
-    "name": "My name is Vasily Kuzin,"
-  }
-}
+<i18n lang="yaml">
+en:
+  about:
+    - I'm {age}. I have extensive experience working with various frameworks and technologies in web development. I professionally master {nuxt} and {tailwind}, and bring my design ideas to life using {sketch}.
+    - In pursuit of continuously improving my skills, I actively explore and implement the latest technologies. {typescript} caught my attention with its ability to enhance code stability and readability, and for convenient database interaction, I have started using {drizzle}. These tools have become an integral part of my technological arsenal, inspiring me to create more efficient and powerful web applications.
+    - I am convinced that the website I build will serve as an excellent example of my development approach, which is why I have opened access to its source code on the GitHub platform.
+  age: "{n} years old"
+  name: My name is Vasily Kuzin,
+  title: About Me
+ru:
+  about:
+    - Мне {age}. Я имею обширный опыт работы с различными фреймворками и технологиями в области веб-разработки. Профессионально владею {nuxt} и {tailwind}, а также воплощаю свои дизайнерские идеи с помощью {sketch}.
+    - В поисках постоянного совершенствования своих навыков я активно изучаю и внедряю новейшие технологии. {typescript} привлек мое внимание своей способностью улучшить стабильность и читаемость кода, а для удобного взаимодействия с базами данных я стал использовать {drizzle}. Эти инструменты становятся важной частью моего технологического арсенала, вдохновляя меня на создание более эффективных и мощных веб-приложений.
+    - Я убежден, что построенный мной веб-сайт станет отличным образцом моего подхода к разработке, поэтому я открыл доступ к его исходному коду на платформе GitHub.
+  age: 0 лет | {n} год | {n} года | {n} лет
+  name: Меня зовут Василий Кузин,
+  title: Обо мне
 </i18n>

@@ -28,13 +28,9 @@ const { t } = useI18n({ useScope: "local" })
   </HeadlessMenu>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "navigation": "Меню навигации"
-  },
-  "en": {
-    "navigation": "Navigation menu"
-  }
-}
+<i18n lang="yaml">
+en:
+  navigation: Navigation menu
+ru:
+  navigation: Меню навигации
 </i18n>

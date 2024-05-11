@@ -40,15 +40,11 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
   </UiBlock>
 </template>
 
-<i18n lang="json">
-{
-  "en": {
-    "personalProjects": "Personal Projects",
-    "viewAll": "View all"
-  },
-  "ru": {
-    "personalProjects": "Личные проекты",
-    "viewAll": "Смотреть все"
-  }
-}
+<i18n lang="yaml">
+en:
+  personalProjects: Personal Projects
+  viewAll: View all
+ru:
+  personalProjects: Личные проекты
+  viewAll: Смотреть все
 </i18n>

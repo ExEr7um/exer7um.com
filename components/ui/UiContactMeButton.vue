@@ -8,13 +8,9 @@ const { t } = useI18n({ useScope: "local" })
   </NuxtLinkLocale>
 </template>
 
-<i18n lang="json">
-{
-  "en": {
-    "buttonText": "Contact me 👋🏻"
-  },
-  "ru": {
-    "buttonText": "Написать мне 👋🏻"
-  }
-}
+<i18n lang="yaml">
+en:
+  buttonText: Contact me 👋🏻
+ru:
+  buttonText: Написать мне 👋🏻
 </i18n>

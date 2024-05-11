@@ -29,13 +29,9 @@ const nextLocaleCode = computed(() => {
   </SwitchLocalePathLink>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "changeLocale": "Изменить выбранную локализацию"
-  },
-  "en": {
-    "changeLocale": "Change selected localization"
-  }
-}
+<i18n lang="yaml">
+en:
+  changeLocale: Change selected localization
+ru:
+  changeLocale: Изменить выбранную локализацию
 </i18n>

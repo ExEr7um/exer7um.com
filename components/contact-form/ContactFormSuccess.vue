@@ -19,17 +19,13 @@ const { t } = useI18n({ useScope: "local" })
   </UiPopup>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "title": "Спасибо за ваше сообщение!",
-    "description": "Я уже начал работу над вашим запросом и обязательно свяжусь с вами в ближайшее время.",
-    "return": "Вернуться на главную"
-  },
-  "en": {
-    "title": "Thank you for your message!",
-    "description": "I have already started working on your request and will get back to you shortly.",
-    "return": "Return to homepage"
-  }
-}
+<i18n lang="yaml">
+en:
+  description: I have already started working on your request and will get back to you shortly.
+  return: Return to homepage
+  title: Thank you for your message!
+ru:
+  description: Я уже начал работу над вашим запросом и обязательно свяжусь с вами в ближайшее время.
+  return: Вернуться на главную
+  title: Спасибо за ваше сообщение!
 </i18n>

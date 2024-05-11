@@ -30,13 +30,9 @@ const formattedDate = computed(
   </time>
 </template>
 
-<i18n lang="json">
-{
-  "ru": {
-    "presentTime": "Настоящее время"
-  },
-  "en": {
-    "presentTime": "Present time"
-  }
-}
+<i18n lang="yaml">
+en:
+  presentTime: Present time
+ru:
+  presentTime: Настоящее время
 </i18n>

@@ -1,4 +1,21 @@
 
+## v2.0.3
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.2...v2.0.3)
+
+### 💅 Рефактор кода
+
+- Конвертация локализации в `YAML` ([#470](https://github.com/ExEr7um/exer7um.com/pull/470))
+
+### 🏡 Другие изменения
+
+- Обновление `@exer7um/eslint-config` ([80d1cd9](https://github.com/ExEr7um/exer7um.com/commit/80d1cd9))
+- Обновление зависимостей ([#471](https://github.com/ExEr7um/exer7um.com/pull/471))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.2
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.1...v2.0.2)

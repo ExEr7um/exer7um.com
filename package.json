@@ -34,12 +34,12 @@
     "@formkit/tempo": "0.1.1",
     "@nuxt/fonts": "0.7.0",
     "@nuxt/image": "1.7.0",
-    "@nuxthub/core": "0.6.11",
+    "@nuxthub/core": "0.6.14",
     "@nuxtjs/i18n": "8.3.1",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@nuxtjs/tailwindcss": "6.12.0",
-    "@vueuse/core": "10.10.1",
-    "@vueuse/nuxt": "10.10.1",
+    "@vueuse/core": "10.11.0",
+    "@vueuse/nuxt": "10.11.0",
     "drizzle-orm": "0.31.2",
     "nuxt": "3.12.1",
     "nuxt-headlessui": "1.2.0",
@@ -59,10 +59,10 @@
     "drizzle-kit": "0.22.7",
     "happy-dom": "14.12.0",
     "husky": "9.0.11",
-    "lint-staged": "15.2.5",
+    "lint-staged": "15.2.7",
     "typescript": "5.4.5",
     "vitest": "1.6.0",
     "vue-tsc": "2.0.21",
-    "wrangler": "3.60.1"
+    "wrangler": "3.60.2"
   }
 }

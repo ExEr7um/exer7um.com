@@ -65,7 +65,7 @@ describe("Компонент TheHeaderNavigationMobile", () => {
         name: "MenuItem",
       })
 
-      await navigationLinks[1].trigger("click")
+      await navigationLinks[1]?.trigger("click")
 
       expect(navigationMenu().isVisible()).toBeFalsy()
     })

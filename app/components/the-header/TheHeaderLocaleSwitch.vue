@@ -23,7 +23,7 @@ const nextLocaleCode = computed(() => {
   <SwitchLocalePathLink
     :aria-label="t('changeLocale')"
     class="button tertiary squared uppercase"
-    :locale="nextLocaleCode"
+    :locale="nextLocaleCode ?? 'ru'"
   >
     {{ locale }}
   </SwitchLocalePathLink>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Tag } from "~/server/database/schema/tag"
-import type { Workplace } from "~/server/database/schema/workplace"
+import type { Tag } from "~~/server/database/schema/tag"
+import type { Workplace } from "~~/server/database/schema/workplace"
 
 defineProps<{
   /** Проект */

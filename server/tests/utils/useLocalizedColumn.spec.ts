@@ -1,5 +1,5 @@
 // @vitest-environment node
-import useLocalizedColumn from "@/server/utils/useLocalizedColumn"
+import useLocalizedColumn from "~~/server/utils/useLocalizedColumn"
 import { createEvent } from "h3"
 import { IncomingMessage, ServerResponse } from "http"
 import { Socket } from "net"

@@ -1,6 +1,6 @@
-import type { Tag } from "~/server/database/schema/tag"
+import type { Tag } from "~~/server/database/schema/tag"
 
-export const tags: Tag[] = [
+export const tags = [
   {
     id: 1,
     title: "Заголовок тега",
@@ -9,4 +9,4 @@ export const tags: Tag[] = [
     id: 2,
     title: "Заголовок тега",
   },
-] as const
+] as const satisfies Tag[]

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Tag } from "~/server/database/schema/tag"
+import type { Tag } from "~~/server/database/schema/tag"
 
 defineProps<{
   /** Являются ли теги уменьшенными */

@@ -1,20 +1,21 @@
 import type { VueWrapper } from "@vue/test-utils"
+import type { InputTypeHTMLAttribute } from "vue"
 
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import UiTextArea from "~/components/ui/UiTextArea.vue"
+import UiInput from "~/components/ui/UiInput.vue"
 
-describe("Компонент UiTextArea", () => {
+describe("Компонент UiInput", () => {
   const defaultProps = {
     id: "test-field",
-  }
+  } as const
   const labelText = "Текст label"
 
   let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(UiTextArea, {
+    wrapper = shallowMount(UiInput, {
       props: defaultProps,
     })
   })
@@ -23,18 +24,17 @@ describe("Компонент UiTextArea", () => {
     wrapper.unmount()
   })
 
-  const textarea = () => wrapper.find("textarea")
+  const input = () => wrapper.find("input")
   const label = () => wrapper.find("label")
-  const textareaAttributes = (attribute: string) =>
-    textarea().attributes(attribute)
+  const inputAttributes = (attribute: string) => input().attributes(attribute)
 
   const setLabel = async () => await wrapper.setProps({ label: labelText })
 
   test("Выставление атрибутов `id` и `name` на поле ввода", () => {
     // Проверка атрибута `id`
-    expect(textareaAttributes("id")).toBe(defaultProps.id)
+    expect(inputAttributes("id")).toBe(defaultProps.id)
     // Проверка атрибута `name`
-    expect(textareaAttributes("name")).toBe(defaultProps.id)
+    expect(inputAttributes("name")).toBe(defaultProps.id)
   })
 
   describe("Параметр label", () => {
@@ -63,40 +63,40 @@ describe("Компонент UiTextArea", () => {
 
   describe("Параметр placeholder", () => {
     test("Отсутствие по умолчанию", () => {
-      expect(textareaAttributes("placeholder")).toBeUndefined()
+      expect(inputAttributes("placeholder")).toBeUndefined()
     })
 
     test("Выставление при передаче параметра", async () => {
       const placeholder = "Тестовый placeholder"
       await wrapper.setProps({ placeholder })
 
-      expect(textareaAttributes("placeholder")).toBe(placeholder)
+      expect(inputAttributes("placeholder")).toBe(placeholder)
     })
   })
 
   describe("Параметр required", () => {
     test("По умолчанию true", () => {
       // При преобразовании в HTML, true заменяется на пустую строку.
-      expect(textareaAttributes("required")).toBe("")
+      expect(inputAttributes("required")).toBe("")
     })
 
     test("Выставление при передаче параметра", async () => {
       await wrapper.setProps({ required: false })
 
-      expect(textareaAttributes("required")).toBeUndefined()
+      expect(inputAttributes("required")).toBeUndefined()
     })
   })
 
-  describe("Параметр rows", () => {
-    test("По умолчанию 4", () => {
-      expect(textareaAttributes("rows")).toBe("4")
+  describe("Параметр type", () => {
+    test("По умолчанию text", () => {
+      expect(inputAttributes("type")).toBe("text")
     })
 
     test("Выставление при передаче параметра", async () => {
-      const rows = 3
-      await wrapper.setProps({ rows })
+      const type: InputTypeHTMLAttribute = "email"
+      await wrapper.setProps({ type })
 
-      expect(textareaAttributes("rows")).toBe(rows.toString())
+      expect(inputAttributes("type")).toBe(type)
     })
   })
 })

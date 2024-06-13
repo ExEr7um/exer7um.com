@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Message } from "~/server/api/messages/index.post"
+import type { Message } from "~~/server/api/messages/index.post"
 
 const { t } = useI18n({ useScope: "local" })
 

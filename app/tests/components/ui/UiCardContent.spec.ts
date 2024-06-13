@@ -11,7 +11,7 @@ describe("Компонент UiCardContent", () => {
     description: "Описание",
     tags,
     title: "Заголовок",
-  }
+  } as const
 
   let wrapper: VueWrapper
 
@@ -57,9 +57,9 @@ describe("Компонент UiCardContent", () => {
     })
 
     test("Отсутствует при пустом массиве", async () => {
-      cardContent.tags = []
-
-      await wrapper.setProps(cardContent)
+      await wrapper.setProps({
+        tags: [],
+      })
 
       expect(wrapper.find("[data-test-id=tags]").exists()).toBeFalsy()
     })

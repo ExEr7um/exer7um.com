@@ -48,6 +48,9 @@ export default defineNuxtConfig({
     headNext: true,
     typedPages: true,
   },
+  future: {
+    compatibilityVersion: 4,
+  },
   hub: {
     cache: true,
     database: true,

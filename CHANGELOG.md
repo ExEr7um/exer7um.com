@@ -1,4 +1,20 @@
 
+## v2.0.4
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.3...v2.0.4)
+
+### 🚀 Улучшения
+
+- Переработка структуры для Nuxt 4 ([#472](https://github.com/ExEr7um/exer7um.com/pull/472))
+
+### ✅ Тестирование
+
+- Объединение тестов `russianPluralization.ts` ([78a79e0](https://github.com/ExEr7um/exer7um.com/commit/78a79e0))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.3
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.2...v2.0.3)

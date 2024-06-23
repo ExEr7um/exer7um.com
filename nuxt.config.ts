@@ -6,6 +6,7 @@
 const modules = [
   "@formkit/auto-animate/nuxt",
   "@nuxt/fonts",
+  "@nuxt/icon",
   "@nuxt/image",
   "@nuxthub/core",
   "@nuxtjs/i18n",
@@ -13,7 +14,6 @@ const modules = [
   "@nuxtjs/tailwindcss",
   "@vueuse/nuxt",
   "nuxt-headlessui",
-  "nuxt-icon",
   "nuxt-shiki",
 ]
 
@@ -33,11 +33,6 @@ export default defineNuxtConfig({
   },
   $test: {
     modules: devModules,
-  },
-  appConfig: {
-    nuxtIcon: {
-      size: "24px",
-    },
   },
   devtools: {
     enabled: true,
@@ -74,6 +69,9 @@ export default defineNuxtConfig({
       },
     ],
     trailingSlash: true,
+  },
+  icon: {
+    size: "24px",
   },
   image: {
     cloudinary: {

@@ -9,7 +9,7 @@ const props = defineProps<{
 /** Уменьшенный список социальных сетей */
 const compactSocial = [
   {
-    icon: "icon-park:telegram",
+    icon: "icon-park-outline:telegram",
     title: "Telegram",
     url: "https://t.me/exer7um",
   },

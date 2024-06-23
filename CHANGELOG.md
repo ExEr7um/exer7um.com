@@ -1,4 +1,20 @@
 
+## v2.0.5
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.4...v2.0.5)
+
+### 🐞 Исправления
+
+- Обновление `@nuxt/icon` до `v1.0.0` ([#473](https://github.com/ExEr7um/exer7um.com/pull/473))
+
+### 🏡 Другие изменения
+
+- Обновление зависимостей ([#474](https://github.com/ExEr7um/exer7um.com/pull/474))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.4
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.3...v2.0.4)

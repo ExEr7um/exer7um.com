@@ -1,4 +1,20 @@
 
+## v2.0.6
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.5...v2.0.6)
+
+### 🐞 Исправления
+
+- Отключение `serverBundle` для `nuxt/icon` ([925a3a8](https://github.com/ExEr7um/exer7um.com/commit/925a3a8))
+
+### 🏡 Другие изменения
+
+- Обновление зависимостей ([#475](https://github.com/ExEr7um/exer7um.com/pull/475))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.5
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.4...v2.0.5)

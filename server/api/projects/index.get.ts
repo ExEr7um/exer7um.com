@@ -1,15 +1,10 @@
+import { limitQuerySchema } from "~~/server/utils/zod"
 import { sql } from "drizzle-orm"
 
 export default defineEventHandler(async (event) => {
-  const { limit } = getQuery(event)
-
-  // Если limit передан, но не является числом
-  if (limit && !Number(limit))
-    // Выводим ошибку
-    throw createError({
-      message: "Параметр limit не является числом",
-      status: 400,
-    })
+  const { limit } = await getValidatedQuery(event, (query) =>
+    limitQuerySchema.parse(query)
+  )
 
   /** Список проектов */
   const projects = await useDrizzle().query.projects.findMany({

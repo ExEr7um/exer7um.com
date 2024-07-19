@@ -1,25 +1,18 @@
-export interface Message {
-  /** Почта пользователя */
-  email: string
-  /** Сообщение пользователя */
-  message: string
-  /** Имя пользователя */
-  name: string
-}
+import { z } from "zod"
+
+/** Сообщение пользователя */
+const messageSchema = z.object({
+  email: z.string().email(),
+  message: z.string().min(2),
+  name: z.string().min(2),
+})
 
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig(event)
 
-  // Получаем поля из сообщения
-  const { email, message, name } = await readBody<Message>(event)
-
-  // Если не передано хотя бы одно из полей
-  if (!email || !message || !name)
-    // Выводим ошибку
-    throw createError({
-      message: "Проверьте правильность заполненности полей",
-      status: 400,
-    })
+  const { email, message, name } = await readValidatedBody(event, (body) =>
+    messageSchema.parse(body)
+  )
 
   // Отправляем запрос к боту Telegram
   await $fetch("/sendMessage", {

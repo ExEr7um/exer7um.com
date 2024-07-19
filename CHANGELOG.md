@@ -1,4 +1,20 @@
 
+## v2.0.7
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.6...v2.0.7)
+
+### 🐞 Исправления
+
+- Обновление зависимостей ([#476](https://github.com/ExEr7um/exer7um.com/pull/476))
+
+### 🏡 Другие изменения
+
+- Добавление `compatibilityDate` ([0e1b72d](https://github.com/ExEr7um/exer7um.com/commit/0e1b72d))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.6
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.5...v2.0.6)

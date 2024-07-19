@@ -30,7 +30,7 @@
   },
   "prettier": "@exer7um/prettier-config",
   "dependencies": {
-    "@formkit/auto-animate": "0.8.1",
+    "@formkit/auto-animate": "0.8.2",
     "@formkit/tempo": "0.1.2",
     "@nuxt/fonts": "0.7.1",
     "@nuxt/icon": "1.2.0",
@@ -47,7 +47,8 @@
     "nuxt-shiki": "0.3.0",
     "postcss-nesting": "12.1.5",
     "vue": "3.4.33",
-    "vue-router": "4.4.0"
+    "vue-router": "4.4.0",
+    "zod": "3.23.8"
   },
   "devDependencies": {
     "@exer7um/eslint-config": "1.2.0",

@@ -7,6 +7,9 @@ const messageSchema = z.object({
   name: z.string().min(2),
 })
 
+/** Сообщение пользователя */
+export type Message = z.infer<typeof messageSchema>
+
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig(event)
 

@@ -25,12 +25,12 @@
     "typecheck": "nuxt typecheck"
   },
   "lint-staged": {
-    "*.{vue,js,jsx,cjs,mjs,ts,json}": "eslint --cache --fix",
+    "*.{vue,js,jsx,cjs,mjs,ts,json,yaml}": "eslint --cache --fix",
     "*": "prettier --write --ignore-unknown"
   },
   "prettier": "@exer7um/prettier-config",
   "dependencies": {
-    "@formkit/auto-animate": "0.8.2",
+    "@formkit/auto-animate": "0.8.1",
     "@formkit/tempo": "0.1.2",
     "@nuxt/fonts": "0.7.1",
     "@nuxt/icon": "1.2.0",

@@ -72,7 +72,6 @@ export default defineNuxtConfig({
     trailingSlash: true,
   },
   icon: {
-    serverBundle: false,
     size: "24px",
   },
   image: {

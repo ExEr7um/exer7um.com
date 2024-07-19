@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
           "title"
         ),
     },
-    limit: limit as number, // Ограничиваем количество результатов
+    limit: limit, // Ограничиваем количество результатов
     orderBy: desc(tables.projects.createdAt), // Сортируем по дате создания — сначала новые
     with: {
       tags: {

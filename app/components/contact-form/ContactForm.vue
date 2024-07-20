@@ -6,7 +6,12 @@ const { t } = useI18n({ useScope: "local" })
 /** Тело запроса */
 const requestBody = ref<Message>()
 
-const { clear, execute, status } = await useFetch("/api/messages", {
+const {
+  clear,
+  error: submitError,
+  execute,
+  status,
+} = await useFetch("/api/messages", {
   // Выставляем тело запроса
   body: requestBody,
   // Не вызываем функцию при загрузке страницы
@@ -32,12 +37,12 @@ async function submitForm(event: Event) {
 
   // Вызываем функцию отправки сообщения
   await execute()
-    .then(() => {
-      // Сбрасываем данные формы
-      form.reset()
-    })
-    // Выводим сообщение об ошибке, если она есть
-    .catch((error) => alert(error))
+
+  // Если ошибки нет
+  if (!submitError.value) {
+    // Сбрасываем данные формы
+    form.reset()
+  }
 }
 
 // Фокусируемся на первом инпуте
@@ -71,6 +76,11 @@ useFirstInputFocus()
       <span v-else>{{ t("send") }}</span>
     </button>
     <LazyContactFormSuccess v-if="status === 'success'" @close="clear" />
+    <LazyContactFormError
+      v-else-if="status === 'error'"
+      :error="submitError"
+      @close="clear"
+    />
   </form>
 </template>
 

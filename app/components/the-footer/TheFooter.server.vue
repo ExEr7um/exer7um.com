@@ -1,7 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-  <footer class="bg-neutral-100 py-6 dark:bg-neutral-900">
+  <footer class="mt-auto bg-neutral-100 py-6 dark:bg-neutral-900">
     <div class="container flex flex-wrap items-center justify-between gap-y-6">
       <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
       <small data-test-id="copyright">

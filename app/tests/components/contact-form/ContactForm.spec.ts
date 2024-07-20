@@ -65,6 +65,10 @@ describe("Компонент ContactForm", () => {
     expect(document.activeElement).toStrictEqual(name().element)
   })
 
+  test("Минимальное количество символов в поле Имя", () => {
+    expect(name().attributes("minlength")).toBe("2")
+  })
+
   test("Отправка сообщения к API", async () => {
     await name().setValue(contactData.name)
     await email().setValue(contactData.email)

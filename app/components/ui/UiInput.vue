@@ -8,11 +8,23 @@ withDefaults(
     id: string
     /** Подпись для инпута */
     label?: string
+    /** Максимальное количество символов */
+    maxlength?: number | string
+    /** Минимальное количество символов */
+    minlength?: number | string
     /** `placeholder` инпута */
     placeholder?: string
-    /** Обязательно ли заполнение поля */
+    /**
+     * Обязательно ли заполнение поля.
+     *
+     * @default true
+     */
     required?: boolean
-    /** Тип инпута */
+    /**
+     * Тип инпута.
+     *
+     * @default text
+     */
     type?: InputTypeHTMLAttribute
   }>(),
   {
@@ -27,6 +39,6 @@ withDefaults(
     <label v-if="label" :for="id">
       {{ label }}
     </label>
-    <input :id :name="id" :placeholder :required :type />
+    <input :id :maxlength :minlength :name="id" :placeholder :required :type />
   </div>
 </template>

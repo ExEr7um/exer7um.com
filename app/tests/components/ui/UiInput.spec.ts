@@ -99,4 +99,30 @@ describe("Компонент UiInput", () => {
       expect(inputAttributes("type")).toBe(type)
     })
   })
+
+  describe("Параметр minlength", () => {
+    test("Отсутствие по умолчанию", () => {
+      expect(inputAttributes("minlength")).toBeUndefined()
+    })
+
+    test("Выставление при передаче параметра", async () => {
+      const minlength = "2"
+      await wrapper.setProps({ minlength })
+
+      expect(inputAttributes("minlength")).toBe(minlength)
+    })
+  })
+
+  describe("Параметр maxlength", () => {
+    test("Отсутствие по умолчанию", () => {
+      expect(inputAttributes("maxlength")).toBeUndefined()
+    })
+
+    test("Выставление при передаче параметра", async () => {
+      const maxlength = "2"
+      await wrapper.setProps({ maxlength })
+
+      expect(inputAttributes("maxlength")).toBe(maxlength)
+    })
+  })
 })

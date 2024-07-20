@@ -99,4 +99,30 @@ describe("Компонент UiTextArea", () => {
       expect(textareaAttributes("rows")).toBe(rows.toString())
     })
   })
+
+  describe("Параметр minlength", () => {
+    test("По умолчанию 2", () => {
+      expect(textareaAttributes("minlength")).toBe("2")
+    })
+
+    test("Выставление при передаче параметра", async () => {
+      const minlength = "3"
+      await wrapper.setProps({ minlength })
+
+      expect(textareaAttributes("minlength")).toBe(minlength)
+    })
+  })
+
+  describe("Параметр maxlength", () => {
+    test("Отсутствие по умолчанию", () => {
+      expect(textareaAttributes("maxlength")).toBeUndefined()
+    })
+
+    test("Выставление при передаче параметра", async () => {
+      const maxlength = "3"
+      await wrapper.setProps({ maxlength })
+
+      expect(textareaAttributes("maxlength")).toBe(maxlength)
+    })
+  })
 })

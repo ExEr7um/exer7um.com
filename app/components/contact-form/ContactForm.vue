@@ -47,7 +47,12 @@ useFirstInputFocus()
 <template>
   <form class="flex flex-col gap-y-12" @submit.prevent="submitForm">
     <div class="grid w-full grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
-      <UiInput id="name" :label="t('name')" :placeholder="t('name')" />
+      <UiInput
+        id="name"
+        :label="t('name')"
+        minlength="2"
+        :placeholder="t('name')"
+      />
       <UiInput
         id="email"
         :label="t('email')"

@@ -1,4 +1,25 @@
 
+## v2.0.8
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.7...v2.0.8)
+
+### 🐞 Исправления
+
+- Перемещение `app.vue` ([8f7b1aa](https://github.com/ExEr7um/exer7um.com/commit/8f7b1aa))
+- **API:** Валидация `query` и `body` ([#477](https://github.com/ExEr7um/exer7um.com/pull/477))
+- Валидация формы на клиенте ([b753e23](https://github.com/ExEr7um/exer7um.com/commit/b753e23))
+- Обработка ошибок при отправке формы ([0107202](https://github.com/ExEr7um/exer7um.com/commit/0107202))
+- Минимальная высота страницы по экрану ([515a7e0](https://github.com/ExEr7um/exer7um.com/commit/515a7e0))
+
+### 🏡 Другие изменения
+
+- Добавление `.gitattributes` ([14f1b0d](https://github.com/ExEr7um/exer7um.com/commit/14f1b0d))
+- Добавление `yaml` для `lint-staged` ([b3b511e](https://github.com/ExEr7um/exer7um.com/commit/b3b511e))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.7
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.6...v2.0.7)

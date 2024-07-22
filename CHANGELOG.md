@@ -1,4 +1,23 @@
 
+## v2.0.9
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.8...v2.0.9)
+
+### 🐞 Исправления
+
+- Уменьшение прозрачности фона у `TheHeader` ([f779cd7](https://github.com/ExEr7um/exer7um.com/commit/f779cd7))
+- Добавление размытия фона для `UiPopup` ([5d49642](https://github.com/ExEr7um/exer7um.com/commit/5d49642))
+- Исправление размера `ContactFormError` на мобильных устройствах ([41be102](https://github.com/ExEr7um/exer7um.com/commit/41be102))
+- Темная тема для `ContactFormError` ([114bbf8](https://github.com/ExEr7um/exer7um.com/commit/114bbf8))
+
+### 🏡 Другие изменения
+
+- Обновление зависимостей ([#478](https://github.com/ExEr7um/exer7um.com/pull/478))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.8
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.7...v2.0.8)

@@ -94,17 +94,17 @@ export default defineNuxtConfig({
     blockNonSeoBots: true,
     disallow: ["/api"],
   },
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
   routeRules: {
     "/about/": {
       prerender: true,
     },
     "/contact-me/": {
       prerender: true,
-    },
-  },
-  router: {
-    options: {
-      scrollBehaviorType: "smooth",
     },
   },
   runtimeConfig: {

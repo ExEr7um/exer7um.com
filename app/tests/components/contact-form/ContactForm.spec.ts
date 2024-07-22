@@ -2,7 +2,7 @@
 import type { H3Event } from "h3"
 
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
-import { type VueWrapper, flushPromises } from "@vue/test-utils"
+import { flushPromises, type VueWrapper } from "@vue/test-utils"
 import { readBody } from "h3"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 

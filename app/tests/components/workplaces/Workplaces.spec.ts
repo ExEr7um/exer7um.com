@@ -6,8 +6,8 @@ import { getHeaderLocale } from "@intlify/h3"
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import Workplaces from "~/components/workplaces/Workplaces.vue"
 import WorkplacesCard from "~/components/workplaces/card/WorkplacesCard.vue"
+import Workplaces from "~/components/workplaces/Workplaces.vue"
 import { workplaces } from "~/tests/constants/workplaces"
 
 describe("Компонент Workplaces", () => {

@@ -20,7 +20,10 @@ const { t } = useI18n({ useScope: "local" })
     :title="t('title')"
     @close="emit('close')"
   >
-    <pre class="rounded-lg border bg-neutral-50 p-3">{{ error }}</pre>
+    <pre
+      class="max-w-full overflow-x-auto rounded-lg border bg-neutral-50 p-3 text-xs sm:text-base"
+      v-text="error"
+    />
     <button
       class="button primary mt-2 w-max"
       type="button"

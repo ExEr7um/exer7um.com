@@ -50,7 +50,7 @@ const statusStyles = {
   >
     <div class="fixed inset-0 bg-black/15 backdrop-blur" />
     <HeadlessDialogPanel
-      class="z-50 flex flex-col gap-y-6 rounded-2xl bg-white p-6 sm:p-8 dark:bg-neutral-900"
+      class="z-50 flex max-w-full flex-col gap-y-6 rounded-2xl bg-white p-6 sm:p-8 dark:bg-neutral-900"
     >
       <div
         v-if="status"

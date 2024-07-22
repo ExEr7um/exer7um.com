@@ -21,7 +21,7 @@ const { t } = useI18n({ useScope: "local" })
     @close="emit('close')"
   >
     <pre
-      class="max-w-full overflow-x-auto rounded-lg border bg-neutral-50 p-3 text-xs sm:text-base"
+      class="max-w-full overflow-x-auto rounded-lg border bg-neutral-50 p-3 text-xs sm:text-base dark:border-neutral-700 dark:bg-neutral-800"
       v-text="error"
     />
     <button

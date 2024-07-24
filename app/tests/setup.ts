@@ -11,9 +11,4 @@ const i18n = createI18n({
 })
 
 // Добавляем i18n в плагины
-config.global.plugins.push(i18n)
-
-// НАСТРОЙКА AUTO ANIMATE
-
-// Добавляем Auto Animate в плагины
-config.global.plugins.push(autoAnimatePlugin)
+config.global.plugins.push(i18n, autoAnimatePlugin)

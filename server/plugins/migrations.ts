@@ -11,8 +11,8 @@ export default defineNitroPlugin(async () => {
       .then(() => {
         consola.success("Миграции БД проведены успешно")
       })
-      .catch((err) => {
-        consola.error("Ошибка при проведении миграций БД", err)
+      .catch((error) => {
+        consola.error("Ошибка при проведении миграций БД", error)
       })
   })
 })

@@ -5,6 +5,9 @@ import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UiPopup from "~/components/ui/UiPopup.vue"
 
+const popup = () => document.querySelector("[data-test-id=ui-popup]")!
+const status = () => document.querySelector("[data-test-id=status]")
+
 describe("Компонент UiPopup", () => {
   const title = "Заголовок блока"
   const description = "Описание блока"
@@ -28,16 +31,13 @@ describe("Компонент UiPopup", () => {
     wrapper.unmount()
   })
 
-  const popup = () => document.querySelector("[data-test-id=ui-popup]")!
-  const status = () => document.querySelector("[data-test-id=status]")
-
   describe("Поля поп-апа", () => {
     test("Заголовок", () => {
-      expect(popup().querySelector("h3")?.innerText).toBe(title)
+      expect(popup().querySelector("h3")?.textContent).toBe(title)
     })
 
     test("Описание", () => {
-      expect(popup().querySelector("p")?.innerText).toBe(description)
+      expect(popup().querySelector("p")?.textContent).toBe(description)
     })
   })
 

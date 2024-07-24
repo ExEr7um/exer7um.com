@@ -53,7 +53,7 @@ describe("Компонент WorkplacesCardDate", () => {
   describe("Отсутствие даты", () => {
     beforeEach(async () => {
       await wrapper.setProps({
-        date: null,
+        date: undefined,
       })
     })
 

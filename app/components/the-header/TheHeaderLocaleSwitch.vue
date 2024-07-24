@@ -9,13 +9,11 @@ const nextLocaleCode = computed(() => {
     (localeCode) => localeCode === locale.value
   )
 
-  if (currentLocaleIndex.value === localeCodes.value.length - 1) {
-    // Если локализация последняя в списке, то возвращается код первой из списка
-    return localeCodes.value[0]
-  } else {
-    // Иначе возвращается код следующей локализации
-    return localeCodes.value[currentLocaleIndex.value + 1]
-  }
+  // Если локализация последняя в списке, то возвращается код первой из списка
+  // Иначе возвращается код следующей локализации
+  return localeCodes.value.at(
+    (currentLocaleIndex.value + 1) % localeCodes.value.length
+  )
 })
 </script>
 

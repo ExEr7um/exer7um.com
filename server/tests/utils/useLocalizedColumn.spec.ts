@@ -1,8 +1,8 @@
 // @vitest-environment node
 import useLocalizedColumn from "~~/server/utils/useLocalizedColumn"
 import { createEvent } from "h3"
-import { IncomingMessage, ServerResponse } from "http"
-import { Socket } from "net"
+import { IncomingMessage, ServerResponse } from "node:http"
+import { Socket } from "node:net"
 import { beforeEach, describe, expect, test } from "vitest"
 
 describe("Функция useLocalizedColumn", () => {

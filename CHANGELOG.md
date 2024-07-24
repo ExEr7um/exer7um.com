@@ -1,4 +1,20 @@
 
+## v2.0.10
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.9...v2.0.10)
+
+### 🐞 Исправления
+
+- Обновление конфигурации ESLint ([#479](https://github.com/ExEr7um/exer7um.com/pull/479))
+
+### 🏡 Другие изменения
+
+- Обновление зависимостей ([#480](https://github.com/ExEr7um/exer7um.com/pull/480))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.9
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.8...v2.0.9)

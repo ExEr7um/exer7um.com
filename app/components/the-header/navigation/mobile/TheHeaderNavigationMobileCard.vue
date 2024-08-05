@@ -17,6 +17,7 @@ const navigationRoute = computed(() =>
 </script>
 
 <template>
+  <!-- @vue-expect-error -->
   <HeadlessMenuItem
     as="span"
     class="w-full cursor-pointer rounded px-3 py-2 hover:bg-neutral-50 dark:hover:bg-neutral-800"

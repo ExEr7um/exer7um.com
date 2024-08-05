@@ -3,7 +3,7 @@ import { format } from "@formkit/tempo"
 
 const props = defineProps<{
   /** Дата карточки */
-  date: Date | null | string
+  date: Date | null | string | undefined
 }>()
 
 const { locale, t } = useI18n({ useScope: "local" })

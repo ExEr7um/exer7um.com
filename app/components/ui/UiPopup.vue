@@ -9,7 +9,10 @@ interface StatusStyle {
   icon: string
 }
 
-const props = defineProps<{
+/** Статус поп-апа */
+type Status = "error" | "success"
+
+defineProps<{
   /** Описание поп-апа */
   description?: string
   /**
@@ -17,7 +20,7 @@ const props = defineProps<{
    *
    * От этого параметра зависит появление галочки/крестика в верхней части поп-апа.
    */
-  status?: "error" | "success"
+  status?: Status
   /** Заголовок поп-апа */
   title: string
 }>()
@@ -38,7 +41,7 @@ const statusStyles = {
     color: "text-green-700 dark:text-green-200",
     icon: "heroicons:check",
   },
-} as const satisfies Record<NonNullable<typeof props.status>, StatusStyle>
+} as const satisfies Record<Status, StatusStyle>
 </script>
 
 <template>

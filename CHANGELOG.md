@@ -1,4 +1,16 @@
 
+## v2.0.12
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.11...v2.0.12)
+
+### 🐞 Исправления
+
+- Включение `swr` для всех страниц сайта ([a50079d](https://github.com/ExEr7um/exer7um.com/commit/a50079d))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.11
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.10...v2.0.11)

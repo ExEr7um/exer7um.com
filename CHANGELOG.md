@@ -1,4 +1,20 @@
 
+## v2.0.11
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.10...v2.0.11)
+
+### 🐞 Исправления
+
+- Включение `isr` для всех страниц сайта ([2a39a71](https://github.com/ExEr7um/exer7um.com/commit/2a39a71))
+
+### 🏡 Другие изменения
+
+- Обновление зависимостей ([#481](https://github.com/ExEr7um/exer7um.com/pull/481))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.10
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.9...v2.0.10)

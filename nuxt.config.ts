@@ -100,6 +100,9 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
+    "*": {
+      isr: true,
+    },
     "/about/": {
       prerender: true,
     },

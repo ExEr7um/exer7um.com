@@ -1,7 +1,6 @@
 {
   "_meta": {
     "columns": {},
-    "schemas": {},
     "tables": {}
   },
   "dialect": "sqlite",
@@ -141,5 +140,5 @@
       "uniqueConstraints": {}
     }
   },
-  "version": "5"
+  "version": "6"
 }

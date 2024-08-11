@@ -1,4 +1,20 @@
 
+## v2.0.13
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.12...v2.0.13)
+
+### 🐞 Исправления
+
+- Обновление Drizzle ([#483](https://github.com/ExEr7um/exer7um.com/pull/483))
+
+### 🏡 Другие изменения
+
+- Обновление зависимостей ([#482](https://github.com/ExEr7um/exer7um.com/pull/482))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.12
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.11...v2.0.12)

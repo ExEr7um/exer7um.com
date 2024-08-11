@@ -27,7 +27,7 @@ describe("Компонент UiTags", () => {
   })
 
   test("Правильное количество тегов", () => {
-    expect(tagsList().length).toBe(tags.length)
+    expect(tagsList()).toHaveLength(tags.length)
   })
 
   describe("Параметр small", () => {

@@ -37,7 +37,7 @@ describe("Компонент PersonalProjects", () => {
   })
 
   test("Количество проектов", () => {
-    expect(wrapper.findAllComponents(PersonalProjectsCard).length).toBe(
+    expect(wrapper.findAllComponents(PersonalProjectsCard)).toHaveLength(
       personalProjects.length
     )
   })

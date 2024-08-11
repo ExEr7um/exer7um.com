@@ -36,7 +36,7 @@ describe("Компонент Social", () => {
     })
 
     test("Отображаются 2 соцсети", async () => {
-      expect(socialCards().length).toBe(2)
+      expect(socialCards()).toHaveLength(2)
     })
 
     test("Увеличенный отступ между кнопками", async () => {

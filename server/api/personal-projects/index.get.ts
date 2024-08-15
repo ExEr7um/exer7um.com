@@ -1,4 +1,3 @@
-import { limitQuerySchema } from "~~/server/utils/zod"
 import { sql } from "drizzle-orm"
 
 export default defineEventHandler(async (event) => {

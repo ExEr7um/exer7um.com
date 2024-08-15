@@ -21,6 +21,7 @@
     "typecheck",
     "unixepoch",
     "unref",
+    "valibot",
     "vite",
     "vueuse"
   ],

@@ -46,9 +46,9 @@
     "nuxt-headlessui": "1.2.0",
     "nuxt-shiki": "0.3.0",
     "postcss-nesting": "13.0.0",
+    "valibot": "0.37.0",
     "vue": "3.4.38",
-    "vue-router": "4.4.3",
-    "zod": "3.23.8"
+    "vue-router": "4.4.3"
   },
   "devDependencies": {
     "@exer7um/eslint-config": "1.4.2",

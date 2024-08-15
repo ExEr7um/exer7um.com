@@ -1,20 +1,22 @@
-import { z } from "zod"
+import type { InferInput } from "valibot"
+
+import { email, minLength, object, parse, pipe, string } from "valibot"
 
 /** Сообщение пользователя */
-const messageSchema = z.object({
-  email: z.string().email(),
-  message: z.string().min(2),
-  name: z.string().min(2),
+const messageSchema = object({
+  email: pipe(string(), email()),
+  message: pipe(string(), minLength(2)),
+  name: pipe(string(), minLength(2)),
 })
 
 /** Сообщение пользователя */
-export type Message = z.infer<typeof messageSchema>
+export type Message = InferInput<typeof messageSchema>
 
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig(event)
 
   const { email, message, name } = await readValidatedBody(event, (body) =>
-    messageSchema.parse(body)
+    parse(messageSchema, body)
   )
 
   // Отправляем запрос к боту Telegram

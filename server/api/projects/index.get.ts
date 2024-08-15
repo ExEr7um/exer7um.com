@@ -1,9 +1,9 @@
-import { limitQuerySchema } from "~~/server/utils/zod"
 import { sql } from "drizzle-orm"
+import { parse } from "valibot"
 
 export default defineEventHandler(async (event) => {
   const { limit } = await getValidatedQuery(event, (query) =>
-    limitQuerySchema.parse(query)
+    parse(limitQuerySchema, query)
   )
 
   /** Список проектов */

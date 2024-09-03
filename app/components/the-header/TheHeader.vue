@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import type { RouteName } from "~/types/Utils"
+
 /** Список навигации */
 const navigation = [
   "index",
   "experience",
   "projects",
   "about",
-] as const satisfies string[]
+] as const satisfies RouteName[]
 </script>
 
 <template>

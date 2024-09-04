@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { RouteName } from "~/types/Utils"
+
 defineProps<{
   /** Навигация */
-  navigation: string[]
+  navigation: RouteName[]
 }>()
 
 const { t } = useI18n({ useScope: "local" })

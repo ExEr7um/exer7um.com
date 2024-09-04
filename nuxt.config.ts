@@ -59,13 +59,13 @@ export default defineNuxtConfig({
       {
         code: "ru",
         file: "ru.yaml",
-        iso: "ru-RU",
+        language: "ru-RU",
         name: "Русский",
       },
       {
         code: "en",
         file: "en.yaml",
-        iso: "en-US",
+        language: "en-US",
         name: "English",
       },
     ],

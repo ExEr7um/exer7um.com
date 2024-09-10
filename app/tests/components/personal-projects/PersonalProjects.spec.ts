@@ -66,7 +66,7 @@ describe("Компонент PersonalProjects", () => {
     })
   })
 
-  describe.sequential("Запрос к API", () => {
+  describe("Запрос к API", () => {
     test("Передается хедер локализации", () => {
       expect(getHeaderLocale(userRequest!).baseName).toBeTruthy()
     })

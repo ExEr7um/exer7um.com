@@ -47,7 +47,7 @@ describe("Компонент UiPopup", () => {
     )
   })
 
-  describe.sequential("Статус поп-апа", () => {
+  describe("Статус поп-апа", () => {
     test("Отсутствие по умолчанию", () => {
       expect(status()).toBeNull()
     })

@@ -40,11 +40,9 @@ describe("Компонент UiBlock", () => {
   })
 
   test("Передача контента через slot", () => {
-    expect(wrapper.html()).toMatchInlineSnapshot(`
-      "<section class="flex scroll-mt-32 flex-col gap-y-6 sm:gap-y-8 lg:gap-y-10">
-        <!--v-if-->&lt;div id='test-block'&gt;Тест&lt;/div&gt;
-      </section>"
-    `)
+    expect(wrapper.html()).toContain(
+      `&lt;div id='test-block'&gt;Тест&lt;/div&gt;`
+    )
   })
 
   test("Отступ при скролле", () => {

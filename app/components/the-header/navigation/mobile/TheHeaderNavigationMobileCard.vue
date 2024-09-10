@@ -3,7 +3,7 @@ import type { RouteRecordName } from "vue-router"
 
 import type { RouteName } from "~/types/Utils"
 
-const props = defineProps<{
+const { routeName } = defineProps<{
   /** Ссылка навигации */
   routeName: RouteName
 }>()
@@ -14,7 +14,7 @@ const localeRoute = useLocaleRoute()
 /** Полученная ссылка навигации */
 const navigationRoute = computed(() =>
   localeRoute({
-    name: props.routeName as RouteRecordName,
+    name: routeName as RouteRecordName,
   })
 )
 </script>

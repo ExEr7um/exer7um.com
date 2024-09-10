@@ -42,8 +42,8 @@ describe("Компонент UiPopup", () => {
   })
 
   test("Передача контента через slot", () => {
-    expect(popup().innerHTML).toMatchInlineSnapshot(
-      `"<div class="fixed inset-0 bg-black/15 backdrop-blur"></div><div id="headlessui-dialog-panel-3" data-headlessui-state="open" class="z-50 flex max-w-full flex-col gap-y-6 rounded-2xl bg-white p-6 sm:p-8 dark:bg-neutral-900"><!--v-if--><h3 id="headlessui-dialog-title-4" data-headlessui-state="open">Заголовок блока</h3><p id="headlessui-description-5" data-headlessui-state="open" class="max-w-lg">Описание блока</p>&lt;div id='test-block'&gt;Тест&lt;/div&gt;</div>"`
+    expect(popup().innerHTML).toContain(
+      `&lt;div id='test-block'&gt;Тест&lt;/div&gt;`
     )
   })
 

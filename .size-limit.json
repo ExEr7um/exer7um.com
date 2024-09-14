@@ -1,0 +1,8 @@
+{
+  "size-limit": [
+    {
+      "limit": "1024 kB",
+      "path": "dist/**/*.{js,mjs}"
+    }
+  ]
+}

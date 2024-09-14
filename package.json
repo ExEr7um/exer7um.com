@@ -50,7 +50,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@exer7um/eslint-config": "1.4.2",
+    "@exer7um/eslint-config": "1.4.4",
     "@exer7um/prettier-config": "0.4.5",
     "@nuxt/test-utils": "3.14.1",
     "@types/node": "22.5.3",

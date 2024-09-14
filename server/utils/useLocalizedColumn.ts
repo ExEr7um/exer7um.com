@@ -5,6 +5,7 @@ import { getHeaderLocale } from "@intlify/h3"
 /**
  * Функция для получения локализированного названия колонки.
  *
+ * @template TReturn - тип возвращаемого значения.
  * @param column - название колонки.
  * @param event - H3 ивент.
  * @returns локализированное название колонки

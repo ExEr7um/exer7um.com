@@ -13,7 +13,7 @@ const locales = {
   ru,
 } as const
 
-const { locale, t } = useI18n()
+const { locale } = useI18n()
 
 const { data: workplaces } = await useFetch("/api/workplaces", {
   headers: {
@@ -40,7 +40,7 @@ const fullExperience = computed(() =>
 <template>
   <UiBlock
     :sub-title="fullExperience"
-    :title="hideTitle ? undefined : t('pages.experience')"
+    :title="hideTitle ? undefined : $t('pages.experience')"
   >
     <div class="grid grid-cols-[auto_1fr] gap-x-8 lg:grid-cols-[auto_1fr_auto]">
       <template v-for="workplace in workplaces" :key="workplace.id">

@@ -43,6 +43,10 @@ describe("Компонент Workplaces", () => {
     })
   })
 
+  test("Отображается правильный подзаголовок", () => {
+    expect(wrapper.find("h3").text()).toBe("1 год 8 месяцев")
+  })
+
   test("Количество проектов", () => {
     expect(wrapper.findAllComponents(WorkplacesCard)).toHaveLength(
       workplaces.length

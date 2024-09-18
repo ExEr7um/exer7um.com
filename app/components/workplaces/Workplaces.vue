@@ -32,8 +32,9 @@ const fullExperience = computed(() =>
 
 <template>
   <UiBlock
+    :hide-title
     :sub-title="fullExperience"
-    :title="hideTitle ? undefined : $t('pages.experience')"
+    :title="$t('pages.experience')"
   >
     <div class="grid grid-cols-[auto_1fr] gap-x-8 lg:grid-cols-[auto_1fr_auto]">
       <template v-for="workplace in workplaces" :key="workplace.id">

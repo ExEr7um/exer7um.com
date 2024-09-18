@@ -57,7 +57,7 @@ const icons = [
 </script>
 
 <template>
-  <UiBlock :title="hideTitle ? undefined : t('title')">
+  <UiBlock :hide-title :title="t('title')">
     <article class="flex max-w-5xl flex-col gap-y-5">
       <h3 class="mb-2">{{ t("name") }}</h3>
       <i18n-t

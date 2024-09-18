@@ -21,7 +21,7 @@ const { data: projects } = await useFetch("/api/projects", {
 </script>
 
 <template>
-  <UiBlock id="projects" :title="hideTitle ? undefined : t('projects')">
+  <UiBlock id="projects" :hide-title :title="t('projects')">
     <div
       class="grid grid-cols-1 grid-rows-[repeat(5,_auto)] gap-4 sm:grid-cols-2 lg:grid-cols-4"
     >

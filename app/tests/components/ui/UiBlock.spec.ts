@@ -14,6 +14,9 @@ describe("Компонент UiBlock", () => {
 
   beforeEach(() => {
     wrapper = shallowMount(UiBlock, {
+      props: {
+        title,
+      },
       slots: {
         default: () => TEST_BLOCK,
       },
@@ -25,26 +28,37 @@ describe("Компонент UiBlock", () => {
   })
 
   describe("Заголовок блока", () => {
-    test("По умолчанию скрыт", () => {
+    test("Выставляется из props", async () => {
+      expect(wrapper.find("h2").text()).toBe(title)
+    })
+
+    test("Скрывается при передаче параметра hideTitle", async () => {
+      await wrapper.setProps({
+        hideTitle: true,
+      })
+
       expect(wrapper.find("h2").exists()).toBeFalsy()
     })
 
-    test("Выставляется из props", async () => {
-      await wrapper.setProps({ title })
+    describe("Подзаголовок блока", () => {
+      test("По умолчанию скрыт", () => {
+        expect(wrapper.find("h3").exists()).toBeFalsy()
+      })
 
-      expect(wrapper.find("h2").text()).toBe(title)
-    })
-  })
+      test("Выставляется из props", async () => {
+        await wrapper.setProps({ subTitle })
 
-  describe("Подзаголовок блока", () => {
-    test("По умолчанию скрыт", () => {
-      expect(wrapper.find("h3").exists()).toBeFalsy()
-    })
+        expect(wrapper.find("h3").text()).toBe(subTitle)
+      })
 
-    test("Выставляется из props", async () => {
-      await wrapper.setProps({ subTitle })
+      test("Скрывается при передаче параметра hideTitle", async () => {
+        await wrapper.setProps({
+          hideTitle: true,
+          subTitle,
+        })
 
-      expect(wrapper.find("h3").text()).toBe(subTitle)
+        expect(wrapper.find("h3").exists()).toBeFalsy()
+      })
     })
   })
 

@@ -8,6 +8,7 @@ import { TEST_BLOCK } from "~/tests/constants/utils"
 
 describe("Компонент UiBlock", () => {
   const title = "Заголовок блока"
+  const subTitle = "Подзаголовок блока"
 
   let wrapper: VueWrapper
 
@@ -32,6 +33,18 @@ describe("Компонент UiBlock", () => {
       await wrapper.setProps({ title })
 
       expect(wrapper.find("h2").text()).toBe(title)
+    })
+  })
+
+  describe("Подзаголовок блока", () => {
+    test("По умолчанию скрыт", () => {
+      expect(wrapper.find("h3").exists()).toBeFalsy()
+    })
+
+    test("Выставляется из props", async () => {
+      await wrapper.setProps({ subTitle })
+
+      expect(wrapper.find("h3").text()).toBe(subTitle)
     })
   })
 

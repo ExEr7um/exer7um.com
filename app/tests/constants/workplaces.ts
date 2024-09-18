@@ -3,10 +3,9 @@ import { tags } from "~/tests/constants/tags"
 export const workplaces = [
   {
     description: "Описание места работы",
-    endDate: "2024-01-01T00:00:00.000Z",
     id: 1,
     logo: "/test-logo.webp",
-    startDate: "2023-01-01T00:00:00.000Z",
+    startDate: "2024-01-01T00:00:00.000Z",
     tags,
     title: "Заголовок места работы",
   },

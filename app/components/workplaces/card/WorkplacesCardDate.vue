@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { format } from "@formkit/tempo"
+import { format } from "date-fns"
 
 const props = defineProps<{
   /** Дата карточки */
@@ -12,7 +12,10 @@ const { locale, t } = useI18n({ useScope: "local" })
 const formattedDate = computed(
   () =>
     props.date
-      ? format(props.date, "MMMM YYYY", locale.value) // Выводим текущую дату в формате «январь 2024»
+      ? format(props.date, "LLLL yyyy", {
+          // @ts-expect-error - в i18n нет типизации locale
+          locale: locales[locale.value],
+        }) // Выводим текущую дату в формате «январь 2024»
       : t("presentTime") // Если дата не передана, то выводим «Настоящее время»
 )
 </script>

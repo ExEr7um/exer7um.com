@@ -1,17 +1,10 @@
 <script setup lang="ts">
 import { formatDuration, intervalToDuration } from "date-fns"
-import { enUS as en, ru } from "date-fns/locale"
 
 defineProps<{
   /** Скрыть ли заголовок блока */
   hideTitle?: boolean
 }>()
-
-/** Локализации */
-const locales = {
-  en,
-  ru,
-} as const
 
 const { locale } = useI18n()
 

@@ -13,9 +13,7 @@ const { t } = useI18n({
 })
 
 /** Текущий возраст */
-const age = computed(() =>
-  differenceInYears(useNow().value, new Date("2002-01-15"))
-)
+const age = differenceInYears(new Date(), new Date("2002-01-15"))
 
 const icons = [
   [

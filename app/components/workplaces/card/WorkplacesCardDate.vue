@@ -9,14 +9,15 @@ const props = defineProps<{
 const { locale, t } = useI18n({ useScope: "local" })
 
 /** Форматированная дата */
-const formattedDate = computed(
-  () =>
-    props.date
-      ? format(props.date, "LLLL yyyy", {
-          // @ts-expect-error - в i18n нет типизации locale
-          locale: locales[locale.value],
-        }) // Выводим текущую дату в формате «январь 2024»
-      : t("presentTime") // Если дата не передана, то выводим «Настоящее время»
+const formattedDate = computed(() =>
+  props.date
+    ? // Выводим текущую дату в формате «январь 2024»
+      format(props.date, "LLLL yyyy", {
+        // @ts-expect-error - в i18n нет типизации locale
+        locale: locales[locale.value],
+      })
+    : // Если дата не передана, то выводим «Настоящее время»
+      t("presentTime")
 )
 </script>
 

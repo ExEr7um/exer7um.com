@@ -15,18 +15,16 @@ const { data: workplaces } = await useFetch("/api/workplaces", {
 })
 
 /** Длительность полного опыта */
-const fullExperience = computed(() =>
-  formatDuration(
-    intervalToDuration({
-      end: useNow().value,
-      start: workplaces.value?.at(-1)?.startDate ?? "",
-    }),
-    {
-      format: ["years", "months"],
-      // @ts-expect-error - в i18n нет типизации locale
-      locale: locales[locale.value],
-    }
-  )
+const fullExperience = formatDuration(
+  intervalToDuration({
+    end: new Date(),
+    start: workplaces.value?.at(-1)?.startDate ?? "",
+  }),
+  {
+    format: ["years", "months"],
+    // @ts-expect-error - в i18n нет типизации locale
+    locale: locales[locale.value],
+  }
 )
 </script>
 

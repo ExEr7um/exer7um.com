@@ -10,7 +10,7 @@ const { locale, t } = useI18n({ useScope: "local" })
 
 /** Форматированная дата */
 const formattedDate = computed(() =>
-  props.date
+  date
     ? // Выводим текущую дату в формате «январь 2024»
       format(date, "LLLL yyyy", {
         // @ts-expect-error - в i18n нет типизации locale

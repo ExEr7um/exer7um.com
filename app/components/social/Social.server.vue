@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SocialCard } from "./SocialCard.server.vue"
 
-const props = defineProps<{
+const { compact } = defineProps<{
   /** Является ли блок уменьшенным */
   compact?: boolean
 }>()
@@ -31,7 +31,7 @@ const fullSocial = [
 
 /** Список социальных сетей */
 const social = computed(() => {
-  return [...compactSocial, ...(props.compact ? [] : fullSocial)]
+  return [...compactSocial, ...(compact ? [] : fullSocial)]
 })
 </script>
 

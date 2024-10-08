@@ -1,6 +1,4 @@
 <script setup lang="ts">
-provideHeadlessUseId(() => useId())
-
 const i18nHead = useLocaleHead({
   addDirAttribute: true,
   addSeoAttributes: true,

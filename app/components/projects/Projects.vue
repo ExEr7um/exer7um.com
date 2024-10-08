@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+const { hideTitle, limit } = defineProps<{
   /** Скрыть ли заголовок блока */
   hideTitle?: boolean
   /** Ограничение количества проектов для вывода */
@@ -15,7 +15,7 @@ const { data: projects } = await useFetch("/api/projects", {
     "Accept-Language": locale,
   },
   query: {
-    limit: toRefs(props).limit,
+    limit,
   },
 })
 </script>

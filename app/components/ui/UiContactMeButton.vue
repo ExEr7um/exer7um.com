@@ -10,7 +10,7 @@ const { t } = useI18n({ useScope: "local" })
 
 <i18n lang="yaml">
 en:
-  buttonText: Contact me 👋🏻
+  buttonText: Contact me ✍🏻
 ru:
-  buttonText: Написать мне 👋🏻
+  buttonText: Написать мне ✍🏻
 </i18n>

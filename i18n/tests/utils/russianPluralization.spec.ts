@@ -1,4 +1,5 @@
 // @vitest-environment node
+import russianPluralization from "~~/i18n/utils/russianPluralization"
 import { describe, expect, test } from "vitest"
 
 describe("Функция russianPluralization", () => {

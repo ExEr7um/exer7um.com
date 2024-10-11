@@ -59,7 +59,6 @@ export default defineNuxtConfig({
   },
   i18n: {
     defaultLocale: "ru",
-    langDir: "assets/lang/",
     lazy: true,
     locales: [
       {
@@ -75,6 +74,7 @@ export default defineNuxtConfig({
         name: "English",
       },
     ],
+    restructureDir: "i18n",
     trailingSlash: true,
   },
   icon: {

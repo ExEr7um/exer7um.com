@@ -13,7 +13,7 @@ describe("Компонент SocialCard", () => {
 
   /** Социальная сеть */
   const socialCard = {
-    icon: "icon",
+    icon: "heroicons:at-symbol",
     title: "Социальная сеть",
     url: "https://test.com/",
   } as const satisfies SocialCardType

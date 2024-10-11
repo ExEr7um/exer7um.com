@@ -4,7 +4,7 @@ usePageSeo("index")
 
 <template>
   <main>
-    <TheHero />
+    <TheHeroMain />
     <Workplaces />
     <Projects :limit="3" />
     <PersonalProjects :limit="3" />

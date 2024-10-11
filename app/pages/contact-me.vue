@@ -1,10 +1,10 @@
 <script setup lang="ts">
-usePageSeo("contactMe")
+const { description, title } = usePageSeo("contactMe")
 </script>
 
 <template>
   <main class="max-w-2xl">
-    <h1>{{ $t("pages.contactMe") }}</h1>
+    <UiHero :description :title />
     <ContactForm />
   </main>
 </template>

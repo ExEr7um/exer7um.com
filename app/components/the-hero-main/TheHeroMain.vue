@@ -15,7 +15,7 @@ const { t } = useI18n({ useScope: "local" })
         <Social compact />
       </div>
     </div>
-    <TheHeroCode />
+    <TheHeroMainCode />
   </section>
 </template>
 

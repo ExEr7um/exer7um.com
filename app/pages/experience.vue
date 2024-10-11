@@ -1,10 +1,10 @@
 <script setup lang="ts">
-usePageSeo("experience")
+const { description, title } = usePageSeo("experience")
 </script>
 
 <template>
   <main>
-    <h1>{{ $t("pages.experience") }}</h1>
+    <UiHero :description :title />
     <Workplaces hide-title />
   </main>
 </template>

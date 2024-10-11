@@ -16,7 +16,7 @@ const code = `<section class="flex items-center justify-between gap-x-8 py-8">
     </p>
     <UiContactMeButton />
   </div>
-  <TheHeroCode />
+  <TheHeroMainCode />
 </section>
 ` as const
 </script>

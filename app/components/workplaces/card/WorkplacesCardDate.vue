@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { format } from "date-fns"
 
-const props = defineProps<{
+const { date } = defineProps<{
   /** Дата карточки */
   date: Date | null | string | undefined
 }>()
@@ -10,9 +10,9 @@ const { locale, t } = useI18n({ useScope: "local" })
 
 /** Форматированная дата */
 const formattedDate = computed(() =>
-  props.date
+  date
     ? // Выводим текущую дату в формате «январь 2024»
-      format(props.date, "LLLL yyyy", {
+      format(date, "LLLL yyyy", {
         // @ts-expect-error - в i18n нет типизации locale
         locale: locales[locale.value],
       })

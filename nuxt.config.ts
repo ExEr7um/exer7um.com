@@ -1,3 +1,5 @@
+import wasm from "@rollup/plugin-wasm"
+
 /**
  * Общие модули, которые используются в любой среде.
  *
@@ -30,6 +32,10 @@ export default defineNuxtConfig({
   },
   $production: {
     modules,
+    // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/41
+    vite: {
+      plugins: [wasm()],
+    },
   },
   $test: {
     modules: devModules,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+const { limit } = defineProps<{
   /** Ограничение количества проектов для вывода */
   limit?: number
 }>()
@@ -13,7 +13,7 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
     "Accept-Language": locale,
   },
   query: {
-    limit: toRefs(props).limit,
+    limit: toRef(() => limit),
   },
 })
 </script>

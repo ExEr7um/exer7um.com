@@ -6,9 +6,9 @@ const { t } = useI18n({ useScope: "local" })
   <section
     class="flex flex-col-reverse gap-y-12 py-8 lg:flex-row lg:items-center lg:justify-between lg:gap-x-8"
   >
-    <div class="flex max-w-[27rem] flex-col gap-y-3">
+    <div class="flex max-w-md flex-col gap-y-3">
       <h1>{{ t("title") }}</h1>
-      <p>{{ t("description") }}</p>
+      <p>{{ $t("descriptions.index") }}</p>
       <div class="mt-8 flex items-center gap-x-4 sm:gap-x-6">
         <UiContactMeButton />
         <p>{{ t("or") }}</p>
@@ -21,11 +21,9 @@ const { t } = useI18n({ useScope: "local" })
 
 <i18n lang="yaml">
 en:
-  description: I'm a frontend developer from Moscow. I love Vue, clean code, and beautiful design.
   or: or
   title: 👋🏻 Hello!
 ru:
-  description: Я — фронтенд разработчик из Москвы. Люблю Vue, чистый код и красивый дизайн.
   or: или
   title: 👋🏻 Привет!
 </i18n>

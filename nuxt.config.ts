@@ -39,6 +39,7 @@ export default defineNuxtConfig({
   },
   $test: {
     modules: devModules,
+    ogImage: { enabled: false },
   },
   compatibilityDate: "2024-07-19",
   devtools: {

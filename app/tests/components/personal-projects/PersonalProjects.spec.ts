@@ -75,7 +75,7 @@ describe("Компонент PersonalProjects", () => {
       expect(getQuery(userRequest!).limit).toBeFalsy()
     })
 
-    test.fails("Передается limit", async () => {
+    test("Передается limit", async () => {
       await wrapper.setProps({
         limit: 3,
       })

@@ -13,7 +13,7 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
     "Accept-Language": locale,
   },
   query: {
-    limit,
+    limit: toRef(() => limit),
   },
 })
 </script>

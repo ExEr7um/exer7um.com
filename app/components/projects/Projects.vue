@@ -15,7 +15,7 @@ const { data: projects } = await useFetch("/api/projects", {
     "Accept-Language": locale,
   },
   query: {
-    limit,
+    limit: toRef(() => limit),
   },
 })
 </script>

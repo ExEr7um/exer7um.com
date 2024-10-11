@@ -1,4 +1,54 @@
 
+## v2.1.0
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.13...v2.1.0)
+
+### 🚀 Улучшения
+
+- Подзаголовок для `UiBlock` ([100a91a](https://github.com/ExEr7um/exer7um.com/commit/100a91a))
+- Вывод полного опыта работы ([14d779e](https://github.com/ExEr7um/exer7um.com/commit/14d779e))
+- Вывод описания на страницах ([9daca24](https://github.com/ExEr7um/exer7um.com/commit/9daca24))
+- Обновление основного описания ([59675cb](https://github.com/ExEr7um/exer7um.com/commit/59675cb))
+- Обновление иконки на кнопке «Написать мне» ([6dddde4](https://github.com/ExEr7um/exer7um.com/commit/6dddde4))
+
+### 🔥 Производительность
+
+- Удаление реактивности дат ([5591912](https://github.com/ExEr7um/exer7um.com/commit/5591912))
+
+### 🐞 Исправления
+
+- Исправление вывода даты в `WorkplacesCardDate` ([22d6c8e](https://github.com/ExEr7um/exer7um.com/commit/22d6c8e))
+- Скрытие заголовков блоков через пропс `hideTitle` ([6b17dd7](https://github.com/ExEr7um/exer7um.com/commit/6b17dd7))
+- Обновление Vue до `v3.5` ([#487](https://github.com/ExEr7um/exer7um.com/pull/487))
+- Включение `zeroRuntime` для `ogImage` ([#489](https://github.com/ExEr7um/exer7um.com/pull/489))
+- Адаптив для подзаголовка `UiBlock` ([fc24f06](https://github.com/ExEr7um/exer7um.com/commit/fc24f06))
+
+### 💅 Рефактор кода
+
+- Замена `tempo` на `date-fns` ([b05cc00](https://github.com/ExEr7um/exer7um.com/commit/b05cc00))
+- Использование глобального `$t` ([ea4414c](https://github.com/ExEr7um/exer7um.com/commit/ea4414c))
+- Использование обновленной структуры `i18n` ([180e800](https://github.com/ExEr7um/exer7um.com/commit/180e800))
+
+### 🏡 Другие изменения
+
+- Обновление зависимостей ([#484](https://github.com/ExEr7um/exer7um.com/pull/484))
+- Удаление ненужного импорта ([b5a4724](https://github.com/ExEr7um/exer7um.com/commit/b5a4724))
+- Обновление конфигурации ESLint ([8d35871](https://github.com/ExEr7um/exer7um.com/commit/8d35871))
+- Проверочная ссылка Mastodon ([691f859](https://github.com/ExEr7um/exer7um.com/commit/691f859))
+
+### ✅ Тестирование
+
+- Отключение `coverage` ([5d8fb34](https://github.com/ExEr7um/exer7um.com/commit/5d8fb34))
+- Исправление тестов слотов ([cdfb34c](https://github.com/ExEr7um/exer7um.com/commit/cdfb34c))
+- Обновление Vitest до `v2.0` ([ce383c4](https://github.com/ExEr7um/exer7um.com/commit/ce383c4))
+- Отключение теста подзаголовка `Workplaces` ([c9a9ba0](https://github.com/ExEr7um/exer7um.com/commit/c9a9ba0))
+- Отключение `ogImage` при тестировании ([77f7cba](https://github.com/ExEr7um/exer7um.com/commit/77f7cba))
+- Исправление тестовой иконки в `SocialCard` ([8b15468](https://github.com/ExEr7um/exer7um.com/commit/8b15468))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.0.13
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.12...v2.0.13)

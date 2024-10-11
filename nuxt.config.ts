@@ -89,7 +89,7 @@ export default defineNuxtConfig({
     preset: "cloudflare-pages",
   },
   ogImage: {
-    enabled: false,
+    zeroRuntime: true,
   },
   postcss: {
     plugins: {

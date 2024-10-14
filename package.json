@@ -16,14 +16,13 @@
     "eslint": "eslint . --max-warnings=0",
     "eslint:fix": "eslint . --max-warnings=0 --fix",
     "postinstall": "husky && NODE_ENV=development nuxt prepare",
-    "lint-staged": "lint-staged",
     "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern *",
     "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern *",
     "preview": "nuxt preview",
     "test": "vitest",
     "typecheck": "nuxt typecheck"
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.{vue,js,jsx,cjs,mjs,ts,json,yaml}": "eslint --cache --fix",
     "*": "prettier --write --ignore-unknown"
   },
@@ -59,7 +58,7 @@
     "drizzle-kit": "0.25.0",
     "happy-dom": "15.7.4",
     "husky": "9.1.6",
-    "lint-staged": "15.2.10",
+    "nano-staged": "0.8.0",
     "typescript": "5.6.3",
     "vitest": "2.1.2",
     "vue-tsc": "2.1.6",

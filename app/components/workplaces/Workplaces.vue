@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { formatDuration, intervalToDuration } from "date-fns"
+import { formatDuration, intervalToDuration } from "date-fns";
 
 defineProps<{
   /** Скрыть ли заголовок блока */
-  hideTitle?: boolean
-}>()
+  hideTitle?: boolean;
+}>();
 
-const { locale } = useI18n()
+const { locale } = useI18n();
 
 const { data: workplaces } = await useFetch("/api/workplaces", {
   headers: {
     "Accept-Language": locale,
   },
-})
+});
 
 /** Длительность полного опыта */
 const fullExperience = formatDuration(
@@ -22,10 +22,9 @@ const fullExperience = formatDuration(
   }),
   {
     format: ["years", "months"],
-    // @ts-expect-error - в i18n нет типизации locale
     locale: locales[locale.value],
-  }
-)
+  },
+);
 </script>
 
 <template>

@@ -28,6 +28,9 @@ const devModules = [...modules, "@nuxt/eslint", "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
   $development: {
+    hub: {
+      remote: "production",
+    },
     modules: devModules,
   },
   $production: {

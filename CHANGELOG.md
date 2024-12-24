@@ -1,4 +1,22 @@
 
+## v2.1.1
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.0...v2.1.1)
+
+### 🐞 Исправления
+
+- Обновление `nuxt-i18n` до `v9` ([#490](https://github.com/ExEr7um/exer7um.com/pull/490))
+- Исправление работы `shiki` ([#492](https://github.com/ExEr7um/exer7um.com/pull/492))
+
+### 🏡 Другие изменения
+
+- Обновление настроек VS Code ([98f44d8](https://github.com/ExEr7um/exer7um.com/commit/98f44d8))
+- Использование `nano-staged` вместо `lint-staged` ([6e46758](https://github.com/ExEr7um/exer7um.com/commit/6e46758))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.1.0
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.0.13...v2.1.0)

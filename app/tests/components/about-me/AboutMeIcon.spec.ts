@@ -35,7 +35,7 @@ describe("Компонент AboutMeIcon", () => {
 
     test("Иконка", () => {
       expect(
-        wrapper.findComponent({ name: "NuxtIcon" }).attributes("name")
+        wrapper.findComponent({ name: "NuxtIcon" }).attributes("name"),
       ).toBe(icon.icon)
     })
 

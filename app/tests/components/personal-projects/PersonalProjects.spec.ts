@@ -38,7 +38,7 @@ describe("Компонент PersonalProjects", () => {
 
   test("Количество проектов", () => {
     expect(wrapper.findAllComponents(PersonalProjectsCard)).toHaveLength(
-      personalProjects.length
+      personalProjects.length,
     )
   })
 
@@ -61,7 +61,7 @@ describe("Компонент PersonalProjects", () => {
       })
 
       expect(viewAllButton().attributes("to")).toBe(
-        "/projects#personal-projects"
+        "/projects#personal-projects",
       )
     })
   })

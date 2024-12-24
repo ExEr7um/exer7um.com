@@ -24,5 +24,5 @@ export const tagsToPersonalProjectsRelations = relations(
       fields: [tagsToPersonalProjects.tagId],
       references: [tags.id],
     }),
-  })
+  }),
 )

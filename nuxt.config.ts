@@ -1,4 +1,4 @@
-import wasm from "@rollup/plugin-wasm";
+import wasm from "@rollup/plugin-wasm"
 
 /**
  * Общие модули, которые используются в любой среде.
@@ -17,17 +17,20 @@ const modules = [
   "@vueuse/nuxt",
   "nuxt-headlessui",
   "nuxt-shiki",
-];
+]
 
 /**
  * Объединенный массив модулей, которые будут использоваться только в `DEV` среде.
  *
  * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
  */
-const devModules = [...modules, "@nuxt/eslint", "@nuxt/test-utils/module"];
+const devModules = [...modules, "@nuxt/eslint", "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
   $development: {
+    hub: {
+      remote: "production",
+    },
     modules: devModules,
   },
   $production: {
@@ -103,7 +106,6 @@ export default defineNuxtConfig({
   },
   robots: {
     blockNonSeoBots: true,
-    disallow: ["/api"],
   },
   router: {
     options: {
@@ -139,4 +141,4 @@ export default defineNuxtConfig({
   tailwindcss: {
     viewer: false,
   },
-});
+})

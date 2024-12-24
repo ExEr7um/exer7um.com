@@ -4,14 +4,14 @@ import type { Workplace } from "~~/server/database/schema/workplace"
 
 defineProps<{
   /** Проект */
-  workplace: {
+  workplace: Omit<
+    Workplace,
+    "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
+  > & {
     description: string
     tags: Tag[]
     title: string
-  } & Omit<
-    Workplace,
-    "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
-  >
+  }
 }>()
 </script>
 

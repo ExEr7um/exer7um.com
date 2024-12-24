@@ -4,11 +4,11 @@ import type { Tag } from "~~/server/database/schema/tag"
 
 defineProps<{
   /** Личный проект */
-  personalProject: {
+  personalProject: Pick<PersonalProject, "github" | "icon" | "id"> & {
     description: string
     tags: Tag[]
     title: string
-  } & Pick<PersonalProject, "github" | "icon" | "id">
+  }
 }>()
 
 const { t } = useI18n({ useScope: "local" })

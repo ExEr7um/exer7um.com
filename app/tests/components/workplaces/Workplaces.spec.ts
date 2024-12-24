@@ -49,7 +49,7 @@ describe("Компонент Workplaces", () => {
 
   test("Количество проектов", () => {
     expect(wrapper.findAllComponents(WorkplacesCard)).toHaveLength(
-      workplaces.length
+      workplaces.length,
     )
   })
 

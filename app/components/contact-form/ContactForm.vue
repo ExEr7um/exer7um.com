@@ -32,7 +32,7 @@ async function submitForm(event: Event) {
 
   /** Тело запроса для отправки */
   requestBody.value = Object.fromEntries(
-    new FormData(form).entries()
+    new FormData(form).entries(),
   ) as unknown as Message
 
   // Вызываем функцию отправки сообщения

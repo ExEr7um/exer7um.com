@@ -13,7 +13,12 @@ const { t } = useI18n({ useScope: "local" })
     :title="t('title')"
     @close="emit('close')"
   >
-    <NuxtLinkLocale class="button primary mt-2 w-max" to="/">
+    <NuxtLinkLocale
+      class="button primary mt-2 w-max"
+      :to="{
+        name: 'index',
+      }"
+    >
       {{ t("return") }}
     </NuxtLinkLocale>
   </UiPopup>

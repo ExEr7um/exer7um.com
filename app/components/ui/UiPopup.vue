@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/** Статус поп-апа */
+type Status = "error" | "success"
+
 /** Стили иконки статуса */
 interface StatusStyle {
   /** Фон иконки */
@@ -8,9 +11,6 @@ interface StatusStyle {
   /** Иконка */
   icon: string
 }
-
-/** Статус поп-апа */
-type Status = "error" | "success"
 
 defineProps<{
   /** Описание поп-апа */

@@ -3,7 +3,12 @@ const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
-  <NuxtLinkLocale class="button primary" to="/contact-me/">
+  <NuxtLinkLocale
+    class="button primary"
+    :to="{
+      name: 'contact-me',
+    }"
+  >
     {{ t("buttonText") }}
   </NuxtLinkLocale>
 </template>

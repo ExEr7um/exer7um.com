@@ -13,11 +13,11 @@ export default defineEventHandler(async (event) => {
     extras: {
       description:
         sql<string>`${tables.workplaces[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
-          "description"
+          "description",
         ),
       title:
         sql<string>`${tables.workplaces[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
-          "title"
+          "title",
         ),
     },
     orderBy: desc(tables.workplaces.createdAt), // Сортируем по дате создания — сначала новые

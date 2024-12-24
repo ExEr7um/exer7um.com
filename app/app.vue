@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const i18nHead = useLocaleHead();
+const i18nHead = useLocaleHead()
 
 useHeadSafe({
   htmlAttrs: {
@@ -13,11 +13,11 @@ useHeadSafe({
     },
   ],
   meta: [...(i18nHead.value.meta || [])],
-});
+})
 
 useSeoMeta({
   titleTemplate: `%s | ExEr7um`,
-});
+})
 </script>
 
 <template>

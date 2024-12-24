@@ -37,7 +37,11 @@ export default defineNuxtConfig({
     modules,
     // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/41
     vite: {
-      plugins: [unwasm({})],
+      plugins: [
+        unwasm({
+          esmImport: true,
+        }),
+      ],
     },
   },
   $test: {

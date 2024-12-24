@@ -1,4 +1,16 @@
 
+## v2.1.2
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.1...v2.1.2)
+
+### 🐞 Исправления
+
+- Включение `esmImport` для `unwasm` ([92ed167](https://github.com/ExEr7um/exer7um.com/commit/92ed167))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](http://github.com/ExEr7um))
+
 ## v2.1.1
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.0...v2.1.1)

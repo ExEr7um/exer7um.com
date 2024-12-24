@@ -7,7 +7,7 @@ export default function (customQuery?: string) {
   onMounted(() => {
     /** Первый найденный инпут */
     const input = document.querySelector<HTMLInputElement>(
-      customQuery ?? "input"
+      customQuery ?? "input",
     )
 
     // Фокусируемся на инпуте

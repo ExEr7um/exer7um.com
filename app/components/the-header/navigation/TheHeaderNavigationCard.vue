@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { RouteRecordName } from "vue-router"
-
 import type { RouteName } from "~/types/Utils"
 
 const { routeName } = defineProps<{
@@ -13,8 +11,8 @@ const localeRoute = useLocaleRoute()
 /** Полученная ссылка навигации */
 const navigationRoute = computed(() =>
   localeRoute({
-    name: routeName as RouteRecordName,
-  })
+    name: routeName,
+  }),
 )
 </script>
 

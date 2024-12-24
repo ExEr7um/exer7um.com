@@ -2,7 +2,7 @@ import { sql } from "drizzle-orm"
 
 export default defineEventHandler(async (event) => {
   const { limit } = await getValidatedQuery(event, (query) =>
-    limitQuerySchema.parse(query)
+    limitQuerySchema.parse(query),
   )
 
   /** Список проектов */
@@ -15,11 +15,11 @@ export default defineEventHandler(async (event) => {
     extras: {
       description:
         sql<string>`${tables.personalProjects[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
-          "description"
+          "description",
         ),
       title:
         sql<string>`${tables.personalProjects[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
-          "title"
+          "title",
         ),
     },
     limit: limit, // Ограничиваем количество результатов

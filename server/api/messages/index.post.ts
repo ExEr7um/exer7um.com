@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig(event)
 
   const { email, message, name } = await readValidatedBody(event, (body) =>
-    messageSchema.parse(body)
+    messageSchema.parse(body),
   )
 
   // Отправляем запрос к боту Telegram

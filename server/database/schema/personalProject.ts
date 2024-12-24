@@ -16,5 +16,5 @@ export const personalProjectsRelations = relations(
   personalProjects,
   ({ many }) => ({
     tags: many(tagsToPersonalProjects),
-  })
+  }),
 )

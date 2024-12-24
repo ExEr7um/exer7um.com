@@ -30,7 +30,7 @@ withDefaults(
   {
     required: true,
     type: "text",
-  }
+  },
 )
 </script>
 

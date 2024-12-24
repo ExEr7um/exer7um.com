@@ -68,7 +68,7 @@ describe("Компонент UiBlock", () => {
 
   test("Передача контента через slot", () => {
     expect(wrapper.html()).toContain(
-      `&lt;div id='test-block'&gt;Тест&lt;/div&gt;`
+      `&lt;div id='test-block'&gt;Тест&lt;/div&gt;`,
     )
   })
 

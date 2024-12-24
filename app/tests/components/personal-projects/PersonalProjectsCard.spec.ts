@@ -36,19 +36,19 @@ describe("Компонент PersonalProjectsCard", () => {
 
     test("Описание", () => {
       expect(cardContentAttributes("description")).toBe(
-        personalProject.description
+        personalProject.description,
       )
     })
 
     test("Иконка", () => {
       expect(wrapper.find("[data-test-id=icon]").text()).toBe(
-        personalProject.icon
+        personalProject.icon,
       )
     })
 
     test("Теги", () => {
       expect(cardContentAttributes("tags")).toBe(
-        personalProject.tags.toString()
+        personalProject.tags.toString(),
       )
     })
   })
@@ -64,7 +64,7 @@ describe("Компонент PersonalProjectsCard", () => {
 
     test("Присутствует aria-label", () => {
       expect(githubLinkAttributes("aria-label")).toBe(
-        `Открыть проект ${personalProject.title} на GitHub`
+        `Открыть проект ${personalProject.title} на GitHub`,
       )
     })
   })

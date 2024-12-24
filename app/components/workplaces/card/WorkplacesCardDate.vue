@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { format } from "date-fns";
+import { format } from "date-fns"
 
 const { date } = defineProps<{
   /** Дата карточки */
-  date: Date | null | string | undefined;
-}>();
+  date: Date | null | string | undefined
+}>()
 
-const { locale, t } = useI18n({ useScope: "local" });
+const { locale, t } = useI18n({ useScope: "local" })
 
 /** Форматированная дата */
 const formattedDate = computed(() =>
@@ -17,7 +17,7 @@ const formattedDate = computed(() =>
       })
     : // Если дата не передана, то выводим «Настоящее время»
       t("presentTime"),
-);
+)
 </script>
 
 <template>

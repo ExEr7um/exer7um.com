@@ -33,7 +33,7 @@ withDefaults(
     minlength: 2,
     required: true,
     rows: 4,
-  }
+  },
 )
 </script>
 

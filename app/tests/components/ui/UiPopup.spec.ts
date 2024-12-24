@@ -43,7 +43,7 @@ describe("Компонент UiPopup", () => {
 
   test("Передача контента через slot", () => {
     expect(popup().innerHTML).toContain(
-      `&lt;div id='test-block'&gt;Тест&lt;/div&gt;`
+      `&lt;div id='test-block'&gt;Тест&lt;/div&gt;`,
     )
   })
 

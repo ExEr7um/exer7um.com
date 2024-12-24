@@ -4,14 +4,14 @@ import type { Tag } from "~~/server/database/schema/tag"
 
 defineProps<{
   /** Проект */
-  project: {
+  project: Omit<
+    Project,
+    "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
+  > & {
     description: string
     tags: Tag[]
     title: string
-  } & Omit<
-    Project,
-    "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
-  >
+  }
 }>()
 
 const { t } = useI18n({

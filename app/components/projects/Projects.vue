@@ -27,7 +27,13 @@ const { data: projects } = await useFetch("/api/projects", {
     >
       <ProjectsCard v-for="project in projects" :key="project.id" :project />
       <div v-if="limit" class="row-span-4 flex items-center justify-center">
-        <LazyNuxtLinkLocale class="button secondary" to="/projects#projects">
+        <LazyNuxtLinkLocale
+          class="button secondary"
+          :to="{
+            name: 'projects',
+            hash: '#projects',
+          }"
+        >
           {{ t("viewAll") }}
         </LazyNuxtLinkLocale>
       </div>

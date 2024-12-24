@@ -24,5 +24,5 @@ export const tagsToWorkplacesRelations = relations(
       fields: [tagsToWorkplaces.workplaceId],
       references: [workplaces.id],
     }),
-  })
+  }),
 )

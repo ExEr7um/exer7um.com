@@ -31,7 +31,10 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
       <div v-if="limit" class="row-span-4 flex items-center justify-center">
         <LazyNuxtLinkLocale
           class="button secondary"
-          to="/projects#personal-projects"
+          :to="{
+            hash: '#personal-projects',
+            name: 'projects',
+          }"
         >
           {{ t("viewAll") }}
         </LazyNuxtLinkLocale>

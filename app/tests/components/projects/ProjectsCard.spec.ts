@@ -53,7 +53,7 @@ describe("Компонент ProjectsCard", () => {
     test("Выставляется фон из props", () => {
       expect(
         wrapper.find<HTMLDivElement>("[data-test-id=logo]").element.style
-          .backgroundColor
+          .backgroundColor,
       ).toBe(project.backgroundColor)
     })
 

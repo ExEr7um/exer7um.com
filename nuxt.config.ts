@@ -1,4 +1,4 @@
-import wasm from "@rollup/plugin-wasm"
+import { rollup as unwasm } from "unwasm/plugin"
 
 /**
  * Общие модули, которые используются в любой среде.
@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     modules,
     // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/41
     vite: {
-      plugins: [wasm()],
+      plugins: [unwasm({})],
     },
   },
   $test: {
@@ -94,6 +94,12 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/29
+    experimental: {
+      wasm: true,
+    },
+    // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/45
+    externals: { traceInclude: ["shiki/dist/core.mjs"] },
     preset: "cloudflare-pages",
   },
   ogImage: {

@@ -1,20 +1,22 @@
 <script setup lang="ts">
-const { locale, localeCodes, t } = useI18n({ useScope: "local" })
+const { availableLocales, locale, t } = useI18n({
+  useScope: "local",
+});
 
 /** Код следующей локализации в списке */
 const nextLocaleCode = computed(() => {
   /** Порядковый номер текущего языка локализации */
   const currentLocaleIndex = useArrayFindIndex(
-    localeCodes,
-    (localeCode) => localeCode === locale.value
-  )
+    availableLocales,
+    (localeCode) => localeCode === locale.value,
+  );
 
   // Если локализация последняя в списке, то возвращается код первой из списка
   // Иначе возвращается код следующей локализации
-  return localeCodes.value.at(
-    (currentLocaleIndex.value + 1) % localeCodes.value.length
-  )
-})
+  return availableLocales.at(
+    (currentLocaleIndex.value + 1) % availableLocales.length,
+  );
+});
 </script>
 
 <template>

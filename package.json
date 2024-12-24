@@ -33,7 +33,7 @@
     "@nuxt/icon": "1.5.6",
     "@nuxt/image": "1.8.1",
     "@nuxthub/core": "0.7.26",
-    "@nuxtjs/i18n": "8.5.5",
+    "@nuxtjs/i18n": "9.1.1",
     "@nuxtjs/seo": "2.0.0-rc.23",
     "@nuxtjs/tailwindcss": "6.12.1",
     "@rollup/plugin-wasm": "6.2.2",

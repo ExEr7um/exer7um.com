@@ -9,11 +9,7 @@ const { routeName } = defineProps<{
 const localeRoute = useLocaleRoute()
 
 /** Полученная ссылка навигации */
-const navigationRoute = computed(() =>
-  localeRoute({
-    name: routeName,
-  }),
-)
+const navigationRoute = computed(() => localeRoute({ name: routeName }))
 </script>
 
 <template>

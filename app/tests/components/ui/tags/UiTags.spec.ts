@@ -15,11 +15,7 @@ describe("Компонент UiTags", () => {
     tagsList().every((tag) => tag.attributes("small") === "true")
 
   beforeEach(() => {
-    wrapper = shallowMount(UiTags, {
-      props: {
-        tags,
-      },
-    })
+    wrapper = shallowMount(UiTags, { props: { tags } })
   })
 
   afterEach(() => {
@@ -36,9 +32,7 @@ describe("Компонент UiTags", () => {
     })
 
     test("Присутствие параметра", async () => {
-      await wrapper.setProps({
-        small: true,
-      })
+      await wrapper.setProps({ small: true })
 
       expect(isEveryTagSmall()).toBeTruthy()
     })

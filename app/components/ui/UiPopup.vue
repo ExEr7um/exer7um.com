@@ -25,9 +25,7 @@ defineProps<{
   title: string
 }>()
 
-const emit = defineEmits<{
-  close: []
-}>()
+const emit = defineEmits<{ close: [] }>()
 
 /** Стили иконок */
 const statusStyles = {

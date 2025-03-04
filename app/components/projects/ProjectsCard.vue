@@ -7,16 +7,10 @@ defineProps<{
   project: Omit<
     Project,
     "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
-  > & {
-    description: string
-    tags: Tag[]
-    title: string
-  }
+  > & { description: string; tags: Tag[]; title: string }
 }>()
 
-const { t } = useI18n({
-  useScope: "local",
-})
+const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>

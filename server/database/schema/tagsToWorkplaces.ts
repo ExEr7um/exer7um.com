@@ -16,10 +16,7 @@ export const tagsToWorkplaces = sqliteTable("tags_to_workplaces", {
 export const tagsToWorkplacesRelations = relations(
   tagsToWorkplaces,
   ({ one }) => ({
-    tag: one(tags, {
-      fields: [tagsToWorkplaces.tagId],
-      references: [tags.id],
-    }),
+    tag: one(tags, { fields: [tagsToWorkplaces.tagId], references: [tags.id] }),
     workplace: one(workplaces, {
       fields: [tagsToWorkplaces.workplaceId],
       references: [workplaces.id],

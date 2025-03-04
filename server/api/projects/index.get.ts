@@ -26,20 +26,10 @@ export default defineEventHandler(async (event) => {
     },
     limit: limit, // Ограничиваем количество результатов
     orderBy: desc(tables.projects.createdAt), // Сортируем по дате создания — сначала новые
-    with: {
-      tags: {
-        columns: {},
-        with: {
-          tag: true,
-        },
-      },
-    },
+    with: { tags: { columns: {}, with: { tag: true } } },
   })
 
   return projects.map((project) => {
-    return {
-      ...project,
-      tags: project.tags.map((tag) => tag.tag),
-    }
+    return { ...project, tags: project.tags.map((tag) => tag.tag) }
   })
 })

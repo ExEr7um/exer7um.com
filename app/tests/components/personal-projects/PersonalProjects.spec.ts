@@ -48,17 +48,13 @@ describe("Компонент PersonalProjects", () => {
     })
 
     test.fails("Отображается при переданном limit", async () => {
-      await wrapper.setProps({
-        limit: 3,
-      })
+      await wrapper.setProps({ limit: 3 })
 
       expect(viewAllButton().exists()).toBeTruthy()
     })
 
     test.fails("Переводит на правильную страницу", async () => {
-      await wrapper.setProps({
-        limit: 3,
-      })
+      await wrapper.setProps({ limit: 3 })
 
       expect(viewAllButton().attributes("to")).toBe(
         "/projects#personal-projects",
@@ -76,9 +72,7 @@ describe("Компонент PersonalProjects", () => {
     })
 
     test("Передается limit", async () => {
-      await wrapper.setProps({
-        limit: 3,
-      })
+      await wrapper.setProps({ limit: 3 })
 
       expect(getQuery(userRequest!).limit).toBe("3")
     })

@@ -28,10 +28,7 @@ export default defineEventHandler(async (event) => {
     method: "POST",
   }).catch((error) => {
     // Выводим ошибку
-    throw createError({
-      message: error,
-      status: 500,
-    })
+    throw createError({ message: error, status: 500 })
   })
 
   return "OK"

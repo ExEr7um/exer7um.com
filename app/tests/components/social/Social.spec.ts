@@ -30,9 +30,7 @@ describe("Компонент Social", () => {
 
   describe("Присутствует compact", () => {
     beforeEach(async () => {
-      await wrapper.setProps({
-        compact: true,
-      })
+      await wrapper.setProps({ compact: true })
     })
 
     test("Отображаются 2 соцсети", async () => {

@@ -7,11 +7,7 @@ export default defineEventHandler(async (event) => {
 
   /** Список проектов */
   const personalProjects = await useDrizzle().query.personalProjects.findMany({
-    columns: {
-      github: true,
-      icon: true,
-      id: true,
-    },
+    columns: { github: true, icon: true, id: true },
     extras: {
       description:
         sql<string>`${tables.personalProjects[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
@@ -24,20 +20,10 @@ export default defineEventHandler(async (event) => {
     },
     limit: limit, // Ограничиваем количество результатов
     orderBy: desc(tables.personalProjects.createdAt), // Сортируем по дате создания — сначала новые
-    with: {
-      tags: {
-        columns: {},
-        with: {
-          tag: true,
-        },
-      },
-    },
+    with: { tags: { columns: {}, with: { tag: true } } },
   })
 
   return personalProjects.map((project) => {
-    return {
-      ...project,
-      tags: project.tags.map((tag) => tag.tag),
-    }
+    return { ...project, tags: project.tags.map((tag) => tag.tag) }
   })
 })

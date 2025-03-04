@@ -12,11 +12,7 @@ describe("Компонент TheHeaderNavigation", () => {
   const navigation = ["index", "projects"] as const satisfies string[]
 
   beforeEach(() => {
-    wrapper = shallowMount(TheHeaderNavigation, {
-      props: {
-        navigation,
-      },
-    })
+    wrapper = shallowMount(TheHeaderNavigation, { props: { navigation } })
   })
 
   afterEach(() => {

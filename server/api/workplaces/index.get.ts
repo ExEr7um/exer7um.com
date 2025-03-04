@@ -21,20 +21,10 @@ export default defineEventHandler(async (event) => {
         ),
     },
     orderBy: desc(tables.workplaces.createdAt), // Сортируем по дате создания — сначала новые
-    with: {
-      tags: {
-        columns: {},
-        with: {
-          tag: true,
-        },
-      },
-    },
+    with: { tags: { columns: {}, with: { tag: true } } },
   })
 
   return workplaces.map((workplace) => {
-    return {
-      ...workplace,
-      tags: workplace.tags.map((tag) => tag.tag),
-    }
+    return { ...workplace, tags: workplace.tags.map((tag) => tag.tag) }
   })
 })

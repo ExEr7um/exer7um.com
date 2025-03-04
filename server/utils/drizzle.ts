@@ -24,9 +24,7 @@ export const tables = {
  * @returns методы для работы с Drizzle ORM.
  */
 export function useDrizzle() {
-  return drizzle(hubDatabase(), {
-    schema: tables,
-  })
+  return drizzle(hubDatabase(), { schema: tables })
 }
 
 // Экспортируем методы Drizzle для автоимпорта

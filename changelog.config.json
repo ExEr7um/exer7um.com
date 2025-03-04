@@ -1,6 +1,1 @@
-{
-  "extends": "github:ExEr7um/changelogen-config",
-  "scopeMap": {
-    "api": "API"
-  }
-}
+{ "extends": "github:ExEr7um/changelogen-config", "scopeMap": { "api": "API" } }

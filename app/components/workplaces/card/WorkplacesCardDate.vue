@@ -12,9 +12,7 @@ const { locale, t } = useI18n({ useScope: "local" })
 const formattedDate = computed(() =>
   date
     ? // Выводим текущую дату в формате «январь 2024»
-      format(date, "LLLL yyyy", {
-        locale: locales[locale.value],
-      })
+      format(date, "LLLL yyyy", { locale: locales[locale.value] })
     : // Если дата не передана, то выводим «Настоящее время»
       t("presentTime"),
 )

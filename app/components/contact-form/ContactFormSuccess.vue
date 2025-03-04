@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const emit = defineEmits<{
-  close: []
-}>()
+const emit = defineEmits<{ close: [] }>()
 
 const { t } = useI18n({ useScope: "local" })
 </script>
@@ -13,12 +11,7 @@ const { t } = useI18n({ useScope: "local" })
     :title="t('title')"
     @close="emit('close')"
   >
-    <NuxtLinkLocale
-      class="button primary mt-2 w-max"
-      :to="{
-        name: 'index',
-      }"
-    >
+    <NuxtLinkLocale class="button primary mt-2 w-max" :to="{ name: 'index' }">
       {{ t("return") }}
     </NuxtLinkLocale>
   </UiPopup>

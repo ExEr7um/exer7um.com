@@ -18,11 +18,7 @@ describe("Компонент PersonalProjectsCard", () => {
     wrapper.find("[data-test-id=github-link]").attributes(attribute)
 
   beforeEach(() => {
-    wrapper = shallowMount(PersonalProjectsCard, {
-      props: {
-        personalProject,
-      },
-    })
+    wrapper = shallowMount(PersonalProjectsCard, { props: { personalProject } })
   })
 
   afterEach(() => {

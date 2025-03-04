@@ -17,13 +17,8 @@ describe("Компонент UiPopup", () => {
 
   beforeEach(() => {
     wrapper = mount(UiPopup, {
-      props: {
-        description,
-        title,
-      },
-      slots: {
-        default: () => TEST_BLOCK,
-      },
+      props: { description, title },
+      slots: { default: () => TEST_BLOCK },
     })
   })
 
@@ -53,17 +48,13 @@ describe("Компонент UiPopup", () => {
     })
 
     test("Успешный статус", async () => {
-      await wrapper.setProps({
-        status: "success",
-      })
+      await wrapper.setProps({ status: "success" })
 
       expect(status()?.classList).toContain("bg-green-50")
     })
 
     test("Ошибочный статус", async () => {
-      await wrapper.setProps({
-        status: "error",
-      })
+      await wrapper.setProps({ status: "error" })
 
       expect(status()?.classList).toContain("bg-red-50")
     })

@@ -16,9 +16,7 @@ describe("Функция useFirstInputFocus", () => {
   let wrapper: VueWrapper
 
   const mountComponent = () => {
-    wrapper = shallowMount(testingComponent, {
-      attachTo: document.body,
-    })
+    wrapper = shallowMount(testingComponent, { attachTo: document.body })
   }
 
   afterEach(() => {

@@ -1,4 +1,16 @@
 
+## v2.1.4
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.3...v2.1.4)
+
+### 🏡 Другие изменения
+
+- Удаление расширения GitHub Pull Requests из рекомендованных ([81b010e](https://github.com/ExEr7um/exer7um.com/commit/81b010e))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.1.3
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.2...v2.1.3)

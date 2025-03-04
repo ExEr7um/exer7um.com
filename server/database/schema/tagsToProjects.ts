@@ -18,8 +18,5 @@ export const tagsToProjectsRelations = relations(tagsToProjects, ({ one }) => ({
     fields: [tagsToProjects.projectId],
     references: [projects.id],
   }),
-  tag: one(tags, {
-    fields: [tagsToProjects.tagId],
-    references: [tags.id],
-  }),
+  tag: one(tags, { fields: [tagsToProjects.tagId], references: [tags.id] }),
 }))

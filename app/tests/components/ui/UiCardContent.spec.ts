@@ -16,9 +16,7 @@ describe("Компонент UiCardContent", () => {
   let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(UiCardContent, {
-      props: cardContent,
-    })
+    wrapper = shallowMount(UiCardContent, { props: cardContent })
   })
 
   afterEach(() => {
@@ -33,9 +31,7 @@ describe("Компонент UiCardContent", () => {
     })
 
     test("При передаче largeTitle становится h3", async () => {
-      await wrapper.setProps({
-        largeTitle: true,
-      })
+      await wrapper.setProps({ largeTitle: true })
 
       expect(title().element.tagName).toBe("H3")
     })
@@ -57,9 +53,7 @@ describe("Компонент UiCardContent", () => {
     })
 
     test("Отсутствует при пустом массиве", async () => {
-      await wrapper.setProps({
-        tags: [],
-      })
+      await wrapper.setProps({ tags: [] })
 
       expect(wrapper.find("[data-test-id=tags]").exists()).toBeFalsy()
     })

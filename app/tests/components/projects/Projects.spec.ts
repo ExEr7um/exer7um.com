@@ -38,9 +38,7 @@ describe("Компонент Projects", () => {
     })
 
     test("Скрывается при передаче параметра", async () => {
-      await wrapper.setProps({
-        hideTitle: true,
-      })
+      await wrapper.setProps({ hideTitle: true })
 
       expect(wrapper.find("h2").exists()).toBeFalsy()
     })
@@ -58,17 +56,13 @@ describe("Компонент Projects", () => {
     })
 
     test.fails("Отображается при переданном limit", async () => {
-      await wrapper.setProps({
-        limit: 3,
-      })
+      await wrapper.setProps({ limit: 3 })
 
       expect(viewAllButton().exists()).toBeTruthy()
     })
 
     test.fails("Переводит на правильную страницу", async () => {
-      await wrapper.setProps({
-        limit: 3,
-      })
+      await wrapper.setProps({ limit: 3 })
 
       expect(viewAllButton().attributes("to")).toBe("/projects#projects")
     })
@@ -84,9 +78,7 @@ describe("Компонент Projects", () => {
     })
 
     test("Передается limit", async () => {
-      await wrapper.setProps({
-        limit: 3,
-      })
+      await wrapper.setProps({ limit: 3 })
 
       expect(getQuery(userRequest!).limit).toBe("3")
     })

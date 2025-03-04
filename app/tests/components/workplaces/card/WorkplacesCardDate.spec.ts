@@ -15,11 +15,7 @@ describe("Компонент WorkplacesCardDate", () => {
   let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(WorkplacesCardDate, {
-      props: {
-        date,
-      },
-    })
+    wrapper = shallowMount(WorkplacesCardDate, { props: { date } })
   })
 
   afterEach(() => {
@@ -52,9 +48,7 @@ describe("Компонент WorkplacesCardDate", () => {
 
   describe("Отсутствие даты", () => {
     beforeEach(async () => {
-      await wrapper.setProps({
-        date: undefined,
-      })
+      await wrapper.setProps({ date: undefined })
     })
 
     test("Вывод текста «Настоящее время»", async () => {

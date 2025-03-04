@@ -29,11 +29,7 @@ withDefaults(
      */
     rows?: number | string
   }>(),
-  {
-    minlength: 2,
-    required: true,
-    rows: 4,
-  },
+  { minlength: 2, required: true, rows: 4 },
 )
 </script>
 

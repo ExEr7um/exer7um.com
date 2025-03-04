@@ -19,11 +19,7 @@ describe("Компонент SocialCard", () => {
   } as const satisfies SocialCardType
 
   beforeEach(async () => {
-    wrapper = await mountSuspended(SocialCard, {
-      props: {
-        socialCard,
-      },
-    })
+    wrapper = await mountSuspended(SocialCard, { props: { socialCard } })
   })
 
   afterEach(() => {

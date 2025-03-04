@@ -6,17 +6,11 @@ const { hideTitle, limit } = defineProps<{
   limit?: number
 }>()
 
-const { locale, t } = useI18n({
-  useScope: "local",
-})
+const { locale, t } = useI18n({ useScope: "local" })
 
 const { data: projects } = await useFetch("/api/projects", {
-  headers: {
-    "Accept-Language": locale,
-  },
-  query: {
-    limit: toRef(() => limit),
-  },
+  headers: { "Accept-Language": locale },
+  query: { limit: toRef(() => limit) },
 })
 </script>
 
@@ -29,10 +23,7 @@ const { data: projects } = await useFetch("/api/projects", {
       <div v-if="limit" class="row-span-4 flex items-center justify-center">
         <LazyNuxtLinkLocale
           class="button secondary"
-          :to="{
-            name: 'projects',
-            hash: '#projects',
-          }"
+          :to="{ name: 'projects', hash: '#projects' }"
         >
           {{ t("viewAll") }}
         </LazyNuxtLinkLocale>

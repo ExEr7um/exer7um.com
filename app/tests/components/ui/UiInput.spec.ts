@@ -7,17 +7,13 @@ import { afterEach, beforeEach, describe, expect, test } from "vitest"
 import UiInput from "~/components/ui/UiInput.vue"
 
 describe("Компонент UiInput", () => {
-  const defaultProps = {
-    id: "test-field",
-  } as const
+  const defaultProps = { id: "test-field" } as const
   const labelText = "Текст label"
 
   let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(UiInput, {
-      props: defaultProps,
-    })
+    wrapper = shallowMount(UiInput, { props: defaultProps })
   })
 
   afterEach(() => {

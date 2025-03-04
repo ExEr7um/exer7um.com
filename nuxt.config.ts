@@ -24,131 +24,68 @@ const modules = [
  *
  * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
  */
-const devModules = [...modules, "@nuxt/eslint", "@nuxt/test-utils/module"]
+const devModules = [...modules, "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
-  $development: {
-    hub: {
-      remote: "production",
-    },
-    modules: devModules,
-  },
+  $development: { hub: { remote: "production" }, modules: devModules },
   $production: {
     modules,
     // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/41
-    vite: {
-      plugins: [
-        unwasm({
-          esmImport: true,
-        }),
-      ],
-    },
+    vite: { plugins: [unwasm({ esmImport: true })] },
   },
-  $test: {
-    modules: devModules,
-    ogImage: { enabled: false },
-  },
+  $test: { modules: devModules, ogImage: { enabled: false } },
   compatibilityDate: "2024-07-19",
-  devtools: {
-    enabled: true,
-  },
+  devtools: { enabled: true },
   experimental: {
     componentIslands: true,
     cookieStore: true,
     headNext: true,
     typedPages: true,
   },
-  future: {
-    compatibilityVersion: 4,
-  },
-  hub: {
-    cache: true,
-    database: true,
-  },
+  future: { compatibilityVersion: 4 },
+  hub: { cache: true, database: true },
   i18n: {
     baseUrl: "https://exer7um.com",
     defaultLocale: "ru",
     experimental: {
+      alternateLinkCanonicalQueries: true,
       typedOptionsAndMessages: "default",
       typedPages: true,
     },
     lazy: true,
     locales: [
-      {
-        code: "ru",
-        file: "ru.yaml",
-        language: "ru-RU",
-        name: "Русский",
-      },
-      {
-        code: "en",
-        file: "en.yaml",
-        language: "en-US",
-        name: "English",
-      },
+      { code: "ru", file: "ru.yaml", language: "ru-RU", name: "Русский" },
+      { code: "en", file: "en.yaml", language: "en-US", name: "English" },
     ],
     trailingSlash: true,
   },
-  icon: {
-    size: "24px",
-  },
+  icon: { size: "24px" },
   image: {
-    cloudinary: {
-      baseURL: "https://res.cloudinary.com/exer7um/image/upload/",
-    },
+    cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" },
   },
   nitro: {
     // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/29
-    experimental: {
-      wasm: true,
-    },
+    experimental: { wasm: true },
     // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/45
     externals: { traceInclude: ["shiki/dist/core.mjs"] },
     preset: "cloudflare-pages",
   },
-  ogImage: {
-    zeroRuntime: true,
-  },
-  postcss: {
-    plugins: {
-      "tailwindcss/nesting": "postcss-nesting",
-    },
-  },
-  robots: {
-    blockNonSeoBots: true,
-  },
-  router: {
-    options: {
-      scrollBehaviorType: "smooth",
-    },
-  },
+  ogImage: { zeroRuntime: true },
+  postcss: { plugins: { "tailwindcss/nesting": "postcss-nesting" } },
+  robots: { blockNonSeoBots: true },
+  router: { options: { scrollBehaviorType: "smooth" } },
   routeRules: {
-    "*": {
-      swr: true,
-    },
-    "/about/": {
-      prerender: true,
-    },
-    "/contact-me/": {
-      prerender: true,
-    },
+    "*": { swr: true },
+    "/about/": { prerender: true },
+    "/contact-me/": { prerender: true },
   },
-  runtimeConfig: {
-    telegramChatId: "",
-    telegramUrl: "",
-  },
+  runtimeConfig: { telegramChatId: "", telegramUrl: "" },
   shiki: {
     bundledLangs: ["vue-html"],
     bundledThemes: ["night-owl"],
     defaultLang: "vue-html",
     defaultTheme: "night-owl",
   },
-  site: {
-    name: "ExEr7um",
-    trailingSlash: true,
-    url: "https://exer7um.com",
-  },
-  tailwindcss: {
-    viewer: false,
-  },
+  site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
+  tailwindcss: { viewer: false },
 })

@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { availableLocales, locale, t } = useI18n({
-  useScope: "local",
-})
+const { availableLocales, locale, t } = useI18n({ useScope: "local" })
 
 /** Код следующей локализации в списке */
 const nextLocaleCode = computed(() => {

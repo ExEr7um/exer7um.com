@@ -8,21 +8,14 @@ import { tags } from "~/tests/constants/tags"
 
 describe("Компонент UiTagsCard", () => {
   const tag = tags[0]
-  const classes = {
-    big: "px-3",
-    small: "px-2 text-xs sm:text-sm",
-  } as const
+  const classes = { big: "px-3", small: "px-2 text-xs sm:text-sm" } as const
 
   let wrapper: VueWrapper
 
   const elementClasses = () => wrapper.attributes("class")
 
   beforeEach(() => {
-    wrapper = shallowMount(UiTagsCard, {
-      props: {
-        tag,
-      },
-    })
+    wrapper = shallowMount(UiTagsCard, { props: { tag } })
   })
 
   afterEach(() => {
@@ -40,9 +33,7 @@ describe("Компонент UiTagsCard", () => {
     })
 
     test("Уменьшенный размер при присутствии параметра", async () => {
-      await wrapper.setProps({
-        small: true,
-      })
+      await wrapper.setProps({ small: true })
 
       expect(elementClasses()).not.toContain(classes.big)
       expect(elementClasses()).toContain(classes.small)

@@ -27,10 +27,7 @@ withDefaults(
      */
     type?: InputTypeHTMLAttribute
   }>(),
-  {
-    required: true,
-    type: "text",
-  },
+  { required: true, type: "text" },
 )
 </script>
 

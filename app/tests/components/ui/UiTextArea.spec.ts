@@ -6,17 +6,13 @@ import { afterEach, beforeEach, describe, expect, test } from "vitest"
 import UiTextArea from "~/components/ui/UiTextArea.vue"
 
 describe("Компонент UiTextArea", () => {
-  const defaultProps = {
-    id: "test-field",
-  } as const
+  const defaultProps = { id: "test-field" } as const
   const labelText = "Текст label"
 
   let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(UiTextArea, {
-      props: defaultProps,
-    })
+    wrapper = shallowMount(UiTextArea, { props: defaultProps })
   })
 
   afterEach(() => {

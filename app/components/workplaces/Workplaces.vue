@@ -9,9 +9,7 @@ defineProps<{
 const { locale } = useI18n()
 
 const { data: workplaces } = await useFetch("/api/workplaces", {
-  headers: {
-    "Accept-Language": locale,
-  },
+  headers: { "Accept-Language": locale },
 })
 
 /** Длительность полного опыта */
@@ -20,10 +18,7 @@ const fullExperience = formatDuration(
     end: new Date(),
     start: workplaces.value?.at(-1)?.startDate ?? "",
   }),
-  {
-    format: ["years", "months"],
-    locale: locales[locale.value],
-  },
+  { format: ["years", "months"], locale: locales[locale.value] },
 )
 </script>
 

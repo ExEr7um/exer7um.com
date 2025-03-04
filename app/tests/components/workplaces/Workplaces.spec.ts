@@ -35,9 +35,7 @@ describe("Компонент Workplaces", () => {
     })
 
     test("Скрывается при передаче параметра", async () => {
-      await wrapper.setProps({
-        hideTitle: true,
-      })
+      await wrapper.setProps({ hideTitle: true })
 
       expect(wrapper.find("h2").exists()).toBeFalsy()
     })

@@ -16,25 +16,9 @@ export default {
       DEFAULT: "0 4px 6px 0 #4B556308",
       lg: "0 10px 20px 0 #01162720",
     },
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-      },
-    },
-    extend: {
-      transitionDuration: {
-        DEFAULT: "300ms",
-      },
-    },
-    fontFamily: {
-      sans: ["Inter", "sans-serif"],
-    },
-    fontWeight: {
-      bold: "700",
-      medium: "500",
-      normal: "400",
-    },
+    container: { center: true, padding: { DEFAULT: "1rem", sm: "2rem" } },
+    extend: { transitionDuration: { DEFAULT: "300ms" } },
+    fontFamily: { sans: ["Inter", "sans-serif"] },
+    fontWeight: { bold: "700", medium: "500", normal: "400" },
   },
 } satisfies Config

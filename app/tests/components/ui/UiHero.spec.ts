@@ -12,9 +12,7 @@ describe("Компонент UiHero", () => {
   const description = "Описание страницы"
 
   beforeEach(() => {
-    wrapper = mount(UiHero, {
-      props: { description, title },
-    })
+    wrapper = mount(UiHero, { props: { description, title } })
   })
 
   afterEach(() => {

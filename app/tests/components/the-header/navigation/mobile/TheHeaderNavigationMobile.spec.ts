@@ -14,9 +14,7 @@ describe("Компонент TheHeaderNavigationMobile", () => {
 
   beforeEach(async () => {
     wrapper = await mountSuspended(TheHeaderNavigationMobile, {
-      props: {
-        navigation,
-      },
+      props: { navigation },
     })
   })
 

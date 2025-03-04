@@ -14,12 +14,8 @@ describe("Компонент UiBlock", () => {
 
   beforeEach(() => {
     wrapper = shallowMount(UiBlock, {
-      props: {
-        title,
-      },
-      slots: {
-        default: () => TEST_BLOCK,
-      },
+      props: { title },
+      slots: { default: () => TEST_BLOCK },
     })
   })
 
@@ -33,9 +29,7 @@ describe("Компонент UiBlock", () => {
     })
 
     test("Скрывается при передаче параметра hideTitle", async () => {
-      await wrapper.setProps({
-        hideTitle: true,
-      })
+      await wrapper.setProps({ hideTitle: true })
 
       expect(wrapper.find("h2").exists()).toBeFalsy()
     })
@@ -52,10 +46,7 @@ describe("Компонент UiBlock", () => {
       })
 
       test("Скрывается при передаче параметра hideTitle", async () => {
-        await wrapper.setProps({
-          hideTitle: true,
-          subTitle,
-        })
+        await wrapper.setProps({ hideTitle: true, subTitle })
 
         expect(wrapper.find("h3").exists()).toBeFalsy()
       })

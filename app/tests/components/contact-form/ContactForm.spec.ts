@@ -29,9 +29,7 @@ describe("Компонент ContactForm", () => {
   })
 
   beforeEach(async () => {
-    wrapper = await mountSuspended(ContactForm, {
-      attachTo: document.body,
-    })
+    wrapper = await mountSuspended(ContactForm, { attachTo: document.body })
   })
 
   afterEach(() => {

@@ -11,9 +11,7 @@ describe("Компонент TheHeaderNavigationCard", () => {
 
   beforeEach(async () => {
     wrapper = await mountSuspended(TheHeaderNavigationCard, {
-      props: {
-        routeName: "index",
-      },
+      props: { routeName: "index" },
     })
   })
 

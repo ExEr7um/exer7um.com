@@ -7,11 +7,7 @@ defineProps<{
   workplace: Omit<
     Workplace,
     "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
-  > & {
-    description: string
-    tags: Tag[]
-    title: string
-  }
+  > & { description: string; tags: Tag[]; title: string }
 }>()
 </script>
 

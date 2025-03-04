@@ -6,9 +6,7 @@ defineProps<{
   error: FetchError | undefined
 }>()
 
-const emit = defineEmits<{
-  close: []
-}>()
+const emit = defineEmits<{ close: [] }>()
 
 const { t } = useI18n({ useScope: "local" })
 </script>

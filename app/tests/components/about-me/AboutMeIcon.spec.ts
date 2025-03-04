@@ -17,11 +17,7 @@ describe("Компонент AboutMeIcon", () => {
   let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(AboutMeIcon, {
-      props: {
-        icon,
-      },
-    })
+    wrapper = shallowMount(AboutMeIcon, { props: { icon } })
   })
 
   afterEach(() => {

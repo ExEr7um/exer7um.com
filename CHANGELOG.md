@@ -1,4 +1,8 @@
 
+## v2.1.5
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.4...v2.1.5)
+
 ## v2.1.4
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.3...v2.1.4)

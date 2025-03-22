@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite"
 import { rollup as unwasm } from "unwasm/plugin"
 
 /**
@@ -13,7 +14,6 @@ const modules = [
   "@nuxthub/core",
   "@nuxtjs/i18n",
   "@nuxtjs/seo",
-  "@nuxtjs/tailwindcss",
   "@vueuse/nuxt",
   "nuxt-headlessui",
   "nuxt-shiki",
@@ -35,6 +35,7 @@ export default defineNuxtConfig({
   },
   $test: { modules: devModules, ogImage: { enabled: false } },
   compatibilityDate: "2024-07-19",
+  css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   experimental: {
     componentIslands: true,
@@ -87,5 +88,5 @@ export default defineNuxtConfig({
     defaultTheme: "night-owl",
   },
   site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
-  tailwindcss: { viewer: false },
+  vite: { plugins: [tailwindcss()] },
 })

@@ -1,1 +1,3 @@
-export { default } from "@exer7um/eslint-config"
+import createESLintConfig from "@exer7um/eslint-config"
+
+export default createESLintConfig()

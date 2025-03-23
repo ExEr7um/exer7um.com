@@ -44,7 +44,7 @@ const statusStyles = {
 
 <template>
   <HeadlessDialog
-    class="container fixed inset-0 z-40 flex items-center justify-center"
+    class="fixed inset-0 z-40 container flex items-center justify-center"
     data-test-id="ui-popup"
     open
     @close="emit('close')"

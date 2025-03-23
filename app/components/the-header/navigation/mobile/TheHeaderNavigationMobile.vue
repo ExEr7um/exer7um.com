@@ -19,7 +19,7 @@ const { t } = useI18n({ useScope: "local" })
     </HeadlessMenuButton>
     <HeadlessMenuItems
       as="nav"
-      class="absolute left-0 top-full mt-2 flex min-w-40 flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white p-1 shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900"
+      class="absolute top-full left-0 mt-2 flex min-w-40 flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white p-1 shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900"
     >
       <TheHeaderNavigationMobileCard
         v-for="routeName in navigation"

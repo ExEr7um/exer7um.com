@@ -45,7 +45,7 @@ const icons = [
 <template>
   <UiBlock :hide-title :title="t('title')">
     <article class="flex max-w-5xl flex-col gap-y-5">
-      <h3 class="mb-2">{{ t("name") }}</h3>
+      <h3>{{ t("name") }}</h3>
       <i18n-t
         v-for="paragraph in 3"
         :key="paragraph"

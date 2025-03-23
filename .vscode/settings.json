@@ -30,7 +30,7 @@
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "eslint.validate": ["javascript", "json", "vue", "typescript", "yaml"],
-  "files.associations": { "*.css": "postcss" },
+  "files.associations": { "*.css": "tailwindcss" },
   "git.branchProtection": ["main"],
   "i18n-ally.displayLanguage": "ru",
   "i18n-ally.enabledFrameworks": ["vue", "vue-sfc"],

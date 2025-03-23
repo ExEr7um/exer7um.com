@@ -1,4 +1,20 @@
 
+## v2.1.6
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.5...v2.1.6)
+
+### 🚀 Улучшения
+
+- Обноление Tailwind CSS до `v4` ([#497](https://github.com/ExEr7um/exer7um.com/pull/497))
+
+### 🐞 Исправления
+
+- Добавление `favicon` в формате `.png` ([1ab4011](https://github.com/ExEr7um/exer7um.com/commit/1ab4011))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.1.5
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.4...v2.1.5)

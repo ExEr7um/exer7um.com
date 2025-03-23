@@ -11,9 +11,9 @@ const navigation = [
 </script>
 
 <template>
-  <header class="container sticky top-4 z-10">
+  <header class="sticky top-4 z-10 container">
     <div
-      class="card flex h-20 items-center justify-between gap-x-2 bg-opacity-60 px-4 shadow backdrop-blur-lg md:pl-8"
+      class="default-border flex h-20 items-center justify-between gap-x-2 rounded-2xl bg-white/60 px-4 shadow backdrop-blur-lg md:pl-8 dark:bg-neutral-900/60"
     >
       <TheHeaderNavigation class="hidden md:flex" :navigation />
       <TheHeaderNavigationMobile class="md:hidden" :navigation />

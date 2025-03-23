@@ -18,7 +18,7 @@ defineProps<{
   <component :is="largeTitle ? 'h3' : 'h4'" data-test-id="title">
     {{ title }}
   </component>
-  <p class="-mt-2">{{ description }}</p>
+  <p :class="[largeTitle ? '-mt-3' : '-mt-2']">{{ description }}</p>
   <!-- Список тегов -->
   <LazyUiTags v-if="tags.length" data-test-id="tags" small :tags />
 </template>

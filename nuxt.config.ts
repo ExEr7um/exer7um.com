@@ -72,7 +72,6 @@ export default defineNuxtConfig({
     preset: "cloudflare-pages",
   },
   ogImage: { zeroRuntime: true },
-  postcss: { plugins: { "tailwindcss/nesting": "postcss-nesting" } },
   robots: { blockNonSeoBots: true },
   router: { options: { scrollBehaviorType: "smooth" } },
   routeRules: {

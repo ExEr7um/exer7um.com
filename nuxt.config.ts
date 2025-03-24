@@ -24,7 +24,7 @@ const modules = [
  *
  * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
  */
-const devModules = [...modules, "@nuxt/test-utils/module"]
+const devModules = [...modules, "nuxt-mcp", "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
   $development: { hub: { remote: "production" }, modules: devModules },

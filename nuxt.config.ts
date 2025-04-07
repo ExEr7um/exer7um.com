@@ -50,6 +50,7 @@ export default defineNuxtConfig({
     defaultLocale: "ru",
     experimental: {
       alternateLinkCanonicalQueries: true,
+      generatedLocaleFilePathFormat: "off",
       typedOptionsAndMessages: "default",
       typedPages: true,
     },

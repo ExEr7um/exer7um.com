@@ -1,4 +1,16 @@
 
+## v2.1.8
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.7...v2.1.8)
+
+### 🐞 Исправления
+
+- Откат `@nuxt/fonts` до `v0.11.2` ([4dac058](https://github.com/ExEr7um/exer7um.com/commit/4dac058))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.1.7
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.6...v2.1.7)

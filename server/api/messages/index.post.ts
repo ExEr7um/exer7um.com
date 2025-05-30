@@ -3,7 +3,7 @@ import { z } from "zod/v4-mini"
 /** Сообщение пользователя */
 const messageSchema = z.object({
   email: z.email(),
-  message: z.string().check(z.minLength(5)),
+  message: z.string().check(z.minLength(2)),
   name: z.string().check(z.minLength(2)),
 })
 

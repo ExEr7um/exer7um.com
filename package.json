@@ -58,7 +58,7 @@
     "happy-dom": "17.4.4",
     "husky": "9.1.7",
     "nano-staged": "0.8.0",
-    "nuxt-mcp": "0.0.3",
+    "nuxt-mcp": "0.2.2",
     "typescript": "5.8.3",
     "vitest": "3.1.1",
     "vue-tsc": "2.2.8",

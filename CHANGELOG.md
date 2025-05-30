@@ -1,4 +1,24 @@
 
+## v2.1.7
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.6...v2.1.7)
+
+### 🐞 Исправления
+
+- Обновление `nuxt-skiki` до `v0.3.1` ([#500](https://github.com/ExEr7um/exer7um.com/pull/500))
+- **API:** Обновление Zod до `v4-mini` ([#501](https://github.com/ExEr7um/exer7um.com/pull/501))
+
+### 🏡 Другие изменения
+
+- Добавление `nuxt-mcp` для Cursor ([9858b2e](https://github.com/ExEr7um/exer7um.com/commit/9858b2e))
+- Обновление `nuxt-mcp` до `v0.2.2` ([9a4bdb4](https://github.com/ExEr7um/exer7um.com/commit/9a4bdb4))
+- Обновление `ExEr7um/workflows` до `v0.8.0` ([6808f68](https://github.com/ExEr7um/exer7um.com/commit/6808f68))
+- Обновление `@nuxt/test-utils` до `v3.19.1` ([d5655a2](https://github.com/ExEr7um/exer7um.com/commit/d5655a2))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.1.6
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.5...v2.1.6)

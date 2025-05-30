@@ -1,10 +1,10 @@
-import { z } from "zod"
+import { z } from "zod/v4-mini"
 
 /** Сообщение пользователя */
 const messageSchema = z.object({
-  email: z.string().email(),
-  message: z.string().min(2),
-  name: z.string().min(2),
+  email: z.email(),
+  message: z.string().check(z.minLength(2)),
+  name: z.string().check(z.minLength(2)),
 })
 
 /** Сообщение пользователя */

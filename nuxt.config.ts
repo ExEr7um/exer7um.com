@@ -1,5 +1,4 @@
 import tailwindcss from "@tailwindcss/vite"
-import { rollup as unwasm } from "unwasm/plugin"
 
 /**
  * Общие модули, которые используются в любой среде.
@@ -28,11 +27,7 @@ const devModules = [...modules, "nuxt-mcp", "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
   $development: { hub: { remote: "production" }, modules: devModules },
-  $production: {
-    modules,
-    // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/41
-    vite: { plugins: [unwasm({ esmImport: true })] },
-  },
+  $production: { modules },
   $test: { modules: devModules, ogImage: { enabled: false } },
   compatibilityDate: "2024-07-19",
   css: ["~/assets/css/main.css"],
@@ -65,13 +60,7 @@ export default defineNuxtConfig({
   image: {
     cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" },
   },
-  nitro: {
-    // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/29
-    experimental: { wasm: true },
-    // TODO: Удалить после исправления https://github.com/pi0/nuxt-shiki/issues/45
-    externals: { traceInclude: ["shiki/dist/core.mjs"] },
-    preset: "cloudflare-pages",
-  },
+  nitro: { preset: "cloudflare-pages" },
   ogImage: { zeroRuntime: true },
   robots: { blockNonSeoBots: true },
   router: { options: { scrollBehaviorType: "smooth" } },

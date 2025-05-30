@@ -21,7 +21,6 @@
     "typecheck",
     "unixepoch",
     "unref",
-    "unwasm",
     "vite",
     "vueuse"
   ],

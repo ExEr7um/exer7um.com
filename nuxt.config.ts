@@ -78,7 +78,8 @@ export default defineNuxtConfig({
   },
   site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
   vite: {
-    experimental: { enableNativePlugin: true },
+    // TODO: Включить после исправления __NUXT_ASYNC_CONTEXT__ is not defined
+    // experimental: { enableNativePlugin: true },
     plugins: [tailwindcss()],
   },
 })

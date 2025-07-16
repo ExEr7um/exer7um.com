@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-16",
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
-  experimental: { typedPages: true },
+  experimental: { componentIslands: true, typedPages: true },
   hub: { cache: true, database: true },
   i18n: {
     baseUrl: "https://exer7um.com",

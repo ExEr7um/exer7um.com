@@ -1,6 +1,10 @@
 {
   "mcpServers": {
-    "nuxt": { "url": "http://localhost:3000/__mcp/sse" },
-    "nuxt-docs": { "url": "https://mcp.nuxt.com/sse" }
+    "nuxt": {
+      "url": "http://localhost:3000/__mcp/sse"
+    },
+    "nuxt-docs": {
+      "url": "https://mcp.nuxt.com/sse"
+    }
   }
 }

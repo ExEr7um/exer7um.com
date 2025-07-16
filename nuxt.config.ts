@@ -34,25 +34,18 @@ export default defineNuxtConfig({
   $development: { hub: { remote: "production" }, modules: devModules },
   $production: { modules },
   $test: { modules: testModules, ogImage: { enabled: false } },
-  compatibilityDate: "2024-07-19",
+  compatibilityDate: "2025-07-16",
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
-  experimental: {
-    componentIslands: true,
-    cookieStore: true,
-    headNext: true,
-    typedPages: true,
-  },
-  future: { compatibilityVersion: 4 },
+  experimental: { componentIslands: true, typedPages: true },
   hub: { cache: true, database: true },
   i18n: {
     baseUrl: "https://exer7um.com",
     defaultLocale: "ru",
     experimental: {
       alternateLinkCanonicalQueries: true,
-      generatedLocaleFilePathFormat: "off",
+      // generatedLocaleFilePathFormat: "off",
       typedOptionsAndMessages: "default",
-      typedPages: true,
     },
     lazy: true,
     locales: [

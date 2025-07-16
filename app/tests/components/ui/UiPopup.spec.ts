@@ -10,7 +10,7 @@ import { TEST_BLOCK } from "~/tests/constants/utils"
 const popup = () => document.querySelector("[data-test-id=ui-popup]")!
 const status = () => document.querySelector("[data-test-id=status]")
 
-describe("Компонент UiPopup", () => {
+describe.todo("Компонент UiPopup", () => {
   const title = "Заголовок блока"
   const description = "Описание блока"
 

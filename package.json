@@ -20,7 +20,7 @@
     "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern * --experimental-cli",
     "preview": "nuxt preview",
     "test": "vitest",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck -b"
   },
   "nano-staged": {
     "*.{vue,js,jsx,cjs,mjs,ts,json,yaml}": "eslint --cache --fix",
@@ -44,7 +44,7 @@
     "@vueuse/nuxt": "13.5.0",
     "date-fns": "4.1.0",
     "drizzle-orm": "0.44.3",
-    "nuxt": "3.17.6",
+    "nuxt": "4.0.0",
     "nuxt-headlessui": "1.2.0",
     "nuxt-shiki": "0.3.1",
     "tailwindcss": "4.1.11",
@@ -66,6 +66,6 @@
     "typescript": "5.8.3",
     "vitest": "3.2.4",
     "vue-tsc": "3.0.1",
-    "wrangler": "4.24.3"
+    "wrangler": "4.24.4"
   }
 }

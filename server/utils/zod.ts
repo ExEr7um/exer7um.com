@@ -1,4 +1,4 @@
-import { z } from "zod/v4-mini"
+import { z } from "zod/mini"
 
 /** Лимит количества результатов */
 export const limit = z.optional(z.coerce.number().check(z.int()))

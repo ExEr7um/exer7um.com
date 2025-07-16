@@ -34,6 +34,7 @@ export default defineNuxtConfig({
   $development: { hub: { remote: "production" }, modules: devModules },
   $production: { modules },
   $test: { modules: testModules, ogImage: { enabled: false } },
+  compatibilityDate: "2025-07-16",
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   experimental: { typedPages: true },

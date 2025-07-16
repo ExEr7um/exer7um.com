@@ -23,12 +23,17 @@ const modules = [
  *
  * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
  */
-const devModules = [...modules, "nuxt-mcp", "@nuxt/test-utils/module"]
+const devModules = [...modules, "nuxt-mcp"]
+
+/**
+ * Объединенный массив модулей, которые будут использоваться только в `TEST` среде.
+ */
+const testModules = [...modules, "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
   $development: { hub: { remote: "production" }, modules: devModules },
   $production: { modules },
-  $test: { modules: devModules, ogImage: { enabled: false } },
+  $test: { modules: testModules, ogImage: { enabled: false } },
   compatibilityDate: "2024-07-19",
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },

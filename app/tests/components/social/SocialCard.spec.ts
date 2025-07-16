@@ -4,9 +4,9 @@ import type { VueWrapper } from "@vue/test-utils"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import SocialCard, {
-  type SocialCard as SocialCardType,
-} from "~/components/social/SocialCard.server.vue"
+import type { SocialCard as SocialCardType } from "~/components/social/SocialCard.server.vue"
+
+import SocialCard from "~/components/social/SocialCard.server.vue"
 
 describe("Компонент SocialCard", () => {
   let wrapper: VueWrapper

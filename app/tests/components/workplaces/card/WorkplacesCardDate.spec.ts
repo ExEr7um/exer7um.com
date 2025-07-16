@@ -1,3 +1,4 @@
+// @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
 import { shallowMount } from "@vue/test-utils"

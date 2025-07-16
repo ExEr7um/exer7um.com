@@ -1,4 +1,3 @@
-// @vitest-environment nuxt
 import type { VueWrapper } from "@vue/test-utils"
 
 import { mountSuspended } from "@nuxt/test-utils/runtime"

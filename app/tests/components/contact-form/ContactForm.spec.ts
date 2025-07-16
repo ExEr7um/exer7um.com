@@ -1,8 +1,8 @@
-// @vitest-environment nuxt
+import type { VueWrapper } from "@vue/test-utils"
 import type { H3Event } from "h3"
 
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
-import { flushPromises, type VueWrapper } from "@vue/test-utils"
+import { flushPromises } from "@vue/test-utils"
 import { readBody } from "h3"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 

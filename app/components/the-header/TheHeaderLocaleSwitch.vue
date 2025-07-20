@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { availableLocales, locale, t } = useI18n({ useScope: "local" })
+const switchLocalePath = useSwitchLocalePath()
 
 /** Код следующей локализации в списке */
 const nextLocaleCode = computed(() => {
@@ -18,18 +19,20 @@ const nextLocaleCode = computed(() => {
 </script>
 
 <template>
-  <SwitchLocalePathLink
-    :aria-label="t('changeLocale')"
-    class="button tertiary squared uppercase"
-    :locale="nextLocaleCode ?? 'ru'"
-  >
-    {{ locale }}
-  </SwitchLocalePathLink>
+  <UTooltip :text="t('changeLocale')">
+    <UButton
+      class="uppercase"
+      color="neutral"
+      :label="locale"
+      :to="switchLocalePath(nextLocaleCode ?? 'ru')"
+      variant="soft"
+    />
+  </UTooltip>
 </template>
 
 <i18n lang="yaml">
 en:
-  changeLocale: Change selected localization
+  changeLocale: Change language
 ru:
-  changeLocale: Изменить выбранную локализацию
+  changeLocale: Изменить язык
 </i18n>

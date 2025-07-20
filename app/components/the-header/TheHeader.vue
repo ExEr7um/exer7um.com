@@ -13,7 +13,7 @@ const navigation = [
 <template>
   <header class="sticky top-4 z-10 container">
     <div
-      class="default-border flex h-20 items-center justify-between gap-x-2 rounded-2xl bg-white/60 px-4 shadow backdrop-blur-lg md:pl-8 dark:bg-neutral-900/60"
+      class="default-border flex items-center justify-between gap-x-2 rounded-2xl bg-white/60 px-4 py-2 shadow backdrop-blur-lg dark:bg-neutral-900/60"
     >
       <TheHeaderNavigation class="hidden md:flex" :navigation />
       <TheHeaderNavigationMobile class="md:hidden" :navigation />

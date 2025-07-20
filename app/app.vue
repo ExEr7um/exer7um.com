@@ -14,9 +14,9 @@ useSeoMeta({ titleTemplate: `%s | ExEr7um` })
 </script>
 
 <template>
-  <div>
+  <UApp>
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator color="#2563EB" />
     <NuxtLayout />
-  </div>
+  </UApp>
 </template>

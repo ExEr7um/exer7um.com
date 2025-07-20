@@ -1,16 +1,17 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  --ui-primary: var(--ui-color-primary-600);
+}
 
 @theme {
   --shadow: 0 4px 6px 0 #4b556308;
   --shadow-lg: 0 10px 20px 0 #01162720;
 
-  --font-sans: Inter, sans-serif;
-
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-
-  --transition-duration: 300ms;
 }
 
 @utility container {
@@ -22,27 +23,8 @@
   }
 }
 
-@utility button {
-  @apply flex h-12 cursor-pointer items-center justify-center gap-x-2 rounded-lg border px-5 leading-none transition-colors sm:px-6;
-
-  &.primary {
-    @apply border-blue-700 bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-800;
-  }
-
-  &.secondary {
-    @apply border-blue-200 bg-blue-50 text-blue-600 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400 dark:hover:bg-blue-900;
-  }
-
-  &.tertiary {
-    @apply border-neutral-200 bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800;
-  }
-
-  &.squared {
-    @apply size-12 p-0!;
-  }
-}
-
 @utility default-border {
+  /* TODO: Обновить цвета */
   @apply border border-neutral-200 dark:border-neutral-800;
 }
 
@@ -54,13 +36,9 @@
   }
 }
 
-@utility tag {
-  @apply default-border bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800;
-}
-
 @layer base {
   body {
-    @apply bg-neutral-50 text-neutral-500 antialiased dark:bg-neutral-950 dark:text-neutral-400;
+    @apply bg-muted text-muted antialiased;
   }
 
   h1,
@@ -87,21 +65,7 @@
   }
 
   small {
+    /* TODO: Обновить цвета */
     @apply text-sm text-neutral-400 md:text-base dark:text-neutral-500;
-  }
-}
-
-@layer components {
-  input,
-  textarea {
-    @apply default-border rounded-lg bg-neutral-100 px-3 py-2 text-black outline-hidden transition focus:ring-2 focus:ring-blue-500 dark:bg-neutral-900 dark:text-white dark:focus:ring-blue-600;
-  }
-
-  textarea {
-    @apply resize-none;
-  }
-
-  label {
-    @apply font-medium text-black lg:text-lg dark:text-white;
   }
 }

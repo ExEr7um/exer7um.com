@@ -4,23 +4,17 @@
     "": {
       "name": "exer7um.com",
       "dependencies": {
-        "@formkit/auto-animate": "0.8.2",
-        "@nuxt/fonts": "0.11.4",
-        "@nuxt/icon": "1.15.0",
         "@nuxt/image": "1.10.0",
         "@nuxt/ui": "3.2.0",
         "@nuxthub/core": "0.9.0",
         "@nuxtjs/i18n": "10.0.0",
         "@nuxtjs/seo": "3.1.0",
-        "@tailwindcss/vite": "4.1.11",
         "@vueuse/core": "13.5.0",
         "@vueuse/nuxt": "13.5.0",
         "date-fns": "4.1.0",
         "drizzle-orm": "0.44.3",
         "nuxt": "4.0.0",
-        "nuxt-headlessui": "1.2.0",
         "nuxt-shiki": "0.3.1",
-        "tailwindcss": "4.1.11",
         "vue": "3.5.17",
         "vue-router": "4.5.1",
         "zod": "4.0.5",
@@ -242,10 +236,6 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.10", "", {}, "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ=="],
 
     "@floating-ui/vue": ["@floating-ui/vue@1.1.7", "", { "dependencies": { "@floating-ui/dom": "^1.7.2", "@floating-ui/utils": "^0.2.10", "vue-demi": ">=0.13.0" } }, "sha512-idmAtbAIigGXN2SI5gItiXYBYtNfDTP9yIiObxgu13dgtG7ARCHlNfnR29GxP4LI4o13oiwsJ8wVgghj1lNqcw=="],
-
-    "@formkit/auto-animate": ["@formkit/auto-animate@0.8.2", "", {}, "sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ=="],
-
-    "@headlessui/vue": ["@headlessui/vue@1.7.23", "", { "dependencies": { "@tanstack/vue-virtual": "^3.0.0-beta.60" }, "peerDependencies": { "vue": "^3.2.0" } }, "sha512-JzdCNqurrtuu0YW6QaDtR2PIYCKPUWq28csDyMvN4zmGccmE7lz40Is6hc3LA4HFeCI7sekZ/PQMTNmn9I/4Wg=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 
@@ -2045,8 +2035,6 @@
 
     "nuxt-define": ["nuxt-define@1.0.0", "", {}, "sha512-CYZ2WjU+KCyCDVzjYUM4eEpMF0rkPmkpiFrybTqqQCRpUbPt2h3snswWIpFPXTi+osRCY6Og0W/XLAQgDL4FfQ=="],
 
-    "nuxt-headlessui": ["nuxt-headlessui@1.2.0", "", { "dependencies": { "@headlessui/vue": "^1.7.18", "@nuxt/kit": "^3.11.2", "pathe": "^1.1.2" } }, "sha512-eidWwA4SFLWFk2KcGMHlrPTJb+ODEt5Bsj6cXjmhDtRYydqvgYXHU1U7563E6/qMuayThumbGUopF1IRqlYHwA=="],
-
     "nuxt-link-checker": ["nuxt-link-checker@4.3.1", "", { "dependencies": { "@nuxt/devtools-kit": "^2.5.0", "@nuxt/kit": "^3.17.5", "@vueuse/core": "^13.3.0", "consola": "^3.4.2", "diff": "^8.0.2", "fuse.js": "^7.1.0", "magic-string": "^0.30.17", "nuxt-site-config": "^3.2.0", "ofetch": "^1.4.1", "pathe": "^2.0.3", "pkg-types": "^2.1.0", "radix3": "^1.1.2", "sirv": "^3.0.1", "std-env": "^3.9.0", "ufo": "^1.6.1", "ultrahtml": "^1.6.0", "unstorage": "^1.16.0" } }, "sha512-ntsKKLThlDs/Y9aoBgfld+uwJw0lu3CqDe6cgZDEDTVu55HcgXT9CJV3f/DI5+FvprJnLfnmNY7/cMMcLLHWeg=="],
 
     "nuxt-mcp": ["nuxt-mcp@0.2.3", "", { "dependencies": { "@modelcontextprotocol/sdk": "^1.12.3", "@nuxt/kit": "^3.17.5", "ansis": "^3.17.0", "async-cache-dedupe": "^2.2.0", "citty": "^0.1.6", "debug": "^4.4.1", "pathe": "^2.0.3", "unimport": "^5.0.1", "vite-plugin-mcp": "0.2.3", "zod": "^3.25.67" }, "peerDependencies": { "nitropack": "^2 || ^3", "nuxi": ">=3", "nuxt": ">=3.5.0", "vite": ">=6" } }, "sha512-pRJeOFpze3KdxGvyiTnQ+CaTEOTRCiMsFN/KF3s5gngnC0LQ39MCoBJvuWQWAl1bb10NmupZtu/Kl8iwAuybtA=="],
@@ -2953,6 +2941,8 @@
 
     "@vitejs/plugin-vue/@rolldown/pluginutils": ["@rolldown/pluginutils@1.0.0-beta.19", "", {}, "sha512-3FL3mnMbPu0muGOCaKAhhFEYmqv9eTfPSJRJmANrCwtgK8VuxpsZDGK+m0LYAGoyO8+0j5uRe4PeyPDK1yA/hA=="],
 
+    "@vitejs/plugin-vue-jsx/@rolldown/pluginutils": ["@rolldown/pluginutils@1.0.0-beta.9-commit.d91dfb5", "", {}, "sha512-8sExkWRK+zVybw3+2/kBkYBFeLnEUWz1fT7BLHplpzmtqkOfTbAQ9gkt4pzwGIIZmg4Qn5US5ACjUBenrhezwQ=="],
+
     "@vue/compiler-core/estree-walker": ["estree-walker@2.0.2", "", {}, "sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w=="],
 
     "@vue/compiler-sfc/estree-walker": ["estree-walker@2.0.2", "", {}, "sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w=="],
@@ -3070,8 +3060,6 @@
     "nuxt/oxc-parser": ["oxc-parser@0.77.2", "", { "dependencies": { "@oxc-project/types": "^0.77.2" }, "optionalDependencies": { "@oxc-parser/binding-android-arm64": "0.77.2", "@oxc-parser/binding-darwin-arm64": "0.77.2", "@oxc-parser/binding-darwin-x64": "0.77.2", "@oxc-parser/binding-freebsd-x64": "0.77.2", "@oxc-parser/binding-linux-arm-gnueabihf": "0.77.2", "@oxc-parser/binding-linux-arm-musleabihf": "0.77.2", "@oxc-parser/binding-linux-arm64-gnu": "0.77.2", "@oxc-parser/binding-linux-arm64-musl": "0.77.2", "@oxc-parser/binding-linux-riscv64-gnu": "0.77.2", "@oxc-parser/binding-linux-s390x-gnu": "0.77.2", "@oxc-parser/binding-linux-x64-gnu": "0.77.2", "@oxc-parser/binding-linux-x64-musl": "0.77.2", "@oxc-parser/binding-wasm32-wasi": "0.77.2", "@oxc-parser/binding-win32-arm64-msvc": "0.77.2", "@oxc-parser/binding-win32-x64-msvc": "0.77.2" } }, "sha512-+FMfYsACcAcoeVJfvewk9FeSVXO2maiv78hE1zHzQPwLB7QTdsharc08HnBa0bUPl9D1dfzs20wPGmLLY2HYtg=="],
 
     "nuxt/unplugin-vue-router": ["unplugin-vue-router@0.14.0", "", { "dependencies": { "@vue-macros/common": "3.0.0-beta.15", "ast-walker-scope": "^0.8.1", "chokidar": "^4.0.3", "fast-glob": "^3.3.3", "json5": "^2.2.3", "local-pkg": "^1.1.1", "magic-string": "^0.30.17", "mlly": "^1.7.4", "pathe": "^2.0.3", "picomatch": "^4.0.2", "scule": "^1.3.0", "unplugin": "^2.3.5", "unplugin-utils": "^0.2.4", "yaml": "^2.8.0" }, "peerDependencies": { "@vue/compiler-sfc": "^3.5.17", "vue-router": "^4.5.1" }, "optionalPeers": ["vue-router"] }, "sha512-ipjunvS5e2aFHBAUFuLbHl2aHKbXXXBhTxGT9wZx66fNVPdEQzVVitF8nODr1plANhTTa3UZ+DQu9uyLngMzoQ=="],
-
-    "nuxt-headlessui/pathe": ["pathe@1.1.2", "", {}, "sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ=="],
 
     "nuxt-mcp/zod": ["zod@3.25.76", "", {}, "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="],
 

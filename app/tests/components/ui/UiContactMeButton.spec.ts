@@ -17,12 +17,12 @@ describe("Компонент UiContactMeButton", () => {
   })
 
   test("Правильный текст кнопки", () => {
-    expect(wrapper.text()).toBe("Написать мне ✍🏻")
+    expect(wrapper.text()).toBe("Написать мне✍🏻")
   })
 
   test("Кнопка переводит на страницу «Связаться со мной»", () => {
     /** Атрибут `href` кнопки */
-    const buttonHref = wrapper.attributes("href")
+    const buttonHref = wrapper.find("a").attributes("href")
 
     expect(buttonHref).toBe("/contact-me/")
   })

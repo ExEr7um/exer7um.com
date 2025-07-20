@@ -10,6 +10,7 @@ const modules = [
   "@nuxtjs/seo",
   "@vueuse/nuxt",
   "nuxt-shiki",
+  "@nuxt/ui",
 ]
 
 /**

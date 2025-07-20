@@ -9,9 +9,8 @@ const { t } = useI18n({ useScope: "local" })
     <div class="flex max-w-md flex-col gap-y-3">
       <h1>{{ t("title") }}</h1>
       <p>{{ $t("descriptions.index") }}</p>
-      <div class="mt-8 flex items-center gap-x-4 sm:gap-x-6">
+      <div class="mt-6 flex gap-x-3">
         <UiContactMeButton />
-        <p>{{ t("or") }}</p>
         <Social compact />
       </div>
     </div>

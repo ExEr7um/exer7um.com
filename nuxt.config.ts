@@ -42,12 +42,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: "https://exer7um.com",
     defaultLocale: "ru",
-    experimental: {
-      alternateLinkCanonicalQueries: true,
-      // generatedLocaleFilePathFormat: "off",
-      typedOptionsAndMessages: "default",
-    },
-    lazy: true,
+    experimental: { typedOptionsAndMessages: "default" },
     locales: [
       { code: "ru", file: "ru.yaml", language: "ru-RU", name: "Русский" },
       { code: "en", file: "en.yaml", language: "en-US", name: "English" },
@@ -76,8 +71,7 @@ export default defineNuxtConfig({
   },
   site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
   vite: {
-    // TODO: Включить после исправления __NUXT_ASYNC_CONTEXT__ is not defined
-    // experimental: { enableNativePlugin: true },
+    experimental: { enableNativePlugin: true },
     plugins: [tailwindcss()],
   },
 })

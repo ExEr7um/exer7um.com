@@ -4,7 +4,7 @@ import type { VueWrapper } from "@vue/test-utils"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import Social from "~/components/social/Social.server.vue"
+import Social from "~/components/Social.server.vue"
 
 describe("Компонент Social", () => {
   let wrapper: VueWrapper
@@ -17,11 +17,12 @@ describe("Компонент Social", () => {
     wrapper.unmount()
   })
 
-  const socialCards = () => wrapper.findAllComponents({ name: "SocialCard" })
+  const socialButtons = () => wrapper.findAllComponents({ name: "UButton" })
+  const firstSocialButton = () => socialButtons().at(0)!
 
   describe("Отсутствует compact", () => {
     test("Отображается больше 2 соцсетей", () => {
-      expect(socialCards().length).toBeGreaterThan(2)
+      expect(socialButtons().length).toBeGreaterThan(2)
     })
 
     test("Увеличенный отступ между кнопками", () => {
@@ -35,11 +36,21 @@ describe("Компонент Social", () => {
     })
 
     test("Отображаются 2 соцсети", async () => {
-      expect(socialCards()).toHaveLength(2)
+      expect(socialButtons()).toHaveLength(2)
     })
 
     test("Увеличенный отступ между кнопками", async () => {
-      expect(wrapper.classes()).toContain("gap-x-2")
+      expect(wrapper.classes()).toContain("gap-x-3")
+    })
+  })
+
+  describe("Кнопки соцсетей", () => {
+    test("Открывается в новой вкладке", () => {
+      expect(firstSocialButton().attributes("target")).toBe("_blank")
+    })
+
+    test("Является внешней", () => {
+      expect(firstSocialButton().attributes("external")).toBeTruthy()
     })
   })
 })

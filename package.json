@@ -27,9 +27,6 @@
     "*": "prettier --write --ignore-unknown --experimental-cli"
   },
   "prettier": "@exer7um/prettier-config",
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
-  },
   "dependencies": {
     "@nuxt/image": "1.10.0",
     "@nuxt/ui": "3.2.0",

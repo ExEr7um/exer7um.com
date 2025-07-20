@@ -1,20 +1,14 @@
-import tailwindcss from "@tailwindcss/vite"
-
 /**
  * Общие модули, которые используются в любой среде.
  *
  * Сюда нужно помещать модули, которые находятся в `dependencies`
  */
 const modules = [
-  "@formkit/auto-animate/nuxt",
-  "@nuxt/fonts",
-  "@nuxt/icon",
   "@nuxt/image",
   "@nuxthub/core",
   "@nuxtjs/i18n",
   "@nuxtjs/seo",
   "@vueuse/nuxt",
-  "nuxt-headlessui",
   "nuxt-shiki",
 ]
 
@@ -49,7 +43,6 @@ export default defineNuxtConfig({
     ],
     trailingSlash: true,
   },
-  icon: { size: "24px" },
   image: {
     cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" },
   },
@@ -70,8 +63,5 @@ export default defineNuxtConfig({
     defaultTheme: "night-owl",
   },
   site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
-  vite: {
-    experimental: { enableNativePlugin: true },
-    plugins: [tailwindcss()],
-  },
+  vite: { experimental: { enableNativePlugin: true } },
 })

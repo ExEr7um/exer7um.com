@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import * as locales from "@nuxt/ui/locale"
+
+const { locale } = useI18n()
 const i18nHead = useLocaleHead()
 
 useHeadSafe({
@@ -14,7 +17,7 @@ useSeoMeta({ titleTemplate: `%s | ExEr7um` })
 </script>
 
 <template>
-  <UApp>
+  <UApp :locale="locales[locale]">
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator color="#2563EB" />
     <NuxtLayout />

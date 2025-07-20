@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import type { RouteName } from "~/types/Utils"
+import type { NavigationMenuItem } from "@nuxt/ui"
 
-defineProps<{
+const { navigation } = defineProps<{
   /** Навигация */
-  navigation: RouteName[]
+  navigation: NavigationMenuItem[]
 }>()
 </script>
 
 <template>
-  <nav class="flex gap-x-7">
-    <TheHeaderNavigationCard
-      v-for="routeName in navigation"
-      :key="routeName"
-      :route-name
-    />
-  </nav>
+  <UNavigationMenu :items="navigation" />
 </template>

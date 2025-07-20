@@ -11,6 +11,7 @@ import { getHeaderLocale } from "@intlify/h3"
  * @returns локализированное название колонки
  */
 export default function <TReturn>(column: string, event: H3Event): TReturn {
+  // @ts-expect-error: Берется неправильный тип, но правильная функция
   const locale = getHeaderLocale(event, { lang: "ru" })
 
   return (column + locale.baseName.toUpperCase()) as TReturn

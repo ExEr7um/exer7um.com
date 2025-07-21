@@ -5,6 +5,7 @@ const { limit } = defineProps<{
 }>()
 
 const { locale, t } = useI18n({ useScope: "local" })
+const localePath = useLocalePath()
 
 const { data: personalProjects } = await useFetch("/api/personal-projects", {
   headers: { "Accept-Language": locale },
@@ -22,14 +23,10 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
         :key="personalProject.id"
         :personal-project
       />
-      <div v-if="limit" class="row-span-4 flex items-center justify-center">
-        <LazyNuxtLinkLocale
-          class="button secondary"
-          :to="{ hash: '#personal-projects', name: 'projects' }"
-        >
-          {{ t("viewAll") }}
-        </LazyNuxtLinkLocale>
-      </div>
+      <UiShowAllButton
+        v-if="limit"
+        :to="localePath({ name: 'projects', hash: '#personal-projects' })"
+      />
     </div>
   </UiBlock>
 </template>

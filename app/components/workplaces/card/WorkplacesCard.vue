@@ -13,7 +13,7 @@ defineProps<{
 
 <template>
   <div
-    class="card col-span-full grid grid-flow-dense grid-cols-subgrid gap-y-6 p-5 sm:p-8"
+    class="card col-span-full grid grid-flow-dense grid-cols-subgrid gap-y-6 p-5 sm:p-6"
   >
     <NuxtImg
       :alt="workplace.title"
@@ -38,7 +38,7 @@ defineProps<{
         :date="workplace.startDate"
       />
       <hr
-        class="hidden w-6 border-neutral-200 sm:block dark:border-neutral-700"
+        class="hidden w-4 border-neutral-200 sm:block dark:border-neutral-700"
       />
       <WorkplacesCardDate data-test-id="endDate" :date="workplace.endDate" />
     </div>

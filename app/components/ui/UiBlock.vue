@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="flex scroll-mt-32 flex-col gap-y-6 sm:gap-y-8 lg:gap-y-10">
+  <section class="flex scroll-mt-32 flex-col gap-y-3 sm:gap-y-4 lg:gap-y-6">
     <div
       v-if="!hideTitle"
       class="flex flex-col gap-y-1 sm:flex-row sm:items-baseline sm:gap-x-4"

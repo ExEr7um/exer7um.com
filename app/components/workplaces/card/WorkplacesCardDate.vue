@@ -19,16 +19,13 @@ const formattedDate = computed(() =>
 </script>
 
 <template>
-  <time
-    class="size-max rounded-md px-3 py-2 text-sm first-letter:capitalize md:text-base"
-    :class="[
-      date
-        ? 'tag'
-        : 'border border-blue-200 bg-blue-50 text-blue-600 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400',
-    ]"
-  >
-    {{ formattedDate }}
-  </time>
+  <UBadge
+    as="time"
+    :color="date ? 'neutral' : 'primary'"
+    :label="formattedDate"
+    size="lg"
+    variant="subtle"
+  />
 </template>
 
 <i18n lang="yaml">

@@ -1,6 +1,7 @@
-// @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
+// @vitest-environment happy-dom
+import { UButton } from "#components"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
@@ -17,7 +18,7 @@ describe("Компонент Social", () => {
     wrapper.unmount()
   })
 
-  const socialButtons = () => wrapper.findAllComponents({ name: "UButton" })
+  const socialButtons = () => wrapper.findAllComponents(UButton)
   const firstSocialButton = () => socialButtons().at(0)!
 
   describe("Отсутствует compact", () => {

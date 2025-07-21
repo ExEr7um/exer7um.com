@@ -1,7 +1,7 @@
-// @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { shallowMount } from "@vue/test-utils"
+import { UBadge } from "#components"
+import { mountSuspended } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import WorkplacesCardDate from "~/components/workplaces/card/WorkplacesCardDate.vue"
@@ -9,21 +9,17 @@ import WorkplacesCardDate from "~/components/workplaces/card/WorkplacesCardDate.
 describe("Компонент WorkplacesCardDate", () => {
   const date = "2024-01-01T00:00:00.000Z"
 
-  const defaultClasses = "tag"
-  const activeClasses =
-    "border border-blue-200 bg-blue-50 text-blue-600 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400"
-
   let wrapper: VueWrapper
 
-  beforeEach(() => {
-    wrapper = shallowMount(WorkplacesCardDate, { props: { date } })
+  beforeEach(async () => {
+    wrapper = await mountSuspended(WorkplacesCardDate, { props: { date } })
   })
 
   afterEach(() => {
     wrapper.unmount()
   })
 
-  const wrapperClasses = () => wrapper.classes()
+  const badge = () => wrapper.findComponent(UBadge)
 
   test("Семантический тег time", () => {
     expect(wrapper.element.tagName).toBe("TIME")
@@ -38,12 +34,8 @@ describe("Компонент WorkplacesCardDate", () => {
   })
 
   describe("Стилизация присутствия даты", () => {
-    test("По умолчанию присутствует только класс tag", () => {
-      expect(wrapperClasses()).toContain(defaultClasses)
-    })
-
-    test("По умолчанию отсутствуют классы выделения", () => {
-      expect(wrapperClasses()).not.toContain(activeClasses)
+    test("По умолчанию нейтральный цвет", () => {
+      expect(badge().props().color).toBe("neutral")
     })
   })
 
@@ -56,12 +48,8 @@ describe("Компонент WorkplacesCardDate", () => {
       expect(wrapper.text()).toBe("Настоящее время")
     })
 
-    test("Отсутствует класс по умолчанию", async () => {
-      expect(wrapperClasses()).not.toContain(defaultClasses)
-    })
-
-    test("Присутствуют классы выделения", async () => {
-      expect(wrapperClasses().join(" ")).toContain(activeClasses)
+    test("Акцентный цвет", async () => {
+      expect(badge().props().color).toBe("primary")
     })
   })
 })

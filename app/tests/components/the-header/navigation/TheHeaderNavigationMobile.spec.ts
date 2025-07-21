@@ -1,5 +1,6 @@
 import type { VueWrapper } from "@vue/test-utils"
 
+import { UButton } from "#components"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
@@ -19,7 +20,7 @@ describe("Компонент TheHeaderNavigationMobile", () => {
     wrapper.unmount()
   })
 
-  const menuButton = () => wrapper.findComponent({ name: "UButton" })
+  const menuButton = () => wrapper.findComponent(UButton)
   const navigationMenu = () => wrapper.findComponent({ name: "UDropdownMenu" })
 
   test("Присутствует кнопка открытия меню", () => {

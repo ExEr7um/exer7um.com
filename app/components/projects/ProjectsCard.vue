@@ -41,8 +41,9 @@ const { t } = useI18n({ useScope: "local" })
         <!-- Год проекта -->
         <small>{{ project.year }}</small>
         <!-- Ссылка на проект -->
-        <NuxtLink
-          class="flex items-center gap-x-1 text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+        <ULink
+          active
+          class="flex items-center gap-x-1"
           data-test-id="project-link"
           external
           target="_blank"
@@ -50,7 +51,7 @@ const { t } = useI18n({ useScope: "local" })
         >
           <span>{{ t("view") }}</span>
           <Icon name="heroicons:arrow-right-16-solid" size="16" />
-        </NuxtLink>
+        </ULink>
       </div>
     </div>
   </div>

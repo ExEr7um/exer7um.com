@@ -10,35 +10,34 @@ defineProps<{
     title: string
   }
 }>()
-
-const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
   <div class="card row-span-4 grid grid-rows-subgrid gap-y-5 p-5">
     <!-- Шапка карточки -->
-    <div class="flex justify-between">
+    <div class="flex items-start justify-between">
       <!-- Иконка проекта -->
-      <div
-        class="tag flex size-16 items-center justify-center rounded-lg font-[system-ui] text-[2rem]"
-        data-test-id="icon"
-      >
-        {{ personalProject.icon }}
-      </div>
+      <UBadge
+        color="neutral"
+        :label="personalProject.icon"
+        :ui="{
+          base: 'size-16 justify-center rounded-lg',
+          label: 'text-[2rem] font-[system-ui]',
+        }"
+        variant="subtle"
+      />
       <!-- Ссылка на GitHub -->
-      <LazyNuxtLink
+      <LazyUButton
         v-if="personalProject.github"
-        :aria-label="t('open', { title: personalProject.title })"
-        data-test-id="github-link"
+        color="neutral"
         external
+        icon="simple-icons:github"
+        size="lg"
+        square
         target="_blank"
         :to="personalProject.github"
-      >
-        <LazyIcon
-          class="text-neutral-400 transition-colors hover:text-neutral-500 dark:text-neutral-500 hover:dark:text-neutral-400"
-          name="simple-icons:github"
-        />
-      </LazyNuxtLink>
+        variant="ghost"
+      />
     </div>
     <!-- Контент карточки -->
     <UiCardContent
@@ -48,10 +47,3 @@ const { t } = useI18n({ useScope: "local" })
     />
   </div>
 </template>
-
-<i18n lang="yaml">
-en:
-  open: Open {title} project on GitHub
-ru:
-  open: Открыть проект {title} на GitHub
-</i18n>

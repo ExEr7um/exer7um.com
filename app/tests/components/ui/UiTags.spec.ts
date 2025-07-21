@@ -1,6 +1,6 @@
+// @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-// @vitest-environment happy-dom
 import { UBadge } from "#components"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"

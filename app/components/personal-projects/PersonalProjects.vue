@@ -25,6 +25,7 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
       />
       <UiShowAllButton
         v-if="limit"
+        class="row-span-4"
         :to="localePath({ name: 'projects', hash: '#personal-projects' })"
       />
     </div>

@@ -1,6 +1,7 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
+import { UBadge, UButton } from "#components"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
@@ -16,7 +17,7 @@ describe("Компонент PersonalProjectsCard", () => {
   const cardContentAttributes = (attribute: string) =>
     wrapper.findComponent(UiCardContent).attributes(attribute)
   const githubLinkAttributes = (attribute: string) =>
-    wrapper.find("[data-test-id=github-link]").attributes(attribute)
+    wrapper.findComponent(UButton).attributes(attribute)
 
   beforeEach(() => {
     wrapper = shallowMount(PersonalProjectsCard, { props: { personalProject } })
@@ -38,7 +39,7 @@ describe("Компонент PersonalProjectsCard", () => {
     })
 
     test("Иконка", () => {
-      expect(wrapper.find("[data-test-id=icon]").text()).toBe(
+      expect(wrapper.findComponent(UBadge).props().label).toBe(
         personalProject.icon,
       )
     })
@@ -59,10 +60,8 @@ describe("Компонент PersonalProjectsCard", () => {
       expect(githubLinkAttributes("target")).toBe("_blank")
     })
 
-    test("Присутствует aria-label", () => {
-      expect(githubLinkAttributes("aria-label")).toBe(
-        `Открыть проект ${personalProject.title} на GitHub`,
-      )
+    test("Иконка", () => {
+      expect(githubLinkAttributes("icon")).toBe("simple-icons:github")
     })
   })
 })

@@ -23,6 +23,7 @@ const { data: projects } = await useFetch("/api/projects", {
       <ProjectsCard v-for="project in projects" :key="project.id" :project />
       <UiShowAllButton
         v-if="limit"
+        class="row-span-5"
         :to="localePath({ name: 'projects', hash: '#projects' })"
       />
     </div>

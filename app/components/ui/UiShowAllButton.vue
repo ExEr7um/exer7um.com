@@ -10,7 +10,7 @@ const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
-  <div class="-col-end-1 row-span-full flex items-center justify-center">
+  <div class="flex items-center justify-center">
     <UButton :label="t('viewAll')" size="lg" :to variant="soft" />
   </div>
 </template>

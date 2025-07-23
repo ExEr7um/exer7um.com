@@ -1,15 +1,3 @@
-import { z } from "zod/mini"
-
-/** Сообщение пользователя */
-const messageSchema = z.object({
-  email: z.email(),
-  message: z.string().check(z.minLength(2)),
-  name: z.string().check(z.minLength(2)),
-})
-
-/** Сообщение пользователя */
-export type Message = z.infer<typeof messageSchema>
-
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig(event)
 

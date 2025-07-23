@@ -12,6 +12,7 @@
 - Vue 3
 - TypeScript
 - Tailwind CSS
+- Nuxt UI
 
 ### Бекенд
 

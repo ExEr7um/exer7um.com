@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import * as locales from "@nuxt/ui/locale"
+import * as nuxtUiLocales from "@nuxt/ui/locale"
+import * as zodLocales from "zod/locales"
+import { config } from "zod/mini"
 
 const { locale } = useI18n()
 const i18nHead = useLocaleHead()
@@ -14,10 +16,15 @@ useHeadSafe({
 })
 
 useSeoMeta({ titleTemplate: `%s | ExEr7um` })
+
+// Локализация ошибок Zod
+watchImmediate(locale, (value) => {
+  config(zodLocales[value]())
+})
 </script>
 
 <template>
-  <UApp :locale="locales[locale]">
+  <UApp :locale="nuxtUiLocales[locale]">
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator color="#2563EB" />
     <NuxtLayout />

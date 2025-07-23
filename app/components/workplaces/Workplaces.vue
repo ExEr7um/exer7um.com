@@ -33,7 +33,7 @@ const fullExperience = formatDuration(
         <!-- @vue-expect-error - неправильно определяется тип -->
         <WorkplacesCard :workplace />
         <hr
-          class="ml-5 h-8 w-px justify-self-center border-none bg-neutral-200 last:hidden sm:ml-8 dark:bg-neutral-800"
+          class="bg-border ml-5 h-8 w-px justify-self-center border-none last:hidden sm:ml-8"
         />
       </template>
     </div>

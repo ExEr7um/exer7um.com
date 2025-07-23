@@ -6,7 +6,7 @@ import { flushPromises } from "@vue/test-utils"
 import { readBody } from "h3"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import ContactForm from "~/components/contact-form/ContactForm.vue"
+import ContactForm from "~/components/ContactForm.vue"
 
 describe("Компонент ContactForm", () => {
   let wrapper: VueWrapper

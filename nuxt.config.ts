@@ -65,6 +65,5 @@ export default defineNuxtConfig({
     defaultTheme: "night-owl",
   },
   site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
-  // TODO: Включить, когда будет исправлен баг с @nuxt/ui и rolldown-vite
-  // vite: { experimental: { enableNativePlugin: true } },
+  vite: { experimental: { enableNativePlugin: true } },
 })

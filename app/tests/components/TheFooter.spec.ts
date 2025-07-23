@@ -4,7 +4,7 @@ import type { VueWrapper } from "@vue/test-utils"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import TheFooter from "~/components/the-footer/TheFooter.server.vue"
+import TheFooter from "~/components/TheFooter.server.vue"
 
 describe("Компонент TheFooter", () => {
   let wrapper: VueWrapper

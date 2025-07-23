@@ -1,17 +1,13 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-:root {
+.light {
   --ui-primary: var(--ui-color-primary-600);
 }
 
 @theme {
   --shadow: 0 4px 6px 0 #4b556308;
   --shadow-lg: 0 10px 20px 0 #01162720;
-
-  --font-weight-bold: 700;
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
 }
 
 @utility container {
@@ -22,23 +18,13 @@
     padding-inline: 2rem;
   }
 }
-
-@utility default-border {
-  /* TODO: Обновить цвета */
-  @apply border border-neutral-200 dark:border-neutral-800;
-}
-
 @utility card {
-  @apply default-border rounded-2xl bg-white dark:bg-neutral-900;
-
-  @variant dark {
-    @apply bg-neutral-900;
-  }
+  @apply border-default bg-default rounded-2xl border;
 }
 
 @layer base {
   body {
-    @apply bg-muted text-muted antialiased;
+    @apply bg-muted text-muted dark:bg-neutral-950;
   }
 
   h1,
@@ -65,7 +51,6 @@
   }
 
   small {
-    /* TODO: Обновить цвета */
-    @apply text-sm text-neutral-400 md:text-base dark:text-neutral-500;
+    @apply text-dimmed text-sm md:text-base;
   }
 }

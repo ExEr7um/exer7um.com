@@ -31,7 +31,7 @@ const navigation = computed(() => {
 <template>
   <header class="sticky top-4 z-10 container">
     <div
-      class="default-border flex items-center justify-between gap-x-2 rounded-xl bg-white/60 p-2 shadow backdrop-blur-lg md:rounded-2xl md:px-4 dark:bg-neutral-900/60"
+      class="border-default flex items-center justify-between gap-x-2 rounded-xl border bg-white/60 p-2 shadow backdrop-blur-lg md:rounded-2xl md:px-4 dark:bg-neutral-900/60"
     >
       <TheHeaderNavigation class="hidden md:flex" :navigation />
       <TheHeaderNavigationMobile class="md:hidden" :navigation />

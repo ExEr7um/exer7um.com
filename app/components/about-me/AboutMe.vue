@@ -49,7 +49,7 @@ const icons = [
       <i18n-t
         v-for="paragraph in 3"
         :key="paragraph"
-        class="text-lg leading-loose"
+        class="text-[1.1875rem] leading-loose"
         :keypath="`about[${paragraph - 1}]`"
         tag="p"
       >
@@ -66,15 +66,16 @@ const icons = [
       </i18n-t>
     </article>
     <div class="flex gap-x-3">
-      <NuxtLink
-        class="button tertiary"
+      <UButton
+        color="neutral"
         external
+        label="GitHub"
+        leading-icon="simple-icons:github"
+        size="lg"
         target="_blank"
         to="https://github.com/ExEr7um/exer7um.com/"
-      >
-        <Icon name="simple-icons:github" />
-        <span>GitHub</span>
-      </NuxtLink>
+        variant="subtle"
+      />
       <UiContactMeButton />
     </div>
   </UiBlock>

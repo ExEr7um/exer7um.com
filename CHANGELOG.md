@@ -1,4 +1,38 @@
 
+## v2.2.0
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.8...v2.2.0)
+
+### 🚀 Улучшения
+
+- Обновление Nuxt до `v4` ([#507](https://github.com/ExEr7um/exer7um.com/pull/507))
+- Настройка Nuxt UI ([#509](https://github.com/ExEr7um/exer7um.com/pull/509))
+- Переработка шапки на Nuxt UI ([#510](https://github.com/ExEr7um/exer7um.com/pull/510))
+- Переработка блока `TheHeroMain` на Nuxt UI ([#511](https://github.com/ExEr7um/exer7um.com/pull/511))
+- Переработка опыта работы на Nuxt UI ([#512](https://github.com/ExEr7um/exer7um.com/pull/512))
+- Переработка проектов на Nuxt UI ([#513](https://github.com/ExEr7um/exer7um.com/pull/513))
+- Переработка раздела «Обо мне» на Nuxt UI ([#515](https://github.com/ExEr7um/exer7um.com/pull/515))
+- Переработка формы обратной связи на Nuxt UI ([#516](https://github.com/ExEr7um/exer7um.com/pull/516))
+- Обновление цветов темной темы для Nuxt UI ([#517](https://github.com/ExEr7um/exer7um.com/pull/517))
+
+### 🐞 Исправления
+
+- Замена Vite на `rolldown-vite` ([#503](https://github.com/ExEr7um/exer7um.com/pull/503))
+
+### 📖 Документация
+
+- Добавление информации о Nuxt UI в `README` ([1cd4c3a](https://github.com/ExEr7um/exer7um.com/commit/1cd4c3a))
+- Обновление версии Nuxt в `README` ([67824b2](https://github.com/ExEr7um/exer7um.com/commit/67824b2))
+
+### 🏡 Другие изменения
+
+- Включение параметра `vite.enableNativePlugin` ([#504](https://github.com/ExEr7um/exer7um.com/pull/504))
+- Вынесение некоторых компонентов в корень ([faa8ac0](https://github.com/ExEr7um/exer7um.com/commit/faa8ac0))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.1.8
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.7...v2.1.8)

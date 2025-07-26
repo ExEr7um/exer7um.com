@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@nuxt/image": "1.10.0",
-    "@nuxt/ui": "3.2.0",
+    "@nuxt/ui": "3.3.0",
     "@nuxthub/core": "0.9.0",
-    "@nuxtjs/i18n": "10.0.2",
+    "@nuxtjs/i18n": "10.0.3",
     "@nuxtjs/seo": "3.1.0",
     "@vueuse/core": "13.5.0",
     "@vueuse/nuxt": "13.5.0",
@@ -44,7 +44,7 @@
     "nuxt-shiki": "0.3.1",
     "vue": "3.5.18",
     "vue-router": "4.5.1",
-    "zod": "4.0.5"
+    "zod": "4.0.10"
   },
   "devDependencies": {
     "@exer7um/eslint-config": "2.2.0",
@@ -59,7 +59,7 @@
     "nuxt-mcp": "0.2.3",
     "typescript": "5.8.3",
     "vitest": "3.2.4",
-    "vue-tsc": "3.0.3",
-    "wrangler": "4.25.1"
+    "vue-tsc": "3.0.4",
+    "wrangler": "4.26.0"
   }
 }

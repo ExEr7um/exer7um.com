@@ -8,7 +8,7 @@
 
 ### Фронтенд
 
-- Nuxt 3
+- Nuxt 4
 - Vue 3
 - TypeScript
 - Tailwind CSS

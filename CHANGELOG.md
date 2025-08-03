@@ -1,4 +1,16 @@
 
+## v2.2.1
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.2.0...v2.2.1)
+
+### 🔥 Производительность
+
+- **API:** Индексы для базы данных ([#519](https://github.com/ExEr7um/exer7um.com/pull/519))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.2.0
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.1.8...v2.2.0)

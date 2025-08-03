@@ -28,6 +28,13 @@
       "tag": "0003_numerous_wilson_fisk",
       "version": "5",
       "when": 1713367715412
+    },
+    {
+      "breakpoints": true,
+      "idx": 4,
+      "tag": "0004_slow_hobgoblin",
+      "version": "6",
+      "when": 1754256899282
     }
   ],
   "version": "5"

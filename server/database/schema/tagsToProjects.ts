@@ -1,17 +1,25 @@
 import { relations } from "drizzle-orm"
-import { integer, sqliteTable } from "drizzle-orm/sqlite-core"
+import { index, integer, sqliteTable } from "drizzle-orm/sqlite-core"
 
 import { projects } from "./project"
 import { tags } from "./tag"
 
-export const tagsToProjects = sqliteTable("tags_to_projects", {
-  projectId: integer("project_id")
-    .notNull()
-    .references(() => projects.id),
-  tagId: integer("tag_id")
-    .notNull()
-    .references(() => tags.id),
-})
+export const tagsToProjects = sqliteTable(
+  "tags_to_projects",
+  {
+    projectId: integer("project_id")
+      .notNull()
+      .references(() => projects.id),
+    tagId: integer("tag_id")
+      .notNull()
+      .references(() => tags.id),
+  },
+  (table) => [
+    index("idx_tp_project_id").on(table.projectId),
+    index("idx_tp_tag_id").on(table.tagId),
+    index("idx_tp_project_tag").on(table.projectId, table.tagId),
+  ],
+)
 
 export const tagsToProjectsRelations = relations(tagsToProjects, ({ one }) => ({
   project: one(projects, {

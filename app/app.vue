@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import * as nuxtUiLocales from "@nuxt/ui/locale"
-import * as zodLocales from "zod/locales"
+import { en as nuxtUiEn, ru as nuxtUiRu } from "@nuxt/ui/locale"
+import { en as zodEn, ru as zodRu } from "zod/locales"
 import { config } from "zod/mini"
+
+const nuxtUiLocales = { en: nuxtUiEn, ru: nuxtUiRu }
+const zodLocales = { en: zodEn, ru: zodRu }
 
 const { locale } = useI18n()
 const i18nHead = useLocaleHead()

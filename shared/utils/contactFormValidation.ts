@@ -1,4 +1,4 @@
-import { z } from "zod/mini"
+import * as z from "zod/mini"
 
 /** Сообщение пользователя */
 export const messageSchema = z.object({

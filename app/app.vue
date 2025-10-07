@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { en as nuxtUiEn, ru as nuxtUiRu } from "@nuxt/ui/locale"
-import { en as zodEn, ru as zodRu } from "zod/locales"
-import { config } from "zod/mini"
+import * as z from "zod/mini"
 
 const nuxtUiLocales = { en: nuxtUiEn, ru: nuxtUiRu }
-const zodLocales = { en: zodEn, ru: zodRu }
+const zodLocales = { en: z.locales.en, ru: z.locales.ru }
 
 const { locale } = useI18n()
 const i18nHead = useLocaleHead()
@@ -22,7 +21,7 @@ useSeoMeta({ titleTemplate: `%s | ExEr7um` })
 
 // Локализация ошибок Zod
 watchImmediate(locale, (value) => {
-  config(zodLocales[value]())
+  z.config(zodLocales[value]())
 })
 </script>
 

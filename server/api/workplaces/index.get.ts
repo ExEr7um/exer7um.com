@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
           "title",
         ),
     },
-    orderBy: desc(tables.workplaces.createdAt), // Сортируем по дате создания — сначала новые
+    orderBy: desc(tables.workplaces.startDate), // Сортируем по дате начала работы — сначала новые
     with: { tags: { columns: {}, with: { tag: true } } },
   })
 

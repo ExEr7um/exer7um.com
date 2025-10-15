@@ -1,4 +1,25 @@
 
+## v2.2.2
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.2.1...v2.2.2)
+
+### 🔥 Производительность
+
+- Импорт только нужных локализаций ([#521](https://github.com/ExEr7um/exer7um.com/pull/521))
+- Обновление импортов `zod` ([#523](https://github.com/ExEr7um/exer7um.com/pull/523))
+
+### 🐞 Исправления
+
+- **API:** Сортировка мест работы по дате начала ([298157e](https://github.com/ExEr7um/exer7um.com/commit/298157e))
+
+### 🏡 Другие изменения
+
+- Удаление `antfu.goto-alias` из расширений ([b3656d7](https://github.com/ExEr7um/exer7um.com/commit/b3656d7))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.2.1
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.2.0...v2.2.1)

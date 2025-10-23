@@ -65,4 +65,5 @@ export default defineNuxtConfig({
     defaultTheme: "night-owl",
   },
   site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
+  ui: { experimental: { componentDetection: true } },
 })

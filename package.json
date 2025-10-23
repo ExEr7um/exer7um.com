@@ -33,7 +33,7 @@
   "dependencies": {
     "@nuxt/image": "1.11.0",
     "@nuxt/ui": "3.3.0",
-    "@nuxthub/core": "0.9.0",
+    "@nuxthub/core": "https://pkg.pr.new/@nuxthub/core@672",
     "@nuxtjs/i18n": "10.1.1",
     "@nuxtjs/seo": "3.2.2",
     "@vueuse/core": "14.0.0",

@@ -28,8 +28,7 @@
   },
   "prettier": "@exer7um/prettier-config",
   "overrides": {
-    "picomatch": "npm:picomatch@4.0.3",
-    "vite": "npm:rolldown-vite@latest"
+    "picomatch": "npm:picomatch@4.0.3"
   },
   "dependencies": {
     "@nuxt/image": "1.11.0",

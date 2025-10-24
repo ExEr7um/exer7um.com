@@ -1,7 +1,7 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { UBadge, UButton } from "#components"
+import { LazyUButton, UBadge } from "#components"
 import { shallowMount } from "@vue/test-utils"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
@@ -17,7 +17,7 @@ describe("Компонент PersonalProjectsCard", () => {
   const cardContentAttributes = (attribute: string) =>
     wrapper.findComponent(UiCardContent).attributes(attribute)
   const githubLinkAttributes = (attribute: string) =>
-    wrapper.findComponent(UButton).attributes(attribute)
+    wrapper.findComponent(LazyUButton).attributes(attribute)
 
   beforeEach(() => {
     wrapper = shallowMount(PersonalProjectsCard, { props: { personalProject } })

@@ -1,11 +1,17 @@
-import { defineVitestConfig } from "@nuxt/test-utils/config"
+import { defineVitestProject } from "@nuxt/test-utils/config"
+import { defineConfig } from "vitest/config"
 
-export default defineVitestConfig({
-  experimental: { enableNativePlugin: false },
+export default defineConfig({
   test: {
-    environment: "nuxt",
-    globals: true,
-    include: ["**/*.spec.ts"],
-    setupFiles: ["tests/setup.ts"],
+    projects: [
+      await defineVitestProject({
+        test: {
+          environment: "nuxt",
+          include: ["**/*.spec.ts"],
+          name: "unit",
+          setupFiles: ["tests/setup.ts"],
+        },
+      }),
+    ],
   },
 })

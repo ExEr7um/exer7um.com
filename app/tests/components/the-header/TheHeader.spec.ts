@@ -1,9 +1,7 @@
 import type { VueWrapper } from "@vue/test-utils"
 
+import { TheHeader } from "#components"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
-
-import TheHeader from "~/components/the-header/TheHeader.vue"
 
 describe("Компонент TheHeader", () => {
   let wrapper: VueWrapper

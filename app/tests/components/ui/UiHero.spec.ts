@@ -1,10 +1,8 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
+import { UiHero } from "#components"
 import { mount } from "@vue/test-utils"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
-
-import UiHero from "~/components/ui/UiHero.vue"
 
 describe("Компонент UiHero", () => {
   let wrapper: VueWrapper

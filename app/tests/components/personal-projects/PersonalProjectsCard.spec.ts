@@ -1,13 +1,15 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { LazyUButton, UBadge } from "#components"
+import {
+  LazyUButton,
+  PersonalProjectsCard,
+  UBadge,
+  UiCardContent,
+} from "#components"
 import { shallowMount } from "@vue/test-utils"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import PersonalProjectsCard from "~/components/personal-projects/PersonalProjectsCard.vue"
-import UiCardContent from "~/components/ui/UiCardContent.vue"
-import { personalProjects } from "~/tests/constants/personalProjects"
+import personalProjects from "~/tests/constants/personalProjects"
 
 describe("Компонент PersonalProjectsCard", () => {
   const personalProject = personalProjects[0]

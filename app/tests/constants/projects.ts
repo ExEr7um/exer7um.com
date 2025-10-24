@@ -1,6 +1,6 @@
-import { tags } from "~/tests/constants/tags"
+import tags from "~/tests/constants/tags"
 
-export const projects = [
+export default [
   {
     backgroundColor: "#000000",
     description: "Интернет-магазин брендовой одежды",

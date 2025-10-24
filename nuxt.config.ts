@@ -56,8 +56,9 @@ export default defineNuxtConfig({
   image: {
     cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" },
   },
+  imports: { presets: ["vitest"] },
   linkChecker: { enabled: false },
-  nitro: { preset: "cloudflare-pages" },
+  nitro: { imports: { presets: ["vitest"] }, preset: "cloudflare-pages" },
   ogImage: { zeroRuntime: true },
   robots: { blockNonSeoBots: true },
   router: { options: { scrollBehaviorType: "smooth" } },

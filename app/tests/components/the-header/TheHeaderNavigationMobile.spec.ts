@@ -1,11 +1,9 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { UButton } from "#components"
+import { TheHeaderNavigationMobile, UButton } from "#components"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import TheHeaderNavigationMobile from "~/components/the-header/TheHeaderNavigationMobile.vue"
-import { navigation } from "~/tests/constants/navigation"
+import navigation from "~/tests/constants/navigation"
 
 describe("Компонент TheHeaderNavigationMobile", () => {
   let wrapper: VueWrapper

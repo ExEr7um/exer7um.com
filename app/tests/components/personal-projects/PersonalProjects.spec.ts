@@ -1,14 +1,12 @@
 import type { VueWrapper } from "@vue/test-utils"
 import type { H3Event } from "h3"
 
+import { PersonalProjects, PersonalProjectsCard } from "#components"
 import { getHeaderLocale } from "@intlify/h3"
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
 import { getQuery } from "h3"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import PersonalProjects from "~/components/personal-projects/PersonalProjects.vue"
-import PersonalProjectsCard from "~/components/personal-projects/PersonalProjectsCard.vue"
-import { personalProjects } from "~/tests/constants/personalProjects"
+import personalProjects from "~/tests/constants/personalProjects"
 
 describe("Компонент PersonalProjects", () => {
   let wrapper: VueWrapper

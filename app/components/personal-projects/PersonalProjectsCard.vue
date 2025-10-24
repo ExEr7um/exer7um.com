@@ -10,6 +10,8 @@ defineProps<{
     title: string
   }
 }>()
+
+const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
@@ -27,17 +29,19 @@ defineProps<{
         variant="subtle"
       />
       <!-- Ссылка на GitHub -->
-      <LazyUButton
-        v-if="personalProject.github"
-        color="neutral"
-        external
-        icon="simple-icons:github"
-        size="lg"
-        square
-        target="_blank"
-        :to="personalProject.github"
-        variant="ghost"
-      />
+      <LazyUTooltip v-if="personalProject.github" :text="t('open')">
+        <LazyUButton
+          :aria-label="t('open')"
+          color="neutral"
+          external
+          icon="simple-icons:github"
+          size="lg"
+          square
+          target="_blank"
+          :to="personalProject.github"
+          variant="ghost"
+        />
+      </LazyUTooltip>
     </div>
     <!-- Контент карточки -->
     <UiCardContent
@@ -47,3 +51,10 @@ defineProps<{
     />
   </div>
 </template>
+
+<i18n lang="yaml">
+en:
+  open: Open in GitHub
+ru:
+  open: Открыть на GitHub
+</i18n>

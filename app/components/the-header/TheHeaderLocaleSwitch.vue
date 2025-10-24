@@ -21,6 +21,7 @@ const nextLocaleCode = computed(() => {
 <template>
   <UTooltip :text="t('changeLocale')">
     <UButton
+      :aria-label="t('changeLocale')"
       class="uppercase"
       color="neutral"
       :label="locale"

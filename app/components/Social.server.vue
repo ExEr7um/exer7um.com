@@ -6,6 +6,8 @@ const { compact } = defineProps<{
 
 /** Социальная сеть */
 export interface SocialCard {
+  /** `aria-label` социальной сети */
+  ariaLabel: string
   /** Иконка социальной сети */
   icon: string
   /** `URL` социальной сети */
@@ -14,13 +16,25 @@ export interface SocialCard {
 
 /** Уменьшенный список социальных сетей */
 const compactSocial = [
-  { icon: "icon-park-outline:telegram", to: "https://t.me/exer7um" },
-  { icon: "heroicons:at-symbol", to: "mailto:work@exer7um.com" },
+  {
+    ariaLabel: "Telegram",
+    icon: "icon-park-outline:telegram",
+    to: "https://t.me/exer7um",
+  },
+  {
+    ariaLabel: "E-Mail",
+    icon: "heroicons:at-symbol",
+    to: "mailto:work@exer7um.com",
+  },
 ] as const satisfies SocialCard[]
 
 /** Социальные сети для общего списка */
 const fullSocial = [
-  { icon: "simple-icons:github", to: "https://github.com/ExEr7um" },
+  {
+    ariaLabel: "GitHub",
+    icon: "simple-icons:github",
+    to: "https://github.com/ExEr7um",
+  },
 ] as const satisfies SocialCard[]
 
 /** Список социальных сетей */
@@ -32,8 +46,9 @@ const social = computed(() => {
 <template>
   <div class="flex" :class="[compact ? 'gap-x-3' : 'gap-x-4']">
     <UButton
-      v-for="{ icon, to } in social"
+      v-for="{ icon, to, ariaLabel } in social"
       :key="to"
+      :aria-label
       color="neutral"
       external
       :icon

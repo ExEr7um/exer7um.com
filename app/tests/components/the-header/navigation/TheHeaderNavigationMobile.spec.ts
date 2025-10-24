@@ -4,7 +4,7 @@ import { UButton } from "#components"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import TheHeaderNavigationMobile from "~/components/the-header/navigation/TheHeaderNavigationMobile.vue"
+import TheHeaderNavigationMobile from "~/components/the-header/TheHeaderNavigationMobile.vue"
 import { navigation } from "~/tests/constants/navigation"
 
 describe("Компонент TheHeaderNavigationMobile", () => {

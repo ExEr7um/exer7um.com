@@ -18,7 +18,7 @@ const { data: projects } = await useFetch("/api/projects", {
 <template>
   <UiBlock id="projects" :hide-title :title="t('projects')">
     <div
-      class="grid grid-cols-1 grid-rows-[repeat(5,_auto)] gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      class="grid grid-cols-1 grid-rows-[repeat(5,auto)] gap-4 sm:grid-cols-2 lg:grid-cols-4"
     >
       <ProjectsCard v-for="project in projects" :key="project.id" :project />
       <UiShowAllButton

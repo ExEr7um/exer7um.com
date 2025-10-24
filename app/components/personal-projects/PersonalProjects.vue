@@ -16,7 +16,7 @@ const { data: personalProjects } = await useFetch("/api/personal-projects", {
 <template>
   <UiBlock id="personal-projects" :title="t('personalProjects')">
     <div
-      class="grid grid-cols-1 grid-rows-[repeat(4,_auto)] gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      class="grid grid-cols-1 grid-rows-[repeat(4,auto)] gap-4 sm:grid-cols-2 lg:grid-cols-4"
     >
       <PersonalProjectsCard
         v-for="personalProject in personalProjects"

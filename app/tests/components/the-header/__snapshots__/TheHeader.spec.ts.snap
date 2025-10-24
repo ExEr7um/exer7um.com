@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Компонент TheHeader > Десктопная навигация > Передаются элементы навигации 1`] = `
+[
+  {
+    "icon": "heroicons:home",
+    "label": "pages.index",
+    "to": "/",
+  },
+  {
+    "icon": "heroicons:briefcase",
+    "label": "pages.experience",
+    "to": "/experience/",
+  },
+  {
+    "icon": "heroicons:squares-2x2",
+    "label": "pages.projects",
+    "to": "/projects/",
+  },
+  {
+    "icon": "heroicons:user",
+    "label": "pages.about",
+    "to": "/about/",
+  },
+]
+`;
+
+exports[`Компонент TheHeader > Мобильная навигация > Передаются элементы навигации 1`] = `
+[
+  {
+    "icon": "heroicons:home",
+    "label": "pages.index",
+    "to": "/",
+  },
+  {
+    "icon": "heroicons:briefcase",
+    "label": "pages.experience",
+    "to": "/experience/",
+  },
+  {
+    "icon": "heroicons:squares-2x2",
+    "label": "pages.projects",
+    "to": "/projects/",
+  },
+  {
+    "icon": "heroicons:user",
+    "label": "pages.about",
+    "to": "/about/",
+  },
+]
+`;

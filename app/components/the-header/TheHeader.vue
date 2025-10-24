@@ -33,7 +33,7 @@ const navigation = computed(() => {
     <div
       class="border-default flex items-center justify-between gap-x-2 rounded-xl border bg-white/60 p-2 shadow backdrop-blur-lg md:rounded-2xl md:px-4 dark:bg-neutral-900/60"
     >
-      <TheHeaderNavigation class="hidden md:flex" :navigation />
+      <UNavigationMenu class="hidden md:flex" :items="navigation" />
       <TheHeaderNavigationMobile class="md:hidden" :navigation />
       <div class="flex justify-between gap-x-2">
         <TheHeaderLocaleSwitch />

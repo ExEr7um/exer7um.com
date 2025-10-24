@@ -1,3 +1,5 @@
+import removeTestId from "./app/utils/removeTestId"
+
 /**
  * Общие модули, которые используются в любой среде.
  *
@@ -27,7 +29,14 @@ const testModules = [...modules, "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
   $development: { hub: { remote: "production" }, modules: devModules },
-  $production: { modules },
+  $production: {
+    modules,
+    vite: {
+      vue: {
+        template: { compilerOptions: { nodeTransforms: [removeTestId] } },
+      },
+    },
+  },
   $test: { modules: testModules, ogImage: { enabled: false } },
   compatibilityDate: "2025-07-16",
   css: ["~/assets/css/main.css"],

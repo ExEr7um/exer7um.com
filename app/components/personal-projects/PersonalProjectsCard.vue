@@ -29,19 +29,18 @@ const { t } = useI18n({ useScope: "local" })
         variant="subtle"
       />
       <!-- Ссылка на GitHub -->
-      <LazyUTooltip v-if="personalProject.github" :text="t('open')">
-        <LazyUButton
-          :aria-label="t('open')"
-          color="neutral"
-          external
-          icon="simple-icons:github"
-          size="lg"
-          square
-          target="_blank"
-          :to="personalProject.github"
-          variant="ghost"
-        />
-      </LazyUTooltip>
+      <LazyUButton
+        v-if="personalProject.github"
+        :aria-label="t('open')"
+        color="neutral"
+        external
+        icon="simple-icons:github"
+        size="lg"
+        square
+        target="_blank"
+        :to="personalProject.github"
+        variant="ghost"
+      />
     </div>
     <!-- Контент карточки -->
     <UiCardContent

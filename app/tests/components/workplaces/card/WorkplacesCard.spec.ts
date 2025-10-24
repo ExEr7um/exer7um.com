@@ -65,13 +65,13 @@ describe("Компонент WorkplacesCard", () => {
 
   describe("Передача дат", () => {
     test("Передача начальной даты", () => {
-      const startDate = wrapper.find("[data-test-id=startDate]")
+      const startDate = wrapper.find("[data-testid=startDate]")
 
       expect(startDate.attributes("date")).toBe(workplace.startDate)
     })
 
     test("Передача конечной даты", () => {
-      const endDate = wrapper.find("[data-test-id=endDate]")
+      const endDate = wrapper.find("[data-testid=endDate]")
 
       expect(endDate.attributes("date")).toBe(workplace.endDate)
     })

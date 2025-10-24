@@ -15,10 +15,10 @@ defineProps<{
 
 <template>
   <!-- Заголовок и описание -->
-  <component :is="largeTitle ? 'h3' : 'h4'" data-test-id="title">
+  <component :is="largeTitle ? 'h3' : 'h4'" data-testid="title">
     {{ title }}
   </component>
   <p :class="[largeTitle ? '-mt-4' : '-mt-2']">{{ description }}</p>
   <!-- Список тегов -->
-  <LazyUiTags v-if="tags.length" data-test-id="tags" :tags />
+  <LazyUiTags v-if="tags.length" data-testid="tags" :tags />
 </template>

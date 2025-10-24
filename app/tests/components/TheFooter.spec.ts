@@ -22,7 +22,7 @@ describe("Компонент TheFooter", () => {
   })
 
   test("Текущий год в Copyright", () => {
-    const copyright = wrapper.find("[data-test-id=copyright]")
+    const copyright = wrapper.find("[data-testid=copyright]")
 
     expect(copyright.text()).toContain(`2021-${new Date().getFullYear()}`)
   })

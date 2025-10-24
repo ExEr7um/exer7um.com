@@ -24,7 +24,7 @@ describe("Компонент UiCardContent", () => {
     wrapper.unmount()
   })
 
-  const title = () => wrapper.find("[data-test-id=title]")
+  const title = () => wrapper.find("[data-testid=title]")
 
   describe("Заголовок", () => {
     test("По умолчанию h4", () => {
@@ -48,7 +48,7 @@ describe("Компонент UiCardContent", () => {
 
   describe("Список тегов", () => {
     test("Передается из props", () => {
-      expect(wrapper.find("[data-test-id=tags]").attributes("tags")).toBe(
+      expect(wrapper.find("[data-testid=tags]").attributes("tags")).toBe(
         cardContent.tags.toString(),
       )
     })
@@ -56,7 +56,7 @@ describe("Компонент UiCardContent", () => {
     test("Отсутствует при пустом массиве", async () => {
       await wrapper.setProps({ tags: [] })
 
-      expect(wrapper.find("[data-test-id=tags]").exists()).toBeFalsy()
+      expect(wrapper.find("[data-testid=tags]").exists()).toBeFalsy()
     })
   })
 })

@@ -18,7 +18,7 @@ describe("Компонент ProjectsCard", () => {
   const logoAttributes = (attribute: string) =>
     wrapper.findComponent({ name: "NuxtImg" }).attributes(attribute)
   const projectLinkAttributes = (attribute: string) =>
-    wrapper.find("[data-test-id=project-link]").attributes(attribute)
+    wrapper.find("[data-testid=project-link]").attributes(attribute)
 
   beforeEach(() => {
     wrapper = shallowMount(ProjectsCard, { props: { project } })
@@ -49,7 +49,7 @@ describe("Компонент ProjectsCard", () => {
   describe("Логотип проекта", () => {
     test("Выставляется фон из props", () => {
       expect(
-        wrapper.find<HTMLDivElement>("[data-test-id=logo]").element.style
+        wrapper.find<HTMLDivElement>("[data-testid=logo]").element.style
           .backgroundColor,
       ).toBe(project.backgroundColor)
     })

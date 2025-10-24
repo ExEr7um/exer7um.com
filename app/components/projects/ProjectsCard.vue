@@ -18,7 +18,7 @@ const { t } = useI18n({ useScope: "local" })
     <!-- Логотип проекта -->
     <div
       class="-mr-0.5 flex aspect-video size-full items-center justify-center rounded-2xl px-6 py-8 ring-1 ring-neutral-200 dark:ring-neutral-800"
-      data-test-id="logo"
+      data-testid="logo"
       :style="{ backgroundColor: project.backgroundColor }"
     >
       <NuxtImg
@@ -44,7 +44,7 @@ const { t } = useI18n({ useScope: "local" })
         <ULink
           active
           class="flex items-center gap-x-1"
-          data-test-id="project-link"
+          data-testid="project-link"
           external
           target="_blank"
           :to="project.url"

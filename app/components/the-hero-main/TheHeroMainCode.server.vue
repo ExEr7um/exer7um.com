@@ -31,7 +31,7 @@ const code = `<section class="flex items-center justify-between gap-x-8 py-8">
         :key="color"
         class="size-2.5 rounded-full sm:size-3"
         :class="color"
-        data-test-id="windowButton"
+        data-testid="windowButton"
       />
       <code class="ml-auto">TheHero.vue</code>
     </div>

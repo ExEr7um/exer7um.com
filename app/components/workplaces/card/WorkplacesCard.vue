@@ -33,14 +33,11 @@ defineProps<{
     <div
       class="flex flex-col-reverse items-end gap-x-3 gap-y-2 self-start justify-self-end sm:flex-row sm:items-center"
     >
-      <WorkplacesCardDate
-        data-test-id="startDate"
-        :date="workplace.startDate"
-      />
+      <WorkplacesCardDate data-testid="startDate" :date="workplace.startDate" />
       <hr
         class="hidden w-4 border-neutral-200 sm:block dark:border-neutral-700"
       />
-      <WorkplacesCardDate data-test-id="endDate" :date="workplace.endDate" />
+      <WorkplacesCardDate data-testid="endDate" :date="workplace.endDate" />
     </div>
   </div>
 </template>

@@ -1,4 +1,33 @@
 
+## v2.2.3
+
+[compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.2.2...v2.2.3)
+
+### 🐞 Исправления
+
+- Обновление Nuxt UI до `v4` ([#525](https://github.com/ExEr7um/exer7um.com/pull/525))
+- Добавление `aria-label` для кнопок без текста ([#528](https://github.com/ExEr7um/exer7um.com/pull/528))
+- Удаление атрибута `data-testid` при сборке ([#530](https://github.com/ExEr7um/exer7um.com/pull/530))
+- Обновление Nuxt до `v4.2` ([#532](https://github.com/ExEr7um/exer7um.com/pull/532))
+
+### 💅 Рефактор кода
+
+- Удаление компонента `TheHeaderNavigation` ([#529](https://github.com/ExEr7um/exer7um.com/pull/529))
+
+### 🏡 Другие изменения
+
+- Исправление классов Tailwind CSS ([02c16d6](https://github.com/ExEr7um/exer7um.com/commit/02c16d6))
+
+### ✅ Тестирование
+
+- Обновление Vitest до `v4` ([#527](https://github.com/ExEr7um/exer7um.com/pull/527))
+- Правильное название атрибута `data-testid` ([33f62aa](https://github.com/ExEr7um/exer7um.com/commit/33f62aa))
+- Автоимпорты `vitest` для тестов ([#531](https://github.com/ExEr7um/exer7um.com/pull/531))
+
+### ❤️ Contributors
+
+- Vasily Kuzin ([@ExEr7um](https://github.com/ExEr7um))
+
 ## v2.2.2
 
 [compare changes](https://github.com/ExEr7um/exer7um.com/compare/v2.2.1...v2.2.2)

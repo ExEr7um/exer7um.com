@@ -1,9 +1,7 @@
 import type { VueWrapper } from "@vue/test-utils"
 
+import { UiContactMeButton } from "#components"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
-
-import UiContactMeButton from "~/components/ui/UiContactMeButton.vue"
 
 describe("Компонент UiContactMeButton", () => {
   let wrapper: VueWrapper

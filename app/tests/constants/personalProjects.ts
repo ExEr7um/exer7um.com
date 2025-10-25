@@ -1,6 +1,6 @@
-import { tags } from "./tags"
+import tags from "./tags"
 
-export const personalProjects = [
+export default [
   {
     description: "Описание личного проекта",
     github: "https://exer7um.com/",

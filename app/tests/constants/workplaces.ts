@@ -1,6 +1,6 @@
-import { tags } from "~/tests/constants/tags"
+import tags from "~/tests/constants/tags"
 
-export const workplaces = [
+export default [
   {
     description: "Описание места работы",
     endDate: "2024-08-01T00:00:00.000Z",

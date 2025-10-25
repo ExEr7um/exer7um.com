@@ -3,7 +3,6 @@ import type { VueWrapper } from "@vue/test-utils"
 
 import { UButton } from "#components"
 import { shallowMount } from "@vue/test-utils"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import Social from "~/components/Social.server.vue"
 

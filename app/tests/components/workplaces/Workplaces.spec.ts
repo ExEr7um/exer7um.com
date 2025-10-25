@@ -1,13 +1,11 @@
 import type { VueWrapper } from "@vue/test-utils"
 import type { H3Event } from "h3"
 
+import { Workplaces, WorkplacesCard } from "#components"
 import { getHeaderLocale } from "@intlify/h3"
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import WorkplacesCard from "~/components/workplaces/card/WorkplacesCard.vue"
-import Workplaces from "~/components/workplaces/Workplaces.vue"
-import { workplaces } from "~/tests/constants/workplaces"
+import workplaces from "~/tests/constants/workplaces"
 
 describe("Компонент Workplaces", () => {
   let wrapper: VueWrapper

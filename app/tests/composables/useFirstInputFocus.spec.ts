@@ -1,10 +1,8 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
+import { useFirstInputFocus } from "#imports"
 import { shallowMount } from "@vue/test-utils"
-import { afterEach, describe, expect, test } from "vitest"
-
-import useFirstInputFocus from "~/composables/useFirstInputFocus"
 
 describe("Функция useFirstInputFocus", () => {
   const testingComponent = defineComponent({

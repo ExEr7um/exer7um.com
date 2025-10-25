@@ -1,10 +1,9 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
+import { UiBlock } from "#components"
 import { shallowMount } from "@vue/test-utils"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
-import UiBlock from "~/components/ui/UiBlock.vue"
 import { TEST_BLOCK } from "~/tests/constants/utils"
 
 describe("Компонент UiBlock", () => {

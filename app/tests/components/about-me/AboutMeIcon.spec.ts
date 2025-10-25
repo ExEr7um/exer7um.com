@@ -1,20 +1,19 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
+import { AboutMeIcon } from "#components"
 import { shallowMount } from "@vue/test-utils"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import type { TechnologyIcon } from "~/components/about-me/AboutMeIcon.vue"
 
-import AboutMeIcon from "~/components/about-me/AboutMeIcon.vue"
+const icon = {
+  color: "#00DC82",
+  icon: "logos:nuxt-icon",
+  key: "nuxt",
+  title: "Nuxt 3",
+} as const satisfies TechnologyIcon
 
 describe("Компонент AboutMeIcon", () => {
-  const icon = {
-    color: "#00DC82",
-    icon: "logos:nuxt-icon",
-    key: "nuxt",
-    title: "Nuxt 3",
-  } as const satisfies TechnologyIcon
   let wrapper: VueWrapper
 
   beforeEach(() => {

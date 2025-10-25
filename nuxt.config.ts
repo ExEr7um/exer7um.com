@@ -58,7 +58,7 @@ export default defineNuxtConfig({
   },
   imports: { presets: ["vitest"] },
   linkChecker: { enabled: false },
-  nitro: { imports: { presets: ["vitest"] }, preset: "cloudflare-pages" },
+  nitro: { preset: "cloudflare-pages" },
   ogImage: { zeroRuntime: true },
   robots: { blockNonSeoBots: true },
   router: { options: { scrollBehaviorType: "smooth" } },

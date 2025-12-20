@@ -25,3 +25,6 @@ logs
 
 # ESLint
 .eslintcache
+
+# Wrangler
+.wrangler/

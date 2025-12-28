@@ -1,22 +1,10 @@
 import tags from "~/tests/constants/tags"
 
-export default [
-  {
-    description: "Описание места работы",
-    endDate: "2024-08-01T00:00:00.000Z",
-    id: 1,
-    logo: "/test-logo.webp",
-    startDate: "2024-01-01T00:00:00.000Z",
-    tags,
-    title: "Заголовок места работы",
-  },
-  {
-    description: "Описание места работы 2",
-    endDate: "2024-01-01T00:00:00.000Z",
-    id: 2,
-    logo: "/test-logo.webp",
-    startDate: "2023-01-01T00:00:00.000Z",
-    tags,
-    title: "Заголовок места работы 2",
-  },
-] as const
+import { getTagsForItem, transformSeedObject } from "./utils"
+
+export default seedData.workplaces.map((workplace, index) => ({
+  ...transformSeedObject(workplace, index),
+  endDate: workplace.endDate.toISOString(),
+  startDate: workplace.startDate.toISOString(),
+  tags: getTagsForItem(index + 1, seedData.tagsToWorkplaces, tags),
+}))

@@ -16,6 +16,7 @@ export const workplaces = sqliteTable(
 )
 
 export type Workplace = typeof workplaces.$inferSelect
+export type WorkplaceInsert = typeof workplaces.$inferInsert
 
 export const workplacesRelations = relations(workplaces, ({ many }) => ({
   tags: many(tagsToWorkplaces),

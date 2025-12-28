@@ -1,20 +1,7 @@
 import tags from "./tags"
+import { getTagsForItem, transformSeedObject } from "./utils"
 
-export default [
-  {
-    description: "Описание личного проекта",
-    github: "https://exer7um.com/",
-    icon: "🍔",
-    id: 1,
-    tags: tags,
-    title: "Личный проект",
-  },
-  {
-    description: "Описание личного проекта",
-    github: "https://exer7um.com/",
-    icon: "🍔",
-    id: 2,
-    tags: tags,
-    title: "Личный проект",
-  },
-] as const
+export default seedData.personalProjects.map((project, index) => ({
+  ...transformSeedObject(project, index),
+  tags: getTagsForItem(index + 1, seedData.tagsToPersonalProjects, tags),
+}))

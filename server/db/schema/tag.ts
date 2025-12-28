@@ -13,6 +13,7 @@ export const tags = sqliteTable(
 )
 
 export type Tag = typeof tags.$inferSelect
+export type TagInsert = typeof tags.$inferInsert
 
 export const tagsRelations = relations(tags, ({ many }) => ({
   personalProjects: many(tagsToPersonalProjects),

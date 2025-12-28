@@ -15,6 +15,7 @@ export const personalProjects = sqliteTable(
 )
 
 export type PersonalProject = typeof personalProjects.$inferSelect
+export type PersonalProjectInsert = typeof personalProjects.$inferInsert
 
 export const personalProjectsRelations = relations(
   personalProjects,

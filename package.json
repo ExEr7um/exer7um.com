@@ -33,7 +33,7 @@
   "dependencies": {
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "4.3.0",
-    "@nuxthub/core": "0.10.3",
+    "@nuxthub/core": "0.10.4",
     "@nuxtjs/i18n": "10.2.1",
     "@nuxtjs/seo": "3.3.0",
     "@vueuse/core": "14.1.0",
@@ -59,7 +59,7 @@
     "nuxt-mcp": "0.2.6",
     "typescript": "5.9.3",
     "vitest": "4.0.16",
-    "vue-tsc": "3.1.8",
+    "vue-tsc": "3.2.1",
     "wrangler": "4.56.0"
   }
 }

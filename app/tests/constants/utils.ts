@@ -33,9 +33,12 @@ export function tagsWithIds(tags: TagInsert[]): Tag[] {
 }
 
 /**
+ * Преобразует объект из seed данных в тестовый формат с ID и локализованными полями.
  *
- * @param seedObject
- * @param index
+ * @template T - тип объекта из seed данных
+ * @param seedObject - объект из seed данных
+ * @param index - индекс объекта
+ * @returns объект в тестовом формате
  */
 export function transformSeedObject<
   T extends { descriptionRU: string; titleRU: string },

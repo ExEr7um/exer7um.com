@@ -40,7 +40,12 @@ export default defineNuxtConfig({
       },
     },
   },
-  $test: { modules: testModules, ogImage: { enabled: false } },
+  $test: {
+    modules: testModules,
+    ogImage: { enabled: false },
+    sitemap: { enabled: false },
+    ui: { colorMode: false },
+  },
   compatibilityDate: "2025-07-16",
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },

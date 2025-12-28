@@ -12,7 +12,7 @@ import { shallowMount } from "@vue/test-utils"
 import personalProjects from "~/tests/constants/personalProjects"
 
 describe("Компонент PersonalProjectsCard", () => {
-  const personalProject = personalProjects[0]
+  const personalProject = personalProjects[0]!
 
   let wrapper: VueWrapper
 

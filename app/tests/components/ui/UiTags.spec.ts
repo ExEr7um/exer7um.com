@@ -38,7 +38,7 @@ describe("Компонент UiTags", () => {
     })
 
     test("Текст", () => {
-      expect(firstTag().props().label).toBe(tags[0].title)
+      expect(firstTag().props().label).toBe(tags[0]!.title)
     })
   })
 })

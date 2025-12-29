@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "assets": { "binding": "ASSETS", "directory": "./.output/public/" },
+  "compatibility_date": "2025-12-19",
+  "d1_databases": [
+    { "binding": "DB", "database_id": "1b50fb47-734a-4fca-9522-2eb80ea87ea8" },
+  ],
+  "kv_namespaces": [
+    { "binding": "CACHE", "id": "53fe11b591a842ffb1153dd1e783296d" },
+    { "binding": "KV", "id": "a3dae127a31844678072534725838783" },
+  ],
+  "main": "./.output/server/index.mjs",
+  "name": "exer7um",
+  "observability": { "enabled": true },
+}

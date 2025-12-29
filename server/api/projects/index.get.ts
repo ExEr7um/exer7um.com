@@ -1,12 +1,10 @@
-import { sql } from "drizzle-orm"
-
 export default defineEventHandler(async (event) => {
   const { limit } = await getValidatedQuery(event, (query) =>
     limitQuerySchema.parse(query),
   )
 
   /** Список проектов */
-  const projects = await useDrizzle().query.projects.findMany({
+  const projects = await db.query.projects.findMany({
     columns: {
       createdAt: false,
       descriptionEN: false,
@@ -16,16 +14,16 @@ export default defineEventHandler(async (event) => {
     },
     extras: {
       description:
-        sql<string>`${tables.projects[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
+        sql<string>`${schema.projects[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
           "description",
         ),
       title:
-        sql<string>`${tables.projects[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
+        sql<string>`${schema.projects[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
           "title",
         ),
     },
     limit: limit, // Ограничиваем количество результатов
-    orderBy: desc(tables.projects.createdAt), // Сортируем по дате создания — сначала новые
+    orderBy: desc(schema.projects.createdAt), // Сортируем по дате создания — сначала новые
     with: { tags: { columns: {}, with: { tag: true } } },
   })
 

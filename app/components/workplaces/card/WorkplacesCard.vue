@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import type { Tag } from "~~/server/database/schema/tag"
-import type { Workplace } from "~~/server/database/schema/workplace"
+import type { schema } from "hub:db"
 
 defineProps<{
   /** Проект */
   workplace: Omit<
-    Workplace,
+    schema.Workplace,
     "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
-  > & { description: string; tags: Tag[]; title: string }
+  > & { description: string; tags: schema.Tag[]; title: string }
 }>()
 </script>
 

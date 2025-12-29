@@ -24,6 +24,9 @@ export const tagsToPersonalProjects = sqliteTable(
   ],
 )
 
+export type TagsToPersonalProjectsInsert =
+  typeof tagsToPersonalProjects.$inferInsert
+
 export const tagsToPersonalProjectsRelations = relations(
   tagsToPersonalProjects,
   ({ one }) => ({

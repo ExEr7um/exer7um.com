@@ -1,8 +1,6 @@
-import { sql } from "drizzle-orm"
-
 export default defineEventHandler(async (event) => {
   /** Список мест работы */
-  const workplaces = await useDrizzle().query.workplaces.findMany({
+  const workplaces = await db.query.workplaces.findMany({
     columns: {
       createdAt: false,
       descriptionEN: false,
@@ -12,15 +10,15 @@ export default defineEventHandler(async (event) => {
     },
     extras: {
       description:
-        sql<string>`${tables.workplaces[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
+        sql<string>`${schema.workplaces[useLocalizedColumn<"descriptionEN" | "descriptionRU">("description", event)]}`.as(
           "description",
         ),
       title:
-        sql<string>`${tables.workplaces[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
+        sql<string>`${schema.workplaces[useLocalizedColumn<"titleEN" | "titleRU">("title", event)]}`.as(
           "title",
         ),
     },
-    orderBy: desc(tables.workplaces.startDate), // Сортируем по дате начала работы — сначала новые
+    orderBy: desc(schema.workplaces.startDate), // Сортируем по дате начала работы — сначала новые
     with: { tags: { columns: {}, with: { tag: true } } },
   })
 

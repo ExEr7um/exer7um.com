@@ -7,7 +7,7 @@ import { shallowMount } from "@vue/test-utils"
 import workplaces from "~/tests/constants/workplaces"
 
 describe("Компонент WorkplacesCard", () => {
-  const workplace = workplaces[0]
+  const workplace = workplaces[0]!
 
   let wrapper: VueWrapper
 
@@ -17,12 +17,8 @@ describe("Компонент WorkplacesCard", () => {
     wrapper.findComponent({ name: "NuxtImg" }).attributes(attribute)
 
   beforeEach(() => {
-    wrapper = shallowMount(WorkplacesCard, {
-      props: {
-        // @ts-expect-error неправильная типизация
-        workplace,
-      },
-    })
+    // @ts-expect-error - неправильная типизация
+    wrapper = shallowMount(WorkplacesCard, { props: { workplace } })
   })
 
   afterEach(() => {

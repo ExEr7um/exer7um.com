@@ -30,7 +30,14 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "eslint.validate": ["javascript", "json", "vue", "typescript", "yaml"],
+  "eslint.validate": [
+    "javascript",
+    "json",
+    "jsonc",
+    "vue",
+    "typescript",
+    "yaml"
+  ],
   "files.associations": { "*.css": "tailwindcss" },
   "git.branchProtection": ["main"],
   "i18n-ally.displayLanguage": "ru",
@@ -39,6 +46,5 @@
   "i18n-ally.localesPaths": ["i18n/locales"],
   "i18n-ally.sourceLanguage": "ru",
   "tailwindCSS.emmetCompletions": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "vue.server.hybridMode": true
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

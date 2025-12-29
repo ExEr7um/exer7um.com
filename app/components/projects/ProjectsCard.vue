@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import type { Project } from "~~/server/database/schema/project"
-import type { Tag } from "~~/server/database/schema/tag"
+import type { schema } from "hub:db"
 
 defineProps<{
   /** Проект */
   project: Omit<
-    Project,
+    schema.Project,
     "createdAt" | "descriptionEN" | "descriptionRU" | "titleEN" | "titleRU"
-  > & { description: string; tags: Tag[]; title: string }
+  > & { description: string; tags: schema.Tag[]; title: string }
 }>()
 
 const { t } = useI18n({ useScope: "local" })

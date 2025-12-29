@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Tag } from "~~/server/database/schema/tag"
+import type { schema } from "hub:db"
 
 defineProps<{
   /** Описание карточки */
@@ -7,7 +7,7 @@ defineProps<{
   /** Является ли заголовок увеличенным */
   largeTitle?: boolean
   /** Теги карточки */
-  tags: Tag[]
+  tags: schema.Tag[]
   /** Заголовок карточки */
   title: string
 }>()

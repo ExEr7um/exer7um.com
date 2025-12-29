@@ -28,7 +28,10 @@ const devModules = [...modules, "nuxt-mcp"]
 const testModules = [...modules, "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
-  $development: { hub: { remote: "production" }, modules: devModules },
+  $development: {
+    modules: devModules,
+    nitro: { experimental: { tasks: true } },
+  },
   $production: {
     modules,
     vite: {
@@ -37,7 +40,12 @@ export default defineNuxtConfig({
       },
     },
   },
-  $test: { modules: testModules, ogImage: { enabled: false } },
+  $test: {
+    modules: testModules,
+    ogImage: { enabled: false },
+    sitemap: { enabled: false },
+    ui: { colorMode: false },
+  },
   compatibilityDate: "2025-07-16",
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
@@ -47,7 +55,7 @@ export default defineNuxtConfig({
     typescriptPlugin: true,
     viteEnvironmentApi: true,
   },
-  hub: { cache: true, database: true },
+  hub: { cache: true, db: "sqlite" },
   i18n: {
     baseUrl: "https://exer7um.com",
     defaultLocale: "ru",
@@ -63,7 +71,10 @@ export default defineNuxtConfig({
   },
   imports: { presets: ["vitest"] },
   linkChecker: { enabled: false },
-  nitro: { preset: "cloudflare-pages" },
+  nitro: {
+    cloudflare: { deployConfig: true, nodeCompat: true },
+    preset: "cloudflare-module",
+  },
   ogImage: { zeroRuntime: true },
   robots: { blockNonSeoBots: true },
   router: { options: { scrollBehaviorType: "smooth" } },

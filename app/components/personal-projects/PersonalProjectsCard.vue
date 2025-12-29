@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import type { PersonalProject } from "~~/server/database/schema/personalProject"
-import type { Tag } from "~~/server/database/schema/tag"
+import type { schema } from "hub:db"
 
 defineProps<{
   /** Личный проект */
-  personalProject: Pick<PersonalProject, "github" | "icon" | "id"> & {
+  personalProject: Pick<schema.PersonalProject, "github" | "icon" | "id"> & {
     description: string
-    tags: Tag[]
+    tags: schema.Tag[]
     title: string
   }
 }>()

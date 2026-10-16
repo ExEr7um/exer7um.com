@@ -1,6 +1,8 @@
 {
   "[javascript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[typescript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "[vue]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
   "cSpell.language": "en,ru",
   "cSpell.words": [
@@ -32,6 +34,7 @@
   "editor.codeActionsOnSave": { "source.fixAll": "explicit" },
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
   "editor.tabSize": 2,
   "eslint.validate": ["javascript", "json", "jsonc", "vue", "typescript", "yaml"],
   "files.associations": { "*.css": "tailwindcss" },
@@ -41,6 +44,7 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": ["i18n/locales"],
   "i18n-ally.sourceLanguage": "ru",
+  "oxc.disableNestedConfig": true,
   "oxc.enable.oxlint": false,
   "oxc.fmt.disableNestedConfig": true,
   "tailwindCSS.emmetCompletions": true,

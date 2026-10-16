@@ -46,10 +46,9 @@ describe("Компонент ProjectsCard", () => {
 
   describe("Логотип проекта", () => {
     test("Выставляется фон из props", () => {
-      expect(
-        wrapper.find<HTMLDivElement>("[data-testid=logo]").element.style
-          .backgroundColor,
-      ).toBe(project.backgroundColor)
+      expect(wrapper.find<HTMLDivElement>("[data-testid=logo]").element.style.backgroundColor).toBe(
+        project.backgroundColor,
+      )
     })
 
     test("Атрибут alt", () => {

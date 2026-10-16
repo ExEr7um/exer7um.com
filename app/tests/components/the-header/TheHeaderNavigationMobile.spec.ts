@@ -9,9 +9,7 @@ describe("Компонент TheHeaderNavigationMobile", () => {
   let wrapper: VueWrapper
 
   beforeEach(async () => {
-    wrapper = await mountSuspended(TheHeaderNavigationMobile, {
-      props: { navigation },
-    })
+    wrapper = await mountSuspended(TheHeaderNavigationMobile, { props: { navigation } })
   })
 
   afterEach(() => {

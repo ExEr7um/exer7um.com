@@ -7,11 +7,7 @@ import { shallowMount } from "@vue/test-utils"
 import tags from "~/tests/constants/tags"
 
 describe("Компонент UiCardContent", () => {
-  const cardContent = {
-    description: "Описание",
-    tags,
-    title: "Заголовок",
-  } as const
+  const cardContent = { description: "Описание", tags, title: "Заголовок" } as const
 
   let wrapper: VueWrapper
 

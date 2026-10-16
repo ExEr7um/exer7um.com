@@ -1,8 +1,4 @@
-import {
-  NodeTypes,
-  type RootNode,
-  type TemplateChildNode,
-} from "@vue/compiler-core"
+import { NodeTypes, type RootNode, type TemplateChildNode } from "@vue/compiler-core"
 
 /**
  * Трансформатор для удаления атрибута `data-testid` из дерева виртуального DOM.

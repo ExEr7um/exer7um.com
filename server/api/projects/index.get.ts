@@ -1,7 +1,5 @@
 export default defineEventHandler(async (event) => {
-  const { limit } = await getValidatedQuery(event, (query) =>
-    limitQuerySchema.parse(query),
-  )
+  const { limit } = await getValidatedQuery(event, (query) => limitQuerySchema.parse(query))
 
   /** Список проектов */
   const projects = await db.query.projects.findMany({

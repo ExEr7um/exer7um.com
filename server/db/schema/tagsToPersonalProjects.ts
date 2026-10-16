@@ -17,26 +17,16 @@ export const tagsToPersonalProjects = sqliteTable(
   (table) => [
     index("idx_tpp_personal_project_id").on(table.personalProjectId),
     index("idx_tpp_tag_id").on(table.tagId),
-    index("idx_tpp_personal_project_tag").on(
-      table.personalProjectId,
-      table.tagId,
-    ),
+    index("idx_tpp_personal_project_tag").on(table.personalProjectId, table.tagId),
   ],
 )
 
-export type TagsToPersonalProjectsInsert =
-  typeof tagsToPersonalProjects.$inferInsert
+export type TagsToPersonalProjectsInsert = typeof tagsToPersonalProjects.$inferInsert
 
-export const tagsToPersonalProjectsRelations = relations(
-  tagsToPersonalProjects,
-  ({ one }) => ({
-    personalProject: one(personalProjects, {
-      fields: [tagsToPersonalProjects.personalProjectId],
-      references: [personalProjects.id],
-    }),
-    tag: one(tags, {
-      fields: [tagsToPersonalProjects.tagId],
-      references: [tags.id],
-    }),
+export const tagsToPersonalProjectsRelations = relations(tagsToPersonalProjects, ({ one }) => ({
+  personalProject: one(personalProjects, {
+    fields: [tagsToPersonalProjects.personalProjectId],
+    references: [personalProjects.id],
   }),
-)
+  tag: one(tags, { fields: [tagsToPersonalProjects.tagId], references: [tags.id] }),
+}))

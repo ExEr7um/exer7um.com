@@ -6,10 +6,7 @@ import type { TagsToProjectsInsert } from "~~/server/db/schema/tagsToProjects"
 import type { TagsToWorkplacesInsert } from "~~/server/db/schema/tagsToWorkplaces"
 import type { WorkplaceInsert } from "~~/server/db/schema/workplace"
 
-const tags = [
-  { title: "Vue 2" },
-  { title: "Tailwind CSS" },
-] as const satisfies TagInsert[]
+const tags = [{ title: "Vue 2" }, { title: "Tailwind CSS" }] as const satisfies TagInsert[]
 
 const projects = [
   {
@@ -37,8 +34,7 @@ const projects = [
 const personalProjects = [
   {
     descriptionEN: `Course work on the topic "Information and reference system of the restaurant`,
-    descriptionRU:
-      "Курсовая работа по теме «Информационно-справочная система ресторана»",
+    descriptionRU: "Курсовая работа по теме «Информационно-справочная система ресторана»",
     github: "https://github.com/ExEr7um/restaurant-client",
     icon: "🍔",
     titleEN: "My restaurant",

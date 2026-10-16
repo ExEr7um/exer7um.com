@@ -6,10 +6,8 @@ import { mountSuspended } from "@nuxt/test-utils/runtime"
 describe("Компонент TheHeader", () => {
   let wrapper: VueWrapper
 
-  const desktopNavigation = () =>
-    wrapper.findComponent({ name: "UNavigationMenu" })
-  const mobileNavigation = () =>
-    wrapper.findComponent({ name: "TheHeaderNavigationMobile" })
+  const desktopNavigation = () => wrapper.findComponent({ name: "UNavigationMenu" })
+  const mobileNavigation = () => wrapper.findComponent({ name: "TheHeaderNavigationMobile" })
 
   beforeEach(async () => {
     wrapper = await mountSuspended(TheHeader, { shallow: true })

@@ -1,10 +1,6 @@
 <script setup lang="ts">
 /** Цвета кнопок управления окном */
-const buttonColors = [
-  "bg-red-500",
-  "bg-yellow-500",
-  "bg-green-500",
-] as const satisfies string[]
+const buttonColors = ["bg-red-500", "bg-yellow-500", "bg-green-500"] as const satisfies string[]
 
 /** Код для вывода */
 const code = `<section class="flex items-center justify-between gap-x-8 py-8">

@@ -2,11 +2,7 @@
 const { t } = useI18n({ useScope: "local" })
 const toast = useToast()
 
-const state = shallowReactive<MessageSchema>({
-  email: "",
-  message: "",
-  name: "",
-})
+const state = shallowReactive<MessageSchema>({ email: "", message: "", name: "" })
 
 const {
   error: submitError,
@@ -30,11 +26,7 @@ async function submitForm() {
 
   if (submitError.value) {
     // Выводим сообщение об ошибке
-    toast.add({
-      color: "error",
-      description: t("error.description"),
-      title: t("error.title"),
-    })
+    toast.add({ color: "error", description: t("error.description"), title: t("error.title") })
   } else {
     // Сбрасываем данные формы
     state.email = ""
@@ -82,12 +74,7 @@ useFirstInputFocus()
         variant="subtle"
       />
     </UFormField>
-    <UFormField
-      class="sm:col-span-2"
-      :label="t('message.label')"
-      name="message"
-      required
-    >
+    <UFormField class="sm:col-span-2" :label="t('message.label')" name="message" required>
       <UTextarea
         id="message"
         v-model="state.message"

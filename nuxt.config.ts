@@ -28,17 +28,10 @@ const devModules = [...modules, "nuxt-mcp"]
 const testModules = [...modules, "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
-  $development: {
-    modules: devModules,
-    nitro: { experimental: { tasks: true } },
-  },
+  $development: { modules: devModules, nitro: { experimental: { tasks: true } } },
   $production: {
     modules,
-    vite: {
-      vue: {
-        template: { compilerOptions: { nodeTransforms: [removeTestId] } },
-      },
-    },
+    vite: { vue: { template: { compilerOptions: { nodeTransforms: [removeTestId] } } } },
   },
   $test: {
     modules: testModules,
@@ -66,15 +59,10 @@ export default defineNuxtConfig({
     ],
     trailingSlash: true,
   },
-  image: {
-    cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" },
-  },
+  image: { cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" } },
   imports: { presets: ["vitest"] },
   linkChecker: { enabled: false },
-  nitro: {
-    cloudflare: { deployConfig: true, nodeCompat: true },
-    preset: "cloudflare-module",
-  },
+  nitro: { cloudflare: { deployConfig: true, nodeCompat: true }, preset: "cloudflare-module" },
   ogImage: { zeroRuntime: true },
   robots: { blockNonSeoBots: true },
   router: { options: { scrollBehaviorType: "smooth" } },

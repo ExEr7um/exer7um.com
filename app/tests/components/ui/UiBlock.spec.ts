@@ -13,10 +13,7 @@ describe("Компонент UiBlock", () => {
   let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(UiBlock, {
-      props: { title },
-      slots: { default: () => TEST_BLOCK },
-    })
+    wrapper = shallowMount(UiBlock, { props: { title }, slots: { default: () => TEST_BLOCK } })
   })
 
   afterEach(() => {
@@ -58,9 +55,7 @@ describe("Компонент UiBlock", () => {
   })
 
   test("Передача контента через slot", () => {
-    expect(wrapper.html()).toContain(
-      `&lt;div id='test-block'&gt;Тест&lt;/div&gt;`,
-    )
+    expect(wrapper.html()).toContain(`&lt;div id='test-block'&gt;Тест&lt;/div&gt;`)
   })
 
   test("Отступ при скролле", () => {

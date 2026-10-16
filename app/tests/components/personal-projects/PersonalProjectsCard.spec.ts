@@ -1,12 +1,7 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import {
-  LazyUButton,
-  PersonalProjectsCard,
-  UBadge,
-  UiCardContent,
-} from "#components"
+import { LazyUButton, PersonalProjectsCard, UBadge, UiCardContent } from "#components"
 import { shallowMount } from "@vue/test-utils"
 
 import personalProjects from "~/tests/constants/personalProjects"
@@ -35,21 +30,15 @@ describe("Компонент PersonalProjectsCard", () => {
     })
 
     test("Описание", () => {
-      expect(cardContentAttributes("description")).toBe(
-        personalProject.description,
-      )
+      expect(cardContentAttributes("description")).toBe(personalProject.description)
     })
 
     test("Иконка", () => {
-      expect(wrapper.findComponent(UBadge).props().label).toBe(
-        personalProject.icon,
-      )
+      expect(wrapper.findComponent(UBadge).props().label).toBe(personalProject.icon)
     })
 
     test("Теги", () => {
-      expect(cardContentAttributes("tags")).toBe(
-        personalProject.tags.toString(),
-      )
+      expect(cardContentAttributes("tags")).toBe(personalProject.tags.toString())
     })
   })
 

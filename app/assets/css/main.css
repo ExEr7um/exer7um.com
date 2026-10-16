@@ -19,7 +19,7 @@
   }
 }
 @utility card {
-  @apply border-default bg-default rounded-2xl border;
+  @apply rounded-2xl border border-default bg-default;
 }
 
 @layer base {
@@ -51,6 +51,6 @@
   }
 
   small {
-    @apply text-dimmed text-sm md:text-base;
+    @apply text-sm text-dimmed md:text-base;
   }
 }

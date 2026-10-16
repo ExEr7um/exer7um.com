@@ -10,12 +10,7 @@ export default function (pageName: string) {
   const title = t(`pages.${pageName}`)
   const description = t(`descriptions.${pageName}`)
 
-  useSeoMeta({
-    description,
-    title,
-    twitterDescription: description,
-    twitterTitle: title,
-  })
+  useSeoMeta({ description, title, twitterDescription: description, twitterTitle: title })
 
   return { description, title }
 }

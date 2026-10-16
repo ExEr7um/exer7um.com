@@ -12,9 +12,7 @@ const nextLocaleCode = computed(() => {
 
   // Если локализация последняя в списке, то возвращается код первой из списка
   // Иначе возвращается код следующей локализации
-  return availableLocales.at(
-    (currentLocaleIndex.value + 1) % availableLocales.length,
-  )
+  return availableLocales.at((currentLocaleIndex.value + 1) % availableLocales.length)
 })
 </script>
 

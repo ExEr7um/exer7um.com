@@ -14,17 +14,14 @@ const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
-  <div class="card row-span-4 grid grid-rows-subgrid gap-y-5 p-5">
+  <div class="row-span-4 grid grid-rows-subgrid gap-y-5 card p-5">
     <!-- Шапка карточки -->
     <div class="flex items-start justify-between">
       <!-- Иконка проекта -->
       <UBadge
         color="neutral"
         :label="personalProject.icon"
-        :ui="{
-          base: 'size-16 justify-center rounded-lg',
-          label: 'text-[2rem] font-[system-ui]',
-        }"
+        :ui="{ base: 'size-16 justify-center rounded-lg', label: 'font-[system-ui] text-[2rem]' }"
         variant="subtle"
       />
       <!-- Ссылка на GitHub -->

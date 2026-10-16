@@ -14,9 +14,7 @@ export function getTagsForItem(
   allTags: Tag[],
 ): Tag[] {
   const tagIds = new Set(
-    relations
-      .filter((rel) => Object.values(rel).includes(itemId))
-      .map((rel) => rel.tagId),
+    relations.filter((rel) => Object.values(rel).includes(itemId)).map((rel) => rel.tagId),
   )
 
   return allTags.filter((tag) => tagIds.has(tag.id))
@@ -40,9 +38,10 @@ export function tagsWithIds(tags: TagInsert[]): Tag[] {
  * @param index - индекс объекта
  * @returns объект в тестовом формате
  */
-export function transformSeedObject<
-  T extends { descriptionRU: string; titleRU: string },
->(seedObject: T, index: number) {
+export function transformSeedObject<T extends { descriptionRU: string; titleRU: string }>(
+  seedObject: T,
+  index: number,
+) {
   return {
     ...seedObject,
     description: seedObject.descriptionRU,

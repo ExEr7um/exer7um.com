@@ -42,9 +42,7 @@ describe("Компонент Projects", () => {
   })
 
   test("Количество проектов", () => {
-    expect(wrapper.findAllComponents(ProjectsCard)).toHaveLength(
-      projects.length,
-    )
+    expect(wrapper.findAllComponents(ProjectsCard)).toHaveLength(projects.length)
   })
 
   describe("Кнопка «Показать все»", () => {

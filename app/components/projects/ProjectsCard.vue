@@ -13,7 +13,7 @@ const { t } = useI18n({ useScope: "local" })
 </script>
 
 <template>
-  <div class="card row-span-5 grid grid-rows-subgrid gap-y-5 overflow-hidden">
+  <div class="row-span-5 grid grid-rows-subgrid gap-y-5 overflow-hidden card">
     <!-- Логотип проекта -->
     <div
       class="-mr-0.5 flex aspect-video size-full items-center justify-center rounded-2xl px-6 py-8 ring-1 ring-neutral-200 dark:ring-neutral-800"

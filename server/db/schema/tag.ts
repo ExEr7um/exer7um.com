@@ -6,11 +6,9 @@ import { tagsToPersonalProjects } from "./tagsToPersonalProjects"
 import { tagsToProjects } from "./tagsToProjects"
 import { tagsToWorkplaces } from "./tagsToWorkplaces"
 
-export const tags = sqliteTable(
-  "tags",
-  { ...id, title: text("title").notNull() },
-  (table) => [uniqueIndex("idx_tags_title_unique").on(table.title)],
-)
+export const tags = sqliteTable("tags", { ...id, title: text("title").notNull() }, (table) => [
+  uniqueIndex("idx_tags_title_unique").on(table.title),
+])
 
 export type Tag = typeof tags.$inferSelect
 export type TagInsert = typeof tags.$inferInsert

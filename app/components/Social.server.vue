@@ -16,25 +16,13 @@ export interface SocialCard {
 
 /** Уменьшенный список социальных сетей */
 const compactSocial = [
-  {
-    ariaLabel: "Telegram",
-    icon: "icon-park-outline:telegram",
-    to: "https://t.me/exer7um",
-  },
-  {
-    ariaLabel: "E-Mail",
-    icon: "heroicons:at-symbol",
-    to: "mailto:work@exer7um.com",
-  },
+  { ariaLabel: "Telegram", icon: "icon-park-outline:telegram", to: "https://t.me/exer7um" },
+  { ariaLabel: "E-Mail", icon: "heroicons:at-symbol", to: "mailto:work@exer7um.com" },
 ] as const satisfies SocialCard[]
 
 /** Социальные сети для общего списка */
 const fullSocial = [
-  {
-    ariaLabel: "GitHub",
-    icon: "simple-icons:github",
-    to: "https://github.com/ExEr7um",
-  },
+  { ariaLabel: "GitHub", icon: "simple-icons:github", to: "https://github.com/ExEr7um" },
 ] as const satisfies SocialCard[]
 
 /** Список социальных сетей */

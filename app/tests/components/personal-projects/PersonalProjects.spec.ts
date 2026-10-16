@@ -34,9 +34,7 @@ describe("Компонент PersonalProjects", () => {
   })
 
   test("Количество проектов", () => {
-    expect(wrapper.findAllComponents(PersonalProjectsCard)).toHaveLength(
-      personalProjects.length,
-    )
+    expect(wrapper.findAllComponents(PersonalProjectsCard)).toHaveLength(personalProjects.length)
   })
 
   describe("Кнопка «Показать все»", () => {
@@ -53,9 +51,7 @@ describe("Компонент PersonalProjects", () => {
     test.fails("Переводит на правильную страницу", async () => {
       await wrapper.setProps({ limit: 3 })
 
-      expect(viewAllButton().attributes("to")).toBe(
-        "/projects#personal-projects",
-      )
+      expect(viewAllButton().attributes("to")).toBe("/projects#personal-projects")
     })
   })
 

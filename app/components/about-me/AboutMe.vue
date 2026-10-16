@@ -16,27 +16,12 @@ const age = differenceInYears(new Date(), new Date("2002-01-15"))
 const icons = [
   [
     { color: "#00DC82", icon: "logos:nuxt-icon", key: "nuxt", title: "Nuxt 3" },
-    {
-      color: "#38BDF8",
-      icon: "devicon:tailwindcss",
-      key: "tailwind",
-      title: "Tailwind CSS",
-    },
+    { color: "#38BDF8", icon: "devicon:tailwindcss", key: "tailwind", title: "Tailwind CSS" },
     { color: "#FDAD00", icon: "logos:sketch", key: "sketch", title: "Sketch" },
   ],
   [
-    {
-      color: "#3178C6",
-      icon: "bxl:typescript",
-      key: "typescript",
-      title: "TypeScript",
-    },
-    {
-      color: "#9ED136",
-      icon: "simple-icons:drizzle",
-      key: "drizzle",
-      title: "Drizzle ORM",
-    },
+    { color: "#3178C6", icon: "bxl:typescript", key: "typescript", title: "TypeScript" },
+    { color: "#9ED136", icon: "simple-icons:drizzle", key: "drizzle", title: "Drizzle ORM" },
   ],
   [],
 ] as const satisfies TechnologyIcon[][]
@@ -56,11 +41,7 @@ const icons = [
         <template #age>
           {{ t("age", age) }}
         </template>
-        <template
-          v-for="icon in icons[paragraph - 1]"
-          :key="icon.key"
-          #[icon.key]
-        >
+        <template v-for="icon in icons[paragraph - 1]" :key="icon.key" #[icon.key]>
           <AboutMeIcon :icon />
         </template>
       </i18n-t>

@@ -11,11 +11,7 @@ describe("Компонент ContactForm", () => {
   let userRequest: H3Event | undefined
 
   /** Заполненные данные формы */
-  const contactData = {
-    email: "you@example.com",
-    message: "Сообщение",
-    name: "Имя",
-  } as const
+  const contactData = { email: "you@example.com", message: "Сообщение", name: "Имя" } as const
 
   registerEndpoint("/api/messages", {
     handler: (request) => {

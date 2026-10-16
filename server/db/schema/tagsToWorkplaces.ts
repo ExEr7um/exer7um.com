@@ -23,13 +23,10 @@ export const tagsToWorkplaces = sqliteTable(
 
 export type TagsToWorkplacesInsert = typeof tagsToWorkplaces.$inferInsert
 
-export const tagsToWorkplacesRelations = relations(
-  tagsToWorkplaces,
-  ({ one }) => ({
-    tag: one(tags, { fields: [tagsToWorkplaces.tagId], references: [tags.id] }),
-    workplace: one(workplaces, {
-      fields: [tagsToWorkplaces.workplaceId],
-      references: [workplaces.id],
-    }),
+export const tagsToWorkplacesRelations = relations(tagsToWorkplaces, ({ one }) => ({
+  tag: one(tags, { fields: [tagsToWorkplaces.tagId], references: [tags.id] }),
+  workplace: one(workplaces, {
+    fields: [tagsToWorkplaces.workplaceId],
+    references: [workplaces.id],
   }),
-)
+}))

@@ -11,9 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <div
-    class="card col-span-full grid grid-flow-dense grid-cols-subgrid gap-y-6 p-5 sm:p-6"
-  >
+  <div class="col-span-full grid grid-flow-dense grid-cols-subgrid gap-y-6 card p-5 sm:p-6">
     <NuxtImg
       :alt="workplace.title"
       class="size-28 rounded-lg sm:size-40"
@@ -33,9 +31,7 @@ defineProps<{
       class="flex flex-col-reverse items-end gap-x-3 gap-y-2 self-start justify-self-end sm:flex-row sm:items-center"
     >
       <WorkplacesCardDate data-testid="startDate" :date="workplace.startDate" />
-      <hr
-        class="hidden w-4 border-neutral-200 sm:block dark:border-neutral-700"
-      />
+      <hr class="hidden w-4 border-neutral-200 sm:block dark:border-neutral-700" />
       <WorkplacesCardDate data-testid="endDate" :date="workplace.endDate" />
     </div>
   </div>

@@ -11,24 +11,16 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "check": "vp check",
+    "check:fix": "vp check --fix",
     "db:generate": "nuxt db generate",
     "dev": "nuxt dev",
     "eslint": "eslint --max-warnings=0",
     "eslint:fix": "eslint --max-warnings=0 --fix",
-    "postinstall": "husky && NODE_ENV=development nuxt prepare",
-    "prettier": "prettier --check --ignore-unknown --no-error-on-unmatched-pattern * --experimental-cli",
-    "prettier:write": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern * --experimental-cli",
+    "postinstall": "vp config && NODE_ENV=development nuxt prepare",
     "preview": "nuxt preview",
     "test": "vitest",
     "typecheck": "nuxt typecheck -b"
-  },
-  "nano-staged": {
-    "*.{vue,js,jsx,cjs,mjs,ts,json,yaml}": "eslint --cache --fix",
-    "*": "prettier --write --ignore-unknown --experimental-cli"
-  },
-  "prettier": "@exer7um/prettier-config",
-  "overrides": {
-    "picomatch": "npm:picomatch@4.0.3"
   },
   "dependencies": {
     "@nuxt/image": "2.0.0",
@@ -48,18 +40,19 @@
   },
   "devDependencies": {
     "@exer7um/eslint-config": "2.2.3",
-    "@exer7um/prettier-config": "0.8.3",
+    "@exer7um/vp-config": "0.1.0",
     "@nuxt/test-utils": "3.21.0",
     "@types/node": "25.0.3",
     "@vue/test-utils": "2.4.6",
     "drizzle-kit": "0.31.8",
     "happy-dom": "20.0.11",
-    "husky": "9.1.7",
-    "nano-staged": "0.9.0",
     "nuxt-mcp": "0.2.6",
     "typescript": "5.9.3",
     "vitest": "4.0.16",
     "vue-tsc": "3.2.1",
     "wrangler": "4.56.0"
+  },
+  "overrides": {
+    "picomatch": "npm:picomatch@4.0.3"
   }
 }

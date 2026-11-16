@@ -8,9 +8,7 @@ defineProps<{
 
 const { locale } = useI18n()
 
-const { data: workplaces } = await useFetch("/api/workplaces", {
-  headers: { "Accept-Language": locale },
-})
+const { data: workplaces } = await useLocalizedFetch("/api/workplaces")
 
 /** Длительность полного опыта */
 const fullExperience = formatDuration(

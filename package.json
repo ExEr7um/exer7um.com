@@ -14,6 +14,7 @@
     "check": "vp check",
     "check:fix": "vp check --fix",
     "db:generate": "nuxt db generate",
+    "db:seed": "nuxt task run seed",
     "deploy": "wrangler --cwd .output/server d1 migrations apply DB --remote && wrangler --cwd .output deploy --keep-vars",
     "dev": "nuxt dev",
     "eslint": "eslint --max-warnings=0",
@@ -64,7 +65,6 @@
     "wrangler": "4.162.0"
   },
   "overrides": {
-    "picomatch": "npm:picomatch@4.0.7",
     "typescript": "npm:typescript-native-bridge@6.0.3-bridge.19.tsgo.7.0.2"
   }
 }

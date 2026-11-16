@@ -43,7 +43,7 @@ bun run dev
 ### Заполнение локальной базы данных
 
 ```bash
-curl http://localhost:3000/_nitro/tasks/seed
+bun run db:seed
 ```
 
 ### Сборка проекта

@@ -17,6 +17,10 @@ describe("Функция russianPluralization", () => {
 
       // Если число не заканчивается на 1
       expect(russianPluralization(12, 3)).toBe(2)
+
+      // Если последние две цифры от 10 до 20 (111 «проектов», а не «проект»)
+      expect(russianPluralization(111, 3)).toBe(2)
+      expect(russianPluralization(212, 3)).toBe(2)
     })
 
     test("Если число не от 10 до 20, возвращается 1 или 2", () => {
@@ -41,6 +45,20 @@ describe("Функция russianPluralization", () => {
 
     test("Если заканчивается на 5-9, возвращаем 3", () => {
       expect(russianPluralization(7, 4)).toBe(3)
+    })
+  })
+
+  describe("Если последние две цифры числа от 10 до 20", () => {
+    test("Возвращаем 3, даже если число заканчивается на 1-4", () => {
+      expect(russianPluralization(111, 4)).toBe(3)
+      expect(russianPluralization(114, 4)).toBe(3)
+      expect(russianPluralization(219, 4)).toBe(3)
+    })
+
+    test("Числа вне промежутка склоняются по последней цифре", () => {
+      expect(russianPluralization(121, 4)).toBe(1)
+      expect(russianPluralization(122, 4)).toBe(2)
+      expect(russianPluralization(125, 4)).toBe(3)
     })
   })
 })

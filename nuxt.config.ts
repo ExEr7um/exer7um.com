@@ -57,7 +57,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: "https://exer7um.com",
     defaultLocale: "ru",
-    experimental: { typedOptionsAndMessages: "default" },
+    experimental: { strictSeo: true, typedOptionsAndMessages: "default" },
     locales: [
       { code: "ru", file: "ru.yaml", language: "ru-RU", name: "Русский" },
       { code: "en", file: "en.yaml", language: "en-US", name: "English" },

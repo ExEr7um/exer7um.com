@@ -5,15 +5,8 @@ import * as z from "zod/mini"
 const zodLocales = { en, ru }
 
 const { locale } = useI18n()
-const i18nHead = useLocaleHead()
 
-useHeadSafe(() => ({
-  htmlAttrs: i18nHead.value.htmlAttrs,
-  link: [...i18nHead.value.link, { href: "https://mastodon.social/@exer7um", rel: "me" }],
-  meta: i18nHead.value.meta,
-}))
-
-useSeoMeta({ titleTemplate: `%s | ExEr7um` })
+useHeadSafe({ link: [{ href: "https://mastodon.social/@exer7um", rel: "me" }] })
 
 // Локализация ошибок Zod
 watchImmediate(locale, (value) => {

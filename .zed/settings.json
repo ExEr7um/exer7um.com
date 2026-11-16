@@ -1,8 +1,4 @@
 {
-  "context_servers": {
-    "Nuxt": { "url": "https://nuxt.com/mcp" },
-    "Nuxt UI": { "url": "https://ui.nuxt.com/mcp" }
-  },
   "language_servers": ["!oxlint", "..."],
   "languages": {
     "CSS": {

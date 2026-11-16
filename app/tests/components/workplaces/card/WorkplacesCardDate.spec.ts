@@ -1,7 +1,8 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { UBadge, WorkplacesCardDate } from "#components"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
+
+import { UBadge, WorkplacesCardDate } from "#components"
 
 describe("Компонент WorkplacesCardDate", () => {
   const date = "2024-01-01T00:00:00.000Z"

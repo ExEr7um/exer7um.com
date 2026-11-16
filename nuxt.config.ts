@@ -16,19 +16,12 @@ const modules = [
 ]
 
 /**
- * Объединенный массив модулей, которые будут использоваться только в `DEV` среде.
- *
- * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
- */
-const devModules = [...modules, "nuxt-mcp"]
-
-/**
  * Объединенный массив модулей, которые будут использоваться только в `TEST` среде.
  */
 const testModules = [...modules, "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
-  $development: { modules: devModules, nitro: { experimental: { tasks: true } } },
+  $development: { modules, nitro: { experimental: { tasks: true } } },
   $production: {
     modules,
     vite: { vue: { template: { compilerOptions: { nodeTransforms: [removeTestId] } } } },
@@ -80,5 +73,7 @@ export default defineNuxtConfig({
   },
   site: { name: "ExEr7um", trailingSlash: true, url: "https://exer7um.com" },
   sitemap: { zeroRuntime: true },
+  // Ассеты прошлых сборок не сохраняются между деплоями
+  skewProtection: false,
   ui: { experimental: { componentDetection: true } },
 })

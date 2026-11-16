@@ -1,10 +1,11 @@
 import type { VueWrapper } from "@vue/test-utils"
 import type { H3Event } from "h3"
 
-import { ContactForm } from "#components"
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
 import { flushPromises } from "@vue/test-utils"
 import { readBody } from "h3"
+
+import { ContactForm } from "#components"
 
 describe("Компонент ContactForm", () => {
   let wrapper: VueWrapper

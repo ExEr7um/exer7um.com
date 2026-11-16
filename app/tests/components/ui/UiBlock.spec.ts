@@ -1,14 +1,14 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { UiBlock } from "#components"
 import { shallowMount } from "@vue/test-utils"
 
+import { UiBlock } from "#components"
 import { TEST_BLOCK } from "~/tests/constants/utils"
 
 describe("Компонент UiBlock", () => {
   const title = "Заголовок блока"
-  const subTitle = "Подзаголовок блока"
+  const subtitle = "Подзаголовок блока"
 
   let wrapper: VueWrapper
 
@@ -37,13 +37,13 @@ describe("Компонент UiBlock", () => {
       })
 
       test("Выставляется из props", async () => {
-        await wrapper.setProps({ subTitle })
+        await wrapper.setProps({ subtitle })
 
-        expect(wrapper.find("h3").text()).toBe(subTitle)
+        expect(wrapper.find("h3").text()).toBe(subtitle)
       })
 
       test("Скрывается при передаче параметра hideTitle", async () => {
-        await wrapper.setProps({ hideTitle: true, subTitle })
+        await wrapper.setProps({ hideTitle: true, subtitle })
 
         expect(wrapper.find("h3").exists()).toBeFalsy()
       })

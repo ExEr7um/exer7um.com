@@ -23,6 +23,7 @@ const nextLocaleCode = computed(() => {
       class="uppercase"
       color="neutral"
       :label="locale"
+      :locale="false"
       :to="switchLocalePath(nextLocaleCode ?? 'ru')"
       variant="soft"
     />

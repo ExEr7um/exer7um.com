@@ -1,10 +1,11 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { AboutMeIcon } from "#components"
 import { shallowMount } from "@vue/test-utils"
 
 import type { TechnologyIcon } from "~/components/about-me/AboutMeIcon.vue"
+
+import { AboutMeIcon } from "#components"
 
 const icon = {
   color: "#00DC82",

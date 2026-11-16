@@ -59,6 +59,7 @@ export default defineNuxtConfig({
     ],
     trailingSlash: true,
   },
+  icon: { clientBundle: { scan: true } },
   image: { cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" } },
   imports: { presets: ["vitest"] },
   linkChecker: { enabled: false },

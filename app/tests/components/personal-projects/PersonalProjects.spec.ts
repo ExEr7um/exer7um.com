@@ -57,7 +57,7 @@ describe("Компонент PersonalProjects", () => {
 
   describe("Запрос к API", () => {
     test("Передается хедер локализации", () => {
-      expect(getHeaderLocale(userRequest!).baseName).toBeTruthy()
+      expect(getHeaderLocale(userRequest!).baseName).toBe("ru")
     })
 
     test("По умолчанию limit не передается", () => {

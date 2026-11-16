@@ -6,11 +6,10 @@ const { hideTitle, limit } = defineProps<{
   limit?: number
 }>()
 
-const { locale, t } = useI18n({ useScope: "local" })
+const { t } = useI18n({ useScope: "local" })
 const localePath = useLocalePath()
 
-const { data: projects } = await useFetch("/api/projects", {
-  headers: { "Accept-Language": locale },
+const { data: projects } = await useLocalizedFetch("/api/projects", {
   query: { limit: toRef(() => limit) },
 })
 </script>

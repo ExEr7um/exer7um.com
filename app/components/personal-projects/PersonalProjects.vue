@@ -4,11 +4,10 @@ const { limit } = defineProps<{
   limit?: number
 }>()
 
-const { locale, t } = useI18n({ useScope: "local" })
+const { t } = useI18n({ useScope: "local" })
 const localePath = useLocalePath()
 
-const { data: personalProjects } = await useFetch("/api/personal-projects", {
-  headers: { "Accept-Language": locale },
+const { data: personalProjects } = await useLocalizedFetch("/api/personal-projects", {
   query: { limit: toRef(() => limit) },
 })
 </script>

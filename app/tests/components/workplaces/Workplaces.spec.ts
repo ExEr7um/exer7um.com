@@ -48,7 +48,7 @@ describe("Компонент Workplaces", () => {
 
   describe("Запрос к API", () => {
     test("Передается хедер локализации", () => {
-      expect(getHeaderLocale(userRequest!).baseName).toBeTruthy()
+      expect(getHeaderLocale(userRequest!).baseName).toBe("ru")
     })
   })
 })

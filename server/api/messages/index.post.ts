@@ -1,9 +1,9 @@
-export default defineEventHandler(async (event) => {
-  const runtimeConfig = useRuntimeConfig(event)
+import { createError, defineEventHandler, readValidatedBody, useRuntimeConfig } from "nuxt/server"
 
-  const { email, message, name } = await readValidatedBody(event, (body) =>
-    messageSchema.parse(body),
-  )
+export default defineEventHandler(async (event) => {
+  const runtimeConfig = useRuntimeConfig()
+
+  const { email, message, name } = await readValidatedBody(event, messageSchema)
 
   try {
     // Отправляем запрос к боту Telegram

@@ -15,9 +15,10 @@ on:
 
 jobs:
   changelog:
-    uses: ExEr7um/workflows/.github/workflows/changelog.yml@v0.13.1
+    uses: ExEr7um/workflows/.github/workflows/git-cliff.yml@v0.13.1
     with:
       updateType: ${{ inputs.updateType }}
+      versionCommand: npm pkg set version="${VERSION#v}"
 
   release:
     runs-on: ubuntu-latest

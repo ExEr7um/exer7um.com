@@ -12,8 +12,8 @@ export default function (choice: number, choicesLength: number) {
     return 0
   }
 
-  /** Входит ли число в промежуток от 10 до 20 */
-  const isTeen = choice > 10 && choice < 20
+  /** Входит ли число в промежуток от 10 до 20 (по последним двум цифрам: 111, 213 и т.д.) */
+  const isTeen = choice % 100 > 10 && choice % 100 < 20
   /** Заканчивается ли число на `1` */
   const isEndingWithOne = choice % 10 === 1
 

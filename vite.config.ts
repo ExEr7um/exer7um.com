@@ -9,7 +9,7 @@ import { defineConfig } from "vite-plus"
 export default defineConfig({
   check: defineCheckConfig(),
   fmt: defineFmtConfig({
-    ignorePatterns: ["**/migrations/**", "**/mcp.json"],
+    ignorePatterns: ["**/migrations/**"],
     sortTailwindcss: { stylesheet: "./app/assets/css/main.css" },
   }),
   lint: defineLintConfig(),

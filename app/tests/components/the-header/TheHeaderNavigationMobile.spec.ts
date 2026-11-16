@@ -1,8 +1,8 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { TheHeaderNavigationMobile, UButton } from "#components"
 import { mountSuspended } from "@nuxt/test-utils/runtime"
 
+import { TheHeaderNavigationMobile, UButton } from "#components"
 import navigation from "~/tests/constants/navigation"
 
 describe("Компонент TheHeaderNavigationMobile", () => {

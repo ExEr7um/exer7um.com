@@ -1,9 +1,9 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { UButton } from "#components"
 import { shallowMount } from "@vue/test-utils"
 
+import { UButton } from "#components"
 import Social from "~/components/Social.server.vue"
 
 describe("Компонент Social", () => {

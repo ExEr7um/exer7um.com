@@ -1,9 +1,9 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { ProjectsCard, UiCardContent } from "#components"
 import { shallowMount } from "@vue/test-utils"
 
+import { ProjectsCard, UiCardContent } from "#components"
 import projects from "~/tests/constants/projects"
 
 describe("Компонент ProjectsCard", () => {

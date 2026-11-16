@@ -1,9 +1,9 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { LazyUButton, PersonalProjectsCard, UBadge, UiCardContent } from "#components"
 import { shallowMount } from "@vue/test-utils"
 
+import { LazyUButton, PersonalProjectsCard, UBadge, UiCardContent } from "#components"
 import personalProjects from "~/tests/constants/personalProjects"
 
 describe("Компонент PersonalProjectsCard", () => {

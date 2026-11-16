@@ -13,23 +13,23 @@ export default function (choice: number, choicesLength: number) {
   }
 
   /** Входит ли число в промежуток от 10 до 20 */
-  const teen = choice > 10 && choice < 20
+  const isTeen = choice > 10 && choice < 20
   /** Заканчивается ли число на `1` */
-  const endsWithOne = choice % 10 === 1
+  const isEndingWithOne = choice % 10 === 1
 
   // Если количество склонений меньше 4
   if (choicesLength < 4) {
     // Если число не входит в промежуток от 10 до 20 и заканчивается на `1` — возвращаем 1, иначе 2
-    return !teen && endsWithOne ? 1 : 2
+    return !isTeen && isEndingWithOne ? 1 : 2
   }
 
   // Если число не входит в промежуток от 10 до 20 и заканчивается на `1` — возвращаем 1
-  if (!teen && endsWithOne) {
+  if (!isTeen && isEndingWithOne) {
     return 1
   }
 
   // Если число не входит в промежуток от 10 до 20 и заканчивается на `2`, `3` или `4` — возвращаем 2
-  if (!teen && choice % 10 >= 2 && choice % 10 <= 4) {
+  if (!isTeen && choice % 10 >= 2 && choice % 10 <= 4) {
     return 2
   }
 

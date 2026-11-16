@@ -20,7 +20,7 @@ const fullExperience = formatDuration(
 </script>
 
 <template>
-  <UiBlock :hide-title :sub-title="fullExperience" :title="$t('pages.experience')">
+  <UiBlock :hide-title :subtitle="fullExperience" :title="$t('pages.experience')">
     <div class="grid grid-cols-[auto_1fr] gap-x-8 lg:grid-cols-[auto_1fr_auto]">
       <template v-for="workplace in workplaces" :key="workplace.id">
         <!-- @vue-expect-error - неправильно определяется тип -->

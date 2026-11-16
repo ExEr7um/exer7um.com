@@ -1,7 +1,8 @@
 import type { VueWrapper } from "@vue/test-utils"
 
-import { UButton, UiShowAllButton } from "#components"
 import { shallowMount } from "@vue/test-utils"
+
+import { UButton, UiShowAllButton } from "#components"
 
 describe("UiShowAllButton", () => {
   let wrapper: VueWrapper

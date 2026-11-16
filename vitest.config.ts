@@ -9,7 +9,7 @@ export default defineConfig({
           environment: "nuxt",
           include: ["**/*.spec.ts"],
           name: "unit",
-          setupFiles: ["tests/setup.ts"],
+          setupFiles: ["app/tests/setup.ts"],
         },
       }),
     ],

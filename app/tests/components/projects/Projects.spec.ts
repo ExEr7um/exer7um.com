@@ -1,11 +1,11 @@
 import type { VueWrapper } from "@vue/test-utils"
 import type { H3Event } from "h3"
 
-import { Projects, ProjectsCard } from "#components"
 import { getHeaderLocale } from "@intlify/h3"
 import { mountSuspended, registerEndpoint } from "@nuxt/test-utils/runtime"
 import { getQuery } from "h3"
 
+import { Projects, ProjectsCard } from "#components"
 import projects from "~/tests/constants/projects"
 
 describe("Компонент Projects", () => {

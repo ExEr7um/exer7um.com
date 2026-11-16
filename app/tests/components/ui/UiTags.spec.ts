@@ -1,9 +1,9 @@
 // @vitest-environment happy-dom
 import type { VueWrapper } from "@vue/test-utils"
 
-import { UBadge, UiTags } from "#components"
 import { shallowMount } from "@vue/test-utils"
 
+import { UBadge, UiTags } from "#components"
 import tags from "~/tests/constants/tags"
 
 describe("Компонент UiTags", () => {

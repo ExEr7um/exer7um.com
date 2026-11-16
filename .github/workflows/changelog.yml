@@ -15,7 +15,7 @@ on:
 
 jobs:
   changelog:
-    uses: ExEr7um/workflows/.github/workflows/changelog.yml@v0.12.1
+    uses: ExEr7um/workflows/.github/workflows/changelog.yml@v0.13.1
     with:
       updateType: ${{ inputs.updateType }}
 
@@ -24,6 +24,6 @@ jobs:
     needs: changelog
     steps:
       - name: Запуск деплоя
-        uses: peter-evans/repository-dispatch@v3.0.0
+        uses: peter-evans/repository-dispatch@v4.0.1
         with:
           event-type: deploy

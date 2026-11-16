@@ -17,7 +17,7 @@ export interface SocialCard {
 /** Уменьшенный список социальных сетей */
 const compactSocial = [
   { ariaLabel: "Telegram", icon: "icon-park-outline:telegram", to: "https://t.me/exer7um" },
-  { ariaLabel: "E-Mail", icon: "heroicons:at-symbol", to: "mailto:work@exer7um.com" },
+  { ariaLabel: "E-Mail", icon: "lucide:at-sign", to: "mailto:work@exer7um.com" },
 ] as const satisfies SocialCard[]
 
 /** Социальные сети для общего списка */

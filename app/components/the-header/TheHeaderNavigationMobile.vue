@@ -11,13 +11,7 @@ const { t } = useI18n({ useScope: "local" })
 
 <template>
   <UDropdownMenu :items="navigation" size="lg">
-    <UButton
-      :aria-label="t('menu')"
-      color="neutral"
-      icon="heroicons:bars-2"
-      size="lg"
-      variant="soft"
-    />
+    <UButton :aria-label="t('menu')" color="neutral" icon="lucide:menu" size="lg" variant="soft" />
   </UDropdownMenu>
 </template>
 

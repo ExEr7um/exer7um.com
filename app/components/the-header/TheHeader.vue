@@ -8,12 +8,12 @@ const localePath = useLocalePath()
 
 /** Иконки навигации */
 const navigationIcons = {
-  index: "heroicons:home",
+  index: "lucide:house",
   // eslint-disable-next-line perfectionist/sort-objects
-  experience: "heroicons:briefcase",
-  projects: "heroicons:squares-2x2",
+  experience: "lucide:briefcase",
+  projects: "lucide:layout-grid",
   // eslint-disable-next-line perfectionist/sort-objects
-  about: "heroicons:user",
+  about: "lucide:user",
 } as const satisfies Partial<Record<RouteName, string>>
 
 /** Список навигации */

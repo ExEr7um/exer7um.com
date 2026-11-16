@@ -3,22 +3,22 @@
 exports[`Компонент TheHeader > Десктопная навигация > Передаются элементы навигации 1`] = `
 [
   {
-    "icon": "heroicons:home",
+    "icon": "lucide:house",
     "label": "pages.index",
     "to": "/",
   },
   {
-    "icon": "heroicons:briefcase",
+    "icon": "lucide:briefcase",
     "label": "pages.experience",
     "to": "/experience/",
   },
   {
-    "icon": "heroicons:squares-2x2",
+    "icon": "lucide:layout-grid",
     "label": "pages.projects",
     "to": "/projects/",
   },
   {
-    "icon": "heroicons:user",
+    "icon": "lucide:user",
     "label": "pages.about",
     "to": "/about/",
   },
@@ -28,22 +28,22 @@ exports[`Компонент TheHeader > Десктопная навигация 
 exports[`Компонент TheHeader > Мобильная навигация > Передаются элементы навигации 1`] = `
 [
   {
-    "icon": "heroicons:home",
+    "icon": "lucide:house",
     "label": "pages.index",
     "to": "/",
   },
   {
-    "icon": "heroicons:briefcase",
+    "icon": "lucide:briefcase",
     "label": "pages.experience",
     "to": "/experience/",
   },
   {
-    "icon": "heroicons:squares-2x2",
+    "icon": "lucide:layout-grid",
     "label": "pages.projects",
     "to": "/projects/",
   },
   {
-    "icon": "heroicons:user",
+    "icon": "lucide:user",
     "label": "pages.about",
     "to": "/about/",
   },

@@ -1,3 +1,5 @@
+import { defineEventHandler } from "nuxt/server"
+
 export default defineEventHandler(async (event) => {
   /** Список мест работы */
   const workplaces = await db.query.workplaces.findMany({

@@ -1,5 +1,7 @@
+import { defineEventHandler, getValidatedQuery } from "nuxt/server"
+
 export default defineEventHandler(async (event) => {
-  const { limit } = await getValidatedQuery(event, (query) => limitQuerySchema.parse(query))
+  const { limit } = await getValidatedQuery(event, limitQuerySchema)
 
   /** Список проектов */
   const personalProjects = await db.query.personalProjects.findMany({

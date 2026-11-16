@@ -16,12 +16,19 @@ const modules = [
 ]
 
 /**
+ * Объединенный массив модулей, которые будут использоваться только в `DEV` среде.
+ *
+ * Сюда нужно помещать модули, которые находятся в `devDependencies`, и не будут установлены при сборке проекта.
+ */
+const devModules = [...modules, "@nuxt/a11y", "@nuxt/hints"]
+
+/**
  * Объединенный массив модулей, которые будут использоваться только в `TEST` среде.
  */
 const testModules = [...modules, "@nuxt/test-utils/module"]
 
 export default defineNuxtConfig({
-  $development: { modules, nitro: { experimental: { tasks: true } } },
+  $development: { modules: devModules, nitro: { experimental: { tasks: true } } },
   $production: {
     modules,
     vite: { vue: { template: { compilerOptions: { nodeTransforms: [removeTestId] } } } },

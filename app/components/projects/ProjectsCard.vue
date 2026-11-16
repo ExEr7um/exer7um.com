@@ -49,7 +49,7 @@ const { t } = useI18n({ useScope: "local" })
           :to="project.url"
         >
           <span>{{ t("view") }}</span>
-          <Icon name="heroicons:arrow-right-16-solid" size="16" />
+          <Icon name="lucide:arrow-right" size="16" />
         </ULink>
       </div>
     </div>

@@ -9,7 +9,7 @@ import { AboutMeIcon } from "#components"
 
 const icon = {
   color: "#00DC82",
-  icon: "logos:nuxt-icon",
+  icon: "simple-icons:nuxt",
   key: "nuxt",
   title: "Nuxt 3",
 } as const satisfies TechnologyIcon

@@ -43,6 +43,8 @@
     "@exer7um/eslint-config": "2.4.0",
     "@exer7um/vp-config": "0.1.0",
     "@libsql/client": "0.18.0",
+    "@nuxt/a11y": "1.0.0-alpha.1",
+    "@nuxt/hints": "1.1.5",
     "@nuxt/test-utils": "4.4.0",
     "@types/node": "26.6.6",
     "@vue/test-utils": "2.6.0",

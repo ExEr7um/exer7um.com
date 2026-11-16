@@ -4,42 +4,24 @@ const toast = useToast()
 
 const state = shallowReactive<MessageSchema>({ email: "", message: "", name: "" })
 
-const {
-  error: submitError,
-  execute,
-  status,
-} = await useFetch("/api/messages", {
-  body: state,
-  // Не вызываем функцию при загрузке страницы
-  immediate: false,
-  method: "POST",
-  // Не следим за изменением параметров
-  watch: false,
-})
-
 /**
  * Функция для отправки сообщения к API.
  */
 async function submitForm() {
-  // Вызываем функцию отправки сообщения
-  await execute()
-
-  if (submitError.value) {
-    // Выводим сообщение об ошибке
+  try {
+    await $fetch("/api/messages", { body: state, method: "POST" })
+  } catch {
     toast.add({ color: "error", description: t("error.description"), title: t("error.title") })
-  } else {
-    // Сбрасываем данные формы
-    state.email = ""
-    state.message = ""
-    state.name = ""
 
-    // Выводим сообщение об успешной отправке
-    toast.add({
-      color: "success",
-      description: t("success.description"),
-      title: t("success.title"),
-    })
+    return
   }
+
+  // Сбрасываем данные формы
+  state.email = ""
+  state.message = ""
+  state.name = ""
+
+  toast.add({ color: "success", description: t("success.description"), title: t("success.title") })
 }
 
 // Фокусируемся на первом инпуте
@@ -86,13 +68,7 @@ useFirstInputFocus()
         variant="subtle"
       />
     </UFormField>
-    <UButton
-      class="mt-2 w-max"
-      :label="t('send')"
-      :loading="status === 'pending'"
-      size="lg"
-      type="submit"
-    />
+    <UButton class="mt-2 w-max" :label="t('send')" loading-auto size="lg" type="submit" />
   </UForm>
 </template>
 

@@ -1,4 +1,6 @@
-import removeTestId from "./app/utils/removeTestId"
+import { builtinPresets } from "unimport"
+
+import removeTestId from "./app/utils/removeTestId.ts"
 
 /**
  * Общие модули, которые используются в любой среде.
@@ -43,11 +45,14 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   experimental: {
-    componentIslands: true,
-    typedPages: true,
+    early404: true,
+    // `@nuxtjs/i18n` берет серверные хелперы из `#imports`, без них Nitro не собирается
+    nitroAutoImports: true,
+    prefetchPreloadTags: true,
+    strictRouteTypes: true,
     typescriptPlugin: true,
-    viteEnvironmentApi: true,
   },
+  future: { compatibilityVersion: 5 },
   hub: { cache: true, db: "sqlite" },
   i18n: {
     baseUrl: "https://exer7um.com",
@@ -61,7 +66,7 @@ export default defineNuxtConfig({
   },
   icon: { clientBundle: { scan: true } },
   image: { cloudinary: { baseURL: "https://res.cloudinary.com/exer7um/image/upload/" } },
-  imports: { presets: ["vitest"] },
+  imports: { presets: [builtinPresets.vitest] },
   linkChecker: { enabled: false },
   nitro: { cloudflare: { deployConfig: true, nodeCompat: true }, preset: "cloudflare-module" },
   ogImage: { zeroRuntime: true },

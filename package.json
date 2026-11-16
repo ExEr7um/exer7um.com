@@ -14,6 +14,7 @@
     "check": "vp check",
     "check:fix": "vp check --fix",
     "db:generate": "nuxt db generate",
+    "deploy": "wrangler --cwd .output/server d1 migrations apply DB --remote && wrangler --cwd .output deploy --keep-vars",
     "dev": "nuxt dev",
     "eslint": "eslint --max-warnings=0",
     "eslint:fix": "eslint --max-warnings=0 --fix",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@exer7um/eslint-config": "2.4.0",
     "@exer7um/vp-config": "0.1.0",
+    "@libsql/client": "0.18.0",
     "@nuxt/test-utils": "4.4.0",
     "@types/node": "26.6.6",
     "@vue/test-utils": "2.6.0",

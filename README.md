@@ -40,11 +40,21 @@ bun install
 bun run dev
 ```
 
+### Заполнение локальной базы данных
+
+```bash
+curl http://localhost:3000/_nitro/tasks/seed
+```
+
 ### Сборка проекта
 
 ```bash
 bun run build
 ```
+
+### Деплой
+
+После сборки `bun run deploy` применяет миграции D1 и публикует воркер. В Cloudflare Workers Builds это команда деплоя, команда сборки — `bun run build`.
 
 ## License
 
